@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 02/07/2018 at 11:59pm EST
+openDate          = 04/20/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 02/12/2018 at 11:59pm EST
-answerDate        = 02/12/2018 at 11:59pm EST
+dueDate           = 04/24/2018 at 11:59pm EDT
+answerDate        = 04/29/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-05.pg
+source_file = Library/Rochester/setIntegrals0Theory/S05.01.AreaDistance.PTP03.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/UCSB/Stewart5_2_3/Stewart5_2_3_28.pg
+source_file = local/Library/FortLewis/Calc1/05-02-Definite-integral/HGM5-05-02-Definite-integral-25b.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_26.pg
+source_file = Library/Hope/Calc1/05-02-Sigma-notation/sigma-notation-01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_11.pg
+source_file = Library/Valdosta/APEX_Calculus/5.3/APEX_5.3_8-10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/270/setLimitsRates3Infinite/ur_lr_3_18.pg
+source_file = local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_32.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_28.pg
+source_file = local/Library/UCSB/Stewart5_5_2/Stewart5_5_2_31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/maCalcDB/setLimitsRates3Infinite/ur_lr_3_6.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-35.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/AlfredUniv/anton8e/chapter2/2.6/prob1.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-33.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/UCSB/Stewart5_2_6/Stewart5_2_6_54.pg
+source_file = Library/UMN/calculusTaalman/t_4_3_prob01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Wiley/setAnton_Section_1.3/Anton1_3_Q56.pg
+source_file = Library/UMN/calculusStewartCCC/s_5_2_43.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/Wiley/setAnton_Section_1.3/Anton1_3_Q38.pg
+source_file = Library/ASU-topics/setCalculusFundamentalTheorem/6-5-09.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/270/setLimitsRates2Limits/ur_lr_2_11.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,17 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/ma122DB/set1/ur_lr_2_11.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 17
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S08-Derivatives/2-8-19.pg
+source_file = Library/FortLewis/Calc1/05-02-Definite-integral/HGM5-05-02-Definite-integral-27.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

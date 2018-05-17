@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 12/07/2017 at 11:59pm EST
+openDate          = 04/24/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 12/16/2017 at 11:59pm EST
-answerDate        = 12/16/2017 at 11:59pm EST
+dueDate           = 04/30/2018 at 11:59pm EDT
+answerDate        = 04/30/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,106 +13,6 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/Rochester/setIntegrals0Theory/S05.01.AreaDistance.PTP03.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 2
-source_file = Library/FortLewis/Calc1/05-02-Definite-integral/HGM5-05-02-Definite-integral-25b.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 3
-source_file = Library/Hope/Calc1/05-02-Sigma-notation/sigma-notation-01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 4
-source_file = Library/Valdosta/APEX_Calculus/5.3/APEX_5.3_8-10.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 5
-source_file = Library/UCSB/Stewart5_5_2/Stewart5_5_2_32.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 6
-source_file = Library/UCSB/Stewart5_5_2/Stewart5_5_2_31.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 7
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-35.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 8
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-33.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 9
-source_file = Library/UMN/calculusTaalman/t_4_3_prob01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 10
-source_file = Library/UMN/calculusStewartCCC/s_5_2_43.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 11
 source_file = Library/Rochester/setIntegrals4FTC/S05.03.FundThmCalc.PTP01.pg
 value = 1
 max_attempts = -1
@@ -122,7 +22,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 12
+problem_id = 2
 source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/5_The_Integral/5.4_The_Fundamental_Theorem_of_Calculus_Part_II/5.4.35.pg
 value = 1
 max_attempts = -1
@@ -132,7 +32,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 13
+problem_id = 3
 source_file = Library/ASU-topics/setCalculusFundamentalTheorem/6-5-13.pg
 value = 1
 max_attempts = -1
@@ -142,7 +42,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 14
+problem_id = 4
 source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S04-IndefInts/5-4-21.pg
 value = 1
 max_attempts = -1
@@ -152,7 +52,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 15
+problem_id = 5
 source_file = Library/Valdosta/APEX_Calculus/5.4/APEX_5.4_5-7.pg
 value = 1
 max_attempts = -1
@@ -162,7 +62,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 16
+problem_id = 6
 source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S03-FundThmCalc/5-3-21.pg
 value = 1
 max_attempts = -1
@@ -172,7 +72,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 17
+problem_id = 7
 source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S04-IndefInts/5-4-19.pg
 value = 1
 max_attempts = -1
@@ -182,7 +82,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 18
+problem_id = 8
 source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S04-IndefInts/5-4-25.pg
 value = 1
 max_attempts = -1
@@ -192,7 +92,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 19
+problem_id = 9
 source_file = Library/ma122DB/set12/s5_4_22.pg
 value = 1
 max_attempts = -1
@@ -202,7 +102,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 20
+problem_id = 10
 source_file = Library/Valdosta/APEX_Calculus/5.4/APEX_5.4_8-9.pg
 value = 1
 max_attempts = -1
@@ -212,7 +112,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 21
+problem_id = 11
 source_file = Library/UMN/calculusStewartCCC/s_5_3_18.pg
 value = 1
 max_attempts = -1
@@ -222,8 +122,48 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 22
-source_file = Library/UCSB/Stewart5_5_2/Stewart5_5_2_29.pg
+problem_id = 12
+source_file = Library/Union/setIntBasic/an7_2_7.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/Union/setIntSubstitution/an6_3_01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/ASU-topics/setAntiderivatives/6-1-59.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/Michigan/Chap7Sec1/Q37.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = Library/Rochester/setIntegrals4FTC/S05.03.FundThmCalc.PTP18.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
