@@ -80,6 +80,22 @@ $BR
 $BR
 EOT
 
+
+BEGIN_HINT
+
+In both parts, note that we are have restricted to times \(t\geq 0\).  
+
+$PAR 
+
+In part (A), the functions position \(f\) is increating $BBOLD if and only if $EBOLD  \(f'(t)>0\).  
+
+$PAR
+
+In part (B), the \(f'\) is increasing $BBOLD if and only if $EBOLD \( (f')' > 0\).   
+
+END_HINT
+
+
 $AverageOfa1b1=($a1+$b1)/2;
 $speedup="($AverageOfa1b1,inf)";
 $slowdown="[0,$AverageOfa1b1)";
