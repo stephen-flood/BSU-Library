@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = local/Library/UCSB/Stewart5_3_2/Stewart5_3_2_39.pg
+source_file = CustomProblems/Library/UCSB/Stewart5_3_2/Stewart5_3_2_39.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -233,7 +233,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 23
-source_file = local/CustomProblems/Library/Rochester/setDerivatives3WordProblems/S03.03.RatesOfChange.PTP01.pg
+source_file = CustomProblems/Library/Rochester/setDerivatives3WordProblems/S03.03.RatesOfChange.PTP01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

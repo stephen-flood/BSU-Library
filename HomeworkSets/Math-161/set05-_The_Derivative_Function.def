@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = local/Library/Hope/Calc1/02-01-Rates-of-change/Thomas12-02-01-21/Thomas12-02-01-21.pg
+source_file = CustomProblems/Library/Hope/Calc1/02-01-Rates-of-change/Thomas12-02-01-21/Thomas12-02-01-21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
