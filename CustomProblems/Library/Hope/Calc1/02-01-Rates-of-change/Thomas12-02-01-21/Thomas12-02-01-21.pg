@@ -25,8 +25,9 @@
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
-"MathObjects.pl",
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl"
 );
 
 TEXT(beginproblem());
@@ -53,7 +54,7 @@ $BCENTER
 $ECENTER
 $BR
 $BR
-Estimate the bicyclist's average velocity over the 
+(a) Estimate the bicyclist's average velocity over the 
 following time intervals.
 $BR
 Over \( \lbrack 0,1 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
@@ -63,8 +64,18 @@ $BR
 Over \( \lbrack 2.5,3.5 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
 $BR
 $BR
-$BBOLD Hint:$EBOLD If you the position at a given time is  not on one of the labeled lines, start by guessing that it is one mile above/below the labeled line.  If that doesn't work, try increasing or decreasing your guess by one.  Repeat as needed.
-
+(b) Estimate the bicyclist's instantaneous velocity at the following times.
+$BR
+At \( t = 1/2 \) hour, the instantaneous velocity is approximately \{ ans_rule(10) \} mi/hr.
+$BR
+At \( t = 2 \) hours, the instantaneous velocity is approximately \{ ans_rule(10) \} mi/hr.
+$BR
+At \( t = 3 \) hours, the instantaneous velocity is approximately \{ ans_rule(10) \} mi/hr.
+$BR
+$BR
+(c) Estimate the bicyclist's maximum velocity and the specific time at which it occurs.
+$BR
+The maximum velocity is approximately \{ ans_rule(10) \} mi/hr, which occurs when \( t \approx \) \{ ans_rule(10) \} hr.
 END_TEXT
 Context()->normalStrings;
 
@@ -78,12 +89,12 @@ ANS( Compute("15")->cmp() );
 ANS( Compute("4")->cmp(tolType=>'absolute',tolerance=>0.34) );
 ANS( Compute("18")->cmp(tolType=>'absolute',tolerance=>0.34) );
 
-#ANS( Compute("15")->cmp(tolType=>'absolute',tolerance=>1.01) );
-#ANS( Compute("0")->cmp() );
-#ANS( Compute("30")->cmp(tolType=>'absolute',tolerance=>1.01) );
+ANS( Compute("15")->cmp(tolType=>'absolute',tolerance=>3.01) );
+ANS( Compute("0")->cmp() );
+ANS( Compute("30")->cmp(tolType=>'absolute',tolerance=>1.01) );
 
-#ANS( Compute("30")->cmp(tolType=>'absolute',tolerance=>1.01) );
-#ANS( Compute("3")->cmp() );
+ANS( Compute("30")->cmp(tolType=>'absolute',tolerance=>1.01) );
+ANS( Compute("3")->cmp() );
 
 COMMENT('Not randomized.');
 

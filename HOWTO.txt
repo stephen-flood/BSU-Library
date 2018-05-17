@@ -1,0 +1,9 @@
+
+
+// To backup modified OPL files from <course>, 
+// use the command 
+rsync -aiuP /opt/webwork/courses/<course>/templates/local/Library /opt/webwork/libraries/BSU/CustomProblems/Library
+
+
+
+
