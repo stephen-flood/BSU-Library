@@ -1,0 +1,85 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+$L = random(300,500,10) ; 
+$a = random(2,5,1); 
+$k = random(2,6,1) ; 
+
+$P1 = random(50,100,5);
+$P2 = random(150,200,5);
+$P3 = random(250,275,10);
+
+
+$invinputs = PopUp(["?", "days", "thousands of cells"], "thousands of cells");
+$invoutputs = PopUp(["?", "days", "thousands of cells"], "days");
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+A population of bacteria in a petri dish is nearing the carrying capacity of the dish.  With a bit of work, you decide that its population is modeled by 
+
+[`P(x) = [$L]  -  [$a] \cdot e^{-[$k] x}`]
+
+where [`x`] is in days and [`P(x)`] is in thousands of cells.
+
+
+(a) Find a formula for [`P^{-1}(x)`]  
+[`P^{-1}(x) = `] [_____________]{ Compute("ln( (x-$L)/ (-$a) )/(-$k)")->cmp()  }
+
+(b) The inputs to [`P^{-1}(x)`] have units [______]{$invinputs}.  
+The outputs of [`P^{-1}(x)`] have units [______]{$invoutputs}.     
+
+(c) Use [`P^{-1}(x)`] to answer the following questions.
+
+The population reaches [$P1] thousand cells after [______________]{ "ln( ($P1-$L)/(-$a) )/(-$k) "   } hours.
+ 
+The population reaches [$P2] thousand cells after [______________]{Compute("ln( ($P2-$L)/(-$a) )/(-$k)")->cmp()  } hours.
+ 
+The population reaches [$P3] thousand cells after [______________]{Compute("ln( ($P3-$L)/(-$a) )/(-$k)")->cmp()  } hours.
+ 
+
+
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

@@ -1,0 +1,139 @@
+## DESCRIPTION
+## Trigonometry: proving trig identities
+## ENDDESCRIPTION
+
+
+## DBsubject(Trigonometry)
+## DBchapter(Analytic trigonometry)
+## DBsection(Using and proving basic identities)
+## Date(2011)
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## MLT()
+## MLTleader()
+## Level(3)
+## KEYWORDS('trigonometry', 'proving trig identities')
+
+## Using a multipart template created by Paul Pearson
+
+DOCUMENT();
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+);
+
+TEXT(beginproblem());
+
+$showPartialCorrectAnswers = 1;
+
+
+###################################
+#  Setup
+
+Context("Numeric")->variables->are(t=>"Real");
+
+
+#
+#  You manually define the answers
+#
+@answers = ();
+$answers[1] = Formula("tan(t)");
+$answers[2] = Formula("sec^2(t)");
+$answers[3] = Formula("tan(t)*sec^2(t)");
+$answers[4] = Formula("tan(t)");
+
+
+#
+#  Automatic configuration for answer evaluation
+#
+@ans_eval = ();
+@scores = ();
+foreach my $i (1..$#answers) {
+  $ans_eval[$i] = $answers[$i] ->cmp();
+  $ans_hash[$i] = $ans_eval[$i]->evaluate($inputs_ref->{ANS_NUM_TO_NAME($i)});
+  $scores[$i]   = $ans_hash[$i]->{score};
+}
+
+
+###########################################
+#  Main text and answer evaluation part 1
+
+Context()->texStrings;
+BEGIN_TEXT
+${BBOLD}Three part problem:${EBOLD}
+$BR
+Verify the following identity:
+
+\[ \tan^3(t) = \tan(t)\cdot\sec^2(t)-\tan(t)\]
+
+
+$PAR
+$BR
+It is often best to start with the "more complicated" side.  
+In this case the left side appears is more "complicated" because although it has fewer terms, it is being raised to a larger power.  
+$BR
+$BR
+We don't have any way to rewrite \(\tan^3(t)\), so we begin by rewriting the expression to find a \(\tan^2(t) \) term.
+$BR
+\(  \tan^3(t) = \) \{ ans_rule(10) \} \( \cdot  \tan^2(t) \)
+
+END_TEXT
+Context()->normalStrings;
+
+ANS( $ans_eval[1] );
+
+
+
+##########################################
+#  Main text and answer evaluation part 2
+
+if ($scores[1]==1) {
+
+Context()->texStrings;
+BEGIN_TEXT
+$BR 
+\(  \tan^3(t)  = {\color{Green}{\tan(t)}}  \cdot  \tan^2(t) \)
+$PAR
+Good work.  We can now use an identity to rewrite \(tan^2(t)\). 
+$PAR
+\( \tan(t)\cdot  \tan^2(t) = \tan(t)\cdot \Big(\) \{ ans_rule(10) \} \(-1\Big)\)
+END_TEXT
+Context()->normalStrings;
+
+ANS( $ans_eval[2] );
+
+}  # end if
+
+ 
+##########################################
+#  Main text and answer evaluation part 3
+
+if ( ($scores[1]==1) && ($scores[2]==1) ) {
+
+Context()->texStrings;
+BEGIN_TEXT
+$BR
+\( \tan(t)  \cdot  \tan^2(t)  = \tan(t)\cdot\Big( { \color{Green}{\sec^2(t)} } -1\Big)\)
+$PAR
+Very good!  $BR
+
+Distributing gives
+$PAR
+\( =\) \{ ans_rule(10) \} \( - \) \{ans_rule(10)\} as desired. 
+
+END_TEXT
+Context()->normalStrings;
+
+ANS( $ans_eval[3] );
+ANS( $ans_eval[4] );
+
+}  # end if
+
+
+COMMENT("MathObject version.  This is a multi-part problem 
+in which the next part is revealed only after the previous 
+part is correct.  Prevents students from entering trivial 
+identities (entering what they were given)");
+
+ENDDOCUMENT();

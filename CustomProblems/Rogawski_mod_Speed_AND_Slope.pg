@@ -1,0 +1,79 @@
+## DBsubject(Calculus - single variable)
+## DBchapter(Parametric)
+## DBsection(Tangents, velocity, and speed)
+## Institution(W.H.Freeman)
+## Author(Christopher Sira)
+## MLT(speedValue)
+## MLTleader(1)
+## Level(3)
+## MO(1)
+## TitleText1('Calculus: Early Transcendentals')
+## AuthorText1('Rogawski')
+## EditionText1('2')
+## Section1('11.2')
+## Problem1('18')
+## KEYWORDS('calculus', 'parametric', 'polar', 'conic')
+
+DOCUMENT();
+loadMacros("PG.pl","PGbasicmacros.pl","PGanswermacros.pl");
+loadMacros("PGchoicemacros.pl");
+loadMacros("PGML.pl");
+loadMacros("Parser.pl");
+loadMacros("freemanMacros.pl");
+loadMacros("PGchoicemacros.pl");
+
+TEXT(beginproblem());
+$context = Context();
+
+$t = random(1, 15);
+$xspeed = 1/($t**2 + 1)*(2*$t);
+$yspeed = -1*$t**(-2);
+$speed = ( ($xspeed)**2 + ($yspeed)**2 )**.5 ;
+$slope =  $yspeed/$xspeed ; 
+
+$ans = Formula("$exp");
+
+#\{ textbook_ref_exact("Rogawski ET 2e", "11.2","18") \}
+
+Context()->texStrings;
+
+BEGIN_PGML
+
+Suppose that the trajectory of a certain particle is given by [``c(t) = \left(\ln(t^2 + 1), \frac{1}{t}\right)``] 
+
+1. Find the *speed of the particle* at the time [``t_0 = [$t] ``].  
+[__________]{"$speed"}
+
+2. Find the *slope of the trajectory* at the time  [``t_0 = [$t] ``].  
+[__________]{"$slope"}
+
+
+
+
+END_PGML
+
+
+Context()->texStrings;
+SOLUTION(EV3(<<'END_SOLUTION'));
+$PAR
+$SOL
+We have \( x = \ln(t^2 + 1), \, y = t^{-1} \), so \( x' = \frac{2t}{t^2 + 1} \) and \( y' = -t^{-2} \).  
+
+Therefore \( x' = $xspeed \) and \(y' = $yspeed\).  
+
+The speed of the particle at time t is thus
+\[ \frac{ds}{dt} = \sqrt{x'(t)^2 + y'(t)^2} \] 
+
+The speed at time \( t = $t \) is
+\[ \frac{ds}{dt} \mid _{t = $t} = \sqrt{ ($xspeed)^2 + ($yspeed)^2 } = $speed \] 
+
+
+The slope of the trajectory at time t is 
+\[ \frac{dy}{dx} = \frac{\left( \frac{dy}{dt}\right)  }{  \left( \frac{dx}{dt} \right) }\] 
+
+The slope at time \( t = $t \) is
+\[ \frac{dy}{dx} \mid _{t = $t} = \dfrac{$yspeed}{$xspeed} = $slope \] 
+
+END_SOLUTION
+
+ENDDOCUMENT();

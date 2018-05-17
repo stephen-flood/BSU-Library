@@ -1,0 +1,68 @@
+# DESCRIPTION
+# Text Goes Here
+# ENDDESCRIPTION
+
+## DBsubject('')
+## DBchapter('')
+## DBsection('')
+## KEYWORDS('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+## Author('Stephen Flood')
+## Institution('UConn')
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"PGML.pl",
+##
+##### SPECIAL CONTEXTS FOR LIMITED POLYNOMIALS ####
+"contextLimitedPolynomial.pl",
+"contextPolynomialFactors.pl",
+##### 
+##
+"PGcourse.pl",
+);
+
+# make sure we're in the context we want
+Context("Numeric");
+
+$n = list_random(4,6);
+$a = random(2,4,1);
+$b = ($a+$n);
+$h = ($b-$a)/2;
+$k = $h**2+$a*$b;
+$vertexform = Compute("(x-$h)^2-$k");
+$vertexform = Compute("(x-$h)^2-$k");
+
+#
+#  Expanded form
+#
+Context("LimitedPolynomial");
+
+$p[0] = $h**2 - $k;
+$p[1] = 2*$h;
+$expandedform = Formula("x^2 - $p[1] x + $p[0]")->reduce;
+
+
+#### The Problem Text ####
+TEXT(beginproblem());
+#TEXT(PGML::Format2(<<'END_PGML'));
+BEGIN_PGML
+
+
+Rewrite the function [`f(x) = [$vertexform] `] in the form [` ax^2 + bx + c `].
+
+[_______________]{$expandedform->cmp()}
+END_PGML
+
+
+#BEGIN_PGML_SOLUTION
+
+#END_PGML_SOLUTION
+
+ENDDOCUMENT();

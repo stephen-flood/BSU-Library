@@ -1,0 +1,175 @@
+## DESCRIPTION
+## Quadratic functions, expressions, and equations
+## ENDDESCRIPTION
+
+
+## BookTitle('')
+## BookChapter('')
+## DBsubject(Algebra)
+## DBchapter(Functions)
+## DBsection(Graphs)
+## Date()
+## Institution(Fort Lewis College)
+## Author(Paul Pearson, adapted by Stephen Flood)
+## MLT(LikeThisF)
+## Level(3)
+## TitleText1(")
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('')
+
+####################################
+#  Initialization
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"PGgraphmacros.pl",
+"PGunion.pl",
+"imageChoice.pl",
+"PGgraders.pl",
+"MathObjects.pl",
+"AnswerFormatHelp.pl",
+"unionTables.pl"
+);
+
+TEXT(beginproblem());
+$refreshCachedImages=1;
+
+####################################
+#  Setup
+
+## Convert variable to t
+Context("Numeric")->variables->are(t=>"Real");
+
+## Prepare graphs to draw each angle on
+foreach my $i (0..5) {
+     # Set up the graph
+          $gr[$i] = init_graph(-1.1,-1.1,1.1,1.1,axes=>[0,0],size=>[300,300]);
+     # Draw a circle
+     $cx[$i] = Formula("cos(t)");
+     $cy[$i] = Formula("sin(t)");
+     $cf[$i] = new Fun( $cx[$i]->perlFunction, $cy[$i]->perlFunction, $gr[$i] );
+     $cf[$i]->domain(0,2*pi);
+     $cf[$i]->weight(1);
+}
+
+
+## Define the angles.  Recall:
+##  For a polar curve r = f(t),
+##  x = r cos(t) = f(t) cos(t)
+##  y = r sin(t) = f(t) sin(t)
+
+## Randomize variables
+## variable = random($first,$last,$increment)
+#foreach my $i (0..5) {
+#    $a[$i] = random(-5,5,2);
+#}
+
+    $a[0] = random(3,7,2);
+$F[0]= "\dfrac{$a[0]\pi}{2}";
+$x[0] = Formula("cos($a[0]*pi/2) * t");
+$y[0] = Formula("sin($a[0]*pi/2) * t");
+
+
+    $a[1] = random(-11,11,22);
+$F[1]= "\dfrac{$a[1]\pi}{6}";
+$x[1] = Formula("cos($a[1]*pi/6) * t");
+$y[1] = Formula("sin($a[1]*pi/6) * t");
+
+    $a[2] = random(-7,7,14);
+$F[2]= "\dfrac{$a[2]\pi}{4}";
+$x[2] = Formula("cos($a[2]*pi/4) * t");
+$y[2] = Formula("sin($a[2]*pi/4) * t");
+
+    $a[3] = random(-4,4,8);
+$F[3]= "\dfrac{$a[3]\pi}{3}";
+$x[3] = Formula("cos($a[3]*pi/3) * t");
+$y[3] = Formula("sin($a[3]*pi/3) * t");
+
+
+    $a[4] = random(-3,3,6);
+$F[4]= "$a[4]\pi";
+$x[4] = Formula("cos($a[4]*pi) * t");
+$y[4] = Formula("sin($a[4]*pi) * t");
+
+
+    $a[5] = random(-5,5,10);
+$F[5]= "\dfrac{$a[5]\pi}{6}";
+$x[5] = Formula("cos($a[5]*pi/6) * t");
+$y[5] = Formula("sin($a[5]*pi/6) * t");
+
+foreach my $i (0..5) {
+     # Draw the angles defined above
+     $f[$i] = new Fun( $x[$i]->perlFunction, $y[$i]->perlFunction, $gr[$i]);
+     $f[$i]->domain(0,1.1);
+     $f[$i]->weight(5);
+     $gr[$i]->new_color("darkgreen",    50, 200, 50);
+     $f[$i]->color('darkgreen');
+}
+
+
+
+@QA = ();
+foreach my $i (0..5) { push( @QA, "\($F[$i]\)",  $gr[$i] ); }
+
+$ml = new_image_match_list(
+  link => 1,                #  do not link to separate image
+  size => [225,225],        #  image width, height in pixels
+  tex_size => 310,          #  tex size in precent times 10
+  columns => 3,             #  number of columns
+  separation => 20,         #  space between images
+);
+
+$ml->rf_print_q(~~&pop_up_list_print_q); # use pop-up-lists
+$ml -> ra_pop_up_list(
+[ No_answer=>"?", A=>"A", B=>"B", C=>"C", D=>"D", E=>"E", "F"=>"F" ] );
+
+$ml->qa(@QA);               #  set the questions and answers
+$ml->choose(6);             #  select 6 of them
+$ml->choose_extra(0);       #  and show the other 0
+
+
+######################################
+#  Main text
+
+BEGIN_TEXT
+\{
+ColumnTable(
+"Draw each of the following angles on your own.  
+$BR
+Then, match the angles with the images provided.".
+$ml->print_q() # no period!
+, # comma!
+$BCENTER.
+$ml->print_a().
+$BR.
+
+
+"(Click on a graph to enlarge it)".
+$ECENTER # no period!
+, # comma!
+indent => 0, separation => 30, valign => "TOP"
+)
+\}
+
+
+END_TEXT
+
+
+######################################
+#  Answer evaluation
+
+install_problem_grader(~~&custom_problem_grader_fluid);
+$ENV{'grader_numright'} = [2,4];
+$ENV{'grader_scores'} = [0.5,1];
+$ENV{'grader_message'} = "You can earn " .
+"50% partial credit for 2 - 3 correct answers.";
+
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($ml->ra_correct_ans));
+
+ENDDOCUMENT();

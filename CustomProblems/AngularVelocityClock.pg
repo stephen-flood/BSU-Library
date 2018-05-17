@@ -1,0 +1,80 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('trigonometry')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+
+$rolld3=random(1,3,1);
+$flipcoin=random(1,2,1);
+
+$hour= random(4,9,1);
+$minute= Real("$hour+$rolld3");
+$second= Real("$minute+$flipcoin"); 
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+You have an analog clock.  The hour hand is [$hour]" long, the minute hand is [$minute]" long, and the second hand is [$second]" long.  In this problem, we will determine how "fast" each hand is moving.  To keep things simple, we will leave things in the units that occur naturally.
+
+*The Hour Hand*
+ 
+Angular Velocity = [___]{Compute("2pi/12")} radians per *hour*
+
+Linear Velocity = [___]{Compute("2pi*$hour/12")} inches per *hour*
+
+
+*The Minute Hand*
+ 
+Angular Velocity = [___]{Compute("2pi/60")} radians per *minute*
+
+Linear Velocity = [___]{Compute("2pi*$minute/60")} inches per *minute*
+
+
+*The Second Hand*
+ 
+Angular Velocity = [___]{Compute("2pi/60")} radians per *second*
+
+Linear Velocity = [___]{Compute("2pi*$second/60")} inches per *second*
+
+
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

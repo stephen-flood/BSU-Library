@@ -1,0 +1,77 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+    "PGchoicemacros.pl",  
+    "parserPopUp.pl", 
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=0;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+
+$popup0 = PopUp(["?", "positive", "negative", "zero"], "positive"); 
+
+  $popup = new_select_list();
+  $popup->rf_print_q(~~&pop_up_list_print_q);
+  $popup->ra_pop_up_list( [ No_answer => "",  Positive => "Positive",  Negative => "Negative",  Zero => "Zero", DNE => "DNE"  ] );
+
+  $popup->qa(
+    "`\ln(3)`", "Positive",
+    "`\ln(0.3)`", "Negative",
+    "`\ln(0.9)`", "Negative",
+    "`\ln(1.1)`", "Positive",
+    "`\ln(1)`", "Zero",
+    "`\ln(-2)`", "DNE",
+  );
+
+  $popup->choose(6);
+
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+
+Determine if each of the following is positive, negative, zero, or if it does not exist.
+
+[@ $popup->print_q() @]*
+
+
+END_PGML
+
+ANS(str_cmp( $popup->ra_correct_ans() )) ;
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

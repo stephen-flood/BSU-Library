@@ -1,0 +1,78 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+    "PGchoicemacros.pl",  
+    "parserPopUp.pl", 
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=0;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+
+$popup0 = PopUp(["?", "positive", "negative", "zero"], "positive"); 
+
+  $popup = new_select_list();
+  $popup->rf_print_q(~~&pop_up_list_print_q);
+  $popup->ra_pop_up_list( [ No_answer => "",  Increasing=> "Increasing", Decreasing=> "Decreasing" ] );
+
+  $popup->qa(
+    "` e^{\ln(1/2)x}`", "Decreasing",
+    "`e^{\ln(3/2)x}`", "Increasing",
+    "`e^{\frac{\ln(3)}{2}x}`", "Increasing",
+    "`e^{\frac{\ln(3)}{\ln(2)}x}`", "Increasing",
+    "`e^{\ln(2/3)x}`", "Decreasing",
+  );
+
+
+
+  $popup->choose(5);
+
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+
+Determine if each of the following functions is increasing or decreasing.
+
+[@ $popup->print_q() @]*
+
+
+END_PGML
+
+ANS(str_cmp( $popup->ra_correct_ans() )) ;
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

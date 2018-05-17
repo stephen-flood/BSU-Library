@@ -1,0 +1,95 @@
+##DESCRIPTION
+##  Describe the type of problem!  
+##ENDDESCRIPTION
+
+##KEYWORDS('custom', 'in-progress')
+
+## DBsubject('Subject')
+## DBchapter('Chapter')
+## DBsection('Section')
+## Date('8/26/2016')
+## Author('BSU Faculty')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+   "PGstandard.pl",     # Standard macros for PG language
+   "MathObjects.pl",
+    "PGML.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+#### Set the Context ####
+# 
+# Common Contexts: Numeric, Matrix, Interval, Vector, Vector2D, and several more 
+# 	http://webwork.maa.org/wiki/Common_Contexts#.V8CSf1Qko2w
+#
+#  The Numeric context is the most common.  Answers can be numbers or functions
+# 	Any function is accepted if it gives the same outputs as the correct answer
+#
+Context("Numeric");
+# Accept submissions as correct if they differ from the correct answer given below by 1% or less. 
+Context()->flags->set(tolerance => 0.01);
+##############################################################
+$pi = Real("pi");
+
+
+$k = random(3, 5, 1);
+#$n = random(0.25,0.5,0.25);
+$n = Compute("1/$k ");
+
+$a = random(2000, 4000, 100); 
+
+$p = Formula(" $a/(x^{1/$k}) ");
+ 
+$r = random(10,20,10);
+
+$cost = Compute(" ($a*(1-$n))/$r ");
+
+#$slnx = Compute(" $r^(1/$n) ");
+$slnx = Compute(" $r^(1/$n) ");
+
+
+$psln = $p->eval( x=>$slnx );
+
+
+##############################################################
+
+BEGIN_PGML
+
+Suppose that the (demand) price for your novelty enamel pin business is given by 
+
+[` p(x) = \frac{[$a]}{x^{1/[$k]}} `] 
+
+and that each unit costs $[$cost] 
+
+
+Find the price where profit is maximized.
+
+Price = [________]{"$psln"}
+
+when 
+
+Quantity = [_______]{"$slnx"}
+
+END_PGML
+
+ENDDOCUMENT();        

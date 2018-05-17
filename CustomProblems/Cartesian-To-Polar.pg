@@ -1,0 +1,121 @@
+## DBsubject(Trigonometry)
+## DBchapter(Polar coordinates & vectors)
+## DBsection(Polar and rectangular coordinates)
+## Institution(BSU)
+## MLT(CartToPolarTwice)
+## MLTleader(1)
+## Level(2)
+## Static(1)
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('polar coordinates')
+
+DOCUMENT();
+
+loadMacros(
+"PG.pl",
+"PGbasicmacros.pl",
+"PGchoicemacros.pl",
+"PGanswermacros.pl",
+"PGauxiliaryFunctions.pl",
+"parserMultiAnswer.pl",
+"MathObjects.pl",
+);
+
+TEXT(&beginproblem);
+
+
+
+# DEFINE AN ARRAY
+@piover4 = ("pi/4","3pi/4","5pi/4","7pi/4");
+@piover4x = ("sqrt(2)/2","-sqrt(2)/2","-sqrt(2)/2","sqrt(2)/2");
+@piover4y = ("sqrt(2)/2","sqrt(2)/2","-sqrt(2)/2","-sqrt(2)/2");
+@textpiover4x = ("\frac{\sqrt{2}}{2}","-\frac{\sqrt{2}}{2}","-\frac{\sqrt{2}}{2}","\frac{\sqrt{2}}{2}");
+@textpiover4y = ("\frac{\sqrt{2}}{2}","\frac{\sqrt{2}}{2}","-\frac{\sqrt{2}}{2}","-\frac{\sqrt{2}}{2}");
+
+@piover6 = ("pi/6","5pi/6","7pi/6","11pi/6");
+@piover6x = ("sqrt(3)/2","-sqrt(3)/2","-sqrt(3)/2","sqrt(3)/2");
+@piover6y = ("1/2","1/2","-1/2","-1/2");
+@textpiover6x = ("\frac{\sqrt{3}}{2}","-\frac{\sqrt{3}}{2}","-\frac{\sqrt{3}}{2}","\frac{\sqrt{3}}{2}");
+@textpiover6y = ("\frac{1}{2}","\frac{1}{2}","-\frac{1}{2}","-\frac{1}{2}");
+
+@piover3 = ("pi/3","2pi/3","4pi/3","5pi/3");
+@piover3x = ("1/2","-1/2","-1/2","1/2");
+@piover3y = ("sqrt(3)/2","sqrt(3)/2","-sqrt(3)/2","-sqrt(3)/2");
+@textpiover3x = ("\frac{1}{2}","\frac{-1}{2}","\frac{-1}{2}","\frac{1}{2}");
+@textpiover3y = ("\frac{\sqrt{3}}{2}","\frac{\sqrt{3}}{2}","-\frac{\sqrt{3}}{2}","-\frac{\sqrt{3}}{2}");
+
+@radii = ();
+foreach my $i (0..3) {
+     $radii[$i] = 1;
+}
+
+@multians = ();
+foreach my $i (0..3) {
+    $multians[$i] = MultiAnswer($radii[$i], $piover3[$i])->with(
+                           singleResult => 0,
+                           checker => sub {
+                               my ( $correct, $student, $self ) = @_;
+                               my ( $r, $theta) = @{$student};
+                               my ( $radius1, $theta1 ) = @{$correct};
+                               if ( ($piover3x[$i] == $r*cos($theta) && $piover3y[$i] == $r*sin($theta) ) ) {
+                                   return [1,1];
+                               } else {
+                                   return [0,0];
+                               }
+                           }
+                         );
+}
+
+
+
+BEGIN_TEXT
+
+$BBOLD Note: $EBOLD For credit, you must input the correct radius $BBOLD and $EBOLD the correct angle at the same time.  
+
+(a) The Cartesian coordinates of a point are \( ( $textpiover3x[0] ,$textpiover3y[0] ) \).
+      Find the Polar Coordinates \( (r,\theta) \) of the point
+$BR
+\( (r, \theta)  =\Big( \) 
+\{$multians[0]->ans_rule(15)\}
+\{$multians[0]->ans_rule(15)\}
+\( \Big)\)
+
+$PAR$PAR
+(b) The Cartesian coordinates of a point are \( ( $textpiover3x[1] ,$textpiover3y[1] ) \).
+      Find the Polar Coordinates \( (r,\theta) \) of the point
+$BR
+\( (r, \theta)  =\Big( \) 
+\{$multians[1]->ans_rule(15)\}
+\{$multians[1]->ans_rule(15)\}
+\( \Big)\)
+
+$PAR
+(c) The Cartesian coordinates of a point are \( ( $textpiover3x[2] ,$textpiover3y[2] ) \).
+      Find the Polar Coordinates \( (r,\theta) \) of the point
+$BR
+\( (r, \theta)  =\Big( \) 
+\{$multians[2]->ans_rule(15)\}
+\{$multians[2]->ans_rule(15)\}
+\( \Big)\)
+
+$PAR
+(d) The Cartesian coordinates of a point are \( ( $textpiover3x[3] ,$textpiover3y[3] ) \).
+      Find the Polar Coordinates \( (r,\theta) \) of the point
+$BR
+\( (r, \theta)  =\Big( \) 
+\{$multians[3]->ans_rule(15)\}
+\{$multians[3]->ans_rule(15)\}
+\( \Big)\)
+
+END_TEXT
+
+ANS( $multians[0]->cmp() );
+ANS( $multians[1]->cmp() );
+ANS( $multians[2]->cmp() );
+ANS( $multians[3]->cmp() );
+
+ENDDOCUMENT();

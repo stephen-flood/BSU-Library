@@ -1,0 +1,74 @@
+# DESCRIPTION
+# ENDDESCRIPTION
+
+## DBsubject(Linear algebra)
+## DBchapter(Euclidean spaces)
+## DBsection(Subspaces)
+## Institution(Bridgewater State University)
+## Author(Stephen Flood)
+## Level(3)
+## KEYWORDS('linear algebra', 'subspaces', 'antiderivatives')
+##
+##   Modified by Stephen Flood on 4/15/17  
+##   to focus on where Null(A) and Col(A) are located.
+## 
+
+## originally textbook_ref_exact("Holt Linear Algebra", "4.1","50_58a") \}
+## Original version written by Richard Bayne, <rbayne@howard.edu>
+
+
+
+DOCUMENT();
+
+loadMacros(
+"PGstandard.pl",
+"PGchoicemacros.pl",
+
+#"freemanMacros.pl,
+#"PGgraders.pl",
+);
+
+TEXT(beginproblem());
+# Create and use pop up lists 
+$tf = new_select_list();
+$tf->rf_print_q(~~&pop_up_list_print_q);
+
+# Specify choices presented to students
+
+$tf->ra_pop_up_list( 
+[ No_answer => "?", "T"=>"True", "F"=>"False"] ); 
+
+$a = random(2,3,1);
+$aa = $a+1;
+$b = random(6,9,1);
+$c = random(7,10,1);
+
+# Questions and answers
+$tf -> qa ( 
+"If  \(\  T:R^{$a} \rightarrow R^{$c}  \) is a linear transformation with standard matrix \(A\), then Col(\(A\)) is a subspace of \(R^{$a}\).",
+"F",
+"If  \( \  T:R^{$a} \rightarrow R^{$c} \) is a linear transformation with standard matrix \(A\),  then Col(\(A\)) is a subspace of \(R^{$c}\).",
+"T",
+"If  \(\  T:R^{$a} \rightarrow R^{$c}  \) is a linear transformation with standard matrix \(A\), then Null(\(A\)) is a subspace of \(R^{$a}\).",
+"T",
+"If  \( \  T:R^{$a} \rightarrow R^{$c} \) is a linear transformation with standard matrix \(A\),  then Null(\(A\)) is a subspace of \(R^{$c}\).",
+"F",
+"The union of two subspaces of \(R^n\) forms another subspace of \(R^n\).",
+"F",
+);
+
+# How many questions to use
+$tf->choose(5);
+
+BEGIN_TEXT
+Are the following statements true or false? 
+$BR
+\{ $tf-> print_q \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($tf->ra_correct_ans));
+
+ENDDOCUMENT();

@@ -1,0 +1,86 @@
+## DESCRIPTION
+## Quadratic functions, expressions, and equations
+## ENDDESCRIPTION
+
+
+## BookTitle('')
+## BookChapter('')
+## DBsubject(Algebra)
+## DBchapter(Functions)
+## DBsection(Graphs)
+## Date()
+## Institution(Fort Lewis College)
+## Author(Paul Pearson, adapted by Stephen Flood)
+## MLT(LikeThisF)
+## Level(3)
+## TitleText1(")
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('')
+
+####################################
+#  Initialization
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"PGgraphmacros.pl",
+"PGunion.pl",
+"imageChoice.pl",
+"PGgraders.pl",
+);
+
+TEXT(beginproblem());
+$refreshCachedImages=1;
+
+$showPartialCorrectAnswers = 0;
+
+
+####################################
+# Randomize Variables
+
+
+$k = random(2,5,1); 
+$L = random(1,2,1);
+$a = random(2,4,1);
+
+$ml = new_match_list();
+$ml->qa(
+"`$L +$a e^{-$k x}`", "Decay toward a limiting output",
+"`$L - $a e^{-$k x}`", "Growth toward a limiting output",
+"`$a e^{$k x}`", "Unlimited growth",
+"`$L/(1 +$a e^{-$k x})`", "Logistic growth",
+);
+
+# use pop-up-lists
+$ml->rf_print_q(~~&pop_up_list_print_q);
+# you may need to add more letters D=>"D", etc. 
+$ml->ra_pop_up_list([No_answer=>"?",A=>"A",B=>"B",C=>"C", D=>"D"]);
+
+$ml->choose(4);
+
+
+######################################
+#  Main text
+
+BEGIN_TEXT
+
+
+\{ $ml->print_a() \}
+
+$BR
+
+\{ $ml->print_q() \}
+
+
+END_TEXT
+
+## Answer to First Set of Questions
+ANS(str_cmp($ml->ra_correct_ans));
+
+
+
+
+ENDDOCUMENT();

@@ -1,0 +1,22 @@
+<p style="font-variant:small-caps;text-align:center;">
+Welcome to WebWork at BSU!  
+</p>
+
+<p> 
+<b>How To Use Webwork:</b> 
+Visit 
+<a href="http://webwork.bridgew.edu">http://webwork.bridgew.edu</a>
+for 
+<ul>
+	<li> How to input Mathematics 
+	<li> Frequently Asked Questions.
+	<li> If you have an unanswered question, please contact <a href="mailto:Stephen.Flood@bridgew.edu">Stephen.Flood@bridgew.edu</a>
+</ul>
+
+<b>How to <i>Succeed</i> with WebWork</b>
+<ul>
+	<li> Write down the problem, or print the whole assignment using the "Download PDF" button. 
+	<li> Answer the question <i>by hand on paper</i>.  Save your work, so that you can use it when you <b>study for the exam</b>.  
+	<li> If your answer is incorrect, re-check your work.  
+        <li> If you're still stumped, click the <b>ask the instructor button</b>. Explain what you're trying to do, and what you are stumped on. 
+</ul>

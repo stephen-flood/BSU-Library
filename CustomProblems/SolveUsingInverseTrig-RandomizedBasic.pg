@@ -1,0 +1,60 @@
+## DESCRIPTION
+## Precalculus: Trigonometry
+## ENDDESCRIPTION
+
+## Tagged by cmd6a 5/11/06
+
+## DBsubject(Trigonometry)
+## DBchapter(Analytic trigonometry)
+## DBsection(Solving trigonometric equations numerically)
+## Institution(ASU)
+## MLT(KentMoreLike4)
+## MLTleader(1)
+## Level(3)
+## KEYWORDS('trigonometry','inverse trigonometric functions','inverse trigonometric function')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+"PG.pl",
+"PGbasicmacros.pl",
+"PGchoicemacros.pl",
+"PGanswermacros.pl",
+"PGauxiliaryFunctions.pl",
+"PGasu.pl",
+"extraAnswerEvaluators.pl"
+);
+
+$num=random(14,36,1);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+
+$num = random(17,36,1);
+
+$tag1 = random(0,2,1);
+
+@function =('\sin','\cos','\tan');
+
+$pi = 3.1415927;
+@ans1 = (arcsin(1/$num), arccos(1/$num), arctan(1/$num));
+@ans2=  (pi-arcsin(1/$num),2*pi-arccos(1/$num),pi+arctan(1/$num));
+
+
+TEXT(EV2(<<EOT));
+Solve the equation in the interval \([0,2 \pi]\). 
+If there is more than one solution write them separated by commas.
+
+$PAR
+ \( $function[$tag1] (x)=\dfrac{1}{$num} \) 
+$PAR
+\( x= \)   \{ans_rule(20) \}
+
+EOT
+ANS(number_list_cmp("$ans1[$tag1],$ans2[$tag1]"));
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+

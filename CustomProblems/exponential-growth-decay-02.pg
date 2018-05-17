@@ -1,0 +1,93 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+Context("Numeric")->variables->add(t=>"Real");
+
+
+## variable = random($first,$last,$increment)
+$extraneousrandomvar = random(1,1000,1);
+$extraneousrandomvar2 = random(2,12,2);
+
+
+## Provide the population at two points in time.
+$t1 = Real("0") ; 
+$P1 = random(100,300,50) ; 
+
+$t2 = random(6,8,1) ; 
+$P2 = Real("2*$P1") ; 
+
+
+## Compute growth constant and starting population
+$k = ln($P1/$P2)/($t1-$t2) ;
+$P0 = $P2/(e**($k*$t2)) ;
+
+
+## Compute the time to reach a third population
+$P3 = random(1500,2100,100);
+
+## Evaluate the function at a random point in time
+$t4 = random(9,12,1);
+
+
+
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+You are studying a certain strain of E. Coli in a lab.  You begin your experiment by counting [$P1] cells in a petri dish.  You know that the doubling time of this particular strain is [$t2] hours.  
+
+Assume that the E. Coli is dividing at a constant rate per cell.  
+
+
+(a) Find a function for the number of cells as function of [`t`] hours after your first measurement.   
+     [`P(t) = `] [_______________]{Compute("$P0*e^($k*t)")->cmp()}
+
+(b) Find the number of cells after [$t4] hours.   
+     [___________]{Real("$P0*e^($k*$t4)")} cells.
+
+(c) How long must you wait until you have [$P3] cells?    
+    [`t=`][___________]{ln($P3/$P0)/$k } hours.
+
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

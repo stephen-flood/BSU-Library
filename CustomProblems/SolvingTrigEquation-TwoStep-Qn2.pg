@@ -1,0 +1,60 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+    "contextInequalitiesAllowStrings.pl"
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric")->variables->add(n=>"Real");
+
+
+## variable = random($first,$last,$increment)
+
+$output = "\dfrac{-1}{sqrt(2)}";
+$answerOne = Formula("3pi/4+2*npi");
+$answerTwo = Formula("5pi/4+2*npi");
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+Find [`\theta`] such that [`\sqrt{2}\cdot\cos(\theta) + 1= 0`] .
+
+Solve the trigonometric equation as in the previous example.  Enter the smaller angle in the first blank, and the larger in the second blank.  *Remember* to add [`2\pi\cdot n`] to each answer.
+
+
+[`\theta= `] [______]{Compute("$answerOne")} [`\ or\ `] [`\theta= `] [______]{Compute("$answerTwo")} 
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

@@ -1,0 +1,87 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+$h = random(2,4,2) ; 
+$b = Real("4*$h") ; 
+$c = random(1,3,1) ; 
+
+#$rpm = 780;
+#$radius = 15;
+$rpm = random(700,800,2);
+$radius = random(12,17,1);
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+**How A Car Measures Speed **
+
+Suppose you are driving a vehicle whose tires have *radius* [$radius]", and your wheels are turning at [$rpm] RPM (rotations per minute).  How fast are you going?
+
+*(1) Convert from RPM to Angular Velocity *
+
+Because [$rpm] RPM = [$rpm] full rotations per minute,
+
+Angular Velocity = [____]{Compute("2pi*$rpm")} radians per minute 
+
+[`\phantom{.}`]
+
+
+*(2) Use Angular Velocity to compute Linear Velocity *
+
+Recall: [`\text{Linear Velocity} = \dfrac{\text{arc length}}{\text{time}} = \text{(Angular Velocity)}\cdot \text{(radius)}`] 
+
+[`\phantom{.}`]
+
+Linear Velocity= [____]{Compute("2pi*$rpm*$radius")} inches per minute.
+
+[`\phantom{.}`]
+
+
+*(3) Convert your speed to miles per hour *
+
+(Note that [`63360 \text{ inches} = 1 \text{ mile}`])
+
+Your car's Linear Velocity = [____]{Compute("2pi*$rpm*$radius*60/63360")} miles per hour
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

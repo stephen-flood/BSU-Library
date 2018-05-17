@@ -1,0 +1,112 @@
+## DBsubject(Trigonometry)
+## DBchapter(Trigonometric functions)
+## DBsection(Trigonometric functions of non-special angles)
+## Institution(Univeristy of Connecticut)
+## Author(Stephen Flood)
+## Level()
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"PGML.pl",
+"PGcourse.pl",
+);
+
+
+Context("Numeric");
+$showPartialCorrectAnswers = 1;
+
+$denom = random(3,10,1);
+
+
+$COS=Formula("1/$denom");
+$SIN=Formula("sqrt($denom^2-1)/$denom");
+
+
+
+TEXT(beginproblem());
+
+BEGIN_PGML
+
+
+Suppose that [`u`] is a mystery angle such that [``\cos(u) = \dfrac{1}{[$denom]}``] and [``\sin(u)\text{ is positive.}``]
+
+
+[`\phantom{.}`]
+
+
+Find the following trigonometric functions of [`u`].
+
+[`\sin(u) = `]  [______]{Compute("$SIN")}
+
+[`\cos(u) = `] [______]{Compute("$COS")}
+
+[`\tan(u) = `]  [______]{Compute("$SIN/$COS")}
+
+[`\phantom{.}`]
+
+
+Compute the following trig values using the *basic identities* for sine and cosine.
+
+
+[`\sin(-u) = `]  [______]{Compute("-$SIN")}
+
+[`\cos(-u) = `]  [______]{Compute("$COS")}
+
+[`\tan(-u) = `]  [______]{Compute("-$SIN/$COS")}
+
+
+[`\phantom{.}`]
+
+Compute the following trig values using the *double angle identities* for sine and cosine.
+
+
+[`\sin(2u) = `]  [____________]{Compute("2*$SIN*$COS")}
+
+[`\cos(2u) = `]  [____________]{Compute("2*$COS*$COS-1")}
+
+
+[`\phantom{.}`]
+
+Compute the following trig values using the *sum and difference identities* for sine and cosine.
+
+
+[`\sin(u+\pi) = `]  [______]{Compute("$SIN*cos(pi)+$COS*sin(pi)")}
+
+[`\cos(u+\pi) = `]  [______]{Compute("$COS*cos(pi)-$SIN*sin(pi)")}
+
+[`\tan(u+\pi) = `] [______]{Compute("($SIN*cos(pi)+$COS*sin(pi))/($COS*cos(pi)-$SIN*sin(pi))")}
+
+
+[`\phantom{.}`]
+
+
+
+[`\sin(u+\dfrac{\pi}{2}) = `]  [______]{Compute("$SIN*cos(pi/2)+$COS*sin(pi/2)")}
+
+[`\cos(u+\dfrac{\pi}{2}) = `]  [______]{Compute("$COS*cos(pi/2)-$SIN*sin(pi/2)")}
+
+[`\tan(u+\dfrac{\pi}{2}) = `] [______]{Compute("($SIN*cos(pi/2)+$COS*sin(pi/2))/($COS*cos(pi/2)-$SIN*sin(pi/2))")}
+
+
+
+[`\phantom{.}`]
+
+
+[`\sin(u-8\pi) = `]  [______]{Compute("$SIN")}
+
+[`\cos(u-24\pi) = `]  [______]{Compute("$COS")}
+
+[`\tan(u+6\pi) = `] [______]{Compute("$SIN/$COS")}
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

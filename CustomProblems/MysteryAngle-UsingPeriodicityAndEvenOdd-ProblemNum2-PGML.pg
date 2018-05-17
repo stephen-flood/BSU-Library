@@ -1,0 +1,96 @@
+## DBsubject(Trigonometry)
+## DBchapter(Trigonometric functions)
+## DBsection(Trigonometric functions of non-special angles)
+## Institution(Univeristy of Connecticut)
+## Author(Stephen Flood)
+## Level()
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"PGML.pl",
+"PGcourse.pl",
+);
+
+
+Context("Numeric");
+$showPartialCorrectAnswers = 1;
+$f = Formula("cos^2(x)+sin^2(x)");
+
+
+
+
+$adj=12/13;
+$opp=5/13;
+
+$COS=-$adj;
+$SIN=-$opp;
+
+
+
+TEXT(beginproblem());
+
+BEGIN_PGML
+
+
+Remember that sine and cosine are defined using the unit circle.
+
+[@ image ("MysteryAngle-UsingPeriodicityAndEvenOdd.png", width=>300, height=>300,  tex_size=>600, extra_html_tags=>'alt="Graph of a function."' ) @]*
+
+The [`y`] coordinate of  the intersection with the unit circle is [`\sin(\theta)`], 
+
+and the [`x`] coordinate of the interesction with the unit circle is [`\cos(\theta)`].
+
+[`\phantom{.}`]
+
+Suppose that [`u`] is a mystery angle such that [``\cos(u) = \frac{-12\phantom{-}}{13}``] and [``\sin(u)\text{ is negative.}``]
+
+
+*Note that this is NOT the angle pictured above*, but you may still find the picture useful.
+
+[`\phantom{.}`]
+
+
+As in the previous problem, find all the trigonometric functions of [`\theta`].
+
+[`\sin(u) = `]  [______]{Compute("$SIN")}
+
+[`\cos(u) = `] [______]{Compute("$COS")}
+
+[`\tan(u) = `]  [______]{Compute("$SIN/$COS")}
+
+[`\csc(u) = `] [______]{Compute("1/$SIN")}
+
+[`\sec(u) = `]  [______]{Compute("1/$COS")}
+
+[`\cot(u) = `] [______]{Compute("$COS/$SIN")}
+
+
+[`\phantom{.}`]
+
+
+Compute the following trig values using the basic trigonometric identities.
+
+
+[`\sin(-u) = `]  [______]{Compute("-$SIN")}
+
+[`\cos(-u) = `]  [______]{Compute("$COS")}
+
+
+[`\sin(u-8\pi) = `]  [______]{Compute("$SIN")}
+
+[`\cos(u-24\pi) = `]  [______]{Compute("$COS")}
+
+[`\tan(u+6\pi) = `] [______]{Compute("$SIN/$COS")}
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

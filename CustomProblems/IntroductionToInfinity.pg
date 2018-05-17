@@ -1,0 +1,107 @@
+## DBsubject(Algebra)
+## DBchapter(Quadratic equations and functions)
+## DBsection(Completing the square)
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+$h = random(2,4,2) ; 
+$b = Real("4*$h") ; 
+$c = random(1,3,1) ; 
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+## Describing Eventual Behavior 
+
+When graphing a polynomial, we must describe their "eventual behavior."  
+The [`x`]-axis has two "ends:" an arrow pointing toward [`\infty`] and an arrow pointing toward [`-\infty`].
+
+To describe the "eventual behavior" of [`f(x)`] we examine what happens when you go in each direction. 
+To see where the outputs of [`f(x)`] go as [`x\rightarrow\infty`], we ask "What happens to the [`y`]-values as you plug bigger and bigger *positive* numbers into [`f(x)`]?"  
+We write 
+1. "as [`x\rightarrow \infty`], [`f(x)\rightarrow\infty`]" to say that as you plug bigger and bigger *positive* numbers [`x`] into [`f`], you get bigger and bigger *positive* outputs. 
+2. "as [`x\rightarrow \infty`], [`f(x)\rightarrow-\infty`]" to say that as you plug bigger and bigger *positive* numbers [`x`] into [`f`], you get bigger and bigger *negative* outputs. 
+
+To see where the outputs of [`f(x)`] go as [`x\rightarrow-\infty`], you ask "What happens to the [`y`]-values as you plug bigger and bigger *negative* numbers into [`f(x)`]?"
+
+
+### Eventual Behavior of Even Functions 
+
+For even exponents [`n`], plugging *large positive* numbers into [`x^n`] results in *very large positive* outputs.  
+Therefore, when [`n`] is even, as [`x\rightarrow \infty`], [`f(x)=x^n\rightarrow\infty`].
+
+*E.g.* as [`x\rightarrow\infty`], [`f(x)=x^2\rightarrow`] [_____]{Compute("infinity")}.
+
+
+Plugging large negative numbers into [`x^n`] *also* results in very *large positive* outputs.  
+Therefore, when [`n`] is even, as [`x\rightarrow \infty`], [`f(x)=x^n\rightarrow\infty`].
+
+*E.g.* as [`x\rightarrow-\infty`], [`f(x)=x^2\rightarrow`] [_____]{Compute("infinity")}.
+
+
+### Eventual Behavior of Odd Functions 
+
+For odd exponents [`n`], plugging *large positive* numbers into [`x^n`] results in *very large positive* outputs.  
+Therefore, when [`n`] is odd, as [`x\rightarrow \infty`], [`f(x)=x^n\rightarrow\infty`].
+
+*E.g.* as [`x\rightarrow\infty`], [`f(x)=x^3\rightarrow`] [_____]{Compute("infinity")}.
+
+
+Plugging large negative numbers into [`x^n`] results in very *large negative* outputs.  
+Therefore, when [`n`] is odd, as [`x\rightarrow \infty`], [`f(x)=x^n\rightarrow-\infty`].
+
+
+*E.g.* as [`x\rightarrow-\infty`], [`f(x)=x^3\rightarrow`] [_____]{Compute("-infinity")}.
+
+
+### Eventual Behavior With Coefficients.
+
+To determine the eventual behavior of [`f(x)=-2x^5`], first sketch the graph of [`y=-2x^5`].  Then read the eventual behavior off of the graph
+
+As [`x\rightarrow\infty`], [`f(x)=-2x^5`] goes to  [_____]{Compute("-infinity")}.
+
+
+
+
+As [`x\rightarrow-\infty`], [`f(x)=-2x^5`] goes to  [_____]{Compute("infinity")}.
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

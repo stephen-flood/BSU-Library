@@ -1,0 +1,68 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+$alpha= Formula("pi/3"); 
+$beta= Formula("pi/2-$alpha")->reduce ; 
+$x = random(2,7,1) ; 
+$y = Real("$x*tan($alpha)"); 
+$z = Real("$x/cos($alpha)"); 
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+In the following triangle, suppose that [`\alpha= [$alpha]`]  and that [`x = [$x]`].
+
+[@ image ("TriangleForTrig.png", width=>300, height=>300,  tex_size=>600, extra_html_tags=>'alt="Graph of a function."' ) @]*
+
+Find the remaining angle [`\beta`] and the lengths of the remaining sides [`y,z`].
+
+
+[`\beta= `] [______]{Compute("$beta")}
+
+[`y = `] [______]{Compute("$y")}
+
+[`z = `] [______]{Compute("$z")}
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

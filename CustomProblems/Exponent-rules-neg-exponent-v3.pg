@@ -1,0 +1,74 @@
+# DESCRIPTION
+# Text Goes Here
+# ENDDESCRIPTION
+
+## DBsubject('Algebra')
+## DBchapter('Algebra of real numbers and simplifying expressions')
+## DBsection('Simplifying expressions')
+## KEYWORDS('')
+## TitleText1('Precalculus')
+## EditionText1('5th')
+## AuthorText1('Larson')
+## Section1('P.2')
+## Problem1('39.(b)')
+## Author('Stephen Flood')
+## Institution('UConn')
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"AnswerFormatHelp.pl",
+"PGML.pl",
+##
+##### SPECIAL CONTEXTS FOR LIMITED POLYNOMIALS ####
+"contextLimitedPolynomial.pl",
+"contextPolynomialFactors.pl",
+"contextString.pl",
+##### 
+##
+"PGcourse.pl",
+);
+
+## make sure we're in the context we want
+Context("LimitedPolynomial");
+Context()->variables->add(y=>'Real');
+Context()->variables->add(z=>'Real');
+
+
+$r = random(2,5,1);
+$a = random(2,6,2);
+$b = random(3,5,2);
+$c = random(2,3,1);
+
+#$ra = Real("$r * $a");
+#$rb = Real("$r * $b");
+#$ctor =Compute("$c^($r)");
+
+$answertop=Formula(" ($c)^($r) * x^($a*$r)")->reduce;
+$answerbottom=Formula("  y^($b*$r) ")->reduce;
+
+
+#### The Problem Text ####
+TEXT(beginproblem());
+#TEXT(PGML::Format2(<<'END_PGML'));
+BEGIN_PGML
+
+
+Simplify [`\left( \dfrac{x^{-[$a]}\, y^{[$b]}}{[$c]}\right)^{-[$r]} `] completely.
+
+This yields a fraction of the form [`\dfrac{p}{q}`] where 
+
+[`p`] = [_______________]{$answertop->cmp()} 
+
+[`q`] = [_______________]{$answerbottom->cmp()} 
+
+
+END_PGML
+
+
+#BEGIN_PGML_SOLUTION
+
+#END_PGML_SOLUTION
+
+ENDDOCUMENT();

@@ -1,0 +1,76 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+    "PGchoicemacros.pl",  
+    "parserPopUp.pl", 
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=0;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+
+$popup0 = PopUp(["?", "positive", "negative", "zero"], "positive"); 
+
+  $popup = new_select_list();
+  $popup->rf_print_q(~~&pop_up_list_print_q);
+  $popup->ra_pop_up_list( [ No_answer => "",  Positive => "Positive", Negative => "Negative" ] );
+
+  $popup->qa(
+    "`\ln(\frac{1}{2})`", "Negative",
+    "`\ln(\frac{3}{2})`", "Positive",
+    "`\frac{\ln(3)}{2}`", "Positive",
+    "`\frac{\ln(2)}{\ln(3)}`", "Positive",
+    "`\ln(\frac{2}{3})`", "Negative",
+  );
+
+  $popup->choose(5);
+
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+
+Determine if each of the following is positive or negative.
+
+[@ $popup->print_q() @]*
+
+
+END_PGML
+
+ANS(str_cmp( $popup->ra_correct_ans() )) ;
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

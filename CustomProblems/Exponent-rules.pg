@@ -1,0 +1,74 @@
+# DESCRIPTION
+# Text Goes Here
+# ENDDESCRIPTION
+
+## DBsubject('Algebra')
+## DBchapter('Algebra of real numbers and simplifying expressions')
+## DBsection('Simplifying expressions')
+## KEYWORDS('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+## Author('Stephen Flood')
+## Institution('UConn')
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"AnswerFormatHelp.pl",
+"PGML.pl",
+##
+##### SPECIAL CONTEXTS FOR LIMITED POLYNOMIALS ####
+"contextLimitedPolynomial.pl",
+"contextPolynomialFactors.pl",
+"contextString.pl",
+##### 
+##
+"PGcourse.pl",
+);
+
+## make sure we're in the context we want
+Context("LimitedPolynomial");
+Context()->variables->add(y=>'Real');
+Context()->variables->add(z=>'Real');
+
+
+
+$a = random(2,6,1);
+#$b = random(1,3,2);
+$c = random(2,3,1);
+
+$twicea = Real("2 $a");
+$twiceb = Real("2 $b");
+$ccubed =Compute("$c^3");
+
+$answertop=Formula("x^$twicea * y^2")->reduce;
+$answerbottom=Formula("$ccubed*z^3")->reduce;
+
+
+#### The Problem Text ####
+TEXT(beginproblem());
+#TEXT(PGML::Format2(<<'END_PGML'));
+BEGIN_PGML
+
+
+Simplify [` \dfrac{(x^[$a] y)^2}{([$c]z)^3} `] completely.
+
+This yields a fraction of the form [`\dfrac{p}{q}`] where 
+
+[`p`] = [_______________]{$answertop->cmp()} 
+
+[`q`] = [_______________]{$answerbottom->cmp()} 
+
+
+END_PGML
+
+
+#BEGIN_PGML_SOLUTION
+
+#END_PGML_SOLUTION
+
+ENDDOCUMENT();

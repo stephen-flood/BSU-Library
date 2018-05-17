@@ -1,0 +1,90 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('College Algebra')
+## AuthorText1('Stitz, Carl')
+## EditionText1('3rd Ed')
+## Section1('6.5')
+## Problem1('14')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+Context("Numeric")->variables->add(t=>"Real");
+
+
+## variable = random($first,$last,$increment)
+
+## Provide the population at two points in time.
+$t1 = Real("0"); 
+$P1 = random(200,500,50) ; 
+
+$t2 = Real("5.27") ; 
+$P2 = Real("$P1/2");
+
+
+## Compute growth constant and starting population
+$k = ln($P1/$P2)/($t1-$t2) ;
+$P0 = $P2/(e**($k*$t2)) ;
+
+
+## Compute the time to reach a third population
+$P3 = random(50,100,50);
+
+## Evaluate the function at a random point in time
+$t4 = random(9,12,1);
+
+
+
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+You acquire a [$P1] gram sample of Cobalt 60, a radioactive isotope used in food irradiaiton.  Cobalt 60 has a half life of 5.27 years.
+
+
+(a) Find a function for the amount of Cobalt 60 remaining after [`t`] years.   
+     [`P(t) = `] [_______________]{Compute("$P0*e^($k*t)")->cmp()}
+
+(b) How long will it take until you have only [$P3] grams remaining?    
+    [`t=`][___________]{ln($P3/$P0)/$k } years.
+
+
+(d) How long will it take for 90% of the material to decay?    (*Hint:* If 90% of the material decays, how much is left?)    
+    [`t=`][___________]{ ln(0.1)/$k } years.
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+
+

@@ -1,0 +1,173 @@
+## DESCRIPTION
+## Quadratic functions, expressions, and equations
+## ENDDESCRIPTION
+
+
+## BookTitle('')
+## BookChapter('')
+## DBsubject(Algebra)
+## DBchapter(Functions)
+## DBsection(Graphs)
+## Date()
+## Institution(Fort Lewis College)
+## Author(Paul Pearson, adapted by Stephen Flood)
+## MLT(LikeThisF)
+## Level(3)
+## TitleText1(")
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('')
+
+####################################
+#  Initialization
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"PGgraphmacros.pl",
+"PGML.pl",
+"PGunion.pl",
+"imageChoice.pl",
+"PGgraders.pl",
+);
+
+TEXT(beginproblem());
+$refreshCachedImages=1;
+
+####################################
+#  Setup
+
+$dim = 8;
+$xmin = -$dim;
+$xmax =  $dim;
+$ymin = -$dim;
+$ymax =  $dim;
+$labelsep = 0.5;
+
+
+
+foreach my $i (0..5) {
+  $gr[$i] = init_graph($xmin,$ymin,$xmax,$ymax,axes=>[0,0],grid=>[$xmax-$xmin,$ymax-$ymin],size=>[275,275]);
+  $gr[$i]->lb('erase');
+  $gr[$i]->lb( new Label($xmax-$labelsep,$labelsep,'x','black','center','middle'));
+  $gr[$i]->lb( new Label($labelsep,$ymax-$labelsep,'y','black','center','middle'));
+  foreach my $j (2,4, 6) {
+    $gr[$i]->lb( new Label( $j,$ymin+$labelsep, $j,'black','center','middle'));
+    $gr[$i]->lb( new Label(-$j,$ymin+$labelsep,-$j,'black','center','middle'));
+    $gr[$i]->lb( new Label($xmin+$labelsep, $j, $j,'black','center','middle'));
+    $gr[$i]->lb( new Label($xmin+$labelsep,-$j,-$j,'black','center','middle'));
+  }
+#  add_functions($gr[$i],$f[$i]);
+}
+
+$F[0] = " \Big( 4t^2 + 1, t - 2 \Big) ";
+$fx[0] = sub { my $t = shift();  return 4*($t**2) + 1 ; };
+$fy[0] = sub { my $t = shift();  return $t - 2; };
+$f[0] = new Fun( $fx[0], $fy[0], $gr[0] );
+$f[0]->domain(-2,2);
+
+$F[1] = " \Big( 2\cos(t) + 5 , 2\sin(t) -2  \Big)";
+$fx[1] = sub { my $t = shift();  return 2*cos($t) + 5; };
+$fy[1] = sub { my $t = shift();  return 2*sin($t) - 2 ; };
+$f[1] = new Fun( $fx[1], $fy[1], $gr[1] );
+$f[1]->domain(0,6.2832);
+
+#$F[2] = " \Big( t-2, 4t^2 + 1  \Big)";
+#$fx[2] = sub { my $t = shift();  return $t-2; };
+#$fy[2] = sub { my $t = shift();  return 4*($t**2) + 1; };
+$F[2] = " \Big( t^2-2t, t^3 + 3t^2  \Big)";
+$fx[2] = sub { my $t = shift();  return $t**2-2*$t; };
+$fy[2] = sub { my $t = shift();  return ($t**3) + 3*$t**2; };
+$f[2] = new Fun( $fx[2], $fy[2], $gr[2] );
+$f[2]->domain(-2,2);
+
+$F[3] = " \Big( 2\cos(t), 5\sin(t)  \Big)";
+$fx[3] = sub { my $t = shift();  return 2*cos($t); };
+$fy[3] = sub { my $t = shift();  return 5*sin($t); };
+$f[3] = new Fun( $fx[3], $fy[3], $gr[3] );
+$f[3]->domain(0,6.2832);
+
+$F[4] = " \Big( t^3 + t, t^2 - t   \Big)";
+$fx[4] = sub { my $t = shift();  return $t**3 + $t; };
+$fy[4] = sub { my $t = shift();  return $t**2 - $t ; };
+$f[4] = new Fun( $fx[4], $fy[4], $gr[4] );
+$f[4]->domain(-3,3);
+
+$F[5] = " \Big( 2\sin(t) - 5 , 2\cos(t) + 2 \Big) ";
+$fx[5] = sub { my $t = shift();  return 2*sin($t) - 5; };
+$fy[5] = sub { my $t = shift();  return 2*cos($t) + 2 ; };
+$f[5] = new Fun( $fx[5], $fy[5], $gr[5] );
+$f[5]->domain(0,6.2832);
+
+
+
+@QA = ();
+foreach my $i (0..5) { push( @QA, "\($F[$i]\)",  $gr[$i] ); }
+
+$ml = new_image_match_list(
+  link => 1,                #  do not link to separate image
+  size => [225,225],        #  image width, height in pixels
+  tex_size => 310,          #  tex size in precent times 10
+  columns => 3,             #  number of columns
+  separation => 20,         #  space between images
+);
+
+$ml->rf_print_q(~~&pop_up_list_print_q); # use pop-up-lists
+$ml -> ra_pop_up_list(
+[ No_answer=>"?", A=>"A", B=>"B", C=>"C", D=>"D", E=>"E", "F"=>"F" ] );
+
+$ml->qa(@QA);               #  set the questions and answers
+$ml->choose(4);               #  select 4 of them to test
+$ml->choose_extra(2);       #  and show the other 2 graphs
+
+
+######################################
+#  Main text
+
+BEGIN_TEXT
+\{
+ColumnTable(
+"Match the each graph with its corresponding equation.".
+$ml->print_q() # no period!
+, # comma!
+$BCENTER.
+$ml->print_a().
+$BR.
+"(Click on a graph to enlarge it)".
+$ECENTER # no period!
+, # comma!
+indent => 0, separation => 30, valign => "TOP"
+)
+\}
+END_TEXT
+
+BEGIN_PGML_HINT
+
+There are *two* ways to match a function with its graph
+
+1. If the equation is familiar, you can often recognize the shape of its graph from the equation.
+
+2. You can also plug in small values for [`t`] into the [`x`] and [`y`] components to plot several points on the curve.  Once you have enough points, you will be able to decide which curve fits the parametric equation best.
+
+
+END_PGML_HINT
+
+
+
+
+######################################
+#  Answer evaluation
+
+install_problem_grader(~~&custom_problem_grader_fluid);
+$ENV{'grader_numright'} = [2,4];
+$ENV{'grader_scores'} = [0.5,1];
+$ENV{'grader_message'} = "You can earn " .
+"50% partial credit for 2 - 3 correct answers.";
+
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($ml->ra_correct_ans));
+
+ENDDOCUMENT();

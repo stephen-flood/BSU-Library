@@ -1,0 +1,108 @@
+#DESCRIPTION
+##  Algebra: Properties of polynomial functions
+##ENDDESCRIPTION
+
+
+## DBsubject(Algebra)
+## DBchapter(Polynomial equations and functions)
+## DBsection(Inequalities involving polynomials)
+## Date(01/07/2010)
+## Institution(University of Minnesota)
+## Author(Justin Sukiennik)
+## MLT(Intercepts_solve)
+## Level(2)
+## TitleText1('Algebra for College Students')
+## AuthorText1('Kaufmann, Schwitters')
+## EditionText1('8')
+## Section1('9.4')
+## Problem1('42')
+## KEYWORDS('algebra', 'x-intercepts', 'y-intercepts', 'functions', 'polynomials')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+   "PGstandard.pl",     # Standard macros for PG language
+   "MathObjects.pl",
+"PGML.pl",
+"PGcourse.pl",
+);
+
+##############################################################
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+##############################################################
+
+$a = random(2,8,2);
+
+Context("Numeric");
+Context()->strings->add(none=>{},EmptySet=>{alias=>"none"});
+
+$b = Compute("$a+2");
+$c = Compute("($a^5)*$b^2");
+
+$f = Formula("(x+$a)(x-$b)^3")->reduce;
+
+$an1 = Point(0,$c);
+$an2a = Point(-$a,0);
+$an2b = Point($b,0);
+
+$ans1 = List($an1);
+$ans2 = List($an2a,$an2b);
+
+Context("Interval"); 
+
+$pos1 = Interval("(-$a,inf)");
+$neg1 = Interval("(-inf,-$a)");
+$pos2 = Interval("($b,inf)");
+$neg2 = Interval("(-inf,$b)");
+
+$allpos = $pos1->intersect($pos2);
+$allneg = $neg1->intersect($neg2);
+$halfpos1= $pos1->intersect($neg2);
+$halfpos2= $pos2->intersect($neg1);
+
+$positive=Union("$allpos U $allneg");
+$negative=Union("$halfpos1 U $halfpos2");
+
+##############################################################
+
+Context()->texStrings;
+BEGIN_PGML
+Let [`f(x) = [$f]`].  Find the [`y`]-intercept(s), the [`x`]-intercept(s), the values of [`x`] where [`f(x)>0`], and the values of [`x`] where [`f(x)>0`]. 
+
+[`1.`] Find the [`y`]-intercept(s). List your answers as points in the form [`(a,b)`]. 
+
+Answer (separate by commas): [____________]{($ans1)->cmp(showHints=>0,showTypeWarnings=>0)}
+
+
+[`2.`] Find the [`x`]-intercept(s). List your answers as points in the form [`(a,b)`]. 
+
+Answer (separate by commas):  [____________]{($ans2)->cmp(showHints=>0,showTypeWarnings=>0)}
+
+
+[`3.`]  What are the values of [`x`]  where  [`f(x)>0`]?
+
+Answer (in interval notation):  [____________]{($positive)->cmp()}
+
+
+[`4.`] What are the values of [`x`] where [`f(x)<0`] ?
+
+Answer (in interval notation): [____________]{($negative)->cmp()}
+
+
+END_PGML
+Context()->normalStrings;
+
+##############################################################
+
+Context("Numeric");
+Context("Interval");
+
+ENDDOCUMENT();

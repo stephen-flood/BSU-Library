@@ -1,0 +1,104 @@
+## DESCRIPTION
+## Parametric equations: parametric curve in space
+## ENDDESCRIPTION
+
+## DBsubject(Parametrizing Curves)
+## DBchapter()
+## DBsection()
+## Date(01/21/2017)
+## Institution(BSU)
+## Author(Stephen Flood, modifying template by Paul Pearson)
+## MO(1)
+## KEYWORDS('parametric', 'curve in space')
+
+
+###########################
+#  Initialization
+
+DOCUMENT();      
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"parserMultiAnswer.pl",
+"AnswerFormatHelp.pl",
+"PGML.pl",
+"PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+$showPartialCorrectAnswers = 0;
+
+
+##########################
+#  Setup
+
+Context("Numeric");
+Context()->variables->are(t=>"Real", x=>"Real", y=>"Real");
+Context()->variables->set(t=>{limits=>[0,10]});
+
+
+## THE CANNONICAL ANSWER (displayed as "correct answer") ##
+$a = random(2,5,1);
+$b = random(-3,3,2);
+$d = $b + random(-3,3,2);
+$x = Formula("$a * cos(t) + $b")->reduce;
+$y = Formula("$a * sin(t) + $d")->reduce;
+$cartesian= Formula(" ( (x - $b) )^2 + ( (y-$d) )^2 ")->reduce;
+$RHS = Formula("($a)**2");
+
+## Prevent students from using variables x or y in their answers
+Context()->variables->remove("x","y");
+
+
+## check the *students* answer 
+$multians = MultiAnswer($x, $y )->with(
+  singleResult => 1,
+  checker => sub {
+      my ( $correct, $student, $self ) = @_;
+      my ( $xstu, $ystu ) = @{$student};
+      return 0 unless $xstu->isFormula;
+## INSERT CARTESIAN EQUATION HERE ##  
+      if (  ( ($xstu - $b) )**2 + ( ($ystu - $d) )**2 == ($a)**2 ) {
+            return 1;
+      } else {
+            return 0;
+      }
+  }
+);
+
+
+##########################
+#  Main Text 
+
+BEGIN_PGML
+Find a parametrization of the curve [`[$cartesian] =  [$RHS] `]
+in the [`xy`]-plane.  
+
+Use [` t `] as the 
+parameter for all of your answers.
+
+[` x(t) = `] [______________]{$multians} [@ AnswerFormatHelp("formulas") @]*  
+[` y(t) = `] [______________]{$multians} [@ AnswerFormatHelp("formulas") @]*  
+
+END_PGML
+
+
+########################
+#  Answer Evaluation
+
+
+#ANS($multians->cmp());
+
+
+############################
+#  Solution
+
+#BEGIN_PGML_SOLUTION
+#Solution explanation goes here.
+#END_PGML_SOLUTION
+
+COMMENT('Uses PGML.');
+
+ENDDOCUMENT();

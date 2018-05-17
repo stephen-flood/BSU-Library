@@ -1,0 +1,111 @@
+DOCUMENT();
+
+loadMacros(
+"PGstandard.pl", 
+"MathObjects.pl", 
+"PGunion.pl",
+"parserMultiAnswer.pl",
+"PGcourse.pl",
+"parserDifferenceQuotient.pl",
+"contextFraction.pl",
+"contextLimitedRadical.pl",
+);
+
+TEXT(beginproblem());
+Context("Numeric")->variables->are(x=>"Real",h=>"Real");
+Context()->{error}{msg}{"Operands of '*' can't be words"} = " ";
+
+$m = 1;
+$seedn = random(3,8,2);
+$seedi = random(1,5,1);
+$n = Real(" $seedn * $m ");
+$i = Real(" $seedi * $m ");
+$a = Real("(($i)^2 - $n)/($m)"); # To ensure that f(a) is an integer
+
+
+Context("LimitedRadical");
+
+$f = Formula("root(2,x)");
+$fah = Formula("root(2,$n + h)")->reduce;
+$fa = $f->eval(x=>$a);
+
+$multnum = Formula("($fah-$fa)*($fah+$fa)")->reduce;
+
+#$fraction = "\frac{$f - $fa}{x-$a} \cdot \frac{$f + $fa}{$f + $fa} ";
+
+
+$num = Formula(" $m ");
+
+
+$differencequotient = Formula(" $m/($fah + $fa) ");
+
+Context()->{error}{msg}{"You must simplify your answer further"} 
+= "You must rationalize the numerator, and fully simplify your answer";
+
+
+Context("Numeric");
+
+$limit = Formula(" $m/($fa + $fa) ");
+
+$line = Formula("$limit (x - $a) + $fa");
+
+# 
+#  Display the fraction and answer blanks nicely
+#
+#Context()->texStrings;
+#if ($displayMode eq 'TeX') {
+#  $showfraction =
+#  "\[=\lim_{x\rightarrow #$a}".ans_rule(10).ans_rule(10)."=".ans_rule(10)."\]";
+#} else {
+#  $showfraction =
+#  ColumnTable(
+#  "\(   = \lim_{x\rightarrow $a} \)",
+#  ans_rule(10).$BR.$HR.ans_rule(10),
+#  indent => 0, separation => 10, valign => "MIDDLE"
+#  );
+#}
+Context()->normalStrings;
+
+Context()->texStrings;
+
+BEGIN_TEXT
+
+Let \( f(x) = $f \).  
+
+
+$BR
+$BR
+
+$BBOLD PROBLEM UNDER DEVELOPMENT: Do not use $EBOLD 
+
+$BR 
+$BR 
+$BR 
+(a) Use the limit definition to find the derivative of \(f\) at \($a\).
+    (First, simplify the difference quotient.  Then, take the limit.)
+
+$BR
+$BR
+$BR 
+\(\displaystyle \lim_{x\rightarrow $a} \frac{$f - $fa}{x-$a} \quad = \quad \lim_{x\rightarrow $a} \) \{ans_rule(10)\} \( \quad  =\quad \)\{ans_rule(10)\}
+
+$BR 
+$BR 
+$BR 
+$BR 
+
+(b) Find  the equation of the line tangent to \(f\) at \(a\)
+$PAR
+
+\(y = \)\{ans_rule(10)\}
+
+END_TEXT
+
+$showPartialCorrectAnswers = 1;
+
+#ANS( $num->cmp );
+ANS( $differencequotient->cmp );
+ANS( $limit->cmp );
+ANS( $line->cmp  );
+
+ENDDOCUMENT();

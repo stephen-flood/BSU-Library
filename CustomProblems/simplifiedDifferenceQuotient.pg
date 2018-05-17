@@ -1,0 +1,125 @@
+##DESCRIPTION
+##  Describe the type of problem!  
+##ENDDESCRIPTION
+
+##KEYWORDS('custom', 'in-progress')
+
+## DBsubject('Subject')
+## DBchapter('Chapter')
+## DBsection('Section')
+## Date('8/26/2016')
+## Author('BSU Faculty')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+   "PGstandard.pl",     # Standard macros for PG language
+   "MathObjects.pl",
+    "PGML.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+    "contextLimitedPolynomial.pl",
+);
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+#### Set the Context ####
+Context("Numeric");
+# Accept submissions as correct if they differ from the correct answer given below by 1% or less. 
+Context()->flags->set(tolerance => 0.01);
+
+# These contexts restrict the acceptable format of certain answers
+# Use loadMacros("contextABCD.pl"); to make the context available for a WeBWorK question. 
+#
+# contextFraction.pl  
+# 	Context("Fraction"); Context("Fraction-NoDecimals"); #Context("LimitedFraction"); Context("LimitedProperFraction");
+#
+# contextLimitedPolynomial.pl
+# 	Context("LimitedPolynomial");   # Allow only entry of expanded polynomials
+#
+# contextLimitedPowers.pl
+#       LimitedPowers::NoBaseE(); LimitedPowers::OnlyIntegers(); LimitedPowers::OnlyPositiveIntegers(); LimitedPowers::OnlyNonNegativeIntegers();
+#      
+# contextString.pl
+#       Use this context to allow restricted short answer (no mathematical symbols) questions.
+#       Feedback is provided if the response contains strings that are not allowed. 
+#
+# See also:
+# 	http://webwork.maa.org/wiki/Specialized_contexts#.V8CS8lQko2w
+
+
+##############################################################
+#
+#  Setup
+#
+#  For details, see http://webwork.maa.org/wiki/Introduction_to_MathObjects#.V8CSFFQko2w
+#
+#  (Initialize your variables here)
+#
+
+$pi = Real("pi");
+
+
+$a = non_zero_random(-2,2,1);
+$b = non_zero_random(-3,3,1);
+$c = non_zero_random(-5,5,1);
+
+#$e = random(2,2,1);
+
+$f = Compute("$a*x^2 + $b*x + $c")->reduce();
+
+
+$fofone=Compute("$a*1^2 + $b*1 + $c");
+
+$coeff1=(2*$a+$b);
+$coeff2=($a+$b + $c);
+
+$fxplus1 = Compute("$a*x^2 + $coeff1*x+$coeff2");
+
+
+
+$diffq = Compute("$a*x + $b");
+
+Context("LimitedPolynomial");   # Allow only entry of expanded polynomials
+
+
+
+##############################################################
+#
+
+
+######################################################################
+BEGIN_PGML
+
+Let [`f(x) = [$f]`].
+
+1. Compute [`f(0)`] = [________]{"$c"}
+
+2. Compute [`f(1)`] = [________]{"$fofone"}
+
+3. Simplify [`f(x + 1)`] = [________]{"$fxplus1"}
+
+4. Simplify [`\dfrac{ f(x) - f(0)}{x}`].
+   [____________]{"$diffq"}
+
+
+
+END_PGML
+######################################################################
+
+ENDDOCUMENT();        

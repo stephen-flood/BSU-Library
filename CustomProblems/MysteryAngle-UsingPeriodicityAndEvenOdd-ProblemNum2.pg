@@ -1,0 +1,172 @@
+## DBsubject(Trigonometry)
+## DBchapter(Trigonometric functions)
+## DBsection(Trigonometric functions of non-special angles)
+## Institution(Univeristy of Connecticut)
+## Author()
+## Level()
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+"PG.pl",
+"PGbasicmacros.pl",
+"PGchoicemacros.pl",
+"PGanswermacros.pl",
+"PGauxiliaryFunctions.pl"
+);
+
+
+TEXT(beginproblem());
+
+
+$adj=12/13;
+$opp=5/13;
+
+$COS=-$adj;
+$SIN=-$opp;
+
+TEXT(EV2(<<EOT));
+
+
+
+Remember that sine and cosine are defined using the unit circle.
+$BR
+\{ image ("MysteryAngle-UsingPeriodicityAndEvenOdd.png", width=>300, height=>300,  tex_size=>600, extra_html_tags=>'alt="Graph of a function."' ) \}
+
+$BR
+The \(y\) coordinate of  the intersection with the unit circle is \(\sin(\theta)\), 
+$BR
+and the \(x\) coordinate of the interesction with the unit circle is \(\cos(\theta)\).
+
+$BR$BR$BR
+
+In this problem, you will use triangle trigonometry to use the given information to find all 6 trigonometric values.  
+
+Suppose that \(u\) is a mystery angle such that 
+ \[\cos(u) = \frac{-12}{13}\]
+and \[\sin(u)\text{ is negative.}\]
+
+$BR
+$BBOLD Note that this is NOT the angle pictured above$EBOLD, but you may still find the picture useful.
+
+
+$BR
+$BR
+
+First, find the lengths of the triangle used to compute the trig functions.
+
+$BR
+$BR
+\(hypotenuse = \) \{ ans_rule(12) \}
+EOT
+ANS(num_cmp("1"));
+TEXT(EV2(<<EOT));
+
+$BR
+
+\(opposite = \) \{ ans_rule(12) \}
+EOT
+ANS(num_cmp( $opp  ));
+TEXT(EV2(<<EOT));
+
+$BR
+
+\(adjacent = \) \{ ans_rule(12) \}
+EOT
+ANS(num_cmp(  $adj ));
+TEXT(EV2(<<EOT));
+
+$BR
+$BR
+
+Then use this triangle to find the remaining trigonometric functions.
+
+$BR
+$BR
+
+\(\sin(u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($SIN));
+
+TEXT(EV2(<<EOT));
+$BR
+\(\cos(u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($COS));
+
+TEXT(EV2(<<EOT));
+$BR
+\(\tan(u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($SIN/$COS));
+
+TEXT(EV2(<<EOT));
+$BR
+\(\csc(u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp(1/$SIN));
+
+TEXT(EV2(<<EOT));
+$BR
+\(\sec(u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp(1/$COS));
+
+TEXT(EV2(<<EOT));
+$BR
+\(\cot(u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($COS/$SIN));
+TEXT(EV2(<<EOT));
+
+
+$BR
+$BR
+Finally, compute the following trig values using the basic trigonometric identities.
+$BR
+$BR
+
+
+$BR
+\(\sin(-u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp(-$SIN));
+
+
+TEXT(EV2(<<EOT));
+$BR
+\(\cos(-u) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($COS));
+
+
+TEXT(EV2(<<EOT));
+$BR
+\(\sin(u+2\pi) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($SIN));
+
+
+TEXT(EV2(<<EOT));
+$BR
+\(\cos(u+8\pi) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($COS));
+
+
+
+TEXT(EV2(<<EOT));
+$BR
+\(\tan(u-42\pi) = \)  \{ ans_rule(12) \}
+EOT
+ANS(num_cmp($SIN/$COS));
+
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

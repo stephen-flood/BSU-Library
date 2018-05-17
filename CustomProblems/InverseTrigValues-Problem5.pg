@@ -1,0 +1,109 @@
+
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+$refreshCachedImages=1;
+
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+##### POPUP LISTS ########################
+# the arguments of PopUp are [list of answers], 
+#    correct answer
+$popup = PopUp(["?", "left", "right"], "left");
+## EXPLAINED at http://webwork.maa.org/moodle/mod/forum/discuss.php?d=2743&parent=6124
+#########################################
+
+
+
+
+## Set up graph to illustrate correct angles 
+$startangle = 0;
+$endangle = pi;
+##
+$gr= init_graph(-5.5,-5.5,5.5,5.5,axes=>[0,0],size=>[300,300]);
+$gr->lb('reset');
+$gr->lb( new Label(5.2,0.2,'x','black','center','middle'));
+$gr->lb( new Label(0.2,5.2,'y','black','center','middle'));
+$gr->new_color("lightblue",214,230,244);
+$gr->new_color("darkblue", 100,100,255);
+$gr->new_color("lightred",  245,234,229); # light red-purple
+$gr->new_color("darkred",   159, 64, 16); # red-brown
+
+## -pi/2 to pi/2
+#add_functions($gr,
+#"sqrt(9-x^2) for x in <0,3> using color:darkred and weight:2",
+#"-sqrt(9-x^2) for x in <0,3> using color:darkred and weight:2",
+#);
+#$gr->moveTo(0,-0);
+#$gr->lineTo(0,-3,"darkred",2);
+#$gr->moveTo(0,0);
+#$gr->lineTo(0,3,"darkred",2);
+#$gr->fillRegion([0+0.5,0.1,"lightred"]);
+#$gr->lb( new Label(0.75,4,'pi/2','black','center','middle'));
+#$gr->lb( new Label(0.75,-4,'-pi/2','black','center','middle'));
+
+## 0 to pi
+add_functions($gr,"sqrt(9-x^2) for x in <-3,3> using color:darkblue and weight:2",);
+$gr->moveTo(-3,0);
+$gr->lineTo(3,0,"darkblue",2);
+$gr->fillRegion([0+0.5,0.1,"lightblue"]);
+$gr->lb( new Label(4,0.2,'0','black','center','middle'));
+$gr->lb( new Label(-4,0.2,'pi','black','center','middle'));
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+Recall that [`\cos^{-1}\left(\dfrac{-1}{2}\right) = \theta`] means that [`\theta`] is in [` \left[0,\pi \right] `] *and* [`\dfrac{-1}{2} = \cos(\theta)`]
+
+[@ image( insertGraph($gr) ,  width=>250, height=>250, tex_size=>250 ) @]*
+
+[`\phantom{.}`]
+
+To compute [`\cos^{-1}\left(\dfrac{-1}{2}\right)`], we find an angle in in [` \left[0,\pi \right] `] that has 
+1. Reference angle [_____]{Compute("pi/3")->cmp()}, and 
+2. The [`x`]-value on the unit circle is to the [______]{$popup} of the [`y`]-axis.
+
+[`\phantom{.}`]
+
+Therefore  [`\cos^{-1}\left(\dfrac{-1}{2}\right) = `] [____]{Compute("2pi/3")->cmp()};
+
+END_PGML
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+

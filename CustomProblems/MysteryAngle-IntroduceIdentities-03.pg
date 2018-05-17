@@ -1,0 +1,69 @@
+## DBsubject(Trigonometry)
+## DBchapter(Trigonometric functions)
+## DBsection(Trigonometric functions of non-special angles)
+## Institution(Univeristy of Connecticut)
+## Author(Stephen Flood)
+## Level()
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"PGML.pl",
+"PGcourse.pl",
+);
+
+
+Context("Numeric");
+$showPartialCorrectAnswers = 1;
+
+$numu = random(1,3,1);
+$denomu = random(4,10,1);
+
+$COSu=Formula("$numu/$denomu");
+$SINu=Formula("sqrt($denomu^2-$numu^2)/$denomu");
+$insideofsqrtu=Formula("$denomu^2-$numu^2");
+
+
+$numv = random(1,3,1);
+$denomv = random(4,10,1);
+
+$COSv=Formula("$numv/$denomv");
+$SINv=Formula("sqrt($denomv^2-$numv^2)/$denomv");
+$insideofsqrtv=Formula("$denomv^2-$numv^2");
+
+
+
+TEXT(beginproblem());
+
+BEGIN_PGML
+
+
+Suppose that [`u`] is a mystery angle such that [``\cos(u) = \dfrac{[$numu]}{[$denomu]}``] and [``\sin(u)=\dfrac{\sqrt{[$insideofsqrtu]}}{[$denomu]}``]
+
+
+[`\phantom{.}`]
+
+
+##Half Angle Identities 
+
+Suppose that [`\sin(\frac{u}{2})`] is positive.  Use the identity [`\sin(\frac{u}{2}) = \pm\sqrt{\dfrac{1+\cos(u)}{2}}`] to compute 
+
+[`\sin(\frac{u}{2}) = `] [____________________________________]{Compute("sqrt( ( 1+$COSu )/2 )")}
+
+Suppose that [`\cos(\frac{u}{2})`] is positive.  Use the identity [`\cos(\frac{u}{2}) = \pm\sqrt{\dfrac{1-\cos(u)}{2}}`] to compute 
+
+[`\cos(\frac{u}{2}) = `] [____________________________________]{Compute("sqrt( ( 1-$COSu )/2 )")}
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

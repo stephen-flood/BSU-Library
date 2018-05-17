@@ -1,0 +1,210 @@
+## DESCRIPTION
+## Trigonometry: proving trig identities
+## ENDDESCRIPTION
+
+
+## DBsubject(Trigonometry)
+## DBchapter(Analytic trigonometry)
+## DBsection(Using and proving basic identities)
+## Date(2011)
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## MLT()
+## MLTleader()
+## Level(3)
+## KEYWORDS('trigonometry', 'proving trig identities')
+
+## Using a multipart template created by Paul Pearson, and modified by Stephen Flood
+
+DOCUMENT();
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+);
+
+TEXT(beginproblem());
+
+$showPartialCorrectAnswers = 1;
+
+
+################ ################ ################
+# Adjust strings to prevent trivial answers
+
+Context("Numeric")->variables->are(t=>"Real");
+
+Context()->functions->remove("sin","cos","tan","csc","sec","cot");
+
+package NewFunc;
+## this next line makes the function a 
+## function from reals to reals
+our @ISA = qw(Parser::Function::numeric);
+sub sin {  shift; my $x = shift;  return CORE::exp($x*sqrt(2) + 1);    }
+sub cos {  shift; my $x = shift;  return CORE::exp($x*sqrt(3) + 1);    }
+sub tan {  shift; my $x = shift;  return CORE::exp($x*sqrt(5) + 1);    }
+sub csc {  shift; my $x = shift;  return CORE::exp($x*sqrt(7) + 1);    }
+sub sec {  shift; my $x = shift;  return CORE::exp($x*sqrt(11) + 1 );    }
+sub cot {  shift; my $x = shift;  return CORE::exp($x*sqrt(13) + 1);    }
+package main;
+## Make it work on formulas as well as numbers
+#sub sin {Parser::Function->call('sin',@_)} # if uncommented, this line will generate error messages
+#sub cos {Parser::Function->call('cos',@_)} # if uncommented, this line will generate error messages
+sub tan {Parser::Function->call('tan',@_)} 
+sub csc {Parser::Function->call('csc',@_)} 
+sub sec {Parser::Function->call('sec',@_)} 
+sub cot {Parser::Function->call('cot',@_)} 
+##  Add the new functions to the Context
+Context()->functions->add( sin=> {class => 'NewFunc', TeX => '\sin'}, );
+Context()->functions->add( cos => {class => 'NewFunc', TeX => '\cos'}, );
+Context()->functions->add( tan => {class => 'NewFunc', TeX => '\tan'}, );
+Context()->functions->add( csc => {class => 'NewFunc', TeX => '\csc'}, );
+Context()->functions->add( sec => {class => 'NewFunc', TeX => '\sec'}, );
+Context()->functions->add( cot => {class => 'NewFunc', TeX => '\cot'}, );
+################ ################ ################
+
+
+Context()->strings->add(Yes=>{},No=>{});
+$strAns = String('Yes');
+
+
+
+###################################
+#  Setup
+
+
+#
+#  You manually define the answers
+#
+@answers = ();
+$answers[1] = String('Yes');
+$answers[2] = Formula("tan(t)");
+$answers[3] = Formula("sec^2(t)-1");
+$answers[4] = Formula("tan(t)*sec^2(t)");
+$answers[5] = Formula("tan(t)");
+
+
+#
+#  Automatic configuration for answer evaluation
+#
+@ans_eval = ();
+@scores = ();
+foreach my $i (1..$#answers) {
+  $ans_eval[$i] = $answers[$i] ->cmp();
+  $ans_hash[$i] = $ans_eval[$i]->evaluate($inputs_ref->{ANS_NUM_TO_NAME($i)});
+  $scores[$i]   = $ans_hash[$i]->{score};
+}
+
+
+
+###########################################
+#  Main text and answer evaluation part 1
+
+Context()->texStrings;
+BEGIN_TEXT
+${BBOLD}Three part problem:${EBOLD}
+$BR
+Verify the following identity:
+
+\[ \tan^3(t) = \tan(t)\cdot\sec^2(t)-\tan(t)\]
+
+
+$PAR
+$BR
+First, attempt to prove the identity yourself, by hand.  On the exam, nobody will be there to give you "hints".  
+$BR
+Next, enter \(Yes\) below, and we will go through the proof step-by-step.
+
+$BR
+$BR
+Have you attempted the problem by hand first?  \{ ans_rule(10)\}
+
+END_TEXT
+Context()->normalStrings;
+
+ANS( $ans_eval[1] );
+
+
+
+##########################################
+#  Main text and answer evaluation part 2
+
+if ($scores[1]==1) {
+
+Context()->texStrings;
+BEGIN_TEXT
+$BR
+$BR
+
+It is often best to start with the "more complicated" side.  
+In this case the left side appears is more "complicated" because although it has fewer terms, it is being raised to a larger power.  
+$BR
+$BR
+We don't have any way to rewrite \(\tan^3(t)\), so we begin by rewriting the expression to find a \(\tan^2(t) \) term.
+$BR
+\(  \tan^3(t) = \) \{ ans_rule(10) \} \( \cdot  \tan^2(t) \)
+
+END_TEXT
+Context()->normalStrings;
+
+ANS( $ans_eval[2] );
+
+}  # end if
+
+ 
+##########################################
+#  Main text and answer evaluation part 3
+
+if ( ($scores[1]==1) && ($scores[2]==1) ) {
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BR
+$BR
+\(  \tan^3(t)  = {\color{Green}{\tan(t)}}  \cdot  \tan^2(t) \)
+$PAR
+Good work.  We can now use an identity to rewrite \( \tan^2(t)\). 
+$PAR
+\( \tan(t)\cdot  \tan^2(t) = \tan(t)\cdot \Big(\) \{ ans_rule(20) \} \(\Big)\)
+
+END_TEXT
+Context()->normalStrings;
+
+ANS( $ans_eval[3] );
+
+}  # end if
+
+
+
+ 
+##########################################
+#  Main text and answer evaluation part 4
+
+if ( ($scores[1]==1) && ($scores[2]==1)  && ($scores[3]==1) ) {
+
+Context()->texStrings;
+BEGIN_TEXT
+$BR
+\( \tan(t)  \cdot  \tan^2(t)  = \tan(t)\cdot\Big( { \color{Green}{\sec^2(t)} } -1\Big)\)
+$PAR
+Very good!  $BR
+
+Distributing gives
+$PAR
+\( =\) \{ ans_rule(10) \} \( - \) \{ans_rule(10)\} as desired. 
+
+END_TEXT
+Context()->normalStrings;
+
+ANS( $ans_eval[4] );
+ANS( $ans_eval[5] );
+
+}  # end if
+
+
+COMMENT("MathObject version.  This is a multi-part problem 
+in which the next part is revealed only after the previous 
+part is correct.  Prevents students from entering trivial 
+identities (entering what they were given)");
+
+ENDDOCUMENT();

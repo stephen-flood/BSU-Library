@@ -1,0 +1,96 @@
+
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+Context("Numeric")->variables->add(t=>"Real");
+
+
+## variable = random($first,$last,$increment)
+
+## Provide the population at two points in time.
+$t1 = Real("0"); 
+$P1 = random(100,300,50) ; 
+
+$t2 = random(6,8,1) ; 
+$P2 = random(500,900,50) ; 
+
+
+## Compute growth constant and starting population
+$k = ln($P1/$P2)/($t1-$t2) ;
+$P0 = $P2/(e**($k*$t2)) ;
+
+
+## Compute the time to reach a third population
+$P3 = random(1500,2100,100);
+
+## Evaluate the function at a random point in time
+$t4 = random(9,12,1);
+
+
+
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+You place a population of [$P1] yeast cells in a petri dish.  Then, [$t2] hours later, you measure [$P2] yeast cells in the dish.  
+
+Assume that the yeast is dividing at a constant rate per cell.  
+
+
+(a) Find a function for the number of yeast cells as function of [`t`] hours after your first measurement.   
+     [`P(t) = `] [_______________]{Compute("$P0*e^($k*t)")->cmp()}
+
+(b) Find the number of yeast cells after [$t4] hours.   
+     [___________]{Real("$P0*e^($k*$t4)")} cells.
+
+(c) How long must you wait until you have [$P3] yeast cells?    
+    [`t=`][___________]{ln($P3/$P0)/$k } hours.
+
+
+(d) What is the population's doubling time?  (That is, how often does the number of yeast cells double?)    
+    [`t=`][___________]{ ln(2)/$k } hours.
+
+
+
+END_PGML
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+
+

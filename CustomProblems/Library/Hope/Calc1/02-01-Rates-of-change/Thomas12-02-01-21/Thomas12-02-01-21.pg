@@ -1,0 +1,91 @@
+# DESCRIPTION
+# Secant slope
+# ENDDESCRIPTION
+
+
+## Author('Paul Pearson');
+## DBsubject(Calculus - single variable)
+## DBchapter(Differentiation)
+## DBsection(Conceptual understanding of derivatives)
+## Institution(Hope College)
+## Level(3)
+## Static(1)
+## TitleText1('Thomas Calculus Early Transcendentals')
+## AuthorText1('Thomas, Weir, Hass')
+## EditionText1('12')
+## Section1('2.1')
+## Problem1('21')
+## KEYWORDS('secant','average rate of change','rate of change','slope','tangent','tangent line')
+## RESOURCES('Thomas12-C02-S01-Q21-Rates-of-change.png')
+
+
+################################
+#  Initialization
+
+DOCUMENT();
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+);
+
+TEXT(beginproblem());
+
+$refreshCachedImages = 1;
+
+
+################################
+#  Setup
+
+Context("Numeric");
+
+
+################################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+The graph below shows the total distance \( s \), in miles, traveled by 
+a bicyclist after \( t \) hours.
+$PAR
+$BCENTER
+\{ image("Thomas12-C02-S01-Q21-Rates-of-change.png", width=>543, height=>242) \}
+$ECENTER
+$BR
+$BR
+Estimate the bicyclist's average velocity over the 
+following time intervals.
+$BR
+Over \( \lbrack 0,1 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
+$BR
+Over \( \lbrack 1,2.5 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
+$BR
+Over \( \lbrack 2.5,3.5 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
+$BR
+$BR
+$BBOLD Hint:$EBOLD If you the position at a given time is  not on one of the labeled lines, start by guessing that it is one mile above/below the labeled line.  If that doesn't work, try increasing or decreasing your guess by one.  Repeat as needed.
+
+END_TEXT
+Context()->normalStrings;
+
+
+#################################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( Compute("15")->cmp() );
+ANS( Compute("4")->cmp(tolType=>'absolute',tolerance=>0.34) );
+ANS( Compute("18")->cmp(tolType=>'absolute',tolerance=>0.34) );
+
+#ANS( Compute("15")->cmp(tolType=>'absolute',tolerance=>1.01) );
+#ANS( Compute("0")->cmp() );
+#ANS( Compute("30")->cmp(tolType=>'absolute',tolerance=>1.01) );
+
+#ANS( Compute("30")->cmp(tolType=>'absolute',tolerance=>1.01) );
+#ANS( Compute("3")->cmp() );
+
+COMMENT('Not randomized.');
+
+ENDDOCUMENT();
+

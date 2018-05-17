@@ -1,0 +1,86 @@
+# DESCRIPTION
+# Text Goes Here
+# ENDDESCRIPTION
+
+## DBsubject('')
+## DBchapter('')
+## DBsection('')
+## KEYWORDS('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+## Author('Stephen Flood')
+## Institution('UConn')
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"PGML.pl",
+##
+##### SPECIAL CONTEXTS FOR LIMITED POLYNOMIALS ####
+"contextLimitedPolynomial.pl",
+"contextPolynomialFactors.pl",
+##### 
+##
+"PGcourse.pl",
+);
+
+# make sure we're in the context we want
+#
+#  Factored form
+#
+Context("PolynomialFactors-Strict");
+
+$n = list_random(4,6);
+$a = random(2,4,1);
+$b = ($a+$n);
+$h = ($b-$a)/2;
+$k = $h**2+$a*$b;
+#$vertexform = Formula("(x-$h)^2-$k");
+
+#$factoredform = Compute("(x+$a)(x-$b)");
+#
+#$middle=($a-$b);
+#$end=($a*$b);
+#
+#$factoredform = Formula("x^2+$middle*x-$end");
+
+
+Context()->flags->set(singleFactors=>0);
+$factoredform = Compute("(x+$a)(x-$b)");
+
+Context()->normalStrings;
+
+#### The Problem Text ####
+TEXT(beginproblem());
+#TEXT(PGML::Format2(<<'END_PGML'));
+BEGIN_PGML
+
+
+The quadratic expression [` (x-[$h])^2-[$k] `]
+is written in vertex form.
+
+
+ Write the expression in factored form
+[` k(ax+b)(cx+d) `].
+
+[_______________]{$factoredform->cmp()}
+
+
+END_PGML
+
+
+BEGIN_PGML_SOLUTION
+
+
+
+*SOLUTION*
+
+You can use PGML in your solution if you use the structure
+above.  There is currently no short cut.
+END_PGML_SOLUTION
+
+ENDDOCUMENT();

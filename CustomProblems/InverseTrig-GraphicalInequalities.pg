@@ -1,0 +1,137 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('Precalculus')
+## AuthorText1('Larson')
+## EditionText1('9e')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+Context("Interval");
+# to allow open or closed intervals, uncomment
+#    the following line.
+# Context()->flags->set(ignoreEndpointTypes=>1);
+
+
+
+#Context("Numeric") ; 
+##Context()->flags->set(tolerance => 0.01);
+
+
+
+##### POPUP LISTS ########################
+# the arguments of PopUp are [list of answers], 
+#    correct answer
+$popup = PopUp(["?", "horizontal", "vertical"], "horizontal");
+## EXPLAINED at http://webwork.maa.org/moodle/mod/forum/discuss.php?d=2743&parent=6124
+#########################################
+
+
+
+
+
+## Set up graph to illustrate correct angles 
+##
+$refreshCachedImages=1;
+##
+$gr= init_graph(-3,-2,3,4,axes=>[0,0],size=>[300,300]);
+$gr->lb('reset');
+$gr->lb( new Label(5.2,0.2,'x','black','center','middle'));
+$gr->lb( new Label(0.2,5.2,'y','black','center','middle'));
+$gr->new_color("lightblue",214,230,244);
+$gr->new_color("darkblue", 100,100,255);
+$gr->new_color("lightred",  245,234,229); # light red-purple
+$gr->new_color("darkred",   159, 64, 16); # red-brown
+
+## -pi/2 to pi/2
+add_functions($gr,
+"arcsin(x) for x in <-1,1> using color:darkblue and weight:2",
+"arccos(x) for x in <-1,1> using color:darkred and weight:2",
+);
+#$gr->moveTo(0,-0);
+#$gr->lineTo(0,-3,"darkred",2);
+#$gr->moveTo(0,0);
+#$gr->lineTo(0,3,"darkred",2);
+#$gr->fillRegion([0+0.5,0.1,"lightred"]);
+
+# add points
+$gr->stamps( closed_circle(-1,&pi(),'red') );
+$gr->stamps( closed_circle(1,0,'red') );
+
+$gr->stamps( closed_circle(-1,-&pi()/2,'blue') );
+$gr->stamps( closed_circle(1,&pi()/2,'blue') );
+
+## Additional question: comparing arcsin and arccos
+#
+# Add to graph:
+#$gr->stamps( closed_circle(sqrt(2)/2,&pi()/4,'black') );
+#$gr->lb( new Label (sqrt(2)/2+1.25,&pi()/4, '(sqrt(2)/2,pi/4)','black','center','middle'));
+#
+# Add to PGML
+#The inequality [`\sin^{-1}(x) > \cos^{-1}(x) `] is true on the interval [______]{Compute("(sqrt(2)/2,1]")}
+
+
+# specify the grid manually
+$gr->h_grid("gray",-&pi()/2,&pi()/2,&pi());
+$gr->v_grid("gray",-1,1);
+# y-axis labels
+$gr->lb( new Label(-0.3,&pi(),'pi','black','center','middle'));
+$gr->lb( new Label(-0.3,&pi()/2,'pi/2','black','center','middle'));
+$gr->lb( new Label(-0.3,-&pi()/2,'-pi/2','black','center','middle'));
+# x-axis labels
+$gr->lb( new Label(-1,-0.3,'-1','black','center','middle'));
+$gr->lb( new Label(1,-0.3,'1','black','center','middle'));
+
+
+
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+The functions [`\color{blue}{\sin^{-1}\left(x\right)}`] and [`\color{red}{\cos^{-1}(x)}`] are graphed below.  Use this graph to solve the following inequalitites.
+
+[@ image( insertGraph($gr) ,  width=>250, height=>250, tex_size=>250 ) @]*
+
+*HINT:* We want to find the _inputs_ [`x`] such that the function's _outputs_ [`f(x)`] make the inequality true.  Here, the inputs are on the [____]{$popup} axis and are between [_____]{Compute("-1")} and [____]{Compute("1")}. 
+
+[`\phantom{.}`]
+
+The inequality [`\sin^{-1}(x) > 0 `] is true on the interval [______]{Compute("(0,1]")}
+
+
+[`\phantom{.}`]
+
+The inequality [`\cos^{-1}(x) > \frac{\pi}{2} `] is true on the interval [______]{Compute("[-1,0)")}
+
+
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

@@ -1,0 +1,257 @@
+##DESCRIPTION
+##  Describe the type of problem!  
+##ENDDESCRIPTION
+
+##KEYWORDS('custom', 'in-progress')
+
+## DBsubject('Subject')
+## DBchapter('Chapter')
+## DBsection('Section')
+## Date('8/26/2016')
+## Author('BSU Faculty')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+   "PGstandard.pl",     # Standard macros for PG language
+   "MathObjects.pl",
+    "PGML.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+#### Set the Context ####
+# 
+# Common Contexts: Numeric, Matrix, Interval, Vector, Vector2D, and several more 
+# 	http://webwork.maa.org/wiki/Common_Contexts#.V8CSf1Qko2w
+#
+#  The Numeric context is the most common.  Answers can be numbers or functions
+# 	Any function is accepted if it gives the same outputs as the correct answer
+#
+Context("Numeric");
+# Accept submissions as correct if they differ from the correct answer given below by 1% or less. 
+Context()->flags->set(tolerance => 0.01);
+#
+#
+## Other Specialized Contexts  ##
+# 
+# These contexts restrict the acceptable format of certain answers
+# Use loadMacros("contextABCD.pl"); to make the context available for a WeBWorK question. 
+#
+# contextFraction.pl  
+# 	Context("Fraction"); Context("Fraction-NoDecimals"); Context("LimitedFraction"); Context("LimitedProperFraction");
+#
+# contextLimitedPolynomial.pl
+# 	Context("LimitedPolynomial");   # Allow only entry of expanded polynomials
+#
+# contextLimitedPowers.pl
+#       LimitedPowers::NoBaseE(); LimitedPowers::OnlyIntegers(); LimitedPowers::OnlyPositiveIntegers(); LimitedPowers::OnlyNonNegativeIntegers();
+#      
+# contextString.pl
+#       Use this context to allow restricted short answer (no mathematical symbols) questions.
+#       Feedback is provided if the response contains strings that are not allowed. 
+#
+# See also:
+# 	http://webwork.maa.org/wiki/Specialized_contexts#.V8CS8lQko2w
+
+
+##############################################################
+#
+#  Setup
+#
+#  For details, see http://webwork.maa.org/wiki/Introduction_to_MathObjects#.V8CSFFQko2w
+#
+#  (Initialize your variables here)
+#
+
+$pi = Real("pi");
+
+
+$a = 5;
+
+#Pick a random number between 3 and 15, where the step size is 0.2
+$b = random(3,15,0.2);
+
+
+$f = Compute("$a*x + $b");
+
+#Pick a random integer between -4 and 4
+$c = random(-4,4);
+$ans5 = Compute("$a*$c + $b");
+
+
+##############################################################
+#
+#  Text
+#
+#   1. Place the part that students should see between BEGIN_PGML and END_PGML. 
+#   2. To typset <text> in LaTeX, simply enclose it inside [` and `]. In other words, type [` <text> `]
+#   3. Your answer field is represented by [____________]. 
+#      Place the correct answer in braces after the answer field. 
+#   4. To reference the value of the variable $a enclose it in [ and ].  In other words type [$a]
+#
+#  For details, see 
+#  http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w 
+#
+#
+#   You can find EXAMPLES of most things you want to do at
+#   http://webwork.maa.org/wiki/Category:Sample_Problems#.V8ChZ1Qko2w
+#   http://webwork.maa.org/wiki/Category:Problem_Techniques#.V8CgkVQko2w
+#
+#
+######################################################################
+BEGIN_PGML
+
+1. The value of [$a] is [________]{$a}
+
+2. If [` $a = [$a] `], then [`($a)^2 + 1 =`] [_______]{$a**2+1}
+
+3. Simplify [`2 + 4 \cdot 5`].
+   [____________]{"22"}
+
+4. Now simplify [`2x + 4x + 5x`]. 
+   [____________]{"11x"}
+
+
+5. Suppose that [` f(x) = [$f] `].   Compute [` f([$c]) = `]  [_______]{$ans5} 
+
+To see the difference between Problem \#6 and Problem \#5, Click the box next to "CorrectAnswers" and then select "Show answers"and Problem \#5, Click the box next to "CorrectAnswers" and then select "Show answers".  In \#5 Webwork tells students how you got the correct answer.  In \#6 Webwork only displays the numerical answer.  
+
+6. Suppse that [` f(x) = [$f] `].   Compute [` f([$c]) = `]  [_______]{Compute($ans5)}
+
+
+
+END_PGML
+######################################################################
+
+
+###############
+# 
+# Solutions
+#
+
+BEGIN_PGML_SOLUTION
+*SOLUTION 1*
+
+You can write full solutions, which students will be able to see after the assignment due-date. 
+You can use the same notation as above when writing your solutions. 
+
+In other words, you can reference variables like [$a] and reference and typeset functions like [` [$f] `]. 
+  
+
+*Solution 2*
+
+You get the idea 
+
+*Solution 3*
+
+*Solution 4*
+
+*Solution 5*
+
+END_PGML_SOLUTION
+
+
+##################################################
+######   THE OLD WAY OF WRITING PROBLEMS   #######
+##################################################
+
+# 
+# Most problems are written using an older, less beautiful syntax.
+# 
+# It turns out that you can use both notations: 
+# 	just put a complete PGML problem between the BEGIN_PGML and END_PGML tags
+# 	and then put a complete TEXT problem as described below.
+
+# This is useful:
+#
+# Many examples of problems and tricks from 
+#   http://webwork.maa.org/wiki/Category:Sample_Problems#.V8ChZ1Qko2w
+#   http://webwork.maa.org/wiki/Category:Problem_Techniques#.V8CgkVQko2w
+# use this older syntax, 
+#
+# Also, many tricks do not work (or work well) with PGML (e.g. graphics, etc).
+#
+#
+
+# The MAIN DIFFERENCE is that in the old format, 
+# 	you put the student-readable portion between BEGIN_TEXT and END_TEXT tags
+# 	and you can only put a SINGLE question blank between each pair of tags
+# After you include a question blank, you must type END_TEXT
+# 	if the answer is $ans1, 
+# 	you should type ANS($ans1->cmp());
+#
+# Once you have specified the answer, you can begin a new BEGIN_TEXT/END_TEXT block 
+# 	which can have a second question blank
+
+
+## Initialize the variables
+$a = random(2,9,1);
+$trigFunc = Formula("sin($a x)");
+$trigDeriv = $trigFunc->D();
+
+Context()->texStrings;
+
+## Include text with a SINGLE question blank
+BEGIN_TEXT
+Find the derivative of the function \(f(x) = $trigFunc\).
+$PAR
+\(\frac{df}{dx} = \) \{ ans_rule(35) \}
+END_TEXT
+
+## Specify the correct answer for the previous question blank 
+ANS( $trigDeriv->cmp() );
+
+## Give the solution for the question
+Context()->texStrings;
+SOLUTION(EV3(<<'END_SOLUTION'));
+$PAR SOLUTION $PAR
+We find the derivative to this using the 
+chain rule.  The inside function is \($a x\), 
+so that its derivative is \($a\), and the 
+outside function is \(\sin(x)\), which has 
+derivative \(\cos(x)\).  Thus the solution is
+\[ \frac{d}{dx} $trigFunc = $trigDeriv. \]
+END_SOLUTION
+Context()->normalStrings;
+
+###################################################
+# Hack for Using Tables
+# 
+# (Tables do not work with PGML, due to multiple meanings of [ and ]
+$f = Formula("3^(-x)");
+
+## Define a table VARIABLE in the header
+$table = $BCENTER.begintable(5) .
+  row( "\(x = \)", "0", "1", "2" ) .
+  row( "\(f(x) = \)", ans_rule(5), ans_rule(5), ans_rule(5) ) .
+  endtable().$ECENTER; 
+
+BEGIN_PGML
+Describe problem in words, then insert table using wizardry
+[@ $table @]***
+END_PGML
+
+ANS($f->eval(x=>0)->cmp());
+ANS($f->eval(x=>1)->cmp());
+ANS($f->eval(x=>2)->cmp());
+
+
+ENDDOCUMENT();        

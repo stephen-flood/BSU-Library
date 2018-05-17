@@ -1,0 +1,145 @@
+## DBsubject(Trigonometry)
+## DBchapter()
+## DBsection()
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+
+
+##### POPUP LISTS ########################
+# the arguments of PopUp are [list of answers], 
+#    correct answer
+$popup = PopUp(["?", "above", "below"], "below");
+## EXPLAINED at http://webwork.maa.org/moodle/mod/forum/discuss.php?d=2743&parent=6124
+#########################################
+
+
+
+
+
+## Set up graph to illustrate correct angles 
+$startangle = 0;
+$endangle = pi;
+##
+$refreshCachedImages=1;
+##
+$gr= init_graph(-5.5,-5.5,5.5,5.5,axes=>[0,0],size=>[300,300]);
+$gr->lb('reset');
+$gr->lb( new Label(5.2,0.2,'x','black','center','middle'));
+$gr->lb( new Label(0.2,5.2,'y','black','center','middle'));
+$gr->new_color("lightblue",214,230,244);
+$gr->new_color("darkblue", 100,100,255);
+$gr->new_color("lightred",  245,234,229); # light red-purple
+$gr->new_color("darkred",   159, 64, 16); # red-brown
+
+## -pi/2 to pi/2
+add_functions($gr,
+"sqrt(9-x^2) for x in <0,3> using color:darkred and weight:2",
+"-sqrt(9-x^2) for x in <0,3> using color:darkred and weight:2",
+);
+$gr->moveTo(0,-0);
+$gr->lineTo(0,-3,"darkred",2);
+$gr->moveTo(0,0);
+$gr->lineTo(0,3,"darkred",2);
+$gr->fillRegion([0+0.5,0.1,"lightred"]);
+$gr->lb( new Label(0.75,4,'pi/2','black','center','middle'));
+$gr->lb( new Label(0.75,-4,'-pi/2','black','center','middle'));
+
+## 0 to pi
+#add_functions($gr,"sqrt(9-x^2) for x in <-3,3> using color:darkblue and weight:2",);
+#$gr->moveTo(-3,0);
+#$gr->lineTo(3,0,"darkblue",2);
+#$gr->fillRegion([0+0.5,0.1,"lightblue"]);
+#$gr->lb( new Label(4,0.2,'0','black','center','middle'));
+#$gr->lb( new Label(-4,0.2,'pi','black','center','middle'));
+
+#### MAIN TEXT #### 
+
+
+$arcsinfive = Compute("arcsin(1/3)");
+$piminusarcsinfive = Compute("pi-arcsin(1/3)");
+
+$arcsinneg = Compute("arcsin(-1/3)");
+$arcsinnegplus2pi = Compute("2pi+arcsin(-1/3)");
+$piminusarcsinneg = Compute("pi-arcsin(-1/3)");
+
+BEGIN_PGML
+
+Recall that [`\sin^{-1}\left(\dfrac{-\sqrt{3}}{2}\right) = \theta`] means that [`\theta`] is in [` \left[-\dfrac{\pi}{2},\dfrac{\pi}{2} \right] `] *and* [`\dfrac{-\sqrt{3}}{2} = \sin(\theta)`]
+
+[@ image( insertGraph($gr) ,  width=>250, height=>250, tex_size=>250 ) @]*
+
+[`\phantom{.}`]
+
+For _technical reasons_, many problems in this assignment ask you to enter your answers as angles in [`[0,2\pi]`]  in order of increasing size.  
+
+### In some problems, this is easy.  
+
+One basic solution to the equation [`\sin(x) = \frac{1}{3}`] is [`\sin^{-1}(\frac{1}{3})\approx[$arcsinfive]`].  
+
+Another basic other solution is [`\pi-\sin^{-1}(\frac{1}{3})\approx [$piminusarcsinfive]`]
+
+Now list these solutions in [`0,2\pi`] ordered by increasing size:  
+
+[`0\leq `] [________]{Compute("arcsin(1/3)")->cmp() }  [`<`]  [________]{Compute("pi-arcsin(1/3)")->cmp()}  [`< 2\pi`]
+
+[`\phantom{.}`]
+
+###Other problems require more work.
+
+One solution to the equation [`\sin(x) = \frac{-1}{3}`] is [`\sin^{-1}(\frac{-1}{3})\approx[$arcsinneg]`].  
+To get an equivalent angle in [`[0,2\pi]`], we add [`2\pi`] to obtain the angle [`2\pi+ \sin^{-1}(\frac{-1}{3})\approx[$arcsinnegplus2pi]`]
+
+The other solution is [`\pi-\sin^{-1}(\frac{-1}{3})\approx [$piminusarcsinneg]`].
+
+
+Now list these solutions in [`0,2\pi`] ordered by increasing size:  
+
+  [`0\leq `] [________]{Compute("pi-arcsin(-1/3)")->cmp() }  [`<`]  [________]{Compute("2pi+arcsin(-1/3)")->cmp()}  [`< 2\pi`]
+
+
+### Advice
+
+*In this homework* assignment, _you can use a calculator_ to compare the solutions that you find.  You can even enter decimal answers, as long as you give 6 decimal places of accuracy.  
+*On the exam*, you would write [`\sin^{-1}(1/3)`] and [`\pi-\sin^{-1}(1/3)`], and not worry about the order, or if the angle is in [`[0,2\pi]`].
+
+Similarly, *in this homework* you should only add [`period\cdot n`] to your answers _when the problem asks you to do this_.  
+*On the exam*, you will always need to add [`period\cdot n`] to each solution that you find, to represent all the solutions that exist.
+
+END_PGML
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+

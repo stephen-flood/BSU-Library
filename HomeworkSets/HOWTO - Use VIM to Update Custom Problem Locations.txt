@@ -1,0 +1,9 @@
+
+
+Use the following regular expression search & replace:
+
+    %s/source_file = local/source_file = CustomProblems/
+
+(This assumes that there is a sim-link titled "CustomProblems" in the "Templates" directory of the course.
+ This should link to a folder that contains (1) the new custom problems and (2) a subdirectory "Library" 
+ that contains modified versions of existing problems.)
