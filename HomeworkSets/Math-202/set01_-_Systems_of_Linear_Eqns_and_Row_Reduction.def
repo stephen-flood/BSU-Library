@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/06/2017 at 11:59pm EDT
-reducedScoringDate = 09/11/2017 at 07:00pm EST
-dueDate           = 09/11/2017 at 11:59pm EDT
-answerDate        = 09/15/2017 at 11:00pm EDT
+openDate          = 01/17/2018 at 11:59pm EST
+reducedScoringDate = 09/11/2017 at 11:59pm EDT
+dueDate           = 01/23/2018 at 11:59pm EST
+answerDate        = 01/25/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader

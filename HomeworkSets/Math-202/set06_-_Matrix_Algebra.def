@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 10/28/2017 at 11:59pm EDT
+openDate          = 03/02/2018 at 11:59pm EST
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/07/2017 at 11:59pm EST
-answerDate        = 11/08/2017 at 11:59pm EST
+dueDate           = 03/15/2018 at 11:59pm EDT
+answerDate        = 03/17/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_13.pg
+source_file = CustomProblems/EquivalentDefinitionMatrixMultiplication.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/TCNJ/TCNJ_MatrixOperations/problem28.pg
+source_file = Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/TCNJ/TCNJ_IntroLinearTransformations/problem2.pg
+source_file = Library/TCNJ/TCNJ_MatrixOperations/problem28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/TCNJ/TCNJ_MatrixOperations/problem19.pg
+source_file = Library/TCNJ/TCNJ_IntroLinearTransformations/problem2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/Utah/College_Algebra/set13_Review/1050s13p14.pg
+source_file = Library/TCNJ/TCNJ_MatrixOperations/problem19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/TCNJ/TCNJ_MatrixOperations/problem11.pg
+source_file = Library/Utah/College_Algebra/set13_Review/1050s13p14.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/TCNJ/TCNJ_MatrixOperations/problem21.pg
+source_file = Library/TCNJ/TCNJ_MatrixOperations/problem11.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/TCNJ/TCNJ_IntroLinearTransformations/problem4.pg
+source_file = Library/TCNJ/TCNJ_MatrixOperations/problem21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_28.pg
+source_file = Library/TCNJ/TCNJ_IntroLinearTransformations/problem4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = CustomProblems/EquivalentDefinitionMatrixMultiplication.pg
+source_file = Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

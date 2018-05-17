@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/21/2017 at 11:59pm EDT
+openDate          = 01/30/2018 at 11:59pm EST
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 09/26/2017 at 11:59pm EDT
-answerDate        = 09/28/2017 at 11:59pm EDT
+dueDate           = 02/06/2018 at 11:59pm EST
+answerDate        = 02/08/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -189,7 +189,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 19
@@ -199,6 +199,6 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 
