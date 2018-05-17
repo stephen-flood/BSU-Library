@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = LimitsInPolar4.pg
+source_file = CustomProblems/LimitsInPolar4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = LimitsInPolar.pg
+source_file = CustomProblems/LimitsInPolar.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = LimitsInPolar2.pg
+source_file = CustomProblems/LimitsInPolar2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
