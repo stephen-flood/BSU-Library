@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 10/08/2016 at 10:08am EDT
+openDate          = 11/25/2018 at 11:57pm EST
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 10/12/2016 at 11:59pm EDT
-answerDate        = 10/14/2016 at 11:59pm EDT
+dueDate           = 11/30/2018 at 11:59pm EST
+answerDate        = 12/03/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,106 +13,6 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/3_Differentiation/3.2_The_Derivative_as_a_Function/3.2.25.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 2
-source_file = Library/UCSB/Stewart5_3_1/Stewart5_3_1_21.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 3
-source_file = Library/UCSB/Stewart5_3_1/Stewart5_3_1_30.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 4
-source_file = Library/ASU-topics/setDerivativeFunction/3-3-35.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 5
-source_file = Library/ASU-topics/setDerivativeFunction/ur_dr_1_10.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 6
-source_file = CustomProblems/Library/UCSB/Stewart5_3_3/Stewart5_3_3_29.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 7
-source_file = Library/ASU-topics/setDerivativeApplications/3-7-07.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 8
-source_file = Library/ASU-topics/setDerivativeApplications/3-7-01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 9
-source_file = Library/ASU-topics/setDerivativeBasicFunctions/3-7-13.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 10
-source_file = Library/ASU-topics/setDerivativeBasicFunctions/3-7-15.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 11
 source_file = Library/Rochester/setDerivatives5ChainRule/s2_5_3.pg
 value = 1
 max_attempts = -1
@@ -122,27 +22,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 12
-source_file = Library/Rochester/setDerivatives5ChainRule/s2_5_6.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 13
-source_file = Library/Michigan/Chap3Sec4/Q05.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 14
+problem_id = 2
 source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-27.pg
 value = 1
 max_attempts = -1
@@ -152,7 +32,108 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 15
+problem_id = 3
+source_file = Library/ASU-topics/setChainRulePowerFunctions/5-2-28.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/UBC/setLogExpos/log3.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S08-DerivLogs/3-8-16.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-77.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/Michigan/Chap3Sec2/Q05.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = Library/Michigan/Chap3Sec2/Q07.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+
+problem_start
+problem_id = 9
+source_file = Library/Rochester/setDerivatives5ChainRule/s2_5_3.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 10
+source_file = Library/Rochester/setDerivatives5ChainRule/s2_5_6.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 11
+source_file = Library/Michigan/Chap3Sec4/Q05.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-27.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
 source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-25.pg
 value = 1
 max_attempts = -1
@@ -162,7 +143,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 16
+problem_id = 14
 source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-37.pg
 value = 1
 max_attempts = -1
@@ -172,7 +153,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 17
+problem_id = 15
 source_file = Library/ma122DB/set5/s3_5_7.pg
 value = 1
 max_attempts = -1
@@ -182,7 +163,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 18
+problem_id = 16
 source_file = Library/Rochester/setDerivatives5ChainRule/s2_5_8_mo.pg
 value = 1
 max_attempts = -1
@@ -192,7 +173,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 19
+problem_id = 17
 source_file = Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-21.pg
 value = 1
 max_attempts = -1

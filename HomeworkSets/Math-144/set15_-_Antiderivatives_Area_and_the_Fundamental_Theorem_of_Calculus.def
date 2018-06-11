@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/14/2016 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 09/21/2016 at 11:59pm EDT
-answerDate        = 09/24/2016 at 11:59pm EDT
+openDate          = 12/05/2018 at 11:59pm EST
+reducedScoringDate = 12/15/2018 at 11:59pm EST
+dueDate           = 12/15/2018 at 11:59pm EST
+answerDate        = 12/15/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph30.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-26.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-18-Input-and-output.pg
+source_file = Library/Indiana/Indiana_setDerivatives20Antideriv/c3s10p1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/UMN/algebraKaufmannSchwitters/ks_8_1_48.pg
+source_file = Library/UMN/calculusStewartCCC/s_4_8_24.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/Mizzou/College_Algebra/Functions_Domain_Range/DomainFrac2.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-34.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/ASU-topics/setFunctions/srw2_1_55.pg
+source_file = Library/Valdosta/APEX_Calculus/5.2/APEX_5.2_6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/ASU-topics/setFunctions/di5.pg
+source_file = Library/UCSB/Stewart5_5_2/Stewart5_5_2_35.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/UMN/algebraKaufmannSchwitters/ks_8_1_prob01.pg
+source_file = Library/Valdosta/APEX_Calculus/5.2/APEX_5.2_10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = CustomProblems/simplifiedDifferenceQuotient.pg
+source_file = Library/ASU-topics/setCalculusFundamentalTheorem/6-5-19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = CustomProblems/simplifiedDifferenceQuotient-v2.pg
+source_file = Library/ASU-topics/setCalculusFundamentalTheorem/6-5-13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Rochester/setAlgebra28ExpFunctions/srw4_1_1.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S04-IndefInts/5-4-21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/Rochester/setAlgebra28ExpFunctions/srw4_1_3.pg
+source_file = Library/Union/setIntDefinite/osu_in_3_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/Utah/Business_Algebra/set8_Exponential_and_Logarithmic_Functions/p01/p01.pg
+source_file = Library/Valdosta/APEX_Calculus/5.4/APEX_5.4_5-7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/FortLewis/Algebra/10-1-Exponential-Functions/MCH1-10-1-8.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S04-IndefInts/5-4-30.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/FortLewis/Algebra/10-1-Exponential-Functions/MCH1-10-1-38.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S03-FundThmCalc/5-3-21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,17 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-6.pg
+source_file = Library/ma122DB/set12/s5_4_22.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = Library/UCSB/Stewart5_4_10/Stewart5_4_10_71.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,77 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/ASU-topics/setFinance/p5stef.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 18
-source_file = Library/ASU-topics/setFinance/p3st.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 19
-source_file = Library/ASU-topics/setFinance/p11stef.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 20
-source_file = CustomProblems/Library/NAU/setFinance/yr_interest1.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 21
-source_file = Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-42.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 22
-source_file = Library/LoyolaChicago/Precalc/Chap3Sec1/Q20.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 23
-source_file = Library/Mizzou/College_Algebra/Factoring_x2_bx_c/Factoring11.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 24
-source_file = Library/Mizzou/College_Algebra/Factoring_x2_bx_c/Factoring12.pg
+source_file = Library/UCSB/Stewart5_5_4/Stewart5_5_4_61.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
