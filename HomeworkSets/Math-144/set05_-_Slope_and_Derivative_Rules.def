@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/29/2018 at 05:25pm EDT
-reducedScoringDate = 10/04/2018 at 11:59pm EDT
-dueDate           = 10/04/2018 at 11:59pm EDT
-answerDate        = 10/06/2018 at 11:59pm EDT
+openDate          = 10/01/2018 at 11:59pm EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 10/05/2018 at 11:59pm EDT
+answerDate        = 10/08/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -170,5 +170,25 @@ showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
 att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = BSU-Problems/simplifiedDifferenceQuotient-linear.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 18
+source_file = BSU-Problems/simplifiedDifferenceQuotient-v2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
 problem_end
 
