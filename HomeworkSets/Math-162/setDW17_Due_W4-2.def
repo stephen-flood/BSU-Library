@@ -1,0 +1,44 @@
+assignmentType      = default
+openDate          = 03/30/2018 at 09:51pm EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 04/02/2018 at 01:50pm EDT
+answerDate        = 04/02/2018 at 01:50pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/7_Techniques_of_Integration/7.6_Improper_Integrals/7.6.25.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/Wiley/setAnton_Section_7.8/Anton_7_8_Q6.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/Union/setIntImproper/sc5_9_19.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

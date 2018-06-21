@@ -1,0 +1,54 @@
+assignmentType      = default
+openDate          = 04/04/2018 at 09:12pm EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 04/06/2018 at 01:50pm EDT
+answerDate        = 04/06/2018 at 01:50pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/Wiley/setAnton_Section_9.1/Anton9_1Q7.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/Wiley/setAnton_Section_9.1/Anton9_1Q14.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/Utah/Calculus_II/set7_Infinite_Series/set7_pr11.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/maCalcDB/setSequences2Limits/ur_sq_2_12.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

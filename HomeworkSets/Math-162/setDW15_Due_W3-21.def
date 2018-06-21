@@ -1,0 +1,54 @@
+assignmentType      = default
+openDate          = 03/19/2018 at 09:05pm EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 03/21/2018 at 03:19pm EDT
+answerDate        = 03/21/2018 at 03:19pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/UCSB/Stewart5_7_4/Stewart5_7_4_1a.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/Rochester/setIntegrals25RationalFunctions/S07.04.PartialFractions.PTP18.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/Union/setIntPartialFractions/ur_in_25_04.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/Michigan/Chap7Sec4/Q33.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+
