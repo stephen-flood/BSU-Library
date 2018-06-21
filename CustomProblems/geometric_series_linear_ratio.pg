@@ -1,0 +1,122 @@
+##DESCRIPTION
+##  Geometric Series using a Linear Ratio 
+##ENDDESCRIPTION
+
+##KEYWORDS('')
+
+## DBsubject('Calculus')
+## DBchapter('')
+## DBsection('')
+## Date('6/21/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+   "PGstandard.pl",     # Standard macros for PG language
+   "MathObjects.pl",
+   "PGML.pl",
+    #"source.pl",        # allows code to be displayed on certain sites.
+   #"PGcourse.pl",      # Customization file for the course
+);
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 0;
+
+##############################################################
+#
+#  Setup
+#
+#
+Context("Numeric");
+Context()->variables->add(p => "Real");
+
+$hi  = 2;
+$low = Compute("$hi-1");
+
+$r = Real("$hi - p");
+
+$n = random(5,15,1); 
+$P = 100;
+
+$a0 = Compute("$P*$r^($n)")->reduce();
+$a1 = Compute("$P*$r^($n+1)")->reduce();
+$a2 = Compute("$P*$r^($n+2)")->reduce();
+$a3 = Compute("$P*$r^($n+3)")->reduce();
+
+$ans = Compute("$P*$r^($n)*1/(1-$r)")->reduce();
+
+## If used when p is set equal to a specific number, you can use the following to set the answer based on whether the series converges or diverges.
+#if( -1 < $r && $r < 1)
+#{ $ans = Compute("$P*$r^($n)*1/(1-$r)")->reduce(); }
+#else 
+#{$ans= Compute("DNE");}
+
+
+##############################################################
+#
+#  Text
+#
+#
+
+Context()->texStrings;
+BEGIN_PGML
+
+
+Let [` p \in ([$low],[$hi]] `] be a real number.
+
+Compute [` [$a0] + [$a1] + [$a2]+ [$a3] + \dots `]
+
+[____________]{$ans}
+
+If the series does not converge for *all* values of [`p`] in the indicated interval, enter _DNE_
+
+END_PGML
+
+Context()->normalStrings;
+
+ 
+BEGIN_PGML_SOLUTION
+
+This is a geometric series with first term [`[$a0]`] and common ratio [`[$r]`].
+
+We are given that [`p\in( [$low],[$hi]]`], and therefore we have [` [$low] < p < [$hi]`].  In particular, [` [$low]-[$hi] < p-[$hi] < [$hi]-[$hi]`].  Therefore, for all [`p`] in this interval, we have [` |[$r]| < 1 `].  By the geometric sum test, it follows that the series converges for all [`p\in ( [$low],[$hi]]`]. 
+
+Note that we can factor [`[$a0]`] out of each term in the series.  That allows us to rewrite it as
+>>[`` =  [$a0] \cdot ( 1 + ([$r])^1 + ([$r])^2 + ([$r])^3 + \dots ) ``]<<
+
+In sum notation, and beginning with the index  [`n=0`], this gives
+>>[`` =[$a0] \cdot \sum_{n=0}^\infty ([$r])^n  ``]<<
+
+By the geometric sum formula, this equals
+>>[`` =[$a0] \cdot \dfrac{1}{1-([$r])} ``]<<
+
+>>[`` =  \dfrac{[$a0]}{1-([$r])} ``]<<
+
+
+
+END_PGML_SOLUTION
+
+
+
+##############################################################
+#
+#  Answers
+#
+# ANS($pi->with(tolerance=>.0001)->cmp);
+# relative tolerance --3.1412 is incorrect but 3.1413 is correct
+# default tolerance is .01 or one percent.
+
+
+ENDDOCUMENT();        
