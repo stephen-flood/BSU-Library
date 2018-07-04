@@ -1,0 +1,49 @@
+## DESCRIPTION
+## Algebra and Number Theory
+## ENDDESCRIPTION
+
+## Problem adapted by Stephen Flood to introduce "break even".
+
+## DBsubject(Algebra)
+## DBchapter(Linear equations and functions)
+## DBsection(Applications and models)
+## Institution(BSU)
+## MLT(ProfitPredictionBreakEven)
+## MLTleader(1)
+## Level(3)
+## KEYWORDS('algebra', 'inequality')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$a =  random(1,50,1);
+$b =  random(10,100,15);
+
+$ans= num_cmp(" $b/$a ");
+
+BEGIN_TEXT
+Your company is planning on selling a new line of $BITALIC wind-up widgets$EITALIC.  A careful study of the market shows that the profit from selling \(x\) wind-up widgets will be modeled by the function \( P(x) = $a x - $b\).  
+
+$PAR
+To find when the profit will be $BBOLD greater $EBOLD than zero, we first need to find the "Break Even" points, when the profit is $BBOLD equal $EBOLD to zero.  
+
+$PAR
+In other words, solve  the equation
+
+\($a x - $b = 0 \)
+$PAR
+\(x = \) \{ans_rule(20)\}.
+END_TEXT
+
+ANS( $ans );
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+

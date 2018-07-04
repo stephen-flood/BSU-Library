@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Library/LoyolaChicago/Precalc/Chap5Review/Q30.pg
+source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap5Review/Q30.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = local/Library/maCalcDB/setAlgebra15Functions/jay5.pg
+source_file = CustomProblems/Library/maCalcDB/setAlgebra15Functions/jay5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = local/Library/FortLewis/Algebra/9-4-Factoring-quadratics/MCH1-9-4-20-Factoring-quadratics.pg
+source_file = CustomProblems/Library/FortLewis/Algebra/9-4-Factoring-quadratics/MCH1-9-4-20-Factoring-quadratics.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

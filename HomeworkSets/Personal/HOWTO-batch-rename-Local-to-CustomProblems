@@ -1,0 +1,10 @@
+
+
+#To replace "local/" with "CustomProblems/"
+grep -rl local/ | xargs sed -i 's/local\//CustomProblems\//g'
+
+
+
+# Following General Example 
+# from http://vasir.net/blog/ubuntu/replace_string_in_multiple_files
+grep -rl matchstring somedir/ | xargs sed -i 's/string1/string2/g'

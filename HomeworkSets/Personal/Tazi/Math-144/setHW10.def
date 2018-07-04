@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = local/Library/Westmont/ActiveCalculus/Preview_1_6/preview_1_6_bc/preview_1_6_bc.pg
+source_file = CustomProblems/Library/Westmont/ActiveCalculus/Preview_1_6/preview_1_6_bc/preview_1_6_bc.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = local/VeryBasicDerivatives.pg
+source_file = CustomProblems/VeryBasicDerivatives.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
