@@ -1,0 +1,62 @@
+#DESCRIPTION
+##  Calculus: Limits and continuity
+##ENDDESCRIPTION
+
+
+## DBsubject(Calculus - multivariable)
+## DBchapter(Differentiation of multivariable functions)
+## DBsection(Limits and continuity)
+## Date(04/01/2014)
+## Institution(Colby College)
+## Author(Justin Sukiennik)
+## MLT(2varLimitByEvaluation)
+## MLTleader(1)
+## Level(2)
+## MO(1)
+## TitleText1('Multivariable Calculus')
+## AuthorText1('Stewart')
+## EditionText1('7')
+## Section1('14.2')
+## Problem1('')
+## KEYWORDS('calculus', 'limits','continuous', 'three-dimensions')
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+
+Context("Numeric");
+Context()->variables->add(y =>'Real', z =>'Real' );
+
+$a = random(2,6,1);
+$b = random(2,7,1);
+
+$ans = Real(0);
+
+
+##############################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Find the limit, if it exists.  If a limit does not exist, type "DNE".
+\[
+\lim_{(x,y)\to (0,0)} \frac{$a x^{2} y}{x^{2}+$b y^{2}}
+\]
+$PAR
+Limit: \{ans_rule(20)\}
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+
+Context("Numeric");
+ANS($ans->cmp);;
+
+ENDDOCUMENT(); 
