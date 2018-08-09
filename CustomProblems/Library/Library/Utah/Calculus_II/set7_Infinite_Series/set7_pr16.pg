@@ -1,0 +1,47 @@
+#DESCRIPTION
+# Series. Find sum
+#ENDDESCRIPTION
+## DBsubject(Calculus - single variable)
+## DBchapter(Infinite sequences and series)
+## DBsection(Geometric)
+## Date(7/2/2018)
+## Institution(Bridgewater State University)
+## Author(John Pike)
+## MLT()
+## MLTleader(1)
+## Level(2)
+## TitleText1()
+## AuthorText1()
+## EditionText1()
+## Section1('.')
+## Problem1('')
+## KEYWORDS('calculus','Series', 'Geometric','Series' , 'Summation' , 'Summation', 'Geometric Series' )
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+$c = non_zero_random(-4,4,1);
+$d = random(5,9,1);
+$i = random(3,8,1);
+$n = random(25,32,1);
+$r = $c/$d;
+
+BEGIN_TEXT
+Determine the sum of the following series. $BR
+\[ \sum_{k=$i}^{$n} \left(\frac{$c}{$d}\right)^{k} \]
+\{ans_rule(20)\}
+END_TEXT
+
+$answer = (($r)**($i)-$r**($n+1))/(1-$r);
+
+ANS(num_cmp($answer));
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
