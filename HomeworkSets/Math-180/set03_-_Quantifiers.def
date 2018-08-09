@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = local/Library/MontanaState/FL/2.2B83Nested1.pg
+source_file = CustomProblems/Library/MontanaState/FL/2.2B83Nested1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = local/Library/MontanaState/FL/2.2B83Nested2.pg
+source_file = CustomProblems/Library/MontanaState/FL/2.2B83Nested2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = local/Library/MontanaState/Misc/1.1B33.pg
+source_file = CustomProblems/Library/MontanaState/Misc/1.1B33.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = local/Library/ASU-topics/setDiscrete/katie6.pg
+source_file = CustomProblems/Library/ASU-topics/setDiscrete/katie6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

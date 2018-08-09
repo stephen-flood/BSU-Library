@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = local/Library/MontanaState/Misc.Logic/1.6A43Logic1.pg
+source_file = CustomProblems/Library/MontanaState/Misc.Logic/1.6A43Logic1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Library/MontanaState/Equivalence/1.1A5Equiv.pg
+source_file = CustomProblems/Library/MontanaState/Equivalence/1.1A5Equiv.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = local/Library/SUNYSB/implication-converse-contrapositive-only.pg
+source_file = CustomProblems/Library/SUNYSB/implication-converse-contrapositive-only.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = local/Library/MontanaState/Misc/1.5A1Neg1.pg
+source_file = CustomProblems/Library/MontanaState/Misc/1.5A1Neg1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
