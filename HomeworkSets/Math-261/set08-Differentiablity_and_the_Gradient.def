@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 10/17/2018 at 11:59pm EDT
-reducedScoringDate = 10/31/2018 at 09:59pm EDT
-dueDate           = 10/24/2018 at 09:59pm EDT
-answerDate        = 11/06/2018 at 08:59pm EST
+openDate          = 10/31/2018 at 09:59pm EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 11/14/2018 at 09:59pm EST
+answerDate        = 11/20/2018 at 09:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Library/272/setStewart13_1/problem_3.pg
+source_file = CustomProblems/Library/272/setStewart14_4/problem_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/272/setStewart12_5/problem_5.pg
+source_file = CustomProblems/Library/UMN/calculusStewartET/s_14_4_13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/272/setStewart12_5/problem_3.pg
+source_file = Library/Michigan/Chap14Sec5/Q55.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.1_Vector-Valued_Functions/13.1.14.pg
+source_file = CustomProblems/Library/272/setStewart14_4/problem_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.2_Calculus_of_Vector-Valued_Functions/13.2.7.pg
+source_file = Library/FortLewis/Calc3/14-3-Local-linearity/HGM4-14-3-18-Local-linearity-differential.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/272/setStewart13_2/problem_2.pg
+source_file = Library/FortLewis/Calc3/14-5-Gradients-in-space/HGM4-14-5-06-Gradients-etc.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = CustomProblems/Library/FortLewis/Calc3/17-2-Motion-velocity/HGM4-17-2-30-Motion-velocity-acceleration.pg
+source_file = CustomProblems/Library/FortLewis/Calc3/14-5-Gradients-in-space/HGM4-14-5-00-Gradients-etc.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/Union/setMVderivatives/an13_2_13.pg
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/14_Differentiation_in_Several_Variables/14.5_The_Gradient_and_Directional_Derivatives/14.5.1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/272/setStewart13_4/problem_6.pg
+source_file = Library/FortLewis/Calc3/14-6-Chain-rule/HGM4-14-6-10-Chain-rule.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Dartmouth/setStewartCh14S2/problem_1.pg
+source_file = Library/272/setStewart14_5/problem_7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/Dartmouth/setStewartCh14S3/problem_1.pg
+source_file = Library/Michigan/Chap14Sec6/Q24.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/272/setStewart13_2/problem_1.pg
+source_file = CustomProblems/Library/272/setStewart14_5/problem_8.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/272/setStewart13_1/problem_2.pg
+source_file = Library/272/setStewart14_6/problem_9.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.2_Calculus_of_Vector-Valued_Functions/13.2.5.pg
+source_file = CustomProblems/Library/FortLewis/Calc3/14-4-Gradients-in-plane/HGM4-14-4-33-Gradients-etc.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.2_Calculus_of_Vector-Valued_Functions/13.2.25.pg
+source_file = Library/FortLewis/Calc3/14-4-Gradients-in-plane/HGM4-14-4-25-Gradients-etc.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.2_Calculus_of_Vector-Valued_Functions/13.2.27.pg
+source_file = Library/Michigan/Chap14Sec4/Q69.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/ASU-topics/setCalculus/stef13_2p2.pg
+source_file = Library/272/setStewart14_6/ur_vc_6_12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = Library/Rochester/setVecFunction1Curves/urvc_3_13.pg
+source_file = Library/UMN/calculusStewartET/s_14_6_12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.3_Arc_Length_and_Speed/13.3.14.pg
+source_file = Library/272/setStewart14_6/problem_6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,7 +203,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.2_Calculus_of_Vector-Valued_Functions/13.2.46.pg
+source_file = Library/UMN/calculusStewartET/s_14_6_9.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -213,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = Library/272/setStewart13_3/problem_1.pg
+source_file = Library/FortLewis/Calc3/14-4-Gradients-in-plane/HGM4-14-4-34-Gradients-etc.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -223,7 +223,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 22
-source_file = Library/Hope/Multi2/11-06-Scalar-line-integrals/Scalar-line-integral-02.pg
+source_file = Library/Rochester/setVmultivariable6Gradient/ur_vc_6_13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -233,7 +233,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 23
-source_file = Library/AlfredUniv/anton8e/chapter3/3.2/prob3.pg
+source_file = CustomProblems/Library/272/setStewart14_2/UR_VC_5_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -243,7 +243,77 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 24
-source_file = Library/AlfredUniv/anton8e/chapter3/3.2/prob7.pg
+source_file = Library/272/setStewart14_2/UR_VC_5_3.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 25
+source_file = Library/UMN/calculusStewartET/s_14_2_7.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 26
+source_file = CustomProblems/LimitsInPolar4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 27
+source_file = CustomProblems/LimitsInPolar.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 28
+source_file = CustomProblems/LimitsInPolar2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 29
+source_file = Library/Rochester/setVmultivariable2Limits/UR_VC_5_6.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 30
+source_file = CustomProblems/contour-matching-graphs.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 31
+source_file = CustomProblems/gradient-matching-graph-and-function1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 04/04/2018 at 11:59pm EDT
+openDate          = 11/20/2018 at 11:59pm EST
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 04/20/2018 at 11:59pm EDT
-answerDate        = 04/22/2018 at 11:59pm EDT
+dueDate           = 11/27/2018 at 11:59pm EST
+answerDate        = 11/29/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -110,5 +110,65 @@ showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
 att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 11
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-01p.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-01i.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/Hope/Calc1/04-02-Antiderivatives/Antiderivatives-03.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/Rochester/setDerivatives20Antideriv/S04.10.Antiderivatives.PTP02.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/UCSB/Stewart5_4_10/Stewart5_4_10_13.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 16
+source_file = Library/ma122DB/set10/s4_10_13.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
 problem_end
 

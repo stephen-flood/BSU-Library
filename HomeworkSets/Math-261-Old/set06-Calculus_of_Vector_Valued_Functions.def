@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/05/2018 at 11:59pm EDT
-reducedScoringDate = 09/19/2018 at 11:59pm EDT
-dueDate           = 09/19/2018 at 11:59pm EDT
-answerDate        = 09/25/2018 at 11:59pm EDT
+openDate          = 03/02/2017 at 11:59pm EST
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 03/13/2017 at 11:59pm EDT
+answerDate        = 03/16/2017 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/GraphingAngles.pg
+source_file = CustomProblems/Library/272/setStewart13_1/problem_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/GraphingComplicatedAngles.pg
+source_file = Library/272/setStewart12_5/problem_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/TrigTableValues.pg
+source_file = Library/272/setStewart12_5/problem_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/ASU-topics/setUnitCircle/p6.pg
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.1_Vector-Valued_Functions/13.1.14.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/ASU-topics/setUnitCircle/p5.pg
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/13_Calculus_of_Vector-Valued_Functions/13.2_Calculus_of_Vector-Valued_Functions/13.2.7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/NAU/setSineCosine/SinCosRad.pg
+source_file = Library/272/setStewart13_2/problem_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/1_Precalculus_Review/1.4_Trigonometric_Functions/1.4.9.pg
+source_file = CustomProblems/Library/FortLewis/Calc3/17-2-Motion-velocity/HGM4-17-2-30-Motion-velocity-acceleration.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/LoyolaChicago/Precalc/Chap6Review/Q48.pg
+source_file = Library/Union/setMVderivatives/an13_2_13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/LoyolaChicago/Precalc/Chap6Sec7/Q14.pg
+source_file = Library/272/setStewart13_4/problem_6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = CustomProblems/MysteryAngle-APPLY-Identities-DoubleAngle.pg
+source_file = Library/Dartmouth/setStewartCh14S2/problem_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap7Sec2/Connally3-7-2-01-Trig-identities.pg
+source_file = Library/Dartmouth/setStewartCh14S3/problem_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/LoyolaChicago/Precalc/Chap7Sec2/Connally3-7-2-03-Trig-identities.pg
+source_file = Library/AlfredUniv/anton8e/chapter3/3.2/prob3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/Utah/Calculus_I/set4_The_Derivative/1210s4p3.pg
+source_file = Library/AlfredUniv/anton8e/chapter3/3.2/prob7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/UCSB/Stewart5_3_4/Stewart5_3_4_6.pg
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.7_Cylindrical_and_Spherical_Coordinates/12.7.32.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = CustomProblems/Library/Rochester/setDerivatives4Trig/s2_4_32.pg
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.7_Cylindrical_and_Spherical_Coordinates/12.7.38.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,47 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/UCSB/Stewart5_5_4/Stewart5_5_4_16.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 17
-source_file = CustomProblems/Library/Indiana/Indiana_setIntegrals5Trig/sc5_5_100-v2.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 18
-source_file = Library/UMN/calculusStewartCCC/s_5_3_48.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 19
-source_file = Library/Rochester/setIntegrals14Substitution/sc5_5_44_mo.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 20
-source_file = Library/UCSB/Stewart5_7_2/Stewart5_7_2_7.pg
+source_file = Library/Rochester/setVectors5Coordinates/urvc_3_6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

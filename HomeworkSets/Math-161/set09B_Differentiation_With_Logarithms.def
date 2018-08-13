@@ -1,94 +1,94 @@
 assignmentType      = default
-openDate          = 11/21/2018 at 09:59pm EST
-reducedScoringDate = 12/12/2018 at 11:59pm EST
-dueDate           = 12/05/2018 at 09:59pm EST
-answerDate        = 12/11/2018 at 09:59pm EST
+openDate          = 10/29/2018 at 11:59pm EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 11/05/2018 at 11:59pm EST
+answerDate        = 11/16/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
-restrictProbProgression = 0
-emailInstructor   = 0
+restrictProbProgression = 
+emailInstructor   = 
 
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/UMN/calculusStewartET/s_15_3_4.pg
+source_file = Library/OSU/high_school_apcalc/dchmwk5/prob13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/ASU-topics/setCalculus/stef/stef15_3p2.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S05-ChainRule/3-5-46.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/ASU-topics/setCalculus/stef/stef15_3p1.pg
+source_file = Library/ASU-topics/setProductQuotientRule/5-2-35.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/FortLewis/Calc3/16-4-Polar-integrals/HGM5-16-4-03-Double-integrals-polar.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S08-DerivLogs/3-8-25.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/FortLewis/Calc3/16-4-Polar-integrals/HGM4-16-4-06-Double-integrals-polar.pg
+source_file = Library/Utah/Quantitative_Analysis/set4_Derivatives/pr_16.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/Michigan/Chap16Sec4/Q17.pg
+source_file = Library/UBC/setLogExpos/xx2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/15_Multiple_Integration/15.4_Integration_in_Polar_Cylindrical_and_Spherical_Coordinates/15.4.3.pg
+source_file = Library/ma122DB/set6/s3_8_41.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/UMN/calculusStewartET/s_15_4_7.pg
+source_file = Library/UCSB/Stewart5_3_8/Stewart5_3_8_40.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 

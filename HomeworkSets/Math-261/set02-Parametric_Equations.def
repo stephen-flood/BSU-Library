@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 01/20/2017 at 11:59pm EST
+openDate          = 09/12/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 01/26/2017 at 11:59pm EST
-answerDate        = 01/29/2017 at 11:59pm EST
+dueDate           = 09/26/2018 at 11:59pm EDT
+answerDate        = 10/02/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -213,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = Library/Rochester/setIntegrals14Substitution/sc5_5_44_mo.pg
+source_file = CustomProblems/Library/ma123DB/set8/s10_3_15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -223,7 +223,37 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 22
-source_file = Library/UCSB/Stewart5_7_2/Stewart5_7_2_7.pg
+source_file = Library/UCSB/Stewart5_10_2/Stewart5_10_2_51.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 23
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/11_Parametric_Equations_Polar_Coordinates_and_Conic_Sections/11.2_Arc_Length_and_Speed/11.2.12.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 24
+source_file = Library/UCSB/Stewart5_10_2/Stewart5_10_2_47.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 25
+source_file = Library/UCSB/Stewart5_10_2/Stewart5_10_2_40.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

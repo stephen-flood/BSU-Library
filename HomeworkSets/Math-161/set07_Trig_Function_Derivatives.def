@@ -1,214 +1,194 @@
 assignmentType      = default
-openDate          = 09/05/2018 at 11:59pm EDT
-reducedScoringDate = 09/19/2018 at 11:59pm EDT
-dueDate           = 09/19/2018 at 11:59pm EDT
-answerDate        = 09/25/2018 at 11:59pm EDT
+openDate          = 10/17/2018 at 11:59pm EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 10/24/2018 at 11:59pm EDT
+answerDate        = 10/26/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
-restrictProbProgression = 0
-emailInstructor   = 0
+restrictProbProgression = 
+emailInstructor   = 
 
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/GraphingAngles.pg
+source_file = Library/UCSB/Stewart5_3_4/Stewart5_3_4_21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/GraphingComplicatedAngles.pg
+source_file = Library/Union/setDervTrigonometric/s2_4_27b.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/TrigTableValues.pg
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/3_Differentiation/3.6_Trigonometric_Functions/3.6.5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/ASU-topics/setUnitCircle/p6.pg
+source_file = Library/UMN/calculusStewartCCC/s_3_3_20.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/ASU-topics/setUnitCircle/p5.pg
+source_file = Library/Westmont/ActiveCalculus/Preview_2_4/preview_2_4_abcde.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/NAU/setSineCosine/SinCosRad.pg
+source_file = Library/UCSB/Stewart5_3_4/Stewart5_3_4_13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/1_Precalculus_Review/1.4_Trigonometric_Functions/1.4.9.pg
+source_file = Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_40.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/LoyolaChicago/Precalc/Chap6Review/Q48.pg
+source_file = Library/UCSB/Stewart5_3_4/Stewart5_3_4_26.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/LoyolaChicago/Precalc/Chap6Sec7/Q14.pg
+source_file = Library/Westmont/ActiveCalculus/Preview_2_5/preview_2_5_e.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 10
-source_file = CustomProblems/MysteryAngle-APPLY-Identities-DoubleAngle.pg
+source_file = Library/UCSB/Stewart5_3_4/Stewart5_3_4_29.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 11
-source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap7Sec2/Connally3-7-2-01-Trig-identities.pg
+source_file = Library/Valdosta/APEX_Calculus/2.3/APEX_2.3_28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/LoyolaChicago/Precalc/Chap7Sec2/Connally3-7-2-03-Trig-identities.pg
+source_file = Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_38-39.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/Utah/Calculus_I/set4_The_Derivative/1210s4p3.pg
+source_file = Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_16.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/UCSB/Stewart5_3_4/Stewart5_3_4_6.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S04-DerivsTrig/3-4-25.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 15
-source_file = CustomProblems/Library/Rochester/setDerivatives4Trig/s2_4_32.pg
+source_file = Library/OSU/high_school_apcalc/dchmwk4/prob7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/UCSB/Stewart5_5_4/Stewart5_5_4_16.pg
+source_file = Library/UCSB/Stewart5_3_4/Stewart5_3_4_14.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 17
-source_file = CustomProblems/Library/Indiana/Indiana_setIntegrals5Trig/sc5_5_100-v2.pg
+source_file = Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_24.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 18
-source_file = Library/UMN/calculusStewartCCC/s_5_3_48.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S04-DerivsTrig/3-4-24.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 19
-source_file = Library/Rochester/setIntegrals14Substitution/sc5_5_44_mo.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 20
-source_file = Library/UCSB/Stewart5_7_2/Stewart5_7_2_7.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 

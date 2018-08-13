@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/05/2018 at 11:59pm EDT
-reducedScoringDate = 09/19/2018 at 11:59pm EDT
-dueDate           = 09/19/2018 at 11:59pm EDT
-answerDate        = 09/25/2018 at 11:59pm EDT
+openDate          = 01/08/2017 at 11:59pm EST
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 01/21/2017 at 11:59pm EST
+answerDate        = 01/25/2017 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -184,26 +184,6 @@ problem_end
 problem_start
 problem_id = 18
 source_file = Library/UMN/calculusStewartCCC/s_5_3_48.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 19
-source_file = Library/Rochester/setIntegrals14Substitution/sc5_5_44_mo.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 20
-source_file = Library/UCSB/Stewart5_7_2/Stewart5_7_2_7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

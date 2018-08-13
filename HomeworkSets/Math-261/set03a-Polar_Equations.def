@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 11/14/2018 at 11:59pm EST
+openDate          = 09/19/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/21/2018 at 11:59pm EST
-answerDate        = 11/26/2018 at 11:59pm EST
+dueDate           = 10/03/2018 at 11:59pm EDT
+answerDate        = 10/09/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/maCalcDB/setAlgebra28ExpFunctions/sw6_2_9.pg
+source_file = Library/Utah/Calculus_II/set12_Conics_and_Polar_Coordinates/set12_pr4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,17 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/Library/ASU-topics/setExponentialFunctions/jj2.pg
+source_file = Library/UCSB/Stewart5_10_3/Stewart5_10_3_5.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = CustomProblems/Functions-Matching-Polar.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/ASU-topics/setExponentialFunctions/sw6_2_11.pg
+source_file = CustomProblems/Functions-Matching-Polar-2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_1.pg
+source_file = CustomProblems/Graphing-Angles-V2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_2.pg
+source_file = Library/OSU/accelerated_calculus_and_analytic_geometry_ii/hmwk5/prob14.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_7.pg
+source_file = Library/Wiley/setAnton_Section_10.2/Question12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_17.pg
+source_file = Library/ma123DB/set9/s10_4_15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,37 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_28.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 10
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_53.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 11
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_54.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 12
-source_file = Library/UCSB/Stewart5_4_4/Stewart5_4_4_60.pg
+source_file = Library/ma123DB/set9/s10_4_17.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
