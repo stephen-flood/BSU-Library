@@ -51,6 +51,8 @@ TEXT(MODES(TeX =>"",HTML=>EV3(<<'EOT')));
 
 $BBOLD WeBWorK  Assignment \{ protect_underbar($setNumber) \}  is due :  $formattedDueDate. $EBOLD
 $PAR
+You can find detailed infomration about how to enter answers into WebWork at \{ htmlLink(qq!https://webwork.bridgew.edu/!,"https://webwork.bridgew.edu/") \}
+$PAR
 Here's the list of 
 \{ htmlLink(qq!http://webwork.maa.org/wiki/Available_Functions!,"functions and symbols") \}
  which WeBWorK understands.

@@ -1,0 +1,80 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+        # "PGgraphmacros.pl",
+    	# "parserMultiAnswer.pl",
+    	# "parserPopUp.pl",
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+$a   = random(3,5,1);
+$b   = non_zero_random(-2,2,1);
+
+$f = Compute("$a*x + $b");
+$ans = $f->eval(x=>1);
+
+
+#################################################
+# Write Problem 
+
+
+BEGIN_PGML
+
+
+Let [`f(x) = [$f] `]. Compute [`f(1)`]
+>> [___________]{$ans}<<
+
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();
