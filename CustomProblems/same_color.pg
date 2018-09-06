@@ -1,0 +1,72 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('07/10/2018')
+## Author('John Pike')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+        # "PGgraphmacros.pl",
+    	# "parserMultiAnswer.pl",
+    	# "parserPopUp.pl",
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+$a   = random(3,15,1);
+$b   = random(2,9,1);
+$c = $a+$b;
+$x = $a *($a -1)/($c *($c -1));
+$y = $b *($b -1)/($c *($c -1));
+
+$ans = $x + $y;
+
+BEGIN_TEXT
+An urn contains $a green balls and $b yellow balls. If two balls are selected without replacement, then the probability that both balls are the same color is  \{ ans_rule(30)\}
+
+END_TEXT
+
+ANS(num_cmp($ans) );
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.;

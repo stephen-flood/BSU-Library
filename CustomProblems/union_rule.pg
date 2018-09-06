@@ -1,0 +1,61 @@
+#########################################################
+# DESCRIPTION
+## DBsubject(Probability)
+## DBchapter(Sample Space)
+## DBsection(Probability: direct computation, inclusion/exclusion)
+## Date(07/10/2018)
+## Institution(Bridgewater State University)
+## Author(John Pike)
+
+
+#########################################################
+DOCUMENT();
+## Initializations: (Required)
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "parserRadioButtons.pl",
+  "MathObjects.pl",
+  "parserMultiAnswer.pl",
+  "RserveClient.pl",
+  "answerHints.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+#
+#  Setup
+#
+#
+Context("Numeric");
+
+$x = random(20, 40, 1);
+$y = random(25, 60, 1);
+$z = random(5, 15, 1);
+
+$a = ($x+$y-$z)/100;
+$b = ($x+$y-2*$z)/100;
+
+#########################################################
+## Main Text: where all text goes (Required)
+Context()->texStrings;
+BEGIN_TEXT
+It is estimated that $x percent of all students take economics, $y percent
+of all students take math, and $z percent of all students take both. Answer the following questions, rounding your answers to two decimal places where appropriate.
+$BR
+$BR
+$BBOLD(a) $EBOLD What is the probability that a randomly chosen student will take
+at least one of these courses? 
+\{ans_rule(7) \} 
+$BR
+$BR
+$BBOLD(b) $EBOLD What is the probability that a randomly chosen student will take exactly one of these courses? \{ans_rule(7) \} 
+END_TEXT
+
+#########################################################
+## Answers evaluation (Required)
+ANS( num_cmp($a, tol=>0.02) );
+ANS( num_cmp($b, tol=>0.02) );
+
+
+ENDDOCUMENT();

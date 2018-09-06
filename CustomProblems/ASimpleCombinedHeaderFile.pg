@@ -10,7 +10,7 @@ loadMacros(
 
 );
 
- TEXT($BEGIN_ONE_COLUMN);
+TEXT($BEGIN_ONE_COLUMN);
 
 ####################################################
 #
@@ -28,9 +28,7 @@ TEXT(MODES(TeX =>EV3(<<'EOT'),HTML=>""));
 % Uncomment the line below if this course has sections. Note that this is a comment in TeX mode since this is only processed by LaTeX
 %   {\large \bf { Section: \{protect_underbar($sectionName)\} } }
 \par
-\noindent{\large {Assignment \{protect_underbar($setNumber)\}  due \textbf{$formatedDueDate} }}
-\par
-\noindent{\large {Assignment \{protect_underbar($setNumber)\}  due \textbf{$formatedDueDate} }}
+\noindent{\large \bf {Assignment \{protect_underbar($setNumber)\}  due $formatedDueDate}}
 \par\noindent \bigskip
 % Uncomment and edit the line below if this course has a web page. Note that this is a comment in TeX mode.
 %See the course web page for information http://yoururl/yourcourse
@@ -84,6 +82,7 @@ BEGIN_TEXT
 
 END_TEXT
 
- TEXT($END_ONE_COLUMN);
+
+TEXT($END_ONE_COLUMN);
 
 ENDDOCUMENT();        # This should be the last executable line in the problem.

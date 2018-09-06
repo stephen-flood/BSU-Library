@@ -1,0 +1,52 @@
+## DESCRIPTION
+## Discrete mathematics, counting
+## ENDDESCRIPTION
+
+## DBsubject(Combinatorics)
+## DBchapter(Counting)
+## DBsection(Principles (addition, subtraction, multiplication))
+## Date(07/07/2018)
+## Institution(Bridgewater State University)
+## Author(John Pike)
+## MLT()
+## MLTleader()
+## Level()
+## TitleText1('Introduction to Probability')
+## AuthorText1('Anderson, SeppÃ¤lÃ¤inen, ValkÃ³')
+## EditionText1('1')
+## Section1('Appendix C')
+## Problem1('13')
+## KEYWORDS('combinatorics', 'counting', 'permutation','algebra', 'basic counting', 'probability')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+BEGIN_TEXT
+In how many ways can we color the sides of a square with the colors red, 
+blue, yellow, green so that each side has a different color? 
+We treat colorings that can be rotated into each other as equivalent.
+$BR
+Your answer is : \{ans_rule(25) \}
+$BR
+END_TEXT
+
+$ans = 6;
+ANS(num_cmp($ans));
+
+
+SOLUTION(EV3(<<'END_SOLUTION'));
+
+There are 3! such colorings because we can adopt the convention that red is 
+always on top (to account for the rotation constraint), and there are 3!  ways to assign all remaining colors to the the right, left, and 
+bottom sides.
+
+END_SOLUTION
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

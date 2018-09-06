@@ -1,0 +1,48 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('probability')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('07/10/2018')
+## Author('John Pike')
+## Institution('Bridgewater State University')
+## TitleText1('Introduction to Probability')
+## EditionText1('1')
+## AuthorText1('Anderson, SeppÃ¤lÃ¤inen, ValkÃ³')
+## Section1('')
+## Problem1('1.15')
+
+
+
+########################################################################
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+BEGIN_TEXT
+Assume that \(P(A) = 0.4\) and \(P(B) = 0.7\). 
+Making no further
+assumptions on A and B, show that: $BR $BR
+(a) \(P(A\cap B)\geq\) \{ ans_rule(30)
+\}
+$PAR
+(b) \(P(A\cap B)\leq\) 
+\{ ans_rule(30) \}
+$PAR
+END_TEXT
+
+ANS(num_cmp( 0.1 ) );
+ANS(num_cmp( 0.4 ) );
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.;

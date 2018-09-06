@@ -13,22 +13,20 @@ loadMacros(
 
 
 BEGIN_TEXT
-# $BEGIN_ONE_COLUMN
+$BEGIN_ONE_COLUMN
 \noindent {\large \bf $studentName}
 \hfill
 {\large \bf {\{protect_underbar($courseName)\}}}
 % Uncomment the line below if this course has sections. Note that this is a comment in TeX mode since this is only processed by LaTeX
 %   {\large \bf { Section: \{protect_underbar($sectionName)\} } }
 \par
-\noindent{\large {Assignment \{protect_underbar($setNumber)\} }}
-\par
-\noindent{\large {Due \textbf{$formatedDueDate} }}
+\noindent{\large \bf {Assignment \{protect_underbar($setNumber)\}  due $formatedDueDate}}
 \par\noindent \bigskip
 % Uncomment and edit the line below if this course has a web page. Note that this is a comment in TeX mode.
 % See the course web page for information http://yoururl/yourcourse
 
 
-# $END_ONE_COLUMN
+$END_ONE_COLUMN
 END_TEXT
 
 ENDDOCUMENT();
