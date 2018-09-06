@@ -1,0 +1,90 @@
+##DESCRIPTION
+##  Statistics: Introduction
+##ENDDESCRIPTION
+
+
+## DBsubject(Probability)
+## DBchapter(Random variables)
+## DBsection(Continuous: density function, cumulative distribution function)
+## Date(09/17/2012)
+## Institution(The University of British Columbia)
+## Author(Djun Kim)
+## Level(3)
+## KEYWORDS('probability', 'Continuous random variable', 'Expectation', 'Variance', 'Computing probability', 'Cumulative distribution function', 'Probability density function' )
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGchoicemacros.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+#######
+TEXT(beginproblem());
+
+#######
+# Setup
+
+$parts = [0, 1, 2, 3, 4];
+@perm = shuffle(5);
+@choose = @perm;
+
+$quest[0] = "Find \( P(X > \frac{1}{2} ) \). Give your answer as a decimal, correct to 2 decimal places. ";
+
+$quest[1] = "Find \( E(X) \), correct to 2 decimal places.";
+
+$quest[2] = "Find Var(\( X \)), correct to 2 decimal places.";
+
+$quest[3] = "Find the median of \(X\), correct to 2 decimal places.";
+
+$quest[4] = "Find \( E(  \sqrt{ X } ) \), correct to 2 decimal places.";
+
+
+$ans[0] = {'ans' => Real( 0.56 ),   'tolType'=>'absolute', 'tol'=> 0.01 };
+$ans[1] = {'ans' => Real( 0.67 ),   'tolType'=>'absolute', 'tol'=> 0.01 };
+$ans[2] = {'ans' => Real( 0.22 ),   'tolType'=>'absolute', 'tol'=> 0.01 };
+$ans[3] = {'ans' => Real( 0.59 ),   'tolType'=>'absolute', 'tol'=> 0.01 };
+$ans[4] = {'ans' => Real( 0.75 ),   'tolType'=>'absolute', 'tol'=> 0.01 };
+
+Context()->texStrings;
+
+$string = '';
+for ($i = 0; $i < 5; $i++) {
+   $string .= "$BR$BR $BBOLD Part(" . chr( ord('a') + $i) . ")$EBOLD " . $quest[$choose[$i]] . ans_rule(6);
+#$string .= ' ' . $i. ":" . $choose[$i];
+}
+
+BEGIN_TEXT
+
+The continuous random variable \( X \) has cumulative distribution function given by
+
+\[ 
+F(x) =
+   \begin{cases}
+        0                          & \mbox{ for }  x < 0  \\
+        x - \frac{1}{4} x^2 & \mbox{ for }  0 \le x \le 2   \\
+        1                          & \mbox{ for }  x > 2  \\
+   \end{cases} 
+\]
+
+\{ $string; \}
+
+END_TEXT
+
+
+for ($i = 0; $i < 5; $i++) {
+   ANS ( 
+       num_cmp( 
+            $ans[$choose[$i]]{'ans'}, 
+            tolType=>$ans[$choose[$i]]{'tolType'}, 
+            tol => $ans[$choose[$i]]{'tol'} 
+       )
+   );
+}
+
+
+
+ENDDOCUMENT();
