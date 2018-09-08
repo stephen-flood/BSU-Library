@@ -70,13 +70,30 @@ $ans = Compute("1/n");
 # 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
 
 
+$showHint = 2;
+
 BEGIN_PGML
 
 Consider a coin which lands on heads with probability [` p\in[0,1] `]. We will see later in the class that if the coin is repeatedly tossed, the probability that its first heads occurs on the [`n^{\text{th}}`] toss is [``[$f] ``]. 
 
 The value of [`p`] which maximizes this is [__________]{$ans}.
 
+  
+
+(If you don't get this in [$showHint] tries, you can get a hint.)
+
+
 END_PGML
+
+BEGIN_PGML_HINT
+
+1. Even thought the probability depends on both [`p`] and [`n`], it is best to think of this as a Calculus 1 _optimization problem_.  We are _asking_ about the impact of changing the probability  [`p`] of the coin, so we should think of [`p`] as a _variable_.  We are not asking about the impact of changing the number of flips [`n`], so we can think of [`n`] as an unknown constant.  
+2. In orther words, you want to *maximize* the function [`y = f(p) = [$f] `], where [`f`] happens to reference an unknown constant [`n`].  
+3. Be very careful when computing [`f'(p)`] and  when solving for [`p`] such that [`f(p)=0 `] or [`DNE`].  Be sure to create a sign chart to check the critical points. 
+3. Your answer will be a function.  Your answer might (or might not) include either the variable [`p`] or the constant [`n`].
+
+
+END_PGML_HINT
 
 
 
