@@ -1,0 +1,164 @@
+assignmentType      = default
+openDate          = 09/25/2017 at 11:58pm EDT
+reducedScoringDate = 06/01/2017 at 11:59pm EDT
+dueDate           = 07/01/2018 at 11:59pm EDT
+answerDate        = 07/01/2018 at 11:59pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = Translate between graphical, algebraic, and data-table representations of a two-variable linear relationship.
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot40.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot70.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable20.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = Library/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = Library/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept130.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 10
+source_file = Library/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula20.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph20.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/PCC/BasicAlgebra/PointSlopeForm/FindLineEquation10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/PCC/BasicAlgebra/PointSlopeForm/FindLineEquation40.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Library/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasics10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = Library/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquation10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = Library/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquation30.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

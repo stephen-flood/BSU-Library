@@ -1,0 +1,164 @@
+assignmentType      = default
+openDate          = 11/20/2017 at 11:59pm EST
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 07/01/2018 at 11:59pm EDT
+answerDate        = 07/01/2018 at 11:59pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = Simplify basic radical expressions, and use the quadratic formula to determine exact solutions to quadratic equations.
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/NewHampshire/unh_schoolib/Square_Root/sqrnne401.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/Mizzou/College_Algebra/Rational_and_Radical_Exponents_Simplifying_Radicals/Simplify_Fractional_Radical_Numbers_01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/Mizzou/College_Algebra/Rational_and_Radical_Exponents_Simplifying_Radicals/Three_Terms.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/Mizzou/Intermediate_Algebra/Radicals/Roots_Numbers.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = Library/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals30.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = Library/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals06.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 9
+source_file = Library/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals02.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 10
+source_file = Library/Mizzou/Algebra/eqns_radical/eqns_rad_two_parts_01_ia.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 11
+source_file = Library/Rochester/setAlgebra10QuadraticEqns/sw3_3_37.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/Rochester/setAlgebra10QuadraticEqns/sw3_3_25.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/Rochester/setAlgebra10QuadraticEqns/sw3_3_31.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/FortLewis/Algebra/9-3-Completing-the-square/MCH1-9-3-24-Completing-the-square.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/Mizzou/Intermediate_Algebra/Equations_Radical/Prob_03.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

@@ -1,0 +1,164 @@
+assignmentType      = default
+openDate          = 09/25/2017 at 11:56pm EDT
+reducedScoringDate = 06/01/2017 at 11:59pm EDT
+dueDate           = 07/01/2018 at 11:59pm EDT
+answerDate        = 07/01/2018 at 11:59pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = Solve a linear equation or inequality, especially those with fractional coefficients and instances of the variable on both sides.
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/PCC/BasicAlgebra/VerifySolutionsOneVariable/solutionQ40.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/PCC/BasicAlgebra/VerifySolutionsOneVariable/solutionQ70.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/CollegeOfIdaho/setAlgebra_01_04_SolveLinearEq/14IntAlg_01_SolveLinear.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/CollegeOfIdaho/setAlgebra_01_04_SolveLinearEq/14IntAlg_04_SolveLinear.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/CollegeOfIdaho/setAlgebra_01_04_SolveLinearEq/14IntAlg_06_SolveLinear.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 6
+source_file = Library/CollegeOfIdaho/setAlgebra_01_04_SolveLinearEq/14IntAlg_08_SolveLinear.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/CollegeOfIdaho/setAlgebra_01_04_SolveLinearEq/14IntAlg_11_SolveLinear.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 8
+source_file = Library/CollegeOfIdaho/setAlgebra_01_04_SolveLinearEq/14IntAlg_13_SolveLinear.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 9
+source_file = Library/PCC/BasicAlgebra/AlgebraicProperties/DistributiveProperty10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 10
+source_file = Library/PCC/BasicAlgebra/AlgebraicProperties/DistributiveProperty50.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 11
+source_file = Library/PCC/BasicAlgebra/AlgebraicProperties/DistributiveProperty40.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/CollegeOfIdaho/setAlgebra_04_01_LinearInequalities/41IntAlg_01_LinearIneq.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/CollegeOfIdaho/setAlgebra_04_01_LinearInequalities/41IntAlg_03_LinearIneq.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/CollegeOfIdaho/setAlgebra_04_01_LinearInequalities/41IntAlg_11_LinearIneq.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/CollegeOfIdaho/setAlgebra_04_01_LinearInequalities/41IntAlg_13_LinearIneq.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+
