@@ -30,7 +30,8 @@ loadMacros(
         "PGcourse.pl",       
 	"PGML.pl",
 	"MathObjects.pl",
-        # "PGgraphmacros.pl",
+	"contextInequalities.pl",
+	# "PGgraphmacros.pl",
     	# "parserMultiAnswer.pl",
     	# "parserPopUp.pl",
     	# "contextInequalities.pl",
@@ -59,9 +60,17 @@ $n   = random(5,15,1);
 #$b   = non_zero_random(-2,2,1);
 
 $f = Compute("p*(1-p)^($n-1)")->reduce();
+$fprime = Formula("$f")->D('p'); 
 $ans = Compute("1/$n");
 
+Context("Inequalities");
+#Context("Interval);
+$increasing = Compute("x<$ans");
+$decreasing = Compute("$ans<x<1 or 1<x");
+#$increasing = Interval("(-Infinity,$ans)");
+#$decreasing = Interval("($ans,1) U (1,Inf)");
 
+Context("Numeric");
 #################################################
 # Write Problem 
 #
@@ -76,7 +85,13 @@ Let [` p\in[0,1] `]
 
 We will see later in the class that the probability that a coin which lands on heads with probability [`p`] first lands heads on toss [`[$n]`] is given by [` [$f] `]
 
-The value of [`p`] which maximizes this is [__________]{$ans}.
+The derivive of the function is [_________]{$fprime}
+
+The function is increasing on the interval [___________]{$increasing}
+
+The function is decreasing on the interval [___________]{$decreasing}
+
+The value of [`p`] which maximizes the probability is [__________]{$ans}.
 
 END_PGML
 

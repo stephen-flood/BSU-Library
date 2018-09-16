@@ -1,0 +1,134 @@
+#DESCRIPTION
+##  sample true-false question
+##ENDDESCRIPTION
+## DBsubject(Algebra)
+## DBchapter(Operations on polynomial and rational expressions)
+## DBsection(Simplify rational expressions)
+## Institution(Univeristy of Utah)
+## Author(Utah ww group)
+## Level(2)
+## Static(1)
+## TitleText1('Precalculus')
+## AuthorText1('Ron Larson and Robert  Hostetler')
+## EditionText1('7')
+## Section1('.')
+## Problem1('')
+## KEYWORDS('true-false')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl",
+  "PGML.pl",
+);
+
+install_problem_grader(~~&std_problem_grader);
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 0;
+$showPartialCredit = 0;
+
+
+TEXT(EV2(<<EOT));
+
+
+For each statement below enter a $BITALIC T$EITALIC (true) the statement is true
+and an $BITALIC F$EITALIC (false) otherwise.  In this problem you need to get
+everything correct before receiving credit.  Whenever there is a
+division below,$BBOLD  we assume that the divisor is non-zero.$EBOLD
+
+
+
+$BR   \{ ans_rule(4) \} For all real numbers \(a\), \(b\), and  \(c\)
+\[\frac{ab+ac}{a} = b+c.\]
+EOT
+ANS(str_cmp("T"));
+
+
+TEXT(EV2(<<EOT));
+
+
+$BR   \{ ans_rule(4) \} For all real numbers \(a\), \(b\), and  \(c\)
+\[\frac{ab+c}{a} = b+c.\]
+EOT
+ANS(str_cmp("F"));
+
+
+TEXT(EV2(<<EOT));
+$BR   \{ ans_rule(4) \} For all real numbers \(a\), \(b\), and  \(c\)
+\[\frac{\frac{a}{b}}{c} = \frac{b}{ac}.\]
+EOT
+ANS(str_cmp("F"));
+
+TEXT(EV2(<<EOT));
+$BR   \{ ans_rule(4) \} For all real numbers \(a\), \(b\), and  \(c\)
+\[\frac{\frac{a}{b}}{c} = \frac{a}{bc}.\]
+EOT
+ANS(str_cmp("T"));
+
+TEXT(EV2(<<EOT));
+$BR   \{ ans_rule(4) \} For all real numbers \(a\), \(b\), and  \(c\)
+\[\frac{a}{\frac{b}{c}} = \frac{ba}{c}.\]
+EOT
+ANS(str_cmp("F"));
+
+TEXT(EV2(<<EOT));
+$BR   \{ ans_rule(4) \} For all real numbers \(a\), \(b\), and  \(c\)
+\[\frac{a}{\frac{b}{c}} = \frac{ca}{b}.\]
+EOT
+ANS(str_cmp("T"));
+
+$showHint=3;
+
+BEGIN_PGML_HINT
+
+*Before starting* this problem, you should make sure you are comfortable with the "basic rules of fractions."
+*For each part*, you will need to try to _rewrite_ one of the expressions that you are given, until you are _able_ to apply a "basic property of fractions."
+
+For the first two parts, think about whether you can factor an [`a`] out of all terms of the top of the fraction. 
+For the last two parts, carefully think about the order of operations. 
+
+If you are still stuck, it is often helpful to think about what you would do _if these were specific numbers_.  For example, dividing [`\frac{2}{3}`] into [`5`] pieces is the same thing as multiplying [`\frac{2}{3}`] by [`\frac{1}{5}`].  That means that [`\frac{\,\frac{2}{3}\,}{5}  =   \frac{2}{3} \cdot \frac{1}{5}`]
+
+On the other hand [`\dfrac{2}{\frac{3}{5}}`], which expresses the result of dividing [`2`] into [`\frac{3}{5}`] pieces, is more counterintuitive.  To simplify this expression,  use one rule for fractions to pull the numerator off the top of the fraction, to obtain [`2\cdot \frac{\,1\,}{\frac{3}{5}}`].  You can then use another rule for fractions to rewrite this to get [`2\cdot\frac{5}{3} = \frac{2\cdot 5}{3}`].
+
+END_PGML_HINT
+
+
+SOLUTION(EV3(<<'EOT'));
+$BR $BBOLD Solution:$EBOLD 
+
+
+$BR
+\(\frac{ab+ac}{a} = b+c\) is true.  Applying the distributive law in the numerator gives
+\[\frac{ab+ac}{a} = \frac{a(b+c)}{a}=b+c.\]
+
+
+
+$BR
+\(\frac{\frac{a}{b}}{c} = \frac{b}{ac}\) is false, we divide a fraction by a number by multiplying the denominator with that number.
+
+$BR
+\(\frac{\frac{a}{b}}{c} = \frac{a}{bc}\) is true, it's the correct way to do the preceding problem.
+
+
+$BR
+\(\frac{a}{\frac{b}{c}} = \frac{ba}{c}\) is false, we divide by a fraction by multiplying with the reciprocal.
+
+$BR
+\(\frac{a}{\frac{b}{c}} = \frac{ca}{b}\) is true, it's the correct way to do the preceding problem.
+
+$BR
+EOT
+
+
+
+
+
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+
+
+
