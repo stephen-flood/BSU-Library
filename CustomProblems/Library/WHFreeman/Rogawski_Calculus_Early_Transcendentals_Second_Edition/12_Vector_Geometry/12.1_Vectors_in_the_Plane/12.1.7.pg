@@ -43,7 +43,7 @@ If \(P=$P\) and \(Q=$Q\), find the components of \(\vec{PQ}\)$BR
 \(\vec{PQ}=\)\{ans_rule(10)\}$BR
 
 $BR$BR
-$BBOLD Note: $EBOLD Enter vectors in the form \( < a , b, c >\)
+$BBOLD Note: $EBOLD Enter planar vectors in the form \( < a , b >\)
 END_TEXT
 
 ANS($a->cmp);
