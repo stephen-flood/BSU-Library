@@ -25,13 +25,8 @@ loadMacros(
    "MathObjects.pl",
     "PGML.pl",
     "PGcourse.pl",
-    "parserNumberWithUnits.pl",
-    "contextArbitraryString.pl",
-    "parserMultiAnswer.pl",
-    "parserPopUp.pl",
-    "contextInequalities.pl",
-    "PGgraphmacros.pl",
     "contextLimitedPolynomial.pl",
+    "parserDifferenceQuotient.pl",
 );
 # Print problem number and point value (weight) for the problem
 TEXT(beginproblem());
@@ -42,65 +37,42 @@ $showPartialCorrectAnswers = 1;
 Context("Numeric");
 # Accept submissions as correct if they differ from the correct answer given below by 1% or less. 
 Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(h => "Real");
 
-# These contexts restrict the acceptable format of certain answers
-# Use loadMacros("contextABCD.pl"); to make the context available for a WeBWorK question. 
-#
-# contextFraction.pl  
-# 	Context("Fraction"); Context("Fraction-NoDecimals"); #Context("LimitedFraction"); Context("LimitedProperFraction");
-#
-# contextLimitedPolynomial.pl
-# 	Context("LimitedPolynomial");   # Allow only entry of expanded polynomials
-#
-# contextLimitedPowers.pl
-#       LimitedPowers::NoBaseE(); LimitedPowers::OnlyIntegers(); LimitedPowers::OnlyPositiveIntegers(); LimitedPowers::OnlyNonNegativeIntegers();
-#      
-# contextString.pl
-#       Use this context to allow restricted short answer (no mathematical symbols) questions.
-#       Feedback is provided if the response contains strings that are not allowed. 
-#
-# See also:
-# 	http://webwork.maa.org/wiki/Specialized_contexts#.V8CS8lQko2w
 
 
 ##############################################################
-#
 #  Setup
-#
-#  For details, see http://webwork.maa.org/wiki/Introduction_to_MathObjects#.V8CSFFQko2w
-#
-#  (Initialize your variables here)
-#
-
-$pi = Real("pi");
 
 
+
+## Randomize a Quadratic Function f(x)
 $a = non_zero_random(-2,2,1);
 $b = non_zero_random(-3,3,1);
 $c = non_zero_random(-5,5,1);
+$f = Formula("$b*x + $c")->reduce();
 
-#$e = random(2,2,1);
+## Select a random place to center the difference quotient
+$xzero = random(1,3,1);
+$fofxzero=$f->eval(x=>"$xzero");
+while( $fofxzero==0)
+    {
+    $xzero = random(1,3,1);
+    $fofxzero=$f->eval(x=>"$xzero");
+    }
+## End selection of xzero
 
-$f = Formula("$a*x^2 + $b*x + $c")->reduce();
+## Evaluate f at (x + xzero) [RESTRICTIVE VERSION]
+#Context("LimitedPolynomial");
+#$coeff1 = $a;
+#$coeff2 = 2*$a*$xzero+$b;
+#$coeff3 = $f->eval(x=>"$xzero");
+#$fxplusxzero = Compute("$coeff1*x^2 + $coeff2*x+ $coeff3")->reduce();
+#$diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
 
-
-Context("LimitedPolynomial");   # Allow only entry of expanded polynomials
-
-
-$fofone=Compute("$a*1^2 + $b*1 + $c");
-
-$coeff1 = $a;
-$coeff2 = 2*$a+$b;
-$coeff3 = $fofone;
-$fxplus1 = Compute("$coeff1*x^2 + $coeff2*x+ $coeff3")->reduce();
-
-#$fxplus2 = Compute("$a*x^2 + (4*$a+$b)*x+(4+$b + $c)")->reduce();
-
-
-$diffq = Compute("$a*x + $b")->reduce();
-
-Context("Numeric");   # Allow only entry of expanded polynomials
-
+$fxplusxzero = $f->substitute(x=>"x+$xzero");
+$fh = $f->substitute(x=>"h");
+$diffq = DifferenceQuotient("$b","x");
 
 
 ##############################################################
@@ -112,14 +84,21 @@ BEGIN_PGML
 
 Let [`f(x) = [$f]`].
 
-1. Compute [`f(0)`] = [________]{"$c"}
+a. Compute [`f([$xzero])`] 
 
-2. Compute [`f(1)`] = [________]{"$fofone"}
+    [`f([$xzero])`] = [________]{"$c"}
 
-3. Simplify [`f(x + 1)`] = [________]{"$fxplus1"}
+b. Write down a formula for [`f(h)`]  
 
-4. Simplify [`\dfrac{ f(x) - f(0)}{x}`].
-   [____________]{"$diffq"}
+    [`f(h)`] = [________]{"$fh"}
+
+c. Simplify the following expression completely [`f(x + [$xzero])`] 
+
+    [`f(x + [$xzero])`] = [________]{"$fxplusxzero"}
+
+d. Simplify the following expression completely [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`].
+
+    [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`] =  [____________]{"$diffq"}
 
 
 

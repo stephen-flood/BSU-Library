@@ -47,9 +47,9 @@ Context()->variables->add(h => "Real");
 
 
 ## Randomize a Quadratic Function f(x)
-$a = non_zero_random(-2,2,1);
-$b = non_zero_random(-3,3,1);
-$c = non_zero_random(-5,5,1);
+$a = non_zero_random(-2,-1,1);
+$b = non_zero_random(3,7,2);
+$c = non_zero_random(15,21,1);
 $f = Formula("$a*x^2 + $b*x + $c")->reduce();
 
 ## Select a random place to center the difference quotient
@@ -70,10 +70,11 @@ while( $fofxzero==0)
 #$fxplusxzero = Compute("$coeff1*x^2 + $coeff2*x+ $coeff3")->reduce();
 #$diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
 
-$fxplusxzero = $f->substitute(x=>"x+$xzero");
+$fxplusxzero = $f->substitute(x=>"h+$xzero");
 $fh = $f->substitute(x=>"h");
-$diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
+$diffq = DifferenceQuotient("$a*h + 2*$xzero*$a + $b","h");
 
+$slopeatxzero=$f->D('x')->eval(x=>"$xzero");
 
 ##############################################################
 #
@@ -82,24 +83,26 @@ $diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
 ######################################################################
 BEGIN_PGML
 
-Let [`f(x) = [$f]`].
+The height (in meters) of a certain ball as a function of time [`x`] (in hours) is given by  the function  [`f(x) = [$f]`].
 
-a. Compute [`f([$xzero])`] 
+* Compute the *height* of the ball *at time*  [`a=[$xzero]`] 
 
-    [`f([$xzero])`] = [________]{"$c"}
+    [`f([$xzero])`] = [________]{"$fofxzero"}
 
-b. Write down a formula for [`f(h)`]  
+* Compute the *height* of the ball *a short time after* [`a=[$xzero]`], as a function of the change in time of [`h`].     
+    Completely simplify your answer.  
 
-    [`f(h)`] = [________]{"$fh"}
+    [`f([$xzero] + h)`] = [________]{"$fxplusxzero"}
 
-c. Simplify the following expression completely [`f(x + [$xzero])`] 
+* Find a formula for the *average velocity* of the ball over the interval of time beginning at hour [`[$xzero]`], and having duration [`h`].    
+    Completely simplify your answer.  
 
-    [`f(x + [$xzero])`] = [________]{"$fxplusxzero"}
+    [`\dfrac{ f([$xzero] + h) - f([$xzero])}{h}`] =  [____________]{"$diffq"}
 
-d. Simplify the following expression completely [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`].
+* Find the *instantaneous velocity* of the ball at the time [`x=[$xzero]`],   
+    by letting the duration [`h`] of the interval of time used in the approximation go to zero. 
 
-    [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`] =  [____________]{"$diffq"}
-
+    Rate of change of height [`f`] at time [` [$xzero]`] [`` = \lim_{h\rightarrow 0}\left[ \dfrac{ f([$xzero] + h) - f([$xzero])}{h}\right] = ``] [____________]{"$slopeatxzero"}
 
 
 END_PGML
