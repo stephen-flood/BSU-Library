@@ -1,0 +1,85 @@
+## DESCRIPTION
+## DBsubject(Probability)
+## DBchapter(Sample Space)
+## DBsection(Probability: direct computation, inclusion/exclusion)
+## Institution(The College of Idaho)
+## Author(R Cruz)
+## Level(2)
+## MO(1)
+## TitleText1('The Basic Practice of Statistics')
+## AuthorText1('David Moore')
+## EditionText1('5e')
+## Section1('10')
+## Problem1('')
+## KEYWORDS('statistics', 'sample space', 'probability')
+## Date: 2009/03
+## Comment: Modified to use when introducing probability 
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "answerHints.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+######################################
+#  Setup
+
+@event = ("1", "2");
+$choose = random(0,1,1);
+
+######################################
+#  Main text
+
+BEGIN_TEXT
+Suppose a couple planned to have three children.  Let \( A \) be event that the couple has \($event[$choose]\) girls.  Let \(B\) be the event that the couple has three boys.
+
+$PAR
+(a)   List all possible arrangements of girls and boys. For example, if the
+      couple had 2 girls and then a boy, then type GGB. (Separate each 
+      item in your list with a comma.): \{ans_rule(60)\}.
+
+$PAR
+(b)  What is \(P(A)\)? \{ans_rule(10)\} $PAR
+
+$PAR
+(c) Find the probability that the couple has three boys: \{ans_rule(15)\}.
+END_TEXT
+
+######################################
+#  Answers
+
+$showPartialCorrectAnswers = 1;
+
+Context()->strings->add("GGG"=>{}, 
+			"GGB"=>{}, 
+			"GBG"=>{}, 
+			"BGG"=>{}, 
+			"BBG"=>{}, 
+			"BGB"=>{}, 
+			"GBB"=>{}, 
+			"BBB"=>{});
+
+$ans_a = List("GGG", "GGB", "GBG", "BGG", "BBG", "BGB", "GBB", "BBB");
+ANS($ans_a->cmp);
+
+$ans_c = Real(0.375)->with(toltype=>'absolute',tolerance=>0.003);
+ANS($ans_c->cmp->withPostFilter(AnswerHints(
+     sub {
+         my ($correct,$student,$anshash) = @_;
+         return $student < 0 || $student > 1;
+         } => ["Probabilities must be between 0 and 1."])));
+
+$ans_d = Real("1/8")->with(toltype=>'absolute',tolerance=>0.003);
+ANS($ans_d->cmp->withPostFilter(AnswerHints(
+     sub {
+         my ($correct,$student,$anshash) = @_;
+         return $student < 0 || $student > 1;
+         } => ["Probabilities must be between 0 and 1."])));
+
+ENDDOCUMENT();       # This should be the last executable line in the problem.
+

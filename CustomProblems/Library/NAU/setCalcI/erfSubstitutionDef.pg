@@ -1,0 +1,121 @@
+## DESCRIPTION
+## Calculus
+## ENDDESCRIPTION
+
+## Tagged by tda2d
+
+## DBsubject(Calculus - single variable)
+## DBchapter(Techniques of integration)
+## DBsection(Substitution (without trigonometric functions))
+## Institution(NAU)
+## Author(Jim Swift)
+## Level(4)
+## KEYWORDS('integral' 'substitution')
+
+## Before doing anything, we must import the macro definitions on the next few lines.
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl",
+  "MathObjects.pl",
+);
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->variables->add(t => 'Real');
+
+$pi = 4*arctan(1);
+$lim = random(1,9,1);
+$c = random(2, 9);
+$a = sqrt($pi*$c)/2;
+$b = $lim/sqrt($c);
+
+$e = random(11,32,1);
+$f = $e + 2;
+
+$exponent=Compute("-t^2");
+
+TEXT(EV2(<<EOT));
+The error function, or erf, is
+defied as
+\[
+{\rm erf}(x) = \frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2} dt .
+\]
+The error function cannot be written in terms of elementary functions;
+this is the simplest way to write it.
+
+$BR
+$BR
+
+$BITALIC I.$EITALIC Apply the definition of \(\rm erf\) to expand \({\rm erf} \left( \frac{$e}{$f}\right)\).
+
+$PAR
+\( \displaystyle {\rm erf} \left( \frac{$e}{$f}\right)  =  A\int_B^C e^{D} dt \) 
+$PAR
+where $BR
+\( A = \) \{ans_rule(5) \} $BR
+\( B = \) \{ans_rule(5) \} $BR
+\( C = \) \{ans_rule(5) \} $BR
+\( D = \) \{ans_rule(5) \} 
+
+$BR
+$BR
+$BITALIC II.$EITALIC  For the next problem, do a substitution, changing the limits of integration, to write the following integral as \(a \, {\rm erf} (b)\), where \(a\) and \(b\) are constants.
+Fill in the blanks with these constants.
+$BR 
+$BR
+\( \displaystyle \int_{0}^{$lim} e^{-t^2/$c} \, dt = \) 
+\{ans_rule(10) \} \( {\rm erf} (\)\{ans_rule(5) \} \()\) .
+$BR
+EOT
+
+ANS(num_cmp(2/sqrt(pi)));
+ANS(num_cmp(0));
+ANS(num_cmp($e/$f));
+ANS($exponent->cmp());
+
+ANS(num_cmp($a));
+ANS(num_cmp($b));
+
+
+$showHint = 0;
+BEGIN_HINT
+
+$BBOLD Step 1:$EBOLD $BITALIC Understanding the \(\rm erf\) function. $EITALIC
+$PAR
+
+To better understand the question, lets think about evaluating this function at some input \(x\).  For example, lets see what \( {\rm erf}\left(\frac{5}{2}\right)\) means.  
+
+\[ {\rm erf}\left(\frac{5}{2}\right) = \frac{2}{\sqrt{\pi}}  \int_0^{5/2} e^{-t^2} dt\] 
+
+$PAR 
+
+That means we can solve for the integral in terms of \({\rm erf}\left(\frac{5}{2}\right) \):
+
+\[ \int_0^{5/2} e^{-t^2} dt = \frac{\sqrt{\pi}}{2} \cdot {\rm erf}\left(\frac{5}{2}\right)   \]
+
+$PAR
+
+Notice how the upper limit of integration on the left gives the input to the \(\rm erf\) function on the right.  
+
+$BR
+$PAR
+$BBOLD Step 2:$EBOLD $BITALIC Answering the question. $EITALIC
+$PAR
+
+We are asked to relate the integral 
+\( \displaystyle \int_{0}^{$lim} e^{-t^2/$c} \, dt \)
+to the \(\rm erf\) function.  To do this, we must first perform a u-substitution to get the exponent of \(e\) to be \(-u^2\).  
+
+$PAR
+
+Once we have done that, we will have the desired integral equal to some constant times an integral which is equal to the \(\rm erf\) function (again, the input to the \(\rm erf\) function will be the upper limit of integral after substitution).  
+
+END_HINT
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
