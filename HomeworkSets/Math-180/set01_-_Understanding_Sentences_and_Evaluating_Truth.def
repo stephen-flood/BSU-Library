@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/06/2017 at 11:59pm EDT
+openDate          = 09/05/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 09/12/2017 at 11:59pm EDT
-answerDate        = 09/14/2017 at 11:59pm EDT
+dueDate           = 09/17/2018 at 11:59pm EDT
+answerDate        = 09/18/2018 at 12:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/SDSU/Discrete/Logic/ttlogicequivA4.pg
+source_file = local/Library/SDSU/Discrete/Logic/ttlogicequivA4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

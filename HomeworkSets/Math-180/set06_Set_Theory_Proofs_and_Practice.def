@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/28/2018 at 11:59pm EDT
+openDate          = 10/23/2018 at 12:00am EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 10/15/2018 at 11:59pm EDT
-answerDate        = 10/16/2018 at 12:00am EDT
+dueDate           = 10/29/2018 at 11:59pm EDT
+answerDate        = 10/30/2018 at 12:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/MC/PreAlgebra/setPreAlgebraC01S07/InductiveReasoning03.pg
+source_file = Library/ASU-topics/setSets/ur_st_1_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/NewHampshire/unh_schoolib/Next_Term_in_a_Sequence/ntsbrs201.pg
+source_file = Library/SDSU/Discrete/Sets/differenceB2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/NewHampshire/NECAP/grade4/gr4-2009/n4-2009-6s.pg
+source_file = Library/NAU/setSet/Sets_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,17 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/SDSU/Discrete/Sets/subsetB3.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 5
-source_file = Library/SDSU/Discrete/Sets/subsetB1.pg
+source_file = Library/MC/Proofs/Sets/FamilySets01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/NAU/setFoundations/MAT320_0302.pg
+source_file = Library/Westmont/EoDM3/Inquiry_2_2/iprob2_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/SDSU/Discrete/Sets/subsetB2.pg
+source_file = Library/NAU/setFoundations/MAT320_0302.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/NAU/setFoundations/MAT320_0301.pg
+source_file = Library/NAU/setSet/venn_p4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,27 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/MontanaState/Sets/1.2A29Sets1.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 10
-source_file = Library/MontanaState/Sets/1.2A25Sets1.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 11
-source_file = Library/Rochester/setSetTheory1/ur_st_1_5.pg
+source_file = Library/NUIG/DiscreteMaths/Sets_prob2_OPL.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
