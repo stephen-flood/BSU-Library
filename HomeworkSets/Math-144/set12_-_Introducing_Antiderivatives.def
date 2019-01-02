@@ -1,8 +1,8 @@
 assignmentType      = default
 openDate          = 11/26/2018 at 11:59pm EST
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/30/2018 at 11:59pm EST
-answerDate        = 12/07/2018 at 11:59pm EST
+dueDate           = 12/10/2018 at 11:59pm EST
+answerDate        = 12/10/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/Union/setIntBasic/an7_2_9.pg
+source_file = Library/UCSB/Stewart5_5_4/Stewart5_5_4_7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/ASU-topics/setAntiderivatives/6-1-31.pg
+source_file = Library/Union/setIntBasic/an7_2_9.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-01i.pg
+source_file = Library/ASU-topics/setAntiderivatives/6-1-31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/Michigan/Chap3Sec2/Q01.pg
+source_file = Library/Rochester/setIntegrals4FTC/S05.03.FundThmCalc.PTP15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/Michigan/Chap3Sec2/Q17.pg
+source_file = Library/UCSB/Stewart5_5_4/Stewart5_5_4_15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-01p.pg
+source_file = Library/Michigan/Chap3Sec2/Q01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-26.pg
+source_file = Library/Michigan/Chap3Sec2/Q17.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/UCSB/Stewart5_4_10/Stewart5_4_10_26.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-01p.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-27d.pg
+source_file = local/Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-26.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/ASU-topics/setAntiderivatives/6-1-68.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-27d.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -114,6 +114,86 @@ problem_end
 problem_start
 problem_id = 11
 source_file = Library/Rochester/setDerivatives20Antideriv/s3_10_8func_mo.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/UCSB/Stewart5_4_10/Stewart5_4_10_31.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/UCSB/Stewart5_4_10/Stewart5_4_10_20.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/UCSB/Stewart5_4_10/Stewart5_4_10_19.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = antiderivative-acceleration-with-constraint.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = local/Library/Valdosta/APEX_Calculus/5.1/APEX_5.1_38.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S04-IndefInts/5-4-05d.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = Library/UCSB/Stewart5_5_4/Stewart5_5_4_8.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = Library/ASU-topics/setAntiderivatives/6-1-80.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

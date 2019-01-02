@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 11/02/2018 at 11:59pm EDT
+openDate          = 11/07/2018 at 11:59pm EST
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/05/2018 at 11:59pm EST
-answerDate        = 11/19/2018 at 11:59pm EST
+dueDate           = 11/28/2018 at 11:59pm EST
+answerDate        = 11/29/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,16 +13,6 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-06a.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 2
 source_file = Library/Union/setDervOptimization/4-5-29.pg
 value = 1
 max_attempts = -1
@@ -32,7 +22,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 3
+problem_id = 2
 source_file = Library/Valdosta/APEX_Calculus/4.3/APEX_4.3_4.pg
 value = 1
 max_attempts = -1
@@ -42,8 +32,18 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
+problem_id = 3
+source_file = local/Library/ASU-topics/setOptimization/4-5-48.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
 problem_id = 4
-source_file = CustomProblems/business-optimization-power.pg
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/4_Applications_of_the_Derivative/4.7_Applied_Optimization/4.7.23.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/ASU-topics/setOptimization/4-5-41.pg
+source_file = local/Library/Valdosta/APEX_Calculus/4.3/APEX_4.3_8.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/ASU-topics/setOptimization/5-2-69.pg
+source_file = Library/Union/setDervOptimization/4-5-47.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,37 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/Union/setDervOptimization/4-5-47.pg
+source_file = local/CustomProblems/business-optimization-power.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = business-maxmin-scaffolding-for-optimization.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 9
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-06a.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 10
+source_file = local/Library/ASU-topics/setOptimization/5-2-69.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
