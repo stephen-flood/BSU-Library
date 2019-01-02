@@ -1,0 +1,103 @@
+# DESCRIPTION
+# Problem from Algebra: Form and Function, McCallum et al., 1st ed.
+# WeBWorK problem written by Erich McAlister, <mcalister_e@fortlewis.edu>
+# ENDDESCRIPTION
+
+## DBsubject(Financial mathematics)
+## DBchapter(Interest)
+## DBsection(Compound interest)
+## Institution(Fort Lewis College)
+## Author(Erich McAlister)
+## Level(4)
+## MO(1)
+## TitleText1('Algebra: Form and Function')
+## AuthorText1('McCallum')
+## EditionText1('1')
+## Section1('10.3')
+## Problem1('42')
+## KEYWORDS('exponents')
+
+DOCUMENT();       
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+  "PGML.pl",
+);
+       
+TEXT(beginproblem()); # standard preamble to each problem.
+
+Context("Numeric");
+
+$showPartialCorrectAnswers = 1;
+
+$rdaily = random(.03,.09,.01);
+$rdecimal = $rdaily/100;
+$b = floor(((1+$rdecimal)**365)*100000)/100000;
+$bminus1 = $b-1;
+$rrounded = ($b-1)*100;
+$r = ((1+$rdaily/100)**365-1)*100;
+$APR = $rdaily*365;
+
+$showHint = 2;
+
+BEGIN_TEXT
+The value of an investment increases by $BBOLD\($rdaily\)%  every day$EBOLD (as a decimal, \(r=$rdecimal\)). By what percent does it increase in a year?
+$BR
+$BR
+Annual growth rate as a $BITALIC percent $EITALIC \(= \)\{ ans_rule(10) \}%
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+If you do not get the problem after $showHint attempts, you will get a detailed hint.
+END_TEXT
+
+ANS( Real("$r")->cmp() );
+
+
+BEGIN_PGML_HINT
+
+*Note:* This is a "synthesis" problem, and not a standard compound interest problem.  Instead of being given an APR, we are _explicitly_ told to increase the principal [$rdaily]% _each day_. (This _daily_ rate happens to correspond to an _annual_ percentage rate of [$APR]%).
+
+Recall that "Increasing P by [$rdaily]% once" is the same thing as computing [`P (1 + [$rdecimal])`].  That means that increasing P by a rate of [`r`] (in decimal form) _every day for a year_ is the same thing as computing 
+
+>>[``P\cdot (1 + r)^{365} ``]<<
+
+To find the *effective* annual rate, simplify this expression using a calculator and the laws of exponents.  You will get an expression of the following form, where [`b`] is some decimal number.
+
+>>[`P\cdot (b) =  P\cdot (1 + r_{eff})`]<<
+
+That will tell you that  incrasing  principal by [$rdaily]% every day for a year is the same thing as multiplying the principal by [`(1+r_{eff})`] _once_.  In other words, as a decimal the effective rate is [`r_{eff}`], and as a percent the effective rate is [`r_{eff}\cdot 100`]. 
+END_PGML_HINT
+
+
+BEGIN_PGML_SOLUTION
+
+This is a "synthesis" problem, and not a standard compound interest problem.  Instead of being given an APR, we are _explicitly_ told to increase the principal [$rdaily]% _each day_. (This _daily_ rate happens to correspond to an _annual_ percentage rate of [$APR]%).
+
+Recall that "Increasing P by [$rdaily]% once" is the same thing as computing [`P (1 + [$rdecimal])`].  That means that increasing P by a rate of [`r`] (in decimal form) _every day for a year_ is the same thing as computing 
+
+[``P\cdot (1 + [$rdecimal])^{365} ``]
+
+[``=P\cdot ([$b])``]
+
+[``=P\cdot (1 + [$bminus1])``]
+
+This tells us that  incrasing  principal by [$rdaily]% every day for a year is the same thing as computing [`P\cdot (1 + [$bminus1]) = P + P\cdot[$bminus1]`].
+
+In other words, incrasing  principal by [$rdaily]% every day for a year is  exactly the same thing as increasing the principal _once_ by [$rrounded].  
+
+In other words, as a decimal the effective annual rate is [`[$bminus1]`], and as a percent the effective annual rate is [`[$rrounded]`]%. 
+END_PGML_SOLUTION
+#There are also several things to be careful about in this problem. 
+#
+#1.  There are 365 days in a standard year. 
+#
+#2.  You are given the daily rate as a *percent*.  That means that you need to divide the given rate by 100 to obtain the daily rate as a decimal. 
+#
+#3.  You are asked to provide the effective annual rate as a *percent*.  The standard formula will give you the effective annual rate as a *decimal*.  That means you need to multiply the rate you find by 100.
+
+
+;
+ENDDOCUMENT();
