@@ -1,0 +1,70 @@
+## DBsubject(Calculus - single variable)
+## DBchapter(Parametric)
+## DBsection(Arc length)
+## Institution(UCSB)
+## Level(3)
+## Static(1)
+## TitleText1('Calculus: Early Transcendentals')
+## AuthorText1('Stewart')
+## EditionText1('5')
+## Section1('10.2')
+## Problem1('51')
+## KEYWORDS('parametric equations')
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(&beginproblem);
+$showPartialCorrectAnswers = 1;
+$a=random(1,10,1);
+$b=random(1,10,1)*random(-1,1,2);
+$c=random(1,10,1)*random(-1,1,2);
+
+BEGIN_TEXT
+$PAR
+(a) Find the distance traveled by a particle with position \(x=\sin^2(t),\;\;y=\cos^2(t)\) as \(t\) varies in the time interval \(0 \le t \le 3\pi.\)
+
+$PAR
+Distance traveled = \{ans_rule(25)\}
+
+$PAR
+(b) Find the length of the curve on which the particle traveled.
+
+$PAR
+Length of curve = \{ans_rule(25)\}
+
+END_TEXT
+
+ANS(num_cmp("6*sqrt(2)"));
+ANS(num_cmp("sqrt(2)"));
+
+$showHint=1;
+
+BEGIN_HINT
+There are $BBOLD two $EBOLD different ways to approach this particular problem.
+$PAR
+The first way is to set up the arc-length formula.   You will need to use the chain rule when computing \(\frac{dx}{dt}\) and \(\frac{dy}{dt}\).
+More importantly, you will need to remember that you are integrating the $BBOLD absolute value $EBOLD of the expression you get after simplifying.  
+You will need to chop up the domain of integration to ensure that you are not subtracting any distance by accident. ($BITALIC Hint:$EITALIC \(\sin(t)\) changes sign at multiples of \(\pi\), and \(\cos(t)\) changes sign at odd multiples of \(\frac{\pi}{2}\)).
+$PAR
+The second way to approach this specific problem is to begin by de-parametrizing the curve.  It will turn out that this function happens to trace out a single line segment, $BITALIC multiple times $EITALIC.  You can find the length of the curve by using  the ranges of \(\cos^2(t)\) and \(\sin^2(t)\) to find where the start and stop \(x,y\) values are.  
+To find the distance traveled, determine the interval of \(t\) required to trace the curve once, and find out how many times that occurs in \([0,3\pi]\).  
+END_HINT
+
+#BEGIN_HINT
+#Here are several hints:
+#
+#1. Note that you will need to use the chain rule when computing \(\frac{dx}{dt}\) and \(\frac{dy}{dt}\).
+#$PAR
+#2. Once you have set up the arc-length formula, you can simplify the integral with a  combination of factoring and applying trigonometric identities. 
+#$PAR
+#3. 
+#END_HINT
+
+
+ENDDOCUMENT();

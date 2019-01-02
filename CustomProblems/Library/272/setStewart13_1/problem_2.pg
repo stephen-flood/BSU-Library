@@ -1,0 +1,82 @@
+## -*- perl -*- ##
+## Line above puts emacs in perl mode
+##
+## Description  
+##   This is a generic problem template
+## EndDescription
+
+## Tagged by ynw2d
+
+## DBsubject(Calculus - multivariable)
+## DBchapter(Calculus of vector valued functions)
+## DBsection(Limits and continuity)
+## Institution(Dartmouth)
+## Author(Stewart)
+## Level(2)
+## TitleText1('Calculus')
+## AuthorText1('Stewart')
+## EditionText1('5')
+## Section1('14.1')
+## Problem1('')
+## KEYWORDS('limit' 'vector')
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "extraAnswerEvaluators.pl",
+  "PGcourse.pl"
+);
+ 
+
+## Do NOT show partial correct answers
+$showPartialCorrectAnswers = 0;
+
+$a = non_zero_random(-9,9);
+$b = random(2,15);
+$bm1 = $b - 1;
+$c = non_zero_random(-10,10);
+$d = random(1,20);
+
+
+## Ok, we are ready to begin the problem...
+##
+TEXT(beginproblem());
+
+
+BEGIN_TEXT
+$BR
+Find the limit:
+
+\[
+    \lim_{t \to 0}\langle
+    \frac{e^{$a t} - 1}{t}, \frac{t^{$bm1}}{t^{$b} - t^{$bm1}},\frac{$c}{$d + t}
+\rangle
+\]
+$BR
+\(\langle \) \{ans_rule(10)\}, \{ans_rule(10)\}, \{ans_rule(10)\} \(\rangle\)
+$PAR
+END_TEXT
+
+ANS(num_cmp($a));
+ANS(num_cmp(-1));
+ANS(num_cmp($c/$d));
+
+$showHint=3;
+
+BEGIN_HINT
+To compute the limit of this vector valued function, you must compute the limit of each component.  Note, however, that you will need three $BBOLD different $EBOLD techniques to compute these three limits.  
+$PAR
+Some of the limits are straightforward to compute. 
+Some of the other limits may be more challenging. 
+In these cases, it may be helpful to remember that we have powerful shortcuts for computing a $BBOLD very specific $EBOLD type of limit: 
+\(\displaystyle f'(a) = \lim_{h\rightarrow 0}\dfrac{f(a+h) - f(a)}{h} \).
+That means that you might be able to find one limit (the right hand side) by computing a derivative (the left hand side).  To do this, simply identify the function \(f(x)\), the input \(a\), and compute \(f'(x)\) using a shortcut rule.
+
+END_HINT
+
+
+ENDDOCUMENT();
+
+
+
+
