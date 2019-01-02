@@ -84,16 +84,22 @@ $c = non_zero_random(-5,5,1);
 $f = Formula("$a*x^2 + $b*x + $c")->reduce();
 
 
+Context("LimitedPolynomial");   # Allow only entry of expanded polynomials
+
+
 $fofone=Compute("$a*1^2 + $b*1 + $c");
 
-$fxplus1 = Compute("$a*x^2 + (2*$a+$b)*x+(1+$b + $c)")->reduce();
+$coeff1 = $a;
+$coeff2 = 2*$a+$b;
+$coeff3 = $fofone;
+$fxplus1 = Compute("$coeff1*x^2 + $coeff2*x+ $coeff3")->reduce();
 
 #$fxplus2 = Compute("$a*x^2 + (4*$a+$b)*x+(4+$b + $c)")->reduce();
 
 
 $diffq = Compute("$a*x + $b")->reduce();
 
-Context("LimitedPolynomial");   # Allow only entry of expanded polynomials
+Context("Numeric");   # Allow only entry of expanded polynomials
 
 
 

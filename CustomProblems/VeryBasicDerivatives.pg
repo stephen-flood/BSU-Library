@@ -83,20 +83,18 @@ BEGIN_PGML
 For the remainder of the problems in this assignment, you can (and should) use the "shortcut rules" for computing derivatives.
 
 
-1. Let [`f(x) = [$a] \, x + [$aplusb] `] .  Find the derivative function.  
+1. Let [`f(x) = [$a] \, x + [$aplusb] `] .  Find the slope function for [`f(x)`].  
 [`f'(x) = `] [________]{"$a"}.
 
-2. Let [`f(x) = x^{[$b]} `] .  Find the derivative function.  
+2. Let [`f(x) = x^{[$b]} `] .  Find the instantaneous rate of change function for [`f`].  
 [`f'(x) = `] [________]{"$b*x^($b-1)"}.
 
-3. Let [`f(x) = [$d]^{[$c]} `] .  Find the derivative function.  
+3. Let [`f(x) = [$d]^{[$c]} `] .  Find the derivative function of [`f`].  
 [`f'(x) = `] [________]{"0"}.
 
-4. Let [`f(x) = [$d] \, x^{[$e]} `] .  Find the derivative function.  
+4. Let [`f(x) = [$d] \, x^{[$e]} `] .  Find an expression that gives the slope of [`f`] as a function of [`x`].  
 [`f'(x) = `] [________]{"($d*$e)*x^($e-1)"}.
 
-5. Let [`f(x) = [$b] \cdot e^{[$f]} `] .  Find the derivative function.  
-[`f'(x) = `] [________]{"0"}.
 
 END_PGML
 
