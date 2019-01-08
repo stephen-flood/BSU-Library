@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = local/Library/Utah/Trigonometry/set2_Algebra/s2p3.pg
+source_file = CustomProblems/Library/Utah/Trigonometry/set2_Algebra/s2p3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = local/Library/FortLewis/Algebra/2-3-Expanding-and-factoring/MCH1-2-3-08-Expanding-and-factoring-2.pg
+source_file = CustomProblems/Library/FortLewis/Algebra/2-3-Expanding-and-factoring/MCH1-2-3-08-Expanding-and-factoring-2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

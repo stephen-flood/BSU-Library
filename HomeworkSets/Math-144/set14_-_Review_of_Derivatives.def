@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-18-Input-and-output.pg
+source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-18-Input-and-output.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = local/Library/Mizzou/Algebra/linear_functions_apps/linear_sales_game_system_01.pg
+source_file = CustomProblems/Library/Mizzou/Algebra/linear_functions_apps/linear_sales_game_system_01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = local/CustomProblems/Library/AlfredUniv/anton8e/chapter3/3.2/prob2.pg
+source_file = CustomProblems/CustomProblems/Library/AlfredUniv/anton8e/chapter3/3.2/prob2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = local/Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-05.pg
+source_file = CustomProblems/Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-05.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -253,7 +253,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 25
-source_file = local/Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-25.pg
+source_file = CustomProblems/Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-25.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -343,7 +343,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 34
-source_file = local/Library/Valdosta/APEX_Calculus/4.3/APEX_4.3_8.pg
+source_file = CustomProblems/Library/Valdosta/APEX_Calculus/4.3/APEX_4.3_8.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -353,7 +353,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 35
-source_file = local/Library/ASU-topics/setOptimization/5-2-69.pg
+source_file = CustomProblems/Library/ASU-topics/setOptimization/5-2-69.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

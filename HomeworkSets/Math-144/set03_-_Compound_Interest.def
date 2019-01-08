@@ -213,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = local/Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-42.pg
+source_file = CustomProblems/Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-42.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

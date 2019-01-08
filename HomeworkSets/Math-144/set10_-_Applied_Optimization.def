@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = local/Library/ASU-topics/setOptimization/4-5-48.pg
+source_file = CustomProblems/Library/ASU-topics/setOptimization/4-5-48.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = local/Library/Valdosta/APEX_Calculus/4.3/APEX_4.3_8.pg
+source_file = CustomProblems/Library/Valdosta/APEX_Calculus/4.3/APEX_4.3_8.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = local/CustomProblems/business-optimization-power.pg
+source_file = CustomProblems/CustomProblems/business-optimization-power.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = local/Library/ASU-topics/setOptimization/5-2-69.pg
+source_file = CustomProblems/Library/ASU-topics/setOptimization/5-2-69.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

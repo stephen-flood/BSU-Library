@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = local/Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-26.pg
+source_file = CustomProblems/Library/UVA-Stew5e/setUVA-Stew5e-C04S10-Antiderivs/4-10-26.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = local/Library/Valdosta/APEX_Calculus/5.1/APEX_5.1_38.pg
+source_file = CustomProblems/Library/Valdosta/APEX_Calculus/5.1/APEX_5.1_38.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
