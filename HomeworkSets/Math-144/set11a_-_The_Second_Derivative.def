@@ -1,6 +1,6 @@
 assignmentType      = default
 openDate          = 11/16/2018 at 11:59pm EST
-reducedScoringDate = 12/31/1969 at 07:00pm EST
+reducedScoringDate = 11/29/2018 at 11:59pm EST
 dueDate           = 12/01/2018 at 11:59pm EST
 answerDate        = 12/03/2018 at 11:59pm EST
 enableReducedScoring = N
@@ -130,5 +130,35 @@ showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
 att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_6-7.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_8-9.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_20.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
 problem_end
 

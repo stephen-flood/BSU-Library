@@ -1,6 +1,6 @@
 assignmentType      = default
 openDate          = 10/31/2018 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
+reducedScoringDate = 11/07/2018 at 11:59pm EST
 dueDate           = 11/09/2018 at 11:59pm EST
 answerDate        = 11/12/2018 at 11:59pm EST
 enableReducedScoring = N
@@ -154,6 +154,46 @@ problem_end
 problem_start
 problem_id = 15
 source_file = Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-21.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-75.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-79.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S08-DerivLogs/3-8-27.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = Library/OSU/high_school_apcalc/dchmwk4/prob12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

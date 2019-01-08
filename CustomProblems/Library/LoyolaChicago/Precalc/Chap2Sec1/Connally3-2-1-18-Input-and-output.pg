@@ -91,7 +91,7 @@ ans_rule(20).$SPACE.AnswerFormatHelp("number").
 $BR.
 $BR.
 "(b) For what x-value(s) is \( f(x) = 0 \)? ".
-ans_rule(20).$SPACE.AnswerFormatHelp("number").
+ans_rule(20).$SPACE.AnswerFormatHelp("inequalities").
 $BR.
 $BR.
 "(c) For what x-value(s) is \( f(x) > 0 \)? ".
@@ -117,7 +117,9 @@ $showPartialCorrectAnswers = 1;
 
 ANS(Real("$c")->cmp(tolerance=>0, tolType=>"absolute"));
 
-ANS(List(Real("-$a"),Real("$b"))->cmp(tolerance=>0, tolType=>"absolute"));
+Context("Inequalities");
+#ANS(List(Real("-$a"),Real("$b"))->cmp(tolerance=>0, tolType=>"absolute"));
+ANS(Compute("x=-$a or x=$b")->cmp());
 
 Context("Interval");
 #Context("Inequalities");

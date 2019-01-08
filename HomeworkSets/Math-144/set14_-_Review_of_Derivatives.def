@@ -1,9 +1,9 @@
 assignmentType      = default
 openDate          = 12/01/2018 at 11:59pm EST
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 01/04/2019 at 11:59pm EST
-answerDate        = 01/04/2019 at 11:59pm EST
-enableReducedScoring = N
+reducedScoringDate = 01/03/2019 at 11:59pm EST
+dueDate           = 01/05/2019 at 11:59pm EST
+answerDate        = 01/05/2019 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
