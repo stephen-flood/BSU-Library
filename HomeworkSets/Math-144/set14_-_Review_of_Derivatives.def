@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = CustomProblems/CustomProblems/Library/AlfredUniv/anton8e/chapter3/3.2/prob2.pg
+source_file = CustomProblems/Library/AlfredUniv/anton8e/chapter3/3.2/prob2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = simplifiedDifferenceQuotient-withH-v1.pg
+source_file = CustomProblems/simplifiedDifferenceQuotient-withH-v1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = business-calc-derivative-meaning-profit.pg
+source_file = CustomProblems/business-calc-derivative-meaning-profit.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = business-calc-derivative-meaning-velocity.pg
+source_file = CustomProblems/business-calc-derivative-meaning-velocity.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

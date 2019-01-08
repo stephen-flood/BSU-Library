@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = simplifiedDifferenceQuotient-withH-v1.pg
+source_file = CustomProblems/simplifiedDifferenceQuotient-withH-v1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = business-calc-derivative-meaning-profit.pg
+source_file = CustomProblems/business-calc-derivative-meaning-profit.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = business-calc-derivative-meaning-velocity.pg
+source_file = CustomProblems/business-calc-derivative-meaning-velocity.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
