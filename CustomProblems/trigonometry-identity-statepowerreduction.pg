@@ -1,0 +1,117 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "bizarroArithmetic.pl",
+        # "PGgraphmacros.pl",
+    	# "parserMultiAnswer.pl",
+    	# "parserPopUp.pl",
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+#To enable the bizarro arithmetic operators, load this file with the macros, and then use any subset of:
+Context()->operators->set(
+'+' => {class => 'bizarro::BOP::add', isCommand => 1},
+'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+'*' => {class => 'bizarro::BOP::multiply', isCommand => 1},
+' *' => {class => 'bizarro::BOP::multiply', isCommand => 1},
+'* ' => {class => 'bizarro::BOP::multiply', isCommand => 1},
+'/' => {class => 'bizarro::BOP::divide', isCommand => 1},
+' /' => {class => 'bizarro::BOP::divide', isCommand => 1},
+'/ ' => {class => 'bizarro::BOP::divide', isCommand => 1},
+'//' => {class => 'bizarro::BOP::divide', isCommand => 1},
+'**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+'^' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+);
+
+#Context()->flags->set(bizarroAdd=>1);
+#Context()->flags->set(bizarroSub=>1);
+#Context()->flags->set(bizarroMul=>1);
+Context()->flags->set(bizarroDiv=>1);
+#Context()->flags->set(bizarroPow=>1);
+
+$a   = random(3,5,1);
+$b   = non_zero_random(-2,2,1);
+
+$f = Compute("$a*x + $b")->reduce();
+$ans = $f->eval(x=>1);
+
+$sinsquare = Compute("(1-cos(2x))/(2)"); 
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+$a = random(4,20,2);
+$b = random(3,21,2);
+
+
+BEGIN_PGML
+
+
+1. Use the power reduction identity to rewrite  
+ [`\sin^2(x) = `][__________]{"(1-cos(2x))/(2)"}
+
+2. Use the power reduction identity to rewrite  
+ [`\cos^2(x) = `][__________]{"(1+cos(2x))/(2)"}
+
+3. Use the power reduction identity to rewrite  
+ [`\sin^2([$a] x) = `][__________]{"(1-cos(2*$a*x))/(2)"}
+
+4. Use the power reduction identity to rewrite  
+ [`\cos^2([$b] x) = `][__________]{"(1+cos(2*$b*x))/(2)"}
+
+
+END_PGML
+
+
+ENDDOCUMENT();

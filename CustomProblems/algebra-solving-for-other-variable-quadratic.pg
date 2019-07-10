@@ -1,0 +1,160 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+         "PGgraphmacros.pl",
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    	# "parserMultiAnswer.pl",
+    	# "parserPopUp.pl",
+    	# "contextInequalities.pl",
+);
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+$refreshCachedImages = 1;
+
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(y => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+$m = non_zero_random(2,6,1);
+$root1   = random(3,5,1);
+#$root2   = non_zero_random(-2,2,1);
+#$root2   = -$root1;
+
+$one = $root1+1;
+$two = $root1-1;
+
+$a = $m ;
+$c = $m * $root1 * $root1 ;
+#$b = $m* ($root1 + $root2);
+#$c = $m * $root1 * $root2 
+$start = Compute("-$c");
+$end = Compute("2*$c");
+
+$left = Compute("-2*$c");
+$right = Compute("2*$c");
+$top =  $root1*2;
+$bottom = -$root1*2;
+
+#$f = Compute("$a*y^2 + $b*y + $c")->reduce();
+$f = Formula("$a*y^2 - $c")->reduce();
+$F = $f->perlFunction;
+
+$topbranch = Compute(" sqrt(( x+$c)/$a) ");
+$bottombranch = Compute(" -sqrt(( x+$c)/$a) ");
+
+  
+$refreshCachedImages = 1;
+$gr = init_graph( $left,$bottom,$right,$top,
+axes=>[0,0],
+grid=>[10,10],
+size=>[400,400]
+);
+
+add_functions($gr, "$topbranch for x in <$start,$end>" . " using color:blue and weight:2");
+add_functions($gr, "$bottombranch for x in <$start,$end>" . " using color:blue and weight:2");
+
+#$identity = sub { my $t = shift();  return $t; };
+#$fn = new Fun(  $F,$identity, $gr );
+#$fn->domain(-$c,$c);
+
+#add_functions($gr, "$topbranch for y in <-10,10>" . " using color:blue and weight:2");
+#add_functions($gr, "$bottombranch for y in <-10,10>" . " using color:blue and weight:2");
+
+  
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Consider the curve [` x = f(y) = [$f] `].  
+
+END_PGML
+
+$refreshCachedImages = 1;
+BEGIN_TEXT
+$BCENTER
+\{ image( insertGraph($gr), 
+width=>200,height=>200,tex_size=>800 ) \}
+$BR
+(Click on graph to enlarge)
+$ECENTER
+$PAR
+END_TEXT
+
+BEGIN_PGML
+
+
+1. Find all [`x`] on the curve  [`x = [$f]`] such that [`y = [$one]`]  
+[`x=`][___________]{$f->eval(y=>$one)}
+
+2. Find all [`x`] on the curve  [`x = [$f]`] such that [`y = [$two]`]  
+[`x=`][___________]{$f->eval(y=>$two)}
+
+3. There are *two* solutions to the equation [`[$one] = [$f]`]  
+Positive solution: [`y=`][___________]{$topbranch->eval(x=>$one)}  
+Negative solution: [`y=`][___________]{$bottombranch->eval(x=>$one)}
+
+
+4.  We now wish to write the curve as a function of [`y`], by *solving for [`y`]* in the equation [`x = [$f]`].  
+Top branch (positive solutions):  [` y = `]  [__________]{$topbranch}.  
+Bottom branch (negative solutions):  [` y = `]  [__________]{$bottombranch}.  
+
+
+
+Note that we cannot write [`y`] as a *single* function of [`x`], since the curve fails the vertical line test.
+
+
+END_PGML
+
+BEGIN_PGML_HINT
+Recall that for any number [`a\geq 0`], that [`y^2 = a`] if and only if [`y = \pm \sqrt{a}`].  
+
+In other words, the horizontal parabola [`y^2 = x`] has two branches: [`y = +\sqrt{x}`] and [`y = -\sqrt{x}`]
+END_PGML_HINT
+
+
+ENDDOCUMENT();

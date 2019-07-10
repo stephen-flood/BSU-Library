@@ -1,0 +1,81 @@
+## DBsubject(Algebra)
+## DBchapter(Quadratic equations and functions)
+## DBsection(Completing the square)
+## Institution(University of Connecticut)
+## Author(Stephen Flood)
+## Level('')
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('algebra')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+    "PGstandard.pl",
+    "PGML.pl",
+    "MathObjects.pl",
+    "PGcourse.pl",
+    "parserNumberWithUnits.pl",
+    "contextArbitraryString.pl",
+    "parserMultiAnswer.pl",
+    "parserPopUp.pl",
+    "contextInequalities.pl",
+    "PGgraphmacros.pl",
+);
+
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers=1;
+
+#### SETUP #### 
+
+
+Context("Numeric") ; 
+#Context()->flags->set(tolerance => 0.01);
+
+## variable = random($first,$last,$increment)
+$a = random(2,4,1) ; 
+$b = random(2,4,1); 
+$c = random(4,8,1) ; 
+$d = random(-3,-1,1);
+$e = random(-3,-1,1);
+
+$poly=Formula("$a*x^3 + $b*x^2 + $c*x + $d")->reduce();
+$divisor=Formula("x+$e")->reduce();
+
+$coefxsquare=Real("$a");
+$coefx=Real("$b-$e*$coefxsquare");
+$const=Real("$c-$e*$coefx");
+
+$remainder=Formula("$d-$e*$const")->reduce();
+$quotient=Formula("$coefxsquare*x^2+$coefx*x+$const")->reduce();
+
+#### MAIN TEXT #### 
+
+BEGIN_PGML
+
+Use polynomial division to rewrite the following rational function as a polynomial plus a proper fraction.   
+
+[`\dfrac{[$poly]}{[$divisor]} = q(x) + \dfrac{r(x)}{d(x)} `]  
+
+[`q(x)=`] [_____]{$quotient} 
+ 
+[`r(x)=`] [_____]{$remainder}  
+
+[`d(x)=`] [_____]{$divisor}  
+
+
+END_PGML
+
+#Write your answer in the form [`p(x) = q(x)\cdot d(x) + r(x) `]
+#
+#[`[$poly]= \Big(`] [_____]{$quotient} [`\Big)\cdot ([$divisor])`] [` + `] [_____]{$remainder}
+#
+
+
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

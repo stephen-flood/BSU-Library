@@ -1,0 +1,109 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+         "PGgraphmacros.pl",
+    	# "parserMultiAnswer.pl",
+    	# "parserPopUp.pl",
+    	# "contextInequalities.pl",
+);
+
+$refreshCachedImages = 1;
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(y => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+$refreshCachedImages = 1;
+
+$a  = non_zero_random(-6,6,2);
+$m = random(3,5,2);
+
+$f = Compute("$a/(x^($m))")->reduce();
+
+$curve = Compute(" ($a/y)^(1/$m) ");
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+$gr = init_graph(-4,-4,4,4,
+axes=>[0,0],
+grid=>[8,8],
+size=>[400,400]
+);
+
+add_functions($gr, "$f for x in <-4,4>" . " using color:blue and weight:2");
+  
+
+BEGIN_PGML
+Let [``y = [$f] ``]. 
+END_PGML
+
+BEGIN_TEXT
+$BCENTER
+\{ image( insertGraph($gr), 
+width=>200,height=>200,tex_size=>800 ) \}
+$BR
+(Click on graph to enlarge)
+$ECENTER
+$PAR
+END_TEXT
+
+BEGIN_PGML
+
+Write [`x`] as a function of [`y`].  
+
+[`x = `]  [__________]{$curve}.
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();

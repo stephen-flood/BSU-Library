@@ -1,0 +1,115 @@
+##DESCRIPTION
+##  Requires only the divergence test and the geometric sum formula
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	#"PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(n => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+$afirst   = random(3,5,1);
+#$radenom  = non_zero_random(-2,2,1);
+#$ra = Formula("1/($radenom)");
+$ra = non_zero_random(-2.5,2.5,1);
+$an = Formula("$afirst*($ra)^(n-1)");
+$a1 = $an->eval(n=>1);
+$a2 = $an->eval(n=>2);
+$a3 = $an->eval(n=>3);
+$a4 = $an->eval(n=>4);
+
+if( abs($ra) < 1 )
+{ 
+$SERIESa = Compute("$a1*(1/(1-$ra))")
+}
+else
+{ 
+$SERIESa = Compute("DNE")
+}
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Consider the geometric series  
+[`` \sum_{n=1}^{\infty}\, [$an] = [$a1] + [$a2] + [$a3] + [$a4] + \dots ``].
+
+Find the first term and common ratio
+
+First term = [_______]{"$afirst"}  
+Common ratio = [_______]{"$ra"}
+
+
+Write down the first four partial sums
+
+[`S_1 = `] [_______]{"$a1"}
+
+[`S_2 = `] [_______]{"$a1+$a2"}
+
+[`S_3 = `] [_______]{"$a1+$a2+$a3"}
+
+[`S_4 = `] [_______]{"$a1+$a2+$a3+$a4"}
+
+Write down the value of the whole infinite series  
+[``\sum_{n=1}^{\infty}\, [$an] = ``] [_______]{"$SERIESa"}  
+
+If the series diverges, enter [`DNE`]
+
+
+END_PGML
+
+
+ENDDOCUMENT();

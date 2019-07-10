@@ -1,0 +1,91 @@
+DOCUMENT();
+
+loadMacros(
+"PGstandard.pl", 
+"MathObjects.pl", 
+"PGunion.pl",
+"parserMultiAnswer.pl",
+"PGcourse.pl",
+"parserDifferenceQuotient.pl",
+"contextFraction.pl",
+"contextLimitedRadical.pl",
+"answerHints.pl",
+);
+
+TEXT(beginproblem());
+Context("Numeric")->variables->are(x=>"Real");
+Context()->{error}{msg}{"Operands of '*' can't be words"} = " ";
+Context()->{error}{msg}{"Either your answer is not fully simplified or it has an irrational denominator"} = "Your answer is not fully simplified";
+
+
+$m = random(2,3,1);
+$seedn = random(3,8,2);
+$seedi = random(1,5,1);
+$n = Real(" $seedn * $m ");
+$i = Real(" $seedi * $m ");
+$a = Real("(($i)^2 - $n)/($m)"); # To ensure that f(a) is an integer
+
+
+$f = Formula("sqrt($m * x + $n)")->reduce;
+$fa = $f->eval(x=>$a);
+
+$multnum = Formula("($f-$fa)*($f+$fa)")->reduce;
+
+#$fraction = "\frac{$f - $fa}{x-$a} \cdot \frac{$f + $fa}{$f + $fa} ";
+
+
+$num = Formula(" $m ");
+
+
+Context("LimitedRadical");
+Context()->{error}{msg}{"Either your answer is not fully simplified or it has an irrational denominator"} = "Your answer is not fully simplified";
+
+$differencequotient = Formula(" $m/($f + $fa) ");
+
+Context()->{error}{msg}{"You must simplify your answer further"} 
+= "Either your answer is not fully simplified or it has an irrational denominator";
+
+
+Context("Numeric");
+
+$limit = Formula(" $m/($fa + $fa) ");
+
+
+# 
+#  Display the fraction and answer blanks nicely
+#
+#Context()->texStrings;
+#if ($displayMode eq 'TeX') {
+#  $showfraction =
+#  "\[=\lim_{x\rightarrow #$a}".ans_rule(10).ans_rule(10)."=".ans_rule(10)."\]";
+#} else {
+#  $showfraction =
+#  ColumnTable(
+#  "\(   = \lim_{x\rightarrow $a} \)",
+#  ans_rule(10).$BR.$HR.ans_rule(10),
+#  indent => 0, separation => 10, valign => "MIDDLE"
+#  );
+#}
+Context()->normalStrings;
+
+Context()->texStrings;
+
+BEGIN_TEXT
+
+Compute the limit below.
+In the first blank, enter an  expression that is  simplified completely.
+
+$BR
+$BR
+\(\displaystyle \lim_{x\rightarrow $a} \frac{$f - $fa}{x-$a} \quad = \quad \lim_{x\rightarrow $a} \) \{ans_rule(10)\} \( \quad  =\quad \)\{ans_rule(10)\}
+
+
+END_TEXT
+
+$showPartialCorrectAnswers = 1;
+
+#ANS( $num->cmp );
+ANS( $differencequotient->cmp());
+ANS( $limit->cmp );
+
+ENDDOCUMENT();
