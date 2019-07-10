@@ -1,86 +1,108 @@
-DOCUMENT();
+##DESCRIPTION
+##  Describe the type of problem!  
+##ENDDESCRIPTION
+
+##KEYWORDS('custom', 'in-progress')
+
+## DBsubject('Subject')
+## DBchapter('Chapter')
+## DBsection('Section')
+## Date('8/26/2016')
+## Author('BSU Faculty')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+########################################################################
+
+DOCUMENT();      
 
 loadMacros(
-"PGstandard.pl", 
-"MathObjects.pl", 
-"PGunion.pl",
-"parserMultiAnswer.pl",
-"PGcourse.pl",
-"parserDifferenceQuotient.pl",
-"contextFraction.pl",
-"contextLimitedRadical.pl",
+   "PGstandard.pl",     # Standard macros for PG language
+   "MathObjects.pl",
+    "PGML.pl",
+    "PGcourse.pl",
+    "contextLimitedPolynomial.pl",
+    "parserDifferenceQuotient.pl",
 );
-
+# Print problem number and point value (weight) for the problem
 TEXT(beginproblem());
-Context("Numeric")->variables->are(x=>"Real");
-Context()->{error}{msg}{"Operands of '*' can't be words"} = " ";
-
-$m = random(2,3,1);
-$seedn = random(3,8,2);
-$seedi = random(1,5,1);
-$n = Real(" $seedn * $m ");
-$i = Real(" $seedi * $m ");
-$a = Real("(($i)^2 - $n)/($m)"); # To ensure that f(a) is an integer
-
-
-$f = Formula("sqrt($m * x + $n)")->reduce;
-$fa = $f->eval(x=>$a);
-
-$multnum = Formula("($f-$fa)*($f+$fa)")->reduce;
-
-#$fraction = "\frac{$f - $fa}{x-$a} \cdot \frac{$f + $fa}{$f + $fa} ";
-
-
-$num = Formula(" $m ");
-
-
-Context("LimitedRadical");
-$differencequotient = Formula(" $m/($f + $fa) ");
-
-Context()->{error}{msg}{"You must simplify your answer further"} 
-= "Either your answer is not fully simplified or it has an irrational denominator";
-
-
-Context("Numeric");
-
-$limit = Formula(" $m/($fa + $fa) ");
-
-
-# 
-#  Display the fraction and answer blanks nicely
-#
-#Context()->texStrings;
-#if ($displayMode eq 'TeX') {
-#  $showfraction =
-#  "\[=\lim_{x\rightarrow #$a}".ans_rule(10).ans_rule(10)."=".ans_rule(10)."\]";
-#} else {
-#  $showfraction =
-#  ColumnTable(
-#  "\(   = \lim_{x\rightarrow $a} \)",
-#  ans_rule(10).$BR.$HR.ans_rule(10),
-#  indent => 0, separation => 10, valign => "MIDDLE"
-#  );
-#}
-Context()->normalStrings;
-
-Context()->texStrings;
-
-BEGIN_TEXT
-
-Compute the limit below.
-In the first blank, enter an  expression that is  simplified completely.
-
-$BR
-$BR
-\(\displaystyle \lim_{x\rightarrow $a} \frac{$f - $fa}{x-$a} \quad = \quad \lim_{x\rightarrow $a} \) \{ans_rule(10)\} \( \quad  =\quad \)\{ans_rule(10)\}
-
-
-END_TEXT
-
+# Show which answers are correct and which ones are incorrect
 $showPartialCorrectAnswers = 1;
 
-#ANS( $num->cmp );
-ANS( $differencequotient->cmp );
-ANS( $limit->cmp );
+#### Set the Context ####
+Context("Numeric");
+# Accept submissions as correct if they differ from the correct answer given below by 1% or less. 
+Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(h => "Real");
 
-ENDDOCUMENT();
+
+
+##############################################################
+#  Setup
+
+
+
+## Randomize a Quadratic Function f(x)
+$a = non_zero_random(2,2,1);
+$b = non_zero_random(1,3,1);
+$c = non_zero_random(-3,3,1);
+$f = Formula("$a*x^2 + $b*x + $c")->reduce();
+
+## Select a random place to center the difference quotient
+$xzero = random(1,2,1);
+$fofxzero=$f->eval(x=>"$xzero");
+while( $fofxzero==0)
+    {
+    $xzero = random(1,3,1);
+    $fofxzero=$f->eval(x=>"$xzero");
+    }
+## End selection of xzero
+
+## Evaluate f at (x + xzero) [RESTRICTIVE VERSION]
+#Context("LimitedPolynomial");
+#$coeff1 = $a;
+#$coeff2 = 2*$a*$xzero+$b;
+#$coeff3 = $f->eval(x=>"$xzero");
+#$fxplusxzero = Compute("$coeff1*x^2 + $coeff2*x+ $coeff3")->reduce();
+#$diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
+
+$fxplusxzero = $f->substitute(x=>"x+$xzero");
+$fh = $f->substitute(x=>"h");
+$diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
+
+
+##############################################################
+#
+
+
+######################################################################
+BEGIN_PGML
+
+Let [`f(x) = [$f]`].
+
+a. Compute [`f([$xzero])`] 
+
+    [`f([$xzero])`] = [________]{"$fofxzero"}
+
+b. Write down a formula for [`f(h)`]  
+
+    [`f(h)`] = [________]{"$fh"}
+
+c. Simplify the following expression completely [`f(x + [$xzero])`] 
+
+    [`f(x + [$xzero])`] = [________]{"$fxplusxzero"}
+
+d. Simplify the following expression completely [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`].
+
+    [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`] =  [____________]{"$diffq"}
+
+
+
+END_PGML
+######################################################################
+
+ENDDOCUMENT();        

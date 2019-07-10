@@ -103,15 +103,15 @@ $PAR
 $PAR
 a) \( $tf = $a  \)
 $BR
-Answer: \{ans_rule(20) \}
+Answer: \{ans_rule(20) \} (Enter your answer in the form \(x = a \ \ or \ \ x=b\) )
 $PAR
 b) \( $tf < $a  \)
 $BR
-Answer: \{ans_rule(20) \}
+Answer: \{ans_rule(20) \} (Use Interval Notation)
 $PAR
 c) \( $tf > $a  \)
 $BR
-Answer: \{ans_rule(20) \}
+Answer: \{ans_rule(20) \} (Use Interval Notation)
 END_TEXT
 
 ######################################

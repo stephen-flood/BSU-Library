@@ -86,7 +86,7 @@ Let [`f(x) = [$f]`].
 
 a. Compute [`f([$xzero])`] 
 
-    [`f([$xzero])`] = [________]{"$c"}
+    [`f([$xzero])`] = [________]{"$fofxzero"}
 
 b. Write down a formula for [`f(h)`]  
 

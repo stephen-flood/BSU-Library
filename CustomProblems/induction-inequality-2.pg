@@ -130,10 +130,11 @@ We wish to prove by induction that [``[$LHS] > [$RHS] ``] for each natural numbe
 ----  
 
 
-We proceed by induction on [@ $inducton->menu @]*.
+We proceed by induction on [`n`].
 
 END_PGML
-ANS($inducton->cmp());# Answer checker for the popup list object.
+# with induction hypothesis [@ $inducton->menu @]*.
+# ANS($inducton->cmp());# Answer checker for the popup list object.
 BEGIN_PGML
 
 (a) *Base Case*

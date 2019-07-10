@@ -33,6 +33,7 @@ loadMacros(
     "bizarroArithmetic.pl",
     "unionLists.pl",
     "parserPopUp.pl",
+    "answerHints.pl",
         # "PGgraphmacros.pl",
     	# "parserMultiAnswer.pl",
     	# "contextInequalities.pl",
@@ -51,7 +52,7 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 # Context()->flags->set(tolerance => 0.01);
-Context()->variables->add(ak => 'Real', k => 'Real', n => 'Real');
+Context()->variables->add(ak => 'Real', k => 'Real', n=> 'Real');
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
@@ -102,6 +103,7 @@ $a4 = Compute(" $a * $r^3");
 Context()->flags->set(bizarroDiv=>1);
 Context()->flags->set(bizarroPow=>1);
 
+
 $closedForm = Compute("$a * ($r)^( n-1 )");
 $closedFormK = $closedForm->substitute(n=> "k");
 $closedFormKplus1 = $closedForm->substitute(n=> "k+1");
@@ -127,7 +129,6 @@ $completeInductiveStep = PopUp(["?", "a_1 = $a1", "a_k = $closedFormK", "a_{k+1}
 $supposeIHk = PopUp(["?","Suppose that ","Prove that "],"Suppose that "); 
 $proveIHkplus1 =  PopUp(["?","Suppose that ","Prove that "],"Prove that ");
 
-$stateIH = PopUp(["Select the Induction Hypotheis", "a_n = $closedForm", "two", "three"], "a_n = $closedForm");
 
 #$applyIH = PopUp(["?", "a_k = $closedFormK", "a_{k+1} = $closedFormKplus1", "three"], "a_k = $closedFormK");
 #
@@ -164,17 +165,14 @@ For each [`k`] such that [`a_k`] is defined, [`a_{k+1} =`] [______]{$akplus1Defn
 ----  
 ## 2. The Proof by Induction.
 
-We proceed by induction on [@ $stateIH->menu @]*
+We proceed by induction on [`n`] 
 
-END_PGML
-ANS($stateIH->cmp());# Answer checker for the popup list object.
-BEGIN_PGML
 
 (a) *Base Case*
 
 We first show that the induction hypothesis holds when [`n=1`].
 
-[` a_1 = `] [___________]{$s1}
+[` a_1 = `] [___________]{$s1}.  
 
 [``[$closedForm] = ``][__________]{$s1}. 
 *Note:* Simplify your answer completely.
@@ -183,6 +181,17 @@ We have proved that [@ $completeBaseCase->menu @]*, so the base case holds.
 
 END_PGML
 ANS($completeBaseCase->cmp());# Answer checker for the popup list object.
+BEGIN_PGML
+
+
+END_PGML
+## Do not allow students to use variable n in induction stage
+Context()->variables->remove(n);
+# Explain this to students
+Context()->{error}{msg}{"Variable 'n' is not defined in this context"} 
+   = "We have assumed that n = k+1, so enter your answer in terms of k";
+Context()->{error}{msg}{"'an' is not defined in this context"}
+   = "We have assumed that n = k+1, so enter your answer in terms of k and ak";
 BEGIN_PGML
 
 (b) *Inductive Step*
@@ -205,7 +214,12 @@ BEGIN_PGML
 
 In the first blank, enter the recursive *definition* of [`a_n`] (in terms of [`ak`] and [`k`]).  In the second blank, use the inductive hypothesis to show the result of applying the inductive hypothesis, but do *not* simplify.  
 
-[` a_{n} = `] [____________]{$akplus1Defn} = [____________]{$akplus1Plugged}
+[` a_{n} `]
+= [____________]{$akplus1Defn->cmp()->withPostFilter(AnswerHints(
+$akplus1Plugged => "Enter the recursive *definition* in terms of ak and k",
+$closedFormKplus1 => "Enter the recursive *definition* in terms of ak and k"))} 
+= [____________]{$akplus1Plugged->cmp()->withPostFilter(AnswerHints(
+$closedFormKplus1 => "Use the induction hypothesis, but do not simplify"))}
 
 Then check that the induction hypothesis will *continue* to hold for [`n=k+1`] by *completely* simplifying [`a_n`] until you get desired expression (in terms of [`k`]) .  Enter that into the blank.
 
