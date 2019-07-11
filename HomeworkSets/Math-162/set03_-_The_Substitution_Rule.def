@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = derivatives-chain-inside-and-out-ln.pg
+source_file = CustomProblems/derivatives-chain-inside-and-out-ln.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = derivatives-chain-inside-and-out-v2.pg
+source_file = CustomProblems/derivatives-chain-inside-and-out-v2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = integration-substitution-walkthrough-fraction.pg
+source_file = CustomProblems/integration-substitution-walkthrough-fraction.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = integration-substitution-walkthrough-roots.pg
+source_file = CustomProblems/integration-substitution-walkthrough-roots.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = integration-substitution-walkthrough-ln.pg
+source_file = CustomProblems/integration-substitution-walkthrough-ln.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

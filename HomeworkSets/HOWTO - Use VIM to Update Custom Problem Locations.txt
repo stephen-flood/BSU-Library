@@ -2,6 +2,10 @@
 
 Use the following regular expression search & replace:
 
+1. Open vim
+2. Type 
+    :
+3. Copy/paste
     %s/source_file = local/source_file = CustomProblems/
 
 (This assumes that there is a sim-link titled "CustomProblems" in the "Templates" directory of the course.

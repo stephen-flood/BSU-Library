@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = local/Library/Michigan/Chap5Sec4/Q09.pg
+source_file = CustomProblems/Library/Michigan/Chap5Sec4/Q09.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = algebra-solving-for-other-variable-rational.pg
+source_file = CustomProblems/algebra-solving-for-other-variable-rational.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = algebra-solving-for-other-variable-quadratic.pg
+source_file = CustomProblems/algebra-solving-for-other-variable-quadratic.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

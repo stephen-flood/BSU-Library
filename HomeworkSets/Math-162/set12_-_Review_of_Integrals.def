@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = strategy_of_integration-Sub-Parts-Partial.pg
+source_file = CustomProblems/strategy_of_integration-Sub-Parts-Partial.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = integration-partialfraction-identifying-form.pg
+source_file = CustomProblems/integration-partialfraction-identifying-form.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
