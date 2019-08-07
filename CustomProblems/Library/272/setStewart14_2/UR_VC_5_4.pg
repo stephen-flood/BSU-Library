@@ -23,27 +23,23 @@
 DOCUMENT();
 
 loadMacros(
-"PG.pl",
-"PGbasicmacros.pl",
-"PGchoicemacros.pl",
-"PGanswermacros.pl",
-"PGML.pl",
-"PGauxiliaryFunctions.pl"
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
 );
 
 TEXT(beginproblem());
 $showPartialCorrectAnswers = 1;
 
 
-$a = random(1, 5);
-$b = random(1, 5);
-$c = random(1, 5);
-$m = 2;
+$a = random(2, 5);
+$b = 1;
+$c = random(2, 5);
 
-$str = nicestring([$b, $c], ['x^2', 'y^2']);
+$str = nicestring([1, $c], ['x^2', 'y^2']);
 
 BEGIN_TEXT
-Find the limits, if they exist, or type $BITALIC DNE$EITALIC  for any which 
+Find the limits, if they exist, or type "DNE"  for any which 
 do not exist.
 $PAR
 \[ \displaystyle \lim_{(x, y) \rightarrow (0, 0)} 
@@ -51,18 +47,14 @@ $PAR
 
 1) Along the \(x\)-axis:    \{ans_rule()\}  $BR
 2) Along the \(y\)-axis:    \{ans_rule()\}  $BR
+3) Along the line \(y=mx\) :    \{ans_rule(40)\}  $BR
 4) The limit is:    \{ans_rule()\}  
 
 END_TEXT
-#3) Along the line \(y=$m x\) :    \{ans_rule(40)\}  $BR
-#$mline = "$a/($b + $c*$m**2)";
+$mline = "$a/($b + $c*m**2)";
 ANS(num_cmp($a/$b, strings=>["DNE"]));
 ANS(num_cmp(0, strings=>["DNE"]));
-#ANS(fun_cmp($mline, vars=>"m"));
+ANS(fun_cmp($mline, vars=>"m"));
 ANS(str_cmp("dne")); 
-
-#BEGIN_PGML_HINT
-#For part (c), plug in [`mx`] for y, and simplify 
-#END_PGML_HINT
 
 ENDDOCUMENT();

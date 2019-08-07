@@ -59,10 +59,10 @@ $event1 = '\( P(A) \)';
 $event2 = '\( P(B) \)';
 $event3 = '\( P(A \cup B) \)';
 $event4 = '\( P(A \cap B) \)';
-$event5 = '\( P(\overline{A}) \)';
-$event6 = '\( P(\overline{B}) \)';
-$event7 = '\( P(A \cup \overline{A}) \)';
-$event8 = '\( P(\overline{A} \cap B) \)';
+$event5 = '\( P(A^{c}) \)';
+$event6 = '\( P(B^{c}) \)';
+$event7 = '\( P(A \cup A^{c}) \)';
+$event8 = '\( P(A^{c} \cap B) \)';
 
 #give the answers
 $ans1 = (3*$a)+ $b+$c;
@@ -87,18 +87,18 @@ BEGIN_TEXT
 A sample space contains 7 sample points or outcomes. Let events \(A\) and \(B\)
  be defined according to the Venn diagram below. 
 $BR$BR
-Let \( P($LB 1 $RB)=P($LB 2 $RB)=P($LB 3 $RB)=P($LB 7 $RB)=$a \),
+Let \( P(1)=P(2)=P(3)=P(7)=$a \),
 $BR$BR
-\( P($LB 4 $RB)=P($LB 5 $RB)=$b \),
+\( P(4)=P(5)=$b \),
 $BR$BR
-and \( P($LB 6 $RB)=$c \).
+and \( P(6)=$c \).
 $BR$BR
 
 \{ image(insertGraph($graph_object), height=>200, width=>200) \}
 
-$PAR
+$BR
 
-Use the $BBOLD properties of probability $EBOLD discussed in class to find the following.   
+Use the Venn diagram and the given probabilities  to find: 
 $BR$BR
 (a) $SPACE $sevents[0] \(=\) \{ans_rule(5)\} $BR
 

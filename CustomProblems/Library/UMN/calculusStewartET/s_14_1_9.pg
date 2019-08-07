@@ -6,29 +6,28 @@
 ## DBsubject(Calculus - multivariable)
 ## DBchapter(Concepts for multivariable functions)
 ## DBsection(Notation, domain, and range)
-## Date(03/19/2014)
-## Institution(Colby College)
-## Author(Justin Sukiennik)
+## Date()
+## Institution()
+## Author()
 ## MLTleader(1)
-## MLT(function2varsValueAndRange)
+## MLT()
 ## Level(2)
 ## MO(1)
 ## TitleText1('Multivariable Calculus')
 ## AuthorText1('Stewart')
-## EditionText1('7')
-## Section1('14.1')
-## Problem1('9')
-## KEYWORDS('calculus', 'three-dimensional', 'functions', 'functions of two variables')
+## EditionText1()
+## Section1()
+## Problem1()
+## KEYWORDS('calculus', 'functions of three variables')
 
 ########################################################################
 
 DOCUMENT();      
 
 loadMacros(
-   "PGstandard.pl",     # Standard macros for PG language
-   "MathObjects.pl",
-   #"source.pl",        # allows code to be displayed on certain sites.
-   #"PGcourse.pl",      # Customization file for the course
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl"
 );
 
 ##############################################################
@@ -44,28 +43,36 @@ Context()->variables->add(y =>'Real', z =>'Real' );
 
 $a = random(2,8,1);
 $b = random(2,8,1);
-$c = random(1,2,1);
+$c = random(2,8,1);
+$d = random(1,2,1);
 
-if ($c==1) {
-$f = Compute("sin($a*x+$b*y)")->reduce;
-$ans1 = Compute("sin($a-2*$b)");
+if ($d==1) {
+$f = Compute("sin($a*x+$b*y+$c*z)")->reduce;
+$ans1 = Compute("sin($a-2*$b+$c)");
 }
-if ($c==2) {
-$f = Compute("cos($a*x+$b*y)")->reduce;
-$ans1 = Compute("cos($a-2*$b)");
+if ($d==2) {
+$f = Compute("cos($a*x+$b*y+$c*z)")->reduce;
+$ans1 = Compute("cos($a-2*$b+$c)");
 }
 
+Context("Interval");
+Context()->constants->add(EmptySet => Set());
+Context()->flags->set(noneWord=>"EmptySet");
+
+$ans2 = Interval("[-1,1]");
 
 ##############################################################
 
 Context()->texStrings;
 BEGIN_TEXT
-Let \(g(x,y) = $f.\)
+Let \(g(x,y,z) = $f.\)
 $HR
 $PAR
-Evaluate \(g(1,-2).\)  Use a calculator to simplify your answer, and give 6 decimal places of accuracy.
-$BR$BR 
-\(g(1,-2) = \) \{ans_rule(20)\} $PAR
+$BBOLD 1.$EBOLD Evaluate \(g(1,-2,1).\)
+$BR 
+Answer: \(g(1,-2,1) = \) \{ans_rule(20)\} $PAR
+$BBOLD 2.$EBOLD What is the range of \(g\)? $BR
+Answer (in interval notation): \{ans_rule(30)\} $PAR
 $HR
 END_TEXT
 Context()->normalStrings;
@@ -74,5 +81,7 @@ Context()->normalStrings;
 
 Context("Numeric");
 ANS( $ans1->cmp() );
+Context("Interval");
+ANS( $ans2->cmp() );
 
 ENDDOCUMENT();        

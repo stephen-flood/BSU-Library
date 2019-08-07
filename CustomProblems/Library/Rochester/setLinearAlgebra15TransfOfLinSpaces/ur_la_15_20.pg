@@ -48,15 +48,16 @@ $m22 = $g*$b + $h*$d;
 
 Context()->texStrings;
 BEGIN_TEXT
-You are $BBOLD promised $EBOLD that \(T_1\) and \(T_2\) are $BBOLD linear transformations $EBOLD.  In addition, you are $BBOLD told $EBOLD  that 
+Let \(T_1\) and \(T_2\) be
+linear transformations such that 
 \[ T_1(v) = $a v + $c u, \ \ \ T_1(u) = $b v + $d u, \]
 \[ T_2(v) = $e v + $g u, \ \ \ T_2(u) = $f v + $h u. \]  
 Find the images of \(v\) and \(u\) under the following $BBOLD composition $EBOLD of \(T_1\) and \(T_2\). 
 $BR
 $BR
-\((T_2 \circ T_1)(v) = T_2 \Big( T_1(v) \Big) =  \) \{ans_rule(30)\},
+\((T_2 \circ T_1)(v) = \) \{ans_rule(30)\},
 $BR
-\((T_2 \circ T_1)(u) = T_2 \Big( T_1(u) \Big) = \) \{ans_rule(30)\}.
+\((T_2 \circ T_1)(u) = \) \{ans_rule(30)\}.
 
 END_TEXT
 Context()->normalStrings;
