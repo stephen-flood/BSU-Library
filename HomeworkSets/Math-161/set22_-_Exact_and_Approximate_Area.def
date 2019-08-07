@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 02/08/2019 at 11:59pm EST
-reducedScoringDate = 02/15/2019 at 11:59pm EST
-dueDate           = 02/18/2019 at 11:59pm EST
-answerDate        = 02/18/2019 at 11:59pm EST
+openDate          = 04/23/2019 at 01:59am EDT
+reducedScoringDate = 05/02/2019 at 11:59pm EDT
+dueDate           = 05/06/2019 at 11:59pm EDT
+answerDate        = 05/06/2019 at 11:59pm EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/ASU-topics/setContinuity/4-1-15.pg
+source_file = Library/Valdosta/APEX_Calculus/5.3/APEX_5.3_27.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/ASU-topics/setCalculus/stef/stef2_5p3.pg
+source_file = Library/Rochester/setIntegrals0Theory/S05.01.AreaDistance.PTP03.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/UMN/calculusStewartCCC/s_2_4_prob01.pg
+source_file = CustomProblems/Library/Valdosta/APEX_Calculus/5.3/APEX_5.3_29.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/ASU-topics/setContinuity/4-1-53.pg
+source_file = Library/Rochester/setIntegrals0Theory/ur_in_0_1_mo.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S03-CalcLimits/2-3-44.pg
+source_file = Library/Hope/Calc1/05-02-Sigma-notation/sigma-notation-01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = local/Library/UMN/calculusStewartCCC/s_2_4_prob04.pg
+source_file = Library/Valdosta/APEX_Calculus/5.3/APEX_5.3_8-10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/Rochester/setLimitsRates5Continuity/S02.05.IntermediateValueThm.PTP02.pg
+source_file = CustomProblems/Library/UCSB/Stewart5_5_2/Stewart5_5_2_32.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/UCSB/Stewart5_2_5/Stewart5_2_5_46.pg
+source_file = CustomProblems/Library/UCSB/Stewart5_5_2/Stewart5_5_2_31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/UBC/setContinuity/graphs.pg
+source_file = Library/ASU-topics/setCalculusFundamentalTheorem/6-5-09.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Valdosta/APEX_Calculus/1.5/APEX_1.5_35.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/UCSB/Stewart5_2_5/Stewart5_2_5_44.pg
+source_file = Library/UMN/calculusTaalman/t_4_3_prob01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/Michigan/Chap1Sec7/Q11.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-35.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/ASU-topics/setContinuity/4-1-57.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S02-DefIntegral/5-2-33.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,17 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/Valdosta/APEX_Calculus/1.5/APEX_1.5_26.pg
+source_file = Library/UMN/calculusStewartCCC/s_5_2_43.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/FortLewis/Calc1/05-02-Definite-integral/HGM5-05-02-Definite-integral-27.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

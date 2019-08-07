@@ -193,7 +193,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 19
-source_file = local/Library/ASU-topics/setChainRulePowerFunctions/3-6-21.pg
+source_file = CustomProblems/Library/ASU-topics/setChainRulePowerFunctions/3-6-21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
