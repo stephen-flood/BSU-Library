@@ -213,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = trigonometry-identity-statepowerreduction.pg
+source_file = CustomProblems/trigonometry-identity-statepowerreduction.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
