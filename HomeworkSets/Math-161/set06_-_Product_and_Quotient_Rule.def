@@ -1,244 +1,254 @@
 assignmentType      = default
-openDate          = 01/29/2019 at 11:59pm EST
-reducedScoringDate = 02/02/2019 at 11:59pm EST
-dueDate           = 02/04/2019 at 11:59pm EST
-answerDate        = 02/07/2019 at 11:59pm EST
+openDate          = 02/28/2019 at 11:59pm EST
+reducedScoringDate = 03/11/2019 at 11:59pm EDT
+dueDate           = 03/13/2019 at 11:59pm EDT
+answerDate        = 03/15/2019 at 12:59am EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
-restrictProbProgression = 0
-emailInstructor   = 0
+restrictProbProgression = 
+emailInstructor   = 
 
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Exponent-rules.pg
+source_file = Library/ASU-topics/setProductQuotientRule/3-5-33.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/Exponent-rules-neg-exponent.pg
+source_file = Library/ASU-topics/setProductQuotientRule/5-2-12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/Rochester/setTrig08Equations/srw7_5_67.pg
+source_file = Library/NAU/setCalcI/producte2x.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/LoyolaChicago/Precalc/Chap7Sec2/Connally3-7-2-17-Trig-identities.pg
+source_file = Library/Union/setDervProductQuotientRule/s2_2_13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 5
-source_file = CustomProblems/Exponent-rules-neg-exponent2.pg
+source_file = Library/Union/setDervProductQuotientRule/3-5-22.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 6
-source_file = CustomProblems/Exponent-rules-neg-exponent-v3.pg
+source_file = Library/OSU/high_school_apcalc/dchmwk4/prob6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/Utah/Business_Algebra/set8_Exponential_and_Logarithmic_Functions/p01/p01.pg
+source_file = Library/NAU/setCalcI/secondDerProduct.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/Utah/College_Algebra/set9_Exponential_and_Logarithmic_Functions/1050s9p21.pg
+source_file = CustomProblems/Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_30.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/Rochester/setAlgebra29LogFunctions/srw4_3_17-20.pg
+source_file = Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Utah/College_Algebra/set9_Exponential_and_Logarithmic_Functions/1050s9p27.pg
+source_file = Library/AlfredUniv/anton8e/chapter3/3.4/prob10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/FortLewis/Algebra/11-1-Intro-to-Logarithms/MCH-11-1-56.pg
+source_file = CustomProblems/Library/UCSB/Stewart5_3_2/Stewart5_3_2_39.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/maCalcDB/setAlgebra29LogFunctions/problem4.pg
+source_file = Library/Michigan/Chap2Sec4/Q01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/UMN/algebraKaufmannSchwitters/ks_10_5_prob03.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S07-TansVelsRates/2-7-08.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/ASU-topics/setLogarithmicFunctions/srw4_4_17.pg
+source_file = Library/ASU-topics/setProductQuotientRule/3-5-65.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/ASU-topics/setLogarithmicFunctions/srw4_3_37-38.pg
+source_file = Library/ASU-topics/setProductQuotientRule/3-5-51.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/ma112DB/set10/sw6_5_7.pg
+source_file = Library/ASU-topics/setProductQuotientRule/5-2-21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/Mizzou/Algebra/log_eqns_properties/expand_01.pg
+source_file = Library/ASU-topics/setProductQuotientRule/s2_2_11a.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 18
-source_file = Library/maCalcDB/setAlgebra29LogFunctions/srw4_3_15.pg
+source_file = Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/Michigan/Chap1Sec4/Q13.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-31b.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 20
-source_file = Library/ASU-topics/setLogarithmicFunctions/srw4_3_25.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-20.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 21
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-36.pg
+source_file = Library/ASU-topics/setProductQuotientRule/3-5-35.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 22
-source_file = Library/Mizzou/Algebra/log_eqns_properties/determine_domain_01.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-34.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
 problem_end
 problem_start
 problem_id = 23
-source_file = Library/Union/setFunctionLogarithmic/srw4_2_21.pg
+source_file = Library/Union/setDervProductQuotientRule/s2_2_16.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 0 
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 24
+source_file = Library/Union/setDervProductQuotientRule/ur_dr_2_1.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
 problem_end
 
