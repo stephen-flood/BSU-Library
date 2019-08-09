@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 01/17/2018 at 11:59pm EST
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 01/23/2018 at 11:59pm EST
-answerDate        = 01/25/2018 at 11:59pm EST
-enableReducedScoring = N
+openDate          = 01/23/2019 at 11:59pm EST
+reducedScoringDate = 01/29/2019 at 11:59pm EST
+dueDate           = 01/29/2019 at 11:59pm EST
+answerDate        = 01/31/2019 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -130,5 +130,25 @@ showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
 att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/ASU-topics/set119LinearSystems/p9.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/ASU-topics/setSystems2Variables/jj4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
 problem_end
 

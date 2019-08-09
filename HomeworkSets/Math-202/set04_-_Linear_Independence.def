@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 02/06/2018 at 11:59pm EST
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 02/13/2018 at 11:59pm EST
-answerDate        = 02/13/2018 at 11:59pm EST
-enableReducedScoring = N
+openDate          = 02/12/2019 at 11:59pm EST
+reducedScoringDate = 02/22/2019 at 11:59pm EST
+dueDate           = 02/23/2019 at 11:59pm EST
+answerDate        = 02/23/2019 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -55,7 +55,7 @@ problem_start
 problem_id = 5
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.3.24.pg
 value = 1
-max_attempts = -1
+max_attempts = 3
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -65,7 +65,7 @@ problem_start
 problem_id = 6
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.3.19.pg
 value = 1
-max_attempts = -1
+max_attempts = 3
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -75,7 +75,7 @@ problem_start
 problem_id = 7
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.3.23.pg
 value = 1
-max_attempts = -1
+max_attempts = 3
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
