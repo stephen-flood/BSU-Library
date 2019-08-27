@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = local/Library/ASU-topics/set119LinearSystems/p24.pg
+source_file = CustomProblems/Library/ASU-topics/set119LinearSystems/p24.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = local/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_029.pg
+source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_029.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = local/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_035.pg
+source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_035.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = local/CustomProblems/Library/NAU/setLinearAlgebra/guessCoefficients.pg
+source_file = CustomProblems/CustomProblems/Library/NAU/setLinearAlgebra/guessCoefficients.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,7 +203,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = local/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_029.pg
+source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_029.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
