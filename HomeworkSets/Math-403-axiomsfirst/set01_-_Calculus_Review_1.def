@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = geometric_series_linear_ratio_easy.pg
+source_file = CustomProblems/geometric_series_linear_ratio_easy.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = geom_sum_arbitrary_endpts.pg
+source_file = CustomProblems/geom_sum_arbitrary_endpts.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

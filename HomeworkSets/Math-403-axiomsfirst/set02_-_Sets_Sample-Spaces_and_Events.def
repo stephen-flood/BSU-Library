@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Library/NewHampshire/NECAP/grade6/gr6-2005/n6-2005-15s.pg
+source_file = CustomProblems/Library/NewHampshire/NECAP/grade6/gr6-2005/n6-2005-15s.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = local/Library/NAU/setSet/Sets_4.pg
+source_file = CustomProblems/Library/NAU/setSet/Sets_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -313,7 +313,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 31
-source_file = induction-sum-1.pg
+source_file = CustomProblems/induction-sum-1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -323,7 +323,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 32
-source_file = induction-inequality-2.pg
+source_file = CustomProblems/induction-inequality-2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
