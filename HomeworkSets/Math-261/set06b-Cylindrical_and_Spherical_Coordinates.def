@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = local/Library/Rochester/setVectors5Coordinates/urvc_3_3.pg
+source_file = CustomProblems/Library/Rochester/setVectors5Coordinates/urvc_3_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

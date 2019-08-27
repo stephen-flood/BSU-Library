@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = local/Library/272/setStewart14_6/problem_9.pg
+source_file = CustomProblems/Library/272/setStewart14_6/problem_9.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
