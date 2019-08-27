@@ -72,4 +72,18 @@ Context()->normalStrings;
 
 ANS( $multians->cmp() );
 ;
+
+BEGIN_HINT
+First, find the solutions in $BBOLD parametric $EBOLD form. 
+\( \begin{cases} x_ 1 = \dots \\  x_ 2 = \dots \\ x_ 3 = \dots \\ x_4 = \dots \end{cases}\quad\)
+and label the free variables.
+$PAR
+Second, write the solution as a $BBOLD vector$EBOLD, and plug in your expressions for each bound variable, and leaving the free variables in place
+\( \vec{x} = \begin{bmatrix} x_1 \\  x_2 \\  x_3 \\ x_4 \end{bmatrix} =  \begin{bmatrix} \cdots \\ \cdots \\ \cdots \\ \cdots \end{bmatrix} \) 
+$PAR
+Finally, pull apart the solution vector to describe your solutions as a linear combination of the other vectors. 
+
+END_HINT
+
+
 ENDDOCUMENT() ;

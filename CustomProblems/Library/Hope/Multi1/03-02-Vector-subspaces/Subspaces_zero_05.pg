@@ -92,9 +92,8 @@ Context()->texStrings;
 BEGIN_TEXT
 \{
 ColumnTable(
-"Let \( H \) be the set of all points in the $quadrants
+"Let \( H \) be the set of all points \(\langle x,y\rangle\)  in the $quadrants
 in the plane \( V = \mathbb{R}^2 \).
-That is, \( H = $Htex \).
 Is \( H \) a subspace of the vector space \( V \)?
 $BR
 $BR".BeginList('OL')."
