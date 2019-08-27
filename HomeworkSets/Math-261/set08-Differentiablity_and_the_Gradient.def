@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 10/31/2018 at 09:59pm EDT
+openDate          = 10/31/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/14/2018 at 09:59pm EST
-answerDate        = 11/20/2018 at 09:59pm EST
+dueDate           = 11/14/2018 at 11:59pm EST
+answerDate        = 11/20/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -112,16 +112,6 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 11
-source_file = Library/Michigan/Chap14Sec6/Q24.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
 problem_id = 12
 source_file = CustomProblems/Library/272/setStewart14_5/problem_8.pg
 value = 1
@@ -133,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/272/setStewart14_6/problem_9.pg
+source_file = local/Library/272/setStewart14_6/problem_9.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -239,7 +229,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 24
@@ -249,7 +239,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 25
@@ -259,7 +249,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 26
@@ -269,7 +259,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 27
@@ -279,7 +269,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 28
@@ -289,7 +279,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 29
@@ -299,7 +289,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 30
@@ -309,7 +299,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 31
@@ -319,6 +309,6 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 

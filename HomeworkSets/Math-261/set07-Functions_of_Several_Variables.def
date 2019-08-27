@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 10/24/2018 at 05:16pm EDT
+openDate          = 10/24/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/07/2018 at 04:16pm EST
-answerDate        = 11/13/2018 at 05:16pm EST
+dueDate           = 11/06/2018 at 11:59pm EST
+answerDate        = 11/27/2018 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = CustomProblems/Library/272/setStewart14_2/UR_VC_5_4.pg
+source_file = Library/Hope/Multi2/10-02-MV-partial-derivatives/Partial-derivative-definition-01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,56 +73,6 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = CustomProblems/Library/UMN/calculusStewartET/s_14_2_prob01_1.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 8
-source_file = CustomProblems/Library/UMN/calculusStewartET/s_14_2_prob01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 9
-source_file = CustomProblems/Library/ASU-topics/setCalculus/stef14_2p2.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 10
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/14_Differentiation_in_Several_Variables/14.2_Limits_and_Continuity_in_Several_Variables/14.2.7.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 11
-source_file = Library/Hope/Multi2/10-02-MV-partial-derivatives/Partial-derivative-definition-01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 12
 source_file = Library/Union/setMVderivatives/an14_3_11.pg
 value = 1
 max_attempts = -1
@@ -132,7 +82,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 13
+problem_id = 8
 source_file = Library/UMN/calculusStewartET/s_14_3_19.pg
 value = 1
 max_attempts = -1
@@ -142,7 +92,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 14
+problem_id = 9
 source_file = Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-01-Second-order-partials.pg
 value = 1
 max_attempts = -1
@@ -152,7 +102,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 15
+problem_id = 10
 source_file = Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-06-Second-order-partials.pg
 value = 1
 max_attempts = -1
@@ -162,7 +112,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 16
+problem_id = 11
 source_file = Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-08-Second-order-partials.pg
 value = 1
 max_attempts = -1
@@ -172,7 +122,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 17
+problem_id = 12
 source_file = Library/Michigan/Chap14Sec7/Q10.pg
 value = 1
 max_attempts = -1
@@ -182,7 +132,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 18
+problem_id = 13
 source_file = CustomProblems/Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-01-Second-order-partials.pg
 value = 1
 max_attempts = -1
@@ -192,7 +142,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 19
+problem_id = 14
 source_file = Library/Union/setMVderivatives/an14_3_3.pg
 value = 1
 max_attempts = -1
@@ -202,7 +152,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 20
+problem_id = 15
 source_file = Library/Union/setMVderivatives/an14_3_5.pg
 value = 1
 max_attempts = -1
@@ -212,7 +162,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 21
+problem_id = 16
 source_file = Library/Utah/AP_Calculus_I/set3_Rates_of_Change_and_the_Chain_Rule/1210s4p26.pg
 value = 1
 max_attempts = -1
@@ -222,7 +172,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 22
+problem_id = 17
 source_file = Library/Union/setMVderivatives/an14_3_80.pg
 value = 1
 max_attempts = -1
@@ -232,7 +182,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 23
+problem_id = 18
 source_file = Library/Michigan/Chap14Sec7/Q42.pg
 value = 1
 max_attempts = -1
@@ -242,7 +192,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 24
+problem_id = 19
 source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/14_Differentiation_in_Several_Variables/14.3_Partial_Derivatives/14.3.69.pg
 value = 1
 max_attempts = -1
@@ -252,113 +202,153 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 25
+problem_id = 20
 source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/14_Differentiation_in_Several_Variables/14.1_Functions_of_Two_or_More_Variables/14.1.1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 26
+problem_id = 21
 source_file = Library/FortLewis/Calc3/12-2-Multivariable-graphs/HGM4-12-2-16-Multivariable-functions-graphs.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 27
+problem_id = 22
 source_file = CustomProblems/Library/Hope/Multi2/09-01-Graphs-images-level-sets/Level-sets-02.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 28
+problem_id = 23
 source_file = Library/FortLewis/Calc3/12-3-Contour-diagrams/HGM4-12-3-18f-Contour-diagrams-static/HGM4-12-3-18f-Contour-diagrams-static.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 29
+problem_id = 24
 source_file = Library/FortLewis/Calc3/12-3-Contour-diagrams/HGM4-12-3-18d-Contour-diagrams/HGM4-12-3-18d-Contour-diagrams.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 30
+problem_id = 25
 source_file = CustomProblems/Library/UMN/calculusStewartET/s_14_1_23/s_14_1_23.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 31
-source_file = Library/Hope/Multi2/10-02-MV-partial-derivatives/Partial-derivative-definition-01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 1 
-problem_end
-problem_start
-problem_id = 32
+problem_id = 26
 source_file = CustomProblems/Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-27-Second-order-partials/HGM4-14-7-27-Second-order-partials.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 33
+problem_id = 27
 source_file = CustomProblems/Library/FortLewis/Calc3/14-1-Partial-derivatives/HGM4-14-1-08b-The-partial-derivative/HGM4-14-1-08b-The-partial-derivative.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 34
+problem_id = 28
 source_file = Library/FortLewis/Calc3/14-7-Second-order-partials/HGM4-14-7-24-Second-order-partials/HGM4-14-7-24-Second-order-partials.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 35
+problem_id = 29
 source_file = CustomProblems/Library/Utah/AP_Calculus_I/set3_Rates_of_Change_and_the_Chain_Rule/1210s4p26.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 30
+source_file = CustomProblems/Library/272/setStewart14_2/UR_VC_5_4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 31
+source_file = CustomProblems/Library/UMN/calculusStewartET/s_14_2_prob01_1.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 32
+source_file = CustomProblems/Library/UMN/calculusStewartET/s_14_2_prob01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 33
+source_file = CustomProblems/Library/ASU-topics/setCalculus/stef14_2p2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 34
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/14_Differentiation_in_Several_Variables/14.2_Limits_and_Continuity_in_Several_Variables/14.2.7.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
 problem_end
 

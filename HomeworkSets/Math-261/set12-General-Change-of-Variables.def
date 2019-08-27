@@ -1,0 +1,64 @@
+assignmentType      = default
+openDate          = 12/17/2018 at 11:59pm EST
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 12/24/2018 at 11:59pm EST
+answerDate        = 12/26/2018 at 11:59pm EST
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 
+emailInstructor   = 
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/Hope/Multi2/11-04-MV-Int-change-var/Change-variables-01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/Rochester/setVectorCalculus1/UR_VC_11_1.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/15_Multiple_Integration/15.6_Change_of_Variables/15.6.29.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/Michigan/Chap16Sec7/Q01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/15_Multiple_Integration/15.6_Change_of_Variables/15.6.17.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+

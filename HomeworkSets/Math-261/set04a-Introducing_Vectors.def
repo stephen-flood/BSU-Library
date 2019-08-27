@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 09/26/2018 at 11:59pm EDT
+openDate          = 09/21/2018 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 10/10/2018 at 11:59pm EDT
-answerDate        = 10/10/2018 at 11:59pm EDT
+dueDate           = 10/01/2018 at 11:59pm EDT
+answerDate        = 10/08/2018 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = local/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-02.pg
+source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-02.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.7.pg
+source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = local/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.2_Vectors_in_Three_Dimensions/12.2.5.pg
+source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.2_Vectors_in_Three_Dimensions/12.2.5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = local/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-06/Vectors-06.pg
+source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-06/Vectors-06.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = local/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-18b.pg
+source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-18b.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,16 +103,6 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Union/setMVvectors/an12_2_27.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 11
 source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.2_Vectors_in_Three_Dimensions/12.2.25.pg
 value = 1
 max_attempts = -1
@@ -122,7 +112,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 12
+problem_id = 11
 source_file = Library/272/setStewart12_2/problem_2a.pg
 value = 1
 max_attempts = -1
@@ -132,8 +122,8 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 13
-source_file = local/Library/Michigan/Chap13Sec1/Q31.pg
+problem_id = 12
+source_file = CustomProblems/Library/Michigan/Chap13Sec1/Q31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -142,7 +132,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 14
+problem_id = 13
 source_file = Library/UMN/calculusStewartET/s_12_2_26.pg
 value = 1
 max_attempts = -1
@@ -152,7 +142,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 15
+problem_id = 14
 source_file = CustomProblems/Library/Michigan/Chap13Sec1/Q21.pg
 value = 1
 max_attempts = -1
@@ -162,7 +152,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 16
+problem_id = 15
 source_file = Library/UMN/calculusStewartET/s_12_2_25.pg
 value = 1
 max_attempts = -1
@@ -172,7 +162,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 17
+problem_id = 16
 source_file = Library/UMN/calculusStewartET/s_12_2_24.pg
 value = 1
 max_attempts = -1
@@ -182,7 +172,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 18
+problem_id = 17
 source_file = Library/Hope/Multi1/01-02-Vector-operations/Vectors-14.pg
 value = 1
 max_attempts = -1
@@ -192,7 +182,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 19
+problem_id = 18
 source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.42.pg
 value = 1
 max_attempts = -1
