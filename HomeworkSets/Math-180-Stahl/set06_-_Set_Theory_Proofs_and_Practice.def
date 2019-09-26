@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 03/28/2019 at 11:59pm EDT
-reducedScoringDate = 04/05/2019 at 11:59pm EDT
-dueDate           = 04/05/2019 at 11:59pm EDT
-answerDate        = 04/06/2019 at 12:00am EDT
+openDate          = 03/21/2019 at 11:00am EDT
+reducedScoringDate = 03/29/2019 at 11:59pm EDT
+dueDate           = 03/29/2019 at 11:59pm EDT
+answerDate        = 03/29/2019 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/NAU/setGraphTheory/MakeTree.pg
+source_file = Library/ASU-topics/setSets/ur_st_1_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/NAU/setGraphTheory/IsTree.pg
+source_file = Library/SDSU/Discrete/Sets/differenceB2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/Westmont/EoDM3/Inquiry_3_5/iprob3_13/iprob3_13.pg
+source_file = Library/NAU/setSet/Sets_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/NAU/setGraphTheory/Kruskal.pg
+source_file = Library/Westmont/EoDM3/Inquiry_2_2/iprob2_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/NAU/setGraphTheory/Spanningtree.pg
+source_file = Library/NAU/setFoundations/MAT320_0302.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,17 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/NAU/setGraphTheory/Dijkstra.pg
+source_file = Library/NAU/setSet/venn_p4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/NUIG/DiscreteMaths/Sets_prob2_OPL.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

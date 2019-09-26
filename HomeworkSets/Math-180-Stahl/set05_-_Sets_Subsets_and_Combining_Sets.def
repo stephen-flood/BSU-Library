@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 01/23/2019 at 11:59pm EST
-reducedScoringDate = 01/31/2019 at 11:59pm EST
-dueDate           = 01/31/2019 at 11:59pm EST
-answerDate        = 02/01/2019 at 12:00am EST
+openDate          = 03/04/2019 at 08:59am EST
+reducedScoringDate = 03/20/2019 at 11:59pm EDT
+dueDate           = 03/20/2019 at 11:59pm EDT
+answerDate        = 03/21/2019 at 12:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/Westmont/EoDM3/Inquiry_2_2/iprob2_3.pg
+source_file = Library/SDSU/Discrete/Sets/subsetB3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/SDSU/Discrete/Sets/complementA2.pg
+source_file = Library/SDSU/Discrete/Sets/subsetB1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/Rochester/setSetTheory1/ur_st_1_6.pg
+source_file = Library/NAU/setFoundations/MAT320_0302.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/SDSU/Discrete/Sets/VennB7/VennB7.pg
+source_file = Library/MontanaState/Sets/1.2A29Sets1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/SDSU/Discrete/Sets/VennA2/VennA2.pg
+source_file = Library/MontanaState/Sets/1.2A25Sets1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/SDSU/Discrete/Sets/VennB10/VennB10.pg
+source_file = Library/SDSU/Discrete/Sets/VennB7/VennB7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/SDSU/Discrete/Sets/VennB9/VennB9.pg
+source_file = Library/SDSU/Discrete/Sets/VennA2/VennA2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/SDSU/Discrete/Sets/VennB5/VennB5.pg
+source_file = Library/SDSU/Discrete/Sets/VennB12/VennB12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,17 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/NAU/setSet/venn_p2.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 10
-source_file = Library/NAU/setSet/venn_p1.pg
+source_file = Library/SDSU/Discrete/Sets/VennB10/VennB10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/NAU/setSet/Sets_4.pg
+source_file = Library/SDSU/Discrete/Sets/intersectA2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/CollegeOfIdaho/setAlgebra_04_02_CompoundIneq/42IntAlg_01_CompoundIneq.pg
+source_file = Library/NAU/setSet/Sets_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/ASU-topics/setDiscrete/katie1.7_2.pg
+source_file = Library/NAU/setSet/Sets_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/ASU-topics/setDiscrete/katie1.7_1.pg
+source_file = Library/NAU/setSet/Sets_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/SDSU/Discrete/Sets/subsetB1.pg
+source_file = Library/NAU/setFoundations/MAT320_0403.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = Library/MC/Proofs/Sets/Containment01.pg
+source_file = Library/MontanaState/Sets/1.2A21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/Rochester/setSetTheory1/ur_st_1_5.pg
+source_file = Library/MontanaState/Sets/1.2B39Sets1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = Library/SDSU/Discrete/Sets/subsetB3.pg
+source_file = Library/Rochester/setAlgebra01RealNumbers/ur_ab_10_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

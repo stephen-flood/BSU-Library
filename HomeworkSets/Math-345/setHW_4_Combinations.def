@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 04/18/2019 at 11:59pm EDT
-reducedScoringDate = 05/03/2019 at 11:59pm EDT
-dueDate           = 05/03/2019 at 11:59pm EDT
-answerDate        = 05/04/2019 at 12:00am EDT
+openDate          = 02/13/2018 at 03:15pm EST
+reducedScoringDate = 12/31/1969 at 07:00pm EST
+dueDate           = 02/20/2018 at 11:59pm EST
+answerDate        = 02/21/2018 at 01:00am EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/ASU-topics/setDiscrete/katie4.pg
+source_file = Library/NAU/setCounting/Counting_11.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/SDSU/Discrete/Logic/ttcontratautB4.pg
+source_file = Library/NAU/setCounting/Counting_14.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/SDSU/Discrete/Logic/formallogicB20.pg
+source_file = Library/NAU/setCounting/counting3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/SDSU/Discrete/Logic/ttlogicequivA5.pg
+source_file = Library/Rochester/setAlgebra38Counting/sw10_2_46.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/SDSU/Discrete/Logic/ttlogicequivA7.pg
+source_file = Library/NewHampshire/unh_schoolib/Probability/prbbns401.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/SDSU/Discrete/Logic/formallogicA1.pg
+source_file = Library/UMN/algebraKaufmannSchwitters/ks_15_2_25.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/MontanaState/Misc.Logic/1.6B13Logic3.pg
+source_file = Library/maCalcDB/setAlgebra38Counting/baseball.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/MontanaState/Misc.Logic/1.6B13Logic4.pg
+source_file = Library/NewHampshire/unh_schoolib/Wordy/worsns103.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/MontanaState/Misc.Logic/1.6B13Logic1.pg
+source_file = Library/Mizzou/Finite_Math/Set_Theory_Permutations_Combinations/Printers.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/MontanaState/Misc.Logic/1.3B16Logic1.pg
+source_file = Library/Mizzou/Finite_Math/Set_Theory_Permutations_Combinations/KingsAndQueens.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/MontanaState/FL/1.6B31FL2.pg
+source_file = Library/NUIG/DiscreteMaths/BitStrings1_OPL.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/MontanaState/FL/FLsimple1.pg
+source_file = Library/NAU/setCounting/combinationsAdvanced.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/MontanaState/Grammar/1.3A1Gram1.pg
+source_file = Library/NAU/setCounting/combinationsAdvanced.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,17 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/Rochester/setDiscrete1Logic/ur_dis_1_9.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 15
-source_file = Library/Westmont/EoDM3/Inquiry_1_1/iprob1_2.pg
+source_file = Library/Rochester/setAlgebra38Counting/sw10_2_60.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

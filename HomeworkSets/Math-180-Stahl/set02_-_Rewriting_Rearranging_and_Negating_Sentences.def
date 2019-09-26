@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 04/18/2019 at 11:59pm EDT
-reducedScoringDate = 05/03/2019 at 11:59pm EDT
-dueDate           = 05/03/2019 at 11:59pm EDT
-answerDate        = 05/04/2019 at 12:00am EDT
+openDate          = 02/06/2019 at 11:59pm EST
+reducedScoringDate = 02/15/2019 at 11:59pm EST
+dueDate           = 02/15/2019 at 11:59pm EST
+answerDate        = 02/16/2019 at 12:00am EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/ASU-topics/setDiscrete/katie4.pg
+source_file = CustomProblems/Library/MontanaState/Misc.Logic/1.6A43Logic1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/SDSU/Discrete/Logic/ttcontratautB4.pg
+source_file = CustomProblems/Library/MontanaState/Equivalence/1.1A5Equiv.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/SDSU/Discrete/Logic/formallogicB20.pg
+source_file = Library/Westmont/EoDM3/Exercises_1_1/exer1_1_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,9 +43,9 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/SDSU/Discrete/Logic/ttlogicequivA5.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB9.pg
 value = 1
-max_attempts = -1
+max_attempts = 2
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -53,9 +53,9 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/SDSU/Discrete/Logic/ttlogicequivA7.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB7.pg
 value = 1
-max_attempts = -1
+max_attempts = 2
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -63,9 +63,9 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/SDSU/Discrete/Logic/formallogicA1.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB8.pg
 value = 1
-max_attempts = -1
+max_attempts = 2
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -73,9 +73,9 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/MontanaState/Misc.Logic/1.6B13Logic3.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB10.pg
 value = 1
-max_attempts = -1
+max_attempts = 2
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -83,9 +83,9 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/MontanaState/Misc.Logic/1.6B13Logic4.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB11.pg
 value = 1
-max_attempts = -1
+max_attempts = 2
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/MontanaState/Misc.Logic/1.6B13Logic1.pg
+source_file = CustomProblems/Library/SUNYSB/implication-converse-contrapositive-only.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/MontanaState/Misc.Logic/1.3B16Logic1.pg
+source_file = Library/MontanaState/Equivalence/1.5B13Equiv2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/MontanaState/FL/1.6B31FL2.pg
+source_file = Library/MontanaState/Equivalence/1.5B14Equiv1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,9 +123,9 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/MontanaState/FL/FLsimple1.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB17.pg
 value = 1
-max_attempts = -1
+max_attempts = 2
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -133,9 +133,9 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/MontanaState/Grammar/1.3A1Gram1.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB16.pg
 value = 1
-max_attempts = -1
+max_attempts = 2
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
@@ -143,7 +143,17 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/Rochester/setDiscrete1Logic/ur_dis_1_9.pg
+source_file = Library/SDSU/Discrete/Logic/formallogicB15.pg
+value = 1
+max_attempts = 2
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/SDSU/Discrete/Logic/formallogicA19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -152,8 +162,38 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 15
-source_file = Library/Westmont/EoDM3/Inquiry_1_1/iprob1_2.pg
+problem_id = 16
+source_file = Library/SDSU/Discrete/Logic/formallogicA18.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Library/SDSU/Discrete/Logic/formallogicB20.pg
+value = 1
+max_attempts = 2
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = Library/SDSU/Discrete/Logic/formallogicB21.pg
+value = 1
+max_attempts = 2
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = CustomProblems/Library/MontanaState/Misc/1.5A1Neg1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

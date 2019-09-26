@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 02/28/2019 at 11:59pm EST
-reducedScoringDate = 03/08/2019 at 11:59pm EST
-dueDate           = 03/08/2019 at 11:59pm EST
-answerDate        = 03/09/2019 at 12:00am EST
+openDate          = 06/03/2019 at 08:59pm EDT
+reducedScoringDate = 06/11/2019 at 11:59pm EDT
+dueDate           = 06/11/2019 at 11:59pm EDT
+answerDate        = 06/12/2019 at 12:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/UVA-Stat/setStat212-Homework05/stat212-HW05-15.pg
+source_file = Library/NUIG/DiscreteMaths/IndiscreteClassReps_OPL.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/UVA-Stat/setStat212-Homework05/stat212-HW05-13.pg
+source_file = Library/NUIG/DiscreteMaths/BallyGoBackDeans_OPL.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/UVA-Stat/setStat212-Homework05/stat212-HW05-16.pg
+source_file = Library/ASU-topics/setCount/sw10_1_21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/UVA-Stat/setStat212-Homework05/stat212-HW05-18.pg
+source_file = Library/ASU-topics/setCount/sw10_1_23.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/ASU-topics/setStat/kolossa4.pg
+source_file = Library/ASU-topics/setCount/p11.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/NAU/setProbability/binoprob3.pg
+source_file = Library/NAU/setCounting/Counting_10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/UVA-Stat/setStat212-Homework04/stat212-HW04-01.pg
+source_file = Library/NAU/setCounting/Counting_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/UVA-Stat/setStat212-Homework04/stat212-HW04-02.pg
+source_file = Library/NAU/setCounting/Counting_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/UVA-Stat/setStat212-Homework04/stat212-HW04-03.pg
+source_file = Library/Mizzou/Finite_Math/Set_Theory_Permutations_Combinations/ParkBench.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-18.pg
+source_file = Library/Mizzou/Finite_Math/Set_Theory_Addition_and_Multiplication_Principles/MultiplicationPrinciple2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-15.pg
+source_file = Library/Rochester/setAlgebra38Counting/sw10_1_33.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-20.pg
+source_file = Library/Rochester/setDiscrete9Counting/ur_dis_9_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-19.pg
+source_file = Library/UMass-Amherst/Abstract-Algebra/PS-Functions/Functions4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/ASU-topics/setStat/kolossa27.pg
+source_file = Library/UBC/STAT/STAT302/HW01/HW01-05.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/ASU-topics/setStat/dueck5_2_4.pg
+source_file = Library/NewHampshire/unh_schoolib/Functions/funbrs201.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,47 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/ASU-topics/setStat/gust6.pg
+source_file = Library/NewHampshire/NECAP/grade11/gr11-2009/n11-2009-6s.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Library/NUIG/DiscreteMaths/Sets_prob1_OPL.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = Library/NUIG/DiscreteMaths/Sets_prob2_OPL.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = Library/NAU/setSet/venn_p4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 20
+source_file = Library/Rochester/setAlgebra36SeqSeries/factorial3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

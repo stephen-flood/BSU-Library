@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 03/07/2019 at 11:59pm EST
-reducedScoringDate = 03/22/2019 at 11:59pm EDT
-dueDate           = 03/22/2019 at 11:59pm EDT
-answerDate        = 03/23/2019 at 12:00am EDT
+openDate          = 02/28/2019 at 11:59pm EST
+reducedScoringDate = 03/20/2019 at 11:59pm EDT
+dueDate           = 03/20/2019 at 11:59pm EDT
+answerDate        = 03/21/2019 at 12:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/NUIG/DiscreteMaths/Graph_Theory_e_is_half_sum_k_OPL.pg
+source_file = Library/UVA-Stat/setStat212-Homework05/stat212-HW05-13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/NAU/setGraphTheory/DegreeComponentsFrompic.pg
+source_file = Library/UVA-Stat/setStat212-Homework05/stat212-HW05-16.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/NAU/setGraphTheory/IsConnected.pg
+source_file = Library/ASU-topics/setStat/kolossa4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/NAU/setGraphTheory/DegreeComponentsFrompic2.pg
+source_file = Library/NAU/setProbability/binoprob3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/NAU/setGraphTheory/DegreeComponents.pg
+source_file = Library/UVA-Stat/setStat212-Homework04/stat212-HW04-01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/Westmont/EoDM3/Inquiry_2_6/iprob2_16.pg
+source_file = Library/UVA-Stat/setStat212-Homework04/stat212-HW04-02.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/Westmont/EoDM3/Inquiry_2_6/iprob2_17/iprob2_17.pg
+source_file = Library/UVA-Stat/setStat212-Homework04/stat212-HW04-03.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/NAU/setGraphTheory/FindChromaticNumber.pg
+source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-18.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/NAU/setGraphTheory/KnownChromatic.pg
+source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/NAU/setGraphTheory/FindRoomColor.pg
+source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-20.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/NAU/setGraphTheory/RoomSchedule.pg
+source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,27 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/Westmont/EoDM3/Inquiry_2_6/iprob2_18/iprob2_18.pg
+source_file = Library/ASU-topics/setStat/kolossa27.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/ASU-topics/setStat/dueck5_2_4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/ASU-topics/setStat/gust6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

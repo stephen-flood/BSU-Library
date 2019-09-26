@@ -87,15 +87,19 @@ ColumnTable(
 $BR.
 $BR.
 "(a) \( f(0) \) = ".
-ans_rule(20).$SPACE.AnswerFormatHelp("number").
+ans_rule(20).
 $BR.
 $BR.
 "(b) For what x-value(s) is \( f(x) = 0 \)? ".
-ans_rule(20).$SPACE.AnswerFormatHelp("inequalities").
+ans_rule(20).
+$PAR.
+"If there are multiple solutions \(a\) and \(b\), enter your answer in the following format: \( x = a \text{ or } x=b\)".
 $BR.
 $BR.
 "(c) For what x-value(s) is \( f(x) > 0 \)? ".
-ans_rule(20).$SPACE.AnswerFormatHelp("intervals")
+ans_rule(20).$SPACE.AnswerFormatHelp("intervals").
+$BR.
+"Enter your answer using interval notation"
 ,
 $BCENTER.
 image(insertGraph($gr), width=>400, height=>400, tex_size=>600).
