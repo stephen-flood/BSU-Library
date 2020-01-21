@@ -1,8 +1,8 @@
-assignmentType      = default
-openDate          = 04/19/2019 at 11:59pm EDT
-reducedScoringDate = 04/27/2019 at 11:59pm EDT
-dueDate           = 05/01/2019 at 11:59pm EDT
-answerDate        = 05/01/2019 at 11:59pm EDT
+assignmentType      = jitar
+openDate          = 10/28/2019 at 11:59pm EDT
+reducedScoringDate = 11/04/2019 at 11:59pm EST
+dueDate           = 11/04/2019 at 11:59pm EST
+answerDate        = 11/04/2019 at 11:59pm EST
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/TCNJ/TCNJ_BasesLinearlyIndependentSet/problem7.pg
+source_file = Library/Rochester/setLinearAlgebra4InverseMatrix/ur_Ch2_1_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/TCNJ/TCNJ_BasesLinearlyIndependentSet/problem5.pg
+source_file = Library/ASU-topics/set119MatrixAlgebra/p13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/Library/NAU/setLinearAlgebra/guessCoefficients.pg
+source_file = Library/Rochester/setLinearAlgebra4InverseMatrix/ur_la_4_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/Rochester/setLinearAlgebra9Dependence/ur_la_9_12.pg
+source_file = Library/Rochester/setLinearAlgebra4InverseMatrix/ur_la_4_7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/Hope/Multi1/03-05-Basis-subspace/Basis_05a.pg
+source_file = Library/Rochester/setLinearAlgebra4InverseMatrix/ur_la_4_8.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/Hope/Multi1/03-05-Basis-subspace/Basis_02a.pg
+source_file = Library/ma112DB/set12/sw7_6_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/Hope/Multi1/03-04-Basis-dim/Basis_04a.pg
+source_file = Library/ma112DB/set12/sw7_6_17.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/Hope/Multi1/03-05-Basis-subspace/Basis_15.pg
+source_file = Library/ma112DB/set12/sw7_6_15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/Hope/Multi1/03-05-Basis-subspace/Basis_13.pg
+source_file = Library/Rochester/setLinearAlgebra4InverseMatrix/ur_la_4_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Hope/Multi1/03-05-Basis-subspace/Basis_10.pg
+source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.59.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 03/17/2019 at 11:59pm EDT
-reducedScoringDate = 03/22/2019 at 11:59pm EDT
-dueDate           = 03/22/2019 at 11:59pm EDT
-answerDate        = 03/23/2019 at 11:59pm EDT
+openDate          = 10/16/2019 at 11:59pm EDT
+reducedScoringDate = 10/28/2019 at 11:59pm EDT
+dueDate           = 10/30/2019 at 11:59pm EDT
+answerDate        = 10/30/2019 at 11:59pm EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -144,6 +144,46 @@ problem_end
 problem_start
 problem_id = 14
 source_file = Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_28.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/TCNJ/TCNJ_MatrixLinearTransformation/problem22.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = Library/TCNJ/TCNJ_MatrixLinearTransformation/problem17.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Library/TCNJ/TCNJ_MatrixLinearTransformation/problem26.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = Library/TCNJ/TCNJ_MatrixLinearTransformation/problem11.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

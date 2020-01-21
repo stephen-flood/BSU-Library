@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 01/31/2019 at 11:59pm EST
-reducedScoringDate = 02/07/2019 at 11:59pm EST
-dueDate           = 02/08/2019 at 11:59pm EST
-answerDate        = 02/10/2019 at 11:59pm EST
+openDate          = 09/12/2019 at 11:59pm EDT
+reducedScoringDate = 09/20/2019 at 11:59pm EDT
+dueDate           = 09/23/2019 at 11:59pm EDT
+answerDate        = 09/25/2019 at 11:59pm EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,16 +13,6 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/CustomProblems/Library/NAU/setLinearAlgebra/guessCoefficients.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 2
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.1.4.pg
 value = 1
 max_attempts = -1
@@ -32,7 +22,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 3
+problem_id = 2
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.1.72.pg
 value = 1
 max_attempts = -1
@@ -42,7 +32,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 4
+problem_id = 3
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.1.6.pg
 value = 1
 max_attempts = -1
@@ -52,7 +42,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 5
+problem_id = 4
 source_file = CustomProblems/GenerateVectorInSpan.pg
 value = 1
 max_attempts = -1
@@ -62,7 +52,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 6
+problem_id = 5
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.1.27.pg
 value = 1
 max_attempts = -1
@@ -72,7 +62,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 7
+problem_id = 6
 source_file = Library/Hope/Multi1/03-03-Linear-combinations/Lin_combi_06a.pg
 value = 1
 max_attempts = -1
@@ -82,7 +72,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 8
+problem_id = 7
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.11.pg
 value = 1
 max_attempts = -1
@@ -92,7 +82,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 9
+problem_id = 8
 source_file = CustomProblems/EquivalentDefinitionSpan-v2.pg
 value = 1
 max_attempts = -1
@@ -102,7 +92,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 10
+problem_id = 9
 source_file = CustomProblems/Library/TCNJ/TCNJ_VectorEquations/problem7.pg
 value = 1
 max_attempts = -1
@@ -112,7 +102,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 11
+problem_id = 10
 source_file = CustomProblems/Library/Rochester/setLinearAlgebra9Dependence/ur_la_9_8.pg
 value = 1
 max_attempts = -1
@@ -122,7 +112,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 12
+problem_id = 11
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.10.pg
 value = 1
 max_attempts = -1
@@ -132,7 +122,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 13
+problem_id = 12
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.8.pg
 value = 1
 max_attempts = -1
@@ -142,7 +132,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 14
+problem_id = 13
 source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.7.pg
 value = 1
 max_attempts = -1
@@ -152,7 +142,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 15
+problem_id = 14
 source_file = Library/Rochester/setLinearAlgebra9Dependence/ur_la_9_8.pg
 value = 1
 max_attempts = -1
@@ -162,7 +152,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 16
+problem_id = 15
 source_file = Library/TCNJ/TCNJ_VectorEquations/problem6.pg
 value = 1
 max_attempts = -1
@@ -172,8 +162,18 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
+problem_id = 16
+source_file = CustomProblems/Library/NAU/setLinearAlgebra/guessCoefficients.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
 problem_id = 17
-source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.40.pg
+source_file = Library/TCNJ/TCNJ_MatrixEquations/problem13.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/TCNJ/TCNJ_MatrixEquations/problem13.pg
+source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.40.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -204,16 +204,6 @@ problem_end
 problem_start
 problem_id = 20
 source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_029.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 21
-source_file = Library/Rochester/setAlgebra35SystemMatrices/solve_RREF_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

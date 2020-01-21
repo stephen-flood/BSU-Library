@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 01/29/2019 at 11:59pm EST
-reducedScoringDate = 02/02/2019 at 11:59pm EST
-dueDate           = 02/04/2019 at 11:59pm EST
-answerDate        = 02/06/2019 at 11:59pm EST
+openDate          = 09/06/2019 at 11:59pm EDT
+reducedScoringDate = 09/13/2019 at 11:59pm EDT
+dueDate           = 09/16/2019 at 11:59pm EDT
+answerDate        = 09/18/2019 at 11:59pm EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_036.pg
+source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_036.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = CustomProblems/Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_035.pg
+source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_035.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/ASU-topics/set119LinearSystems/p27.pg
+source_file = Library/ASU-topics/setSystems2Variables/jj4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,27 +203,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_04_025.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 21
-source_file = Library/Rochester/setLinearAlgebra2SystemsApplications/ur_la_2_2.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 22
-source_file = Library/ASU-topics/setSystems2Variables/jj4.pg
+source_file = Library/ASU-topics/set119LinearSystems/p27.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
