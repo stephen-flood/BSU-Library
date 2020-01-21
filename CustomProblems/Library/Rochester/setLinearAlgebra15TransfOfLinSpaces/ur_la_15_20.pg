@@ -55,12 +55,18 @@ linear transformations such that
 Find the images of \(v\) and \(u\) under the following $BBOLD composition $EBOLD of \(T_1\) and \(T_2\). 
 $BR
 $BR
-\((T_2 \circ T_1)(v) = \) \{ans_rule(30)\},
+\((T_2 \circ T_1)(v) = T_2 \Big( T_1(v)\Big) = \) \{ans_rule(30)\},
 $BR
-\((T_2 \circ T_1)(u) = \) \{ans_rule(30)\}.
+\((T_2 \circ T_1)(u) = T_2 \Big(T_1(u)\Big) = \) \{ans_rule(30)\}.
 
 END_TEXT
 Context()->normalStrings;
+
+BEGIN_HINT
+The best way to approach this problem is to connect it to one of the proofs that we have seen in class where we are *given* that T is linear. As in any "problem to prove," begin by writing down ALL assumptions.  Then write down 
+\[T_2 \Big( T_1(v)\Big) =\]
+and repeatedly use the given information to rewrite this expression, one step at a time.  
+END_HINT
 
 ANS(Compute("$m11*v + $m21*u")->cmp);
 ANS(Compute("$m12*v + $m22*u")->cmp);
