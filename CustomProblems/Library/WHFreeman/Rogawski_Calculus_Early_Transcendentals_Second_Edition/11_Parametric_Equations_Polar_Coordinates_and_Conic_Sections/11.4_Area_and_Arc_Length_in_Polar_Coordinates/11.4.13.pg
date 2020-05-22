@@ -46,7 +46,7 @@ Find the area of region A in Figure 6.
 $PAR
 $BCENTER \{image("image_11_4_13_a.png", width=>218, height=>181)\} $ECENTER
 $PAR
-\[\begin{array}{rl} F: r=$rf2\cos\theta , &\quad G: r=$rg\\ r_g=$rg , &\quad r_f=$rf\end{array} \]
+\[\begin{array}{rl} F: r=$rf2\cos\theta , &\quad G: r=$rg\end{array} \]
 $PAR
 $PAR
 Answer : \{ans_rule()\}
