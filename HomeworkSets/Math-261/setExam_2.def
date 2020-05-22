@@ -1,0 +1,74 @@
+assignmentType      = gateway
+openDate          = 04/15/2020 at 12:20pm EDT
+reducedScoringDate = 04/15/2020 at 01:35pm EDT
+dueDate           = 04/15/2020 at 01:35pm EDT
+answerDate        = 04/25/2020 at 11:59pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = 
+attemptsPerVersion  = 1
+timeInterval        = 0
+versionsPerInterval = 1
+versionTimeLimit    = 2400
+problemRandOrder    = 0
+problemsPerPage     = 0
+hideScore           = N
+hideScoreByProblem  = Y
+hideWork            = BeforeAnswerDate
+capTimeLimit        = 0
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = CustomProblems/Academic-Honesty-Statement.pg
+value = 5
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = assessment_multivariable_partialderivatives_simpler_product-on-second.pg
+value = 10
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = assessment_multivariable_tangent-plane_approximation.pg
+value = 10
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = assessment_multivariable_gradient_and_directional_derivative.pg
+value = 10
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = assessment_multivariable_gradient_application_PG.pg
+value = 10
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

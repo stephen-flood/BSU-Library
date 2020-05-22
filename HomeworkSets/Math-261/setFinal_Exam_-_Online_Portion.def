@@ -1,0 +1,84 @@
+assignmentType      = gateway
+openDate          = 05/06/2020 at 11:00am EDT
+reducedScoringDate = 05/06/2020 at 01:00pm EDT
+dueDate           = 05/06/2020 at 01:00pm EDT
+answerDate        = 05/21/2020 at 11:59pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = 
+attemptsPerVersion  = 1
+timeInterval        = 0
+versionsPerInterval = 1
+versionTimeLimit    = 3600
+problemRandOrder    = 0
+problemsPerPage     = 0
+hideScore           = N
+hideScoreByProblem  = Y
+hideWork            = BeforeAnswerDate
+capTimeLimit        = 0
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = CustomProblems/Academic-Honesty-Statement.pg
+value = 4
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = assessment-multivariable-vector-operations-combined.pg
+value = 18
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = assessment_multivariable_tangent-plane_approximation.pg
+value = 8
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = assessment_multivariable_gradient_application_PG.pg
+value = 8
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/Michigan/Chap15Sec1/Q07.pg
+value = 4
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = calc3-optimization-applyrule.pg
+value = 8
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

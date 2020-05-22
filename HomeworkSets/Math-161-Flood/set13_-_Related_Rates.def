@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 05/20/2020 at 01:59am EDT
-reducedScoringDate = 05/27/2020 at 01:59am EDT
-dueDate           = 05/27/2020 at 01:59am EDT
-answerDate        = 05/29/2020 at 01:59am EDT
+openDate          = 03/28/2020 at 11:59pm EDT
+reducedScoringDate = 04/04/2020 at 11:59pm EDT
+dueDate           = 04/08/2020 at 11:59pm EDT
+answerDate        = 04/10/2020 at 11:59pm EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/Hope/Multi2/11-04-MV-Int-change-var/Change-variables-01.pg
+source_file = Library/Valdosta/APEX_Calculus/4.2/APEX_4.2_11.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/Rochester/setVectorCalculus1/UR_VC_11_1.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S10-RelatedRates/3-10-12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/15_Multiple_Integration/15.6_Change_of_Variables/15.6.29.pg
+source_file = Library/NAU/setCalcI/growingBall.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/Michigan/Chap16Sec7/Q01.pg
+source_file = Library/FortLewis/Calc1/04-06-Related-rates/04-06-Related-rates-02.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/15_Multiple_Integration/15.6_Change_of_Variables/15.6.17.pg
+source_file = Library/Valdosta/APEX_Calculus/4.2/APEX_4.2_6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

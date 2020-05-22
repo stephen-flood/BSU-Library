@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 10/31/2018 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/14/2018 at 11:59pm EST
-answerDate        = 11/20/2018 at 11:59pm EST
-enableReducedScoring = N
+openDate          = 02/03/2020 at 11:59pm EST
+reducedScoringDate = 02/12/2020 at 11:59pm EST
+dueDate           = 02/14/2020 at 11:59pm EST
+answerDate        = 02/16/2020 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Library/272/setStewart14_4/problem_3.pg
+source_file = Library/UMN/calculusStewartCCC/s_2_2_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/Library/UMN/calculusStewartET/s_14_4_13.pg
+source_file = local/Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/Michigan/Chap14Sec5/Q55.pg
+source_file = Library/Union/setLimitInfinity/ns2_2_xxx.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = CustomProblems/Library/272/setStewart14_4/problem_4.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S03-CalcLimits/2-3-20.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/FortLewis/Calc3/14-3-Local-linearity/HGM4-14-3-18-Local-linearity-differential.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S03-CalcLimits/2-3-12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/FortLewis/Calc3/14-5-Gradients-in-space/HGM4-14-5-06-Gradients-etc.pg
+source_file = Library/UCSB/Stewart5_2_3/Stewart5_2_3_28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = CustomProblems/Library/FortLewis/Calc3/14-5-Gradients-in-space/HGM4-14-5-00-Gradients-etc.pg
+source_file = Library/AlfredUniv/anton8e/chapter2/2.2/prob17.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/14_Differentiation_in_Several_Variables/14.5_The_Gradient_and_Directional_Derivatives/14.5.1.pg
+source_file = Library/Rochester/setLimitsRates2Limits/ur_lr_2_9.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/FortLewis/Calc3/14-6-Chain-rule/HGM4-14-6-10-Chain-rule.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S02-Limits/2-2-28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,17 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/272/setStewart14_5/problem_7.pg
+source_file = Library/OSU/high_school_apcalc/dchmwk2/prob9.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 11
+source_file = Library/UMN/calculusStewartCCC/s_2_4_prob01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = CustomProblems/Library/272/setStewart14_5/problem_8.pg
+source_file = Library/ASU-topics/setContinuity/4-1-15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = CustomProblems/Library/272/setStewart14_6/problem_9.pg
+source_file = Library/ASU-topics/setCalculus/stef/stef2_5p3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = CustomProblems/Library/FortLewis/Calc3/14-4-Gradients-in-plane/HGM4-14-4-33-Gradients-etc.pg
+source_file = Library/ASU-topics/setContinuity/4-1-53.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/FortLewis/Calc3/14-4-Gradients-in-plane/HGM4-14-4-25-Gradients-etc.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S03-CalcLimits/2-3-44.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/Michigan/Chap14Sec4/Q69.pg
+source_file = local/Library/UMN/calculusStewartCCC/s_2_4_prob04.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/272/setStewart14_6/ur_vc_6_12.pg
+source_file = Library/Rochester/setLimitsRates5Continuity/S02.05.IntermediateValueThm.PTP02.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = Library/UMN/calculusStewartET/s_14_6_12.pg
+source_file = Library/UCSB/Stewart5_2_5/Stewart5_2_5_46.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/272/setStewart14_6/problem_6.pg
+source_file = Library/UBC/setContinuity/graphs.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +203,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = Library/UMN/calculusStewartET/s_14_6_9.pg
+source_file = Library/Valdosta/APEX_Calculus/1.5/APEX_1.5_35.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = Library/FortLewis/Calc3/14-4-Gradients-in-plane/HGM4-14-4-34-Gradients-etc.pg
+source_file = Library/UCSB/Stewart5_2_5/Stewart5_2_5_44.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -213,7 +223,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 22
-source_file = Library/Rochester/setVmultivariable6Gradient/ur_vc_6_13.pg
+source_file = Library/ASU-topics/setContinuity/4-1-57.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -223,7 +233,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 23
-source_file = CustomProblems/Library/272/setStewart14_2/UR_VC_5_4.pg
+source_file = Library/Valdosta/APEX_Calculus/1.5/APEX_1.5_26.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -233,77 +243,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 24
-source_file = Library/272/setStewart14_2/UR_VC_5_3.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 25
-source_file = Library/UMN/calculusStewartET/s_14_2_7.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 26
-source_file = CustomProblems/LimitsInPolar4.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 27
-source_file = CustomProblems/LimitsInPolar.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 28
-source_file = CustomProblems/LimitsInPolar2.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 29
-source_file = Library/Rochester/setVmultivariable2Limits/UR_VC_5_6.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 30
-source_file = CustomProblems/contour-matching-graphs.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 31
-source_file = CustomProblems/gradient-matching-graph-and-function1.pg
+source_file = Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-05.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

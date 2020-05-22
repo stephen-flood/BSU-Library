@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 02/07/2020 at 11:59pm EST
-reducedScoringDate = 02/14/2020 at 11:59pm EST
-dueDate           = 02/24/2020 at 11:59pm EST
-answerDate        = 02/26/2020 at 11:59pm EST
+openDate          = 01/22/2020 at 11:59pm EST
+reducedScoringDate = 01/31/2020 at 11:59pm EST
+dueDate           = 02/03/2020 at 11:59pm EST
+answerDate        = 02/05/2020 at 11:59pm EST
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-02.pg
+source_file = CustomProblems/Exponent-rules.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.7.pg
+source_file = CustomProblems/Exponent-rules-neg-exponent.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.2_Vectors_in_Three_Dimensions/12.2.5.pg
+source_file = Library/Rochester/setTrig08Equations/srw7_5_67.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-06/Vectors-06.pg
+source_file = Library/LoyolaChicago/Precalc/Chap7Sec2/Connally3-7-2-17-Trig-identities.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-18b.pg
+source_file = CustomProblems/Exponent-rules-neg-exponent2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/Union/setMVvectors/vectors-3a.pg
+source_file = CustomProblems/Exponent-rules-neg-exponent-v3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = CustomProblems/Library/272/setStewart12_2/problem_1a.pg
+source_file = Library/Utah/Business_Algebra/set8_Exponential_and_Logarithmic_Functions/p01/p01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/FortLewis/Calc3/13-2-Vectors-in-general/HGM4-13-2-21-Vectors-in-general.pg
+source_file = Library/Utah/College_Algebra/set9_Exponential_and_Logarithmic_Functions/1050s9p21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/272/setStewart12_2/problem_3a.pg
+source_file = Library/Rochester/setAlgebra29LogFunctions/srw4_3_17-20.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.2_Vectors_in_Three_Dimensions/12.2.25.pg
+source_file = Library/Utah/College_Algebra/set9_Exponential_and_Logarithmic_Functions/1050s9p27.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/272/setStewart12_2/problem_2a.pg
+source_file = Library/FortLewis/Algebra/11-1-Intro-to-Logarithms/MCH-11-1-56.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = CustomProblems/Library/Michigan/Chap13Sec1/Q31.pg
+source_file = Library/maCalcDB/setAlgebra29LogFunctions/problem4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/UMN/calculusStewartET/s_12_2_26.pg
+source_file = Library/UMN/algebraKaufmannSchwitters/ks_10_5_prob03.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = CustomProblems/Library/Michigan/Chap13Sec1/Q21.pg
+source_file = Library/ASU-topics/setLogarithmicFunctions/srw4_4_17.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/UMN/calculusStewartET/s_12_2_25.pg
+source_file = Library/ASU-topics/setLogarithmicFunctions/srw4_3_37-38.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/UMN/calculusStewartET/s_12_2_24.pg
+source_file = Library/ma112DB/set10/sw6_5_7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/Hope/Multi1/01-02-Vector-operations/Vectors-14.pg
+source_file = Library/Mizzou/Algebra/log_eqns_properties/expand_01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,57 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.42.pg
+source_file = Library/maCalcDB/setAlgebra29LogFunctions/srw4_3_15.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = Library/Michigan/Chap1Sec4/Q13.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 20
+source_file = Library/ASU-topics/setLogarithmicFunctions/srw4_3_25.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 21
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-36.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 22
+source_file = Library/Mizzou/Algebra/log_eqns_properties/determine_domain_01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 23
+source_file = Library/Union/setFunctionLogarithmic/srw4_2_21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

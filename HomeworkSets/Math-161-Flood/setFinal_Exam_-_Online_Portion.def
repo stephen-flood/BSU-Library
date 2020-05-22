@@ -1,11 +1,21 @@
-assignmentType      = default
-openDate          = 02/07/2020 at 11:59pm EST
-reducedScoringDate = 02/14/2020 at 11:59pm EST
-dueDate           = 02/24/2020 at 11:59pm EST
-answerDate        = 02/26/2020 at 11:59pm EST
-enableReducedScoring = Y
+assignmentType      = gateway
+openDate          = 05/05/2020 at 11:59pm EDT
+reducedScoringDate = 05/08/2020 at 11:59pm EDT
+dueDate           = 05/08/2020 at 11:59pm EDT
+answerDate        = 05/15/2020 at 11:59pm EDT
+enableReducedScoring = N
 paperHeaderFile   = defaultHeader
-screenHeaderFile  = defaultHeader
+screenHeaderFile  = 
+attemptsPerVersion  = 1
+timeInterval        = 0
+versionsPerInterval = 1
+versionTimeLimit    = 0
+problemRandOrder    = 0
+problemsPerPage     = 0
+hideScore           = N
+hideScoreByProblem  = Y
+hideWork            = BeforeAnswerDate
+capTimeLimit        = 0
 description       = 
 restrictProbProgression = 0
 emailInstructor   = 0
@@ -13,7 +23,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-02.pg
+source_file = CustomProblems/Academic-Honesty-Statement.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.7.pg
+source_file = Library/Utah/AP_Calculus_I/set8_Exponentials_and_Logarithms/1220s2p3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.2_Vectors_in_Three_Dimensions/12.2.5.pg
+source_file = assessment_derivatives_combined_simple_rules.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-06/Vectors-06.pg
+source_file = assessment_derivatives_second-derivative_product-of-chain.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = CustomProblems/Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-18b.pg
+source_file = assessment_derivatives_chain-randomized.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/Union/setMVvectors/vectors-3a.pg
+source_file = assessment_derivatives_chain-of-chain.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = CustomProblems/Library/272/setStewart12_2/problem_1a.pg
+source_file = Library/Valdosta/APEX_Calculus/2.4/APEX_2.4_43.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/FortLewis/Calc3/13-2-Vectors-in-general/HGM4-13-2-21-Vectors-in-general.pg
+source_file = CustomProblems/Academic-Honesty-Statement.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/272/setStewart12_2/problem_3a.pg
+source_file = Library/Union/setDervImplicit/5-4-10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.2_Vectors_in_Three_Dimensions/12.2.25.pg
+source_file = assessment_derivative-applications_max-min.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/272/setStewart12_2/problem_2a.pg
+source_file = Library/Union/setDervConcavity/4-3-49.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = CustomProblems/Library/Michigan/Chap13Sec1/Q31.pg
+source_file = assessment_antiderivatives_simple_rules.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/UMN/calculusStewartET/s_12_2_26.pg
+source_file = assessment_antiderivatives_finding_C.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = CustomProblems/Library/Michigan/Chap13Sec1/Q21.pg
+source_file = Library/UMN/calculusStewartCCC/s_2_5_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/UMN/calculusStewartET/s_12_2_25.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S03-CalcLimits/2-3-44.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/UMN/calculusStewartET/s_12_2_24.pg
+source_file = Library/UMN/calculusStewartCCC/s_5_2_31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,17 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/Hope/Multi1/01-02-Vector-operations/Vectors-14.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 18
-source_file = CustomProblems/Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.42.pg
+source_file = Library/UMN/calculusStewartCCC/s_5_2_43.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

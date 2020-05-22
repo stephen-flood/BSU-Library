@@ -1,0 +1,74 @@
+assignmentType      = gateway
+openDate          = 03/24/2020 at 11:59pm EDT
+reducedScoringDate = 03/27/2020 at 08:00am EDT
+dueDate           = 03/27/2020 at 08:00am EDT
+answerDate        = 03/29/2020 at 11:59pm EDT
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = 
+attemptsPerVersion  = 1
+timeInterval        = 0
+versionsPerInterval = 1
+versionTimeLimit    = 1500
+problemRandOrder    = 0
+problemsPerPage     = 0
+hideScore           = N
+hideScoreByProblem  = Y
+hideWork            = BeforeAnswerDate
+capTimeLimit        = 0
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = CustomProblems/Academic-Honesty-Statement.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = assessment_derivatives_combined_simple_rules.pg
+value = 24
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/Utah/AP_Calculus_I/set8_Exponentials_and_Logarithms/1220s2p3.pg
+value = 25
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C03S02-ProdQuotRules/3-2-20.pg
+value = 25
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/Westmont/ActiveCalculus/Preview_2_4/preview_2_4_abcde.pg
+value = 25
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+
