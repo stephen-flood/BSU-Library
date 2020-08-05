@@ -79,7 +79,7 @@ $y1 = Compute("$a + .01");
 
 # this shouldn't be necessary, I think, but the setting for the limit
 #    above seems to be changing what we expect to be valid.
-Context()->flags->set( tolType=>'absolute', tolerance=>0.00001 );
+Context()->flags->set( tolType=>'absolute', tolerance=>0.0001 );
 
 $mp = MultiAnswer( -$delta0, $delta0, $y0, $y1 )->with(
     singleAnswer=>0,

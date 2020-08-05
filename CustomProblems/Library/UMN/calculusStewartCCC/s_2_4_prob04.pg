@@ -155,8 +155,10 @@ Consider a different function
 \{ endtable() \}
 
 Note that \(g(0) = 2.5\) and that \(g(3) = -1.25\).  If the function \(g\) is continuous, then there must be a value of \(c\) such that \(g(c) = 0\) between the inputs \(x=0\) and \(x=3\) (in other words, we know that \(c\) is in the interval \((0,3)\).
-
+$PAR
 In fact, we can use the table to get a $BBOLD better $EBOLD approximation of the root \(c\) of \(g\), by noticing that \(g(1)>0\) and \(g(2)<0\).   This gives us a $BBOLD smaller $EBOLD interval which contains \(c\).
+$PAR
+But we also know that the root $BBOLD cannot $EBOLD be either \(1\) or \(2\).  Therefore, the root is in the interval \( (1,2) \).
 
 END_HINT
 
