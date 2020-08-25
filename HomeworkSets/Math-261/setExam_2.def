@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = assessment_multivariable_partialderivatives_simpler_product-on-second.pg
+source_file =  CustomProblems/assessment_multivariable_partialderivatives_simpler_product-on-second.pg
 value = 10
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = assessment_multivariable_tangent-plane_approximation.pg
+source_file =  CustomProblems/assessment_multivariable_tangent-plane_approximation.pg
 value = 10
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = assessment_multivariable_gradient_and_directional_derivative.pg
+source_file =  CustomProblems/assessment_multivariable_gradient_and_directional_derivative.pg
 value = 10
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = assessment_multivariable_gradient_application_PG.pg
+source_file =  CustomProblems/assessment_multivariable_gradient_application_PG.pg
 value = 10
 max_attempts = -1
 showMeAnother = -1

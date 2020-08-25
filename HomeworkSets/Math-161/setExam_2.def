@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = assessment_derivatives_combined_simple_rules.pg
+source_file =  CustomProblems/assessment_derivatives_combined_simple_rules.pg
 value = 12
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = assessment_derivatives_second-derivative_product-of-chain.pg
+source_file =  CustomProblems/assessment_derivatives_second-derivative_product-of-chain.pg
 value = 12
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = assessment_derivatives_chain-randomized.pg
+source_file =  CustomProblems/assessment_derivatives_chain-randomized.pg
 value = 8
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = assessment_derivatives_chain-of-chain.pg
+source_file =  CustomProblems/assessment_derivatives_chain-of-chain.pg
 value = 8
 max_attempts = -1
 showMeAnother = -1

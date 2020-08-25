@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = assessment_derivatives_combined_simple_rules.pg
+source_file = CustomProblems/assessment_derivatives_combined_simple_rules.pg
 value = 24
 max_attempts = -1
 showMeAnother = -1

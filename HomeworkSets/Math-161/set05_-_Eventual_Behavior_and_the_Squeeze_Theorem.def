@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = local/Library/UVA-Stew5e/setUVA-Stew5e-C02S08-Derivatives/2-8-19.pg
+source_file = CustomProblems/Library/UVA-Stew5e/setUVA-Stew5e-C02S08-Derivatives/2-8-19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

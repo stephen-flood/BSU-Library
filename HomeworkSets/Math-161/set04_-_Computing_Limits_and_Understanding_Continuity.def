@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_10.pg
+source_file = CustomProblems/Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = local/Library/UMN/calculusStewartCCC/s_2_4_prob04.pg
+source_file = CustomProblems/Library/UMN/calculusStewartCCC/s_2_4_prob04.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
