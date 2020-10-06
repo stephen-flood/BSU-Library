@@ -1,0 +1,261 @@
+##DESCRIPTION
+##  Limit of a rational function - approaches a finite number
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "niceTables.pl",
+	 "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+Context()->noreduce('(-x)-y','(-x)+y');
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+
+$dest = non_zero_random(-3,3,2); 
+$direction = list_random( "+","-" );
+
+## PROBLEM GENERATION
+## To make the limit a definite number, 
+##      make the destination one root of the top and bottom polynomials
+##
+## To make the limit INFINITE
+##      make the destination one root of the  bottom polynomial ONLY
+##      AND
+##      have the OTHER linear terms cancel
+##
+## To flip the sign of the limit, negate one of the terms of the limit
+## 
+
+## Decide if this should be an infinite or finite limit problem
+$TYPE = "Finite";
+#$TYPE = "Infinite";
+
+sub same_root{
+    my ($a1, $b1, $a2, $b2) = @_;
+    if( $b1*$a2 == $b2*$a1){ return 1; }
+    else{ return 0; }
+}
+
+
+
+## Possibly have the coefficient negative, to flip the limit sign
+#$scalenumerator = list_random(-1);
+$scalenumerator = list_random(1);
+
+### ALL TERMS should have first coefficient 1 in generator
+### (a scale numerator is defined later)
+### OTHERWISE: cancellation might happen, breaking the "middle step" work shown
+$num1a = 1;
+$num2a = 1;
+$denom1a = 1;
+$denom2a = 1;
+
+# ALWAYS have the destination be the root of the FIRST factor of the denominator
+$denom1b = -$dest; 
+
+### Prevent the second factor of the denominator from equaling the first factor of the denominator
+$denom2b = non_zero_random(-3,3,1);
+while( same_root($denom1a, $denom1b ,$denom2a , $denom2b) ) {$denom2b = non_zero_random(-3,3,1);}
+
+
+## Numerator Factor 1
+## This should EITHER 
+##      equal the FIRST term of the denominator
+##      if the limit is finite
+##  OR
+##      equal the SECOND term of the denominator
+##      if the limit is INFINITE (plus/minus)
+
+if($TYPE eq "Finite"){
+    ## To get the limit to be FINITE, make the DESTINATION term cancel
+    $num1b = -$dest;
+}
+else{
+    ## To get the limit to be INFNIITE, make the OTHER term cancel
+    $num1b = $denom2b;
+}
+
+## Numerator Factor 2
+#  This should be DISTINCT from all other linear factors
+#
+$num2b = non_zero_random(-3,3,1);
+# prevent the second factor of the numerator from having the same root as any other linear factor (numerator OR denominator)
+while(same_root($num2a,$num2b, $num1a,$num1b) 
+   or same_root($num2a,$num2b, $denom1a,$denom1b ) 
+   or same_root($num2a,$num2b, $denom2a, $denom2b))
+{ $num2b = non_zero_random(-3,3,1); }
+
+## Define the factors of the numerator and denominator
+$numfactor1 = Compute("$num1a * x + $num1b ");
+$numfactor2 = Compute("$num2a * x + $num2b ");
+$denomfactor1 = Compute("$denom1a * x + $denom1b ");
+$denomfactor2 = Compute("$denom2a * x + $denom2b ");
+
+
+#### Decide which factors cancel
+## If the first on the top and the first on the bottom have the same roots, cancel them
+#if($num1a*$denom1b == $denom1a*$num1b){
+if(same_root($num1a,$num1b,$denom1a,$denom1b)){
+    $simplifiednum = $numfactor2;
+    $simplifieddenom=$denomfactor2;
+}
+#if($num1a*$denom2b == $denom2a*$num1b){
+if(same_root($num1a,$num1b,$denom2a,$denom2b)){
+    $simplifiednum = $numfactor2;
+    $simplifieddenom=$denomfactor1;
+}
+#if($num2a*$denom1b == $denom1a*$num2b){
+if(same_root($num2a,$num2b,$denom1a,$denom1b)){
+    $simplifiednum = $numfactor1;
+    $simplifieddenom=$denomfactor2;
+}
+#if($num2a*$denom2b == $denom2a*$num2b){
+if(same_root($num2a,$num2b,$denom2a,$denom2b)){
+    $simplifiednum = $numfactor1;
+    $simplifieddenom=$denomfactor1;
+}
+## Compute the numerator
+$numcoeff1 = $scalenumerator*$num1a*$num2a;
+$numcoeff2 = $scalenumerator*($num1a*$num2b + $num1b*$num2a);
+$numcoeff3 = $scalenumerator*($num1b*$num2b);
+##
+$numerator = Compute("$numcoeff1 x^2 + $numcoeff2 x + $numcoeff3")->reduce();
+
+## Compute the denominator
+$denomcoeff1 = $denom1a*$denom2a;
+$denomcoeff2 = ($denom2a*$denom2b + $denom1b*$denom1a);
+$denomcoeff3 = ($denom1b*$denom2b);
+##
+$denominator = Compute("$denomcoeff1 x^2 + $denomcoeff2 x + $denomcoeff3")->reduce();
+
+
+#### Evaluate the Limit ####
+
+if( $TYPE eq "Finite"){
+    ## If the limit is FINITE 
+    $limit = Compute("$simplifiednum/$simplifieddenom")->eval(x=>$dest);
+}
+else {
+    ## If the limit is INFINITE
+    # First, see what the sign of the remaining linear factor of the numerator is becoming (Note: this doesn't include $scalenumerator, if defined)
+    $numeratorfactorlimit=$simplifiednum->eval(x=>$dest);
+    # Now, use the direction of the limit and the sign of the numerator to decide the limit;
+    if($direction eq "+"){
+        if($scalenumerator*$numeratorfactorlimit > 0)
+            {
+                $limit = Compute("INF");
+            }
+        else{
+                $limit = Compute("-INF");
+            }
+    }
+    if($direction eq "-"){
+        if($scalenumerator*$numeratorfactorlimit  > 0)
+            {
+                $limit = Compute("-INF");
+            }
+        else{
+                $limit = Compute("INF");
+            }
+    }
+}
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+$sameroot =  same_root($denom1a, $denom1b ,$denom2a , $denom2b) ;
+ 
+BEGIN_PGML
+Compute the limit 
+[``\lim_{x\rightarrow \ [$dest]^[$direction]} \frac{[$numerator]}{[$denominator]} ``]
+ 
+ 
+ On a separate piece of paper, evaluate the following limit, *showing all work*.  
+ 
+ As a part of this process, you should end up with 
+ 
+ [``= \lim_{x\rightarrow [$dest]^[$direction]} \frac{A}{B} ``]
+
+Enter the numerator and denominator of the *completely simplified* fraction below:
+
+[`A = `] [_________________]{"$scalenumerator*$simplifiednum"}  and 
+
+[`B = `] [_________________]{"$simplifieddenom"}  
+
+.  
+
+Next, evaluate the limit itself.  Enter a number, or use the table below to identify the appropriate text to use.  
+
+
+
+[``\lim_{x\rightarrow [$dest]^[$direction]} \frac{[$numerator]}{[$denominator]}  = ``] [___________________________]{"$limit"}
+
+.  
+
+If your answer is not a number, use the following table to see how to enter your answer.
+[@ LayoutTable(
+    [
+        ['Goal:','Undefined','\(\infty\)','\(-\infty\)'],
+        ['Enter:','\(DNE\)', '\(INF\)', '\(-INF\)'],
+    ],
+    center=>0,
+    align=>'|c|c|c|c|',
+    midrules=>1,
+);@]*
+
+
+END_PGML
+
+
+ENDDOCUMENT();

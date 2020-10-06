@@ -1,0 +1,185 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+         "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(Q1 => 'Real', Q2 => 'Real', Q3 => 'Real', Q4 => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+# Define Functions to get Exact numerators for typesetting automatically
+sub sin_num {
+    my ($parameter_name) = @_;
+    my $output = "UNKNOWN";
+    if ($parameter_name eq "pi/6"){ $output = "1"; }
+    if ($parameter_name eq "pi/4"){ $output = "\sqrt{2}"; }
+    if ($parameter_name eq "pi/3"){ $output = "\sqrt{3}"; }
+    return $output;
+}
+sub cos_num {
+    my ($parameter_name) = @_;
+    my $output = "UNKNOWN";
+    if ($parameter_name eq "pi/3"){ $output = "1"; }
+    if ($parameter_name eq "pi/4"){ $output = "\sqrt{2}"; }
+    if ($parameter_name eq "pi/6"){ $output = "\sqrt{3}"; }
+    return $output;
+}
+
+# Randomly Pick a Function (sin or cosine) 
+@fns = ( "cos" , "sin" );
+$fnversion = random(0,1,1);
+$f = Compute("$fns[$fnversion](x)");
+
+# Randomly Pick Inside Angle
+@insideangles = ("pi/3", "pi/4", "pi/6");
+$angleversion = random(0,2,1);
+$insideangle = $insideangles[$angleversion];
+
+
+
+# Pick Quadrant Based on Function 
+$sign = list_random(-1,1);
+if($fns[$fnversion] eq "sin"){
+    if( $sign == 1 ){
+        $angle1 = $insideangle;
+        $angle2 = "pi - (" . $insideangle . ")";
+        $quadrants = List("Q1,Q2");
+    }     
+    if( $sign == -1 ){
+        $angle1 = "pi +  (" . $insideangle . ")";
+        $angle2 = "2pi - (" . $insideangle . ")";
+        $quadrants = List("Q3,Q4");
+    }     
+}
+if($fns[$fnversion] eq "cos"){
+    if( $sign == 1 ){
+        $angle1 = $insideangle;
+        $angle2 = "2pi - (" . $insideangle . ")";
+        $quadrants = List("Q1,Q4");
+    }     
+    if( $sign == -1 ){
+        $angle1 = "pi - (" . $insideangle . ")";
+        $angle2 = "pi + (" . $insideangle . ")";
+        $quadrants = List("Q2,Q3");
+    }     
+}
+# Collect all solutions in a list
+$solutions = List("$angle1, $angle2");
+
+# Find the right hand of the equation
+if($fns[$fnversion] eq "sin"){ $output_num = sin_num($insideangle); }
+if($fns[$fnversion] eq "cos"){ $output_num = cos_num($insideangle); }
+$output_denom = 2;
+# Decide if the right hand side is positive or negative
+if($sign==-1){ $sign_symbol = "-";}else{ $sign_symbol = "";}
+
+
+## Create a graph to show the quadrants
+# a graph object
+$gr = init_graph(-2,-2,2,2,
+    axes=>[0,0],
+    size=>[100,100]); # or pixels=>[400,400]
+
+# add a label
+$gr->lb( new Label(0.75,0.75,'Q1',
+    'black','center','middle'));
+# add a label
+$gr->lb( new Label(-0.75,0.75,'Q2',
+    'black','center','middle'));
+# add a label
+$gr->lb( new Label(-0.75,-0.75,'Q3',
+    'black','center','middle'));
+# add a label
+$gr->lb( new Label(0.75,-0.75,'Q4',
+    'black','center','middle'));
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Solve the equation  [`[$f] = \frac{[$sign_symbol][$output_num]}{[$output_denom]}  `] for [`x`] in [`[0,2\pi)`]. 
+
+This problem will require you to show your work, and then enter your answer at the end. 
+
+-----
+
+First, identify the inside (or reference) angle. 
+
+Inside angle = [__________]{"$insideangle"}
+
+
+
+Next, specify the quadrant(s) containing solutions to this equation.
+    [@ image( insertGraph($gr), width=>100, 
+    height=>100, tex_size=>800 ) @]*
+
+If there are multiple quadrants, enter your answer as a comma separated list (i.e. [`Q1,Q2`])
+
+Quadrants Containing Solutions = [___________________________]{"$quadrants"}
+
+
+-----
+
+Now enter all solutions to the orignal equation [`[$f] = \frac{[$sign_symbol][$output_num]}{[$output_denom]}  `] for [`x`] in [`[0,2\pi)`]. 
+
+[`x = `]  [__________]{"$solutions"}.
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();
