@@ -1,5 +1,5 @@
 ##DESCRIPTION
-##  Under Development -- graph complete.  still need to generate answer strings
+##  
 ##ENDDESCRIPTION
 
 ##KEYWORDS('sample')
@@ -90,8 +90,8 @@ foreach my $j (-6,-4,-2,0,2,4,6) {
   $gr -> lb(new Label ($j,-1,$j,'black','center','middle'));
 }
 
-$concave_up_string = "";
-$concave_down_string = "";
+$concave_up_answer = Set();
+$concave_down_answer = Set();
 
 #$increasing_string = "";
 #$decreasing_string = "";
@@ -101,57 +101,65 @@ my $changex = 2;
 my $slope = non_zero_random(-2,2,1);
 
 # If the slope DOESN'T change between the even (zero slope->nonzero slope) and odd (nonzero slope->zero slope), then we (may?) need to extend the interval 
-my $changedslope = 1;
+my $lastslope = 0;
 my $startofinterval = -6;
 
 my $changey = $slope*$changex/2;
 
 $x = -6;
 for(my $i = 1; $i < 7; $i++){
-#    if( ($increasing_string eq "" && $decreasing_string ne "" ) || $lasty<-4 ){   
-#        $change = random(2,3,1);    
-#    }
-#    elsif( ($increasing_string ne "" && $decreasing_string eq "") || $lasty>4 )
-#    {   $change = random(-3,-2,1);  }
-#    else
-#    {  
-#        $change = list_random(-4,-3,-2,2,3,4);  
-#    }
 
-#    add_spline_to_graph( $x, $lasty, $lastslope, $x+$changex, $lasty+$change, $lastslope+$changeslope);
-    
     # if $i is odd, go from nonzero slope to flat
     if( $i %2 == 1){   
         add_spline_to_graph( $x, $lasty, $slope, 
                          $x+$changex, $lasty+$changey, 0);
+        # if $slope is positive, we're decreasing to 0, so concave down
+        if ($slope>0){
+            $concave_down_answer = $concave_down_answer  + Interval($x ,($x+$changex));}
+        # if $slope is negative, we're increasing to 0, so concave up
+        if ($slope<0){
+            $concave_up_answer = $concave_up_answer  + Interval($x ,($x+$changex));}
+        
+        # NOTE: *always* have a point of inflection when $i is odd 
+        #   because of our careful choice of $changey and $changex, 
+        #   the odd $i always correspond to  points of LOCAL MAX/MIN SLOPE on the interval between two points of zero slope.
+        #   It follows that this point must be an inflection point, so f'' is either 0 or DNE, and so f is certainly not concaveup/down here.
     }
     else{ # if $i is even, go from flat to nonzero slope
         add_spline_to_graph( $x, $lasty, 0, 
                          $x+$changex, $lasty+$changey, $slope);
+        # if $slope is positive, we're increasing to it from 0, so concave up
+        if ($slope>0){
+            $concave_up_answer = $concave_up_answer  + Interval($x ,($x+$changex));
+            # if concavity stays the same, include $x in the interval
+            if($slope*$lastslope < 0){ $concave_up_answer = $concave_up_answer + Set($x);}
+            }
+        # if $slope is negative, we're decreasing to it from 0, so concave down
+        if ($slope<0){
+            $concave_down_answer = $concave_down_answer  + Interval($x ,($x+$changex));
+            # if concavity stays the same, include $x in the interval
+            if($slope*$lastslope < 0){ $concave_down_answer = $concave_down_answer + Set($x);}
+            }
     }
-    
-#    if($change > 0 ){
-#        if($increasing_string eq ""){ $increasing_string = "($x, $x+$changex)";}
-#        else{ $increasing_string = $increasing_string . " U ($x, $x+$changex)";}
-#    }
-#    elsif($change < 0)
-#    {
-#        if($decreasing_string eq ""){ $decreasing_string = "($x, $x+$changex)";}
-#        else{ $decreasing_string = $decreasing_string . " U ($x, $x+$changex)";}
-#    }    
     
     # record current values
     $lasty = $lasty+$changey;
+    $lastslope = $slope;
+    
+    # Pick new parameter values
     $slope=non_zero_random(-2,2,2);
     $x = $x + $changex ;
     
-    # pick new changes
+    # compute new changes from new parameter values
     $changex = 2;
     $changey = $slope*$changex/2;
 }
 
 #$increasing = Interval("$increasing_string");
 #$decreasing = Interval("$decreasing_string");
+
+#$concave_up_answer = Set("$concave_up_string");
+#$concave_down_answer = Set("$concave_down_string");
 
 $a   = random(3,5,1);
 $b   = non_zero_random(-2,2,1);
