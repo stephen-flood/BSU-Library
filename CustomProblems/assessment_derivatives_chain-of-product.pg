@@ -7,9 +7,9 @@
 ## DBsubject('Course')
 ## DBchapter('Section')
 ## DBsection('Subsection')
-## Date('4/07/2020')
+## Date('3/23/2020')
 ## Author('Stephen Flood')
-## Institution('')
+## Institution('Bridgewater State University')
 ## TitleText1('')
 ## EditionText1('')
 ## AuthorText1('')
@@ -50,37 +50,50 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 # Context()->flags->set(tolerance => 0.01);
-Context()->variables->add(y => 'Real');
+# Context()->variables->add(t => 'Real');
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$m = non_zero_random(2,4,1);
-$n = non_zero_random(2,4,1);
-$o = non_zero_random(2,4,1);
-$p = non_zero_random(2,4,1);
 
-$a   = random(3,5,1);
-$b   = non_zero_random(-2,2,1);
-$c   = random(3,5,1);
-$d   = non_zero_random(-2,2,1);
 
-$dx = non_zero_random(0.1, 0.2, 0.1); 
-$dy = non_zero_random(-0.2, -0.1, 0.1); 
 
-$x = random(1,1,1);
-$y = random(1,1,1);
+$a   = non_zero_random(1,4,1);
+$b   = 0;
+$m   = non_zero_random(1,4,1);
 
-$f = Compute("$a*x^$m + $b*(y)^$n + $c*x*y + $d")->reduce();
-$fx = $f->D('x')->eval(x=>$x,y=>$y);
-$fy = $f->D('y')->eval(x=>$x,y=>$y);
-$height = $f->eval(x=>$x,y=>$y);
+$c   =  non_zero_random(1,4,1);
+$d   =  0;
+$n   =  1;
 
-$L = Compute("$fx*(x-$x) + $fy*(y-$y) + $height");
 
-$x1 = Compute("$x+$dx");
-$y1 = Compute("$y+$dy");
+$f = list_random( 'e^', 'sin', 'cos', 'ln'); 
 
-$approx = $L->eval(x=>$x1,y=>$y1);
+$g = list_random( 'e^', 'sin', 'cos', 'ln', ''); 
+$h = list_random( 'e^', 'sin', 'cos', 'ln', ''); 
+
+$inside1 = Compute("$g($a * x^$n + $b)")->reduce();
+$inside2 = Compute("$h($c * x^$m + $d)")->reduce();
+
+$operation = list_random( '*' , '/' );
+
+$function = Compute("$f($inside1 $operation $inside2) ")->reduce();
+
+$functionprime = $function->D();
+$functionprimeprime = $functionprime->D();
+
+
+### IDEA for how to generate compositions with powers, as well as with other outside fns. 
+# (use perl to define a powtwo function on strings, that returns the input string with an exponent of 2.  THEN call Compute on the NEWLY generated string)
+sub powtwo {
+    my ($base) = @_;  
+    return '('. $base .')^2' ;
+}
+$somefn = powtwo($a . '*' . x . '^' . $n . '+' . $b);
+$somefn = Compute("$inside1")->reduce();
+### END IDEA 
+
+
+
 
 #################################################
 # Write Problem 
@@ -92,15 +105,11 @@ $approx = $L->eval(x=>$x1,y=>$y1);
 
 BEGIN_PGML
 
-Let [`f(x,y) = [$f] `]. 
+Let [`f(x) = [$function] `]. 
 
-1.  Find the equation for the plane tangent to [`f`] at the point [`([$x],[$y])`].  
-[`L(x,y) = `]  [__________________________________________________________________________________________]{$L}.  
+a. Compute [`f'(x) = `]  [__________]{"$functionprime"}.
 
-2.  Use your approximation from part 1 to approximate the original function at the point [`([$x1],[$y1])`]  
-[`f([$x1],[$y1]) \approx `][______________________________]{$approx}.  
-
-
+b. Compute [`f''(x) = `]  [__________]{"$functionprimeprime"}.
 
 END_PGML
 

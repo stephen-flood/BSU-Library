@@ -7,8 +7,8 @@
 ## DBsubject('Course')
 ## DBchapter('Section')
 ## DBsection('Subsection')
-## Date('4/07/2020')
-## Author('Stephen Flood')
+## Date('6/25/2018')
+## Author('')
 ## Institution('')
 ## TitleText1('')
 ## EditionText1('')
@@ -50,37 +50,43 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 # Context()->flags->set(tolerance => 0.01);
-Context()->variables->add(y => 'Real');
+Context()->variables->add(C => 'Real', D=> 'Real');
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$m = non_zero_random(2,4,1);
-$n = non_zero_random(2,4,1);
-$o = non_zero_random(2,4,1);
-$p = non_zero_random(2,4,1);
 
-$a   = random(3,5,1);
-$b   = non_zero_random(-2,2,1);
-$c   = random(3,5,1);
-$d   = non_zero_random(-2,2,1);
+$m   = random(1,3,2);
+$diff   = random(2,4,2);
+$n = $m + $diff;
 
-$dx = non_zero_random(0.1, 0.2, 0.1); 
-$dy = non_zero_random(-0.2, -0.1, 0.1); 
+$c1   = $n+1;
+$c2   = $m+1;
+$c3   = non_zero_random(-3,3,1);
 
-$x = random(1,1,1);
-$y = random(1,1,1);
+$fc1 = Compute("$c1*($n+1)");
+$fc2 = Compute("$c2*($m+1)");
 
-$f = Compute("$a*x^$m + $b*(y)^$n + $c*x*y + $d")->reduce();
-$fx = $f->D('x')->eval(x=>$x,y=>$y);
-$fy = $f->D('y')->eval(x=>$x,y=>$y);
-$height = $f->eval(x=>$x,y=>$y);
+$fprimeprime = Compute("$fc1*x^$n + $fc2*x^$m + $c3")->reduce();
 
-$L = Compute("$fx*(x-$x) + $fy*(y-$y) + $height");
+$a = non_zero_random(-1,1,1);
 
-$x1 = Compute("$x+$dx");
-$y1 = Compute("$y+$dy");
+$givenfprime = non_zero_random(-2,2,1);
+do{$givenf = non_zero_random(-2,2,1);}while($givenf == $givenfprime);
 
-$approx = $L->eval(x=>$x1,y=>$y1);
+$fprime = Compute("$fc1/($n+1)*x^($n+1) + $fc2/($m+1)*x^($m+1) + $c3*x");
+#
+$fprimegeneral = Compute("$fprime + C");
+$fprimea = $fprime->eval(x=>$a);
+$C = Compute("$givenfprime - $fprimea");
+$fprimeexact = $fprimegeneral->substitute(x=>x,C=>$C);
+
+$f = Compute("$fc1/(($n+1)($n+2))*x^($n+2) + $fc2/(($m+1)($m+2))*x^($m+2) + $c3*x^2/2 + $C*x");
+#
+$fgeneral = Compute("$f + D");
+$fa = $f->eval(x=>$a);
+$D = Compute("$givenf - $fa");
+$fexact = $fgeneral->substitute(x=>x,D=>$D);
+
 
 #################################################
 # Write Problem 
@@ -92,15 +98,26 @@ $approx = $L->eval(x=>$x1,y=>$y1);
 
 BEGIN_PGML
 
-Let [`f(x,y) = [$f] `]. 
-
-1.  Find the equation for the plane tangent to [`f`] at the point [`([$x],[$y])`].  
-[`L(x,y) = `]  [__________________________________________________________________________________________]{$L}.  
-
-2.  Use your approximation from part 1 to approximate the original function at the point [`([$x1],[$y1])`]  
-[`f([$x1],[$y1]) \approx `][______________________________]{$approx}.  
+Let [`f''(x) = [$fprimeprime] `], that [`f'([$a]) = [$givenfprime]`], and that [`f([$a]) = [$givenf]`]
 
 
+Find the general antiderivative  
+[`f'(x) = `]  [__________]{$fprimegeneral}.
+
+Find the value of the constant [`C`]  
+[`C = `]  [__________]{$C}.
+
+Find the exact formula for [`f(x)`].  
+[`f'(x) = `] [________________]{$fprimeexact}
+
+Find the general antiderivative  
+[`f(x) = `]  [__________]{$fgeneral}.
+
+Find the value of the constant [`D`]  
+[`D = `]  [__________]{$D}.
+
+Find the exact formula for [`f(x)`].  
+[`f(x) = `] [________________]{$fexact}
 
 END_PGML
 

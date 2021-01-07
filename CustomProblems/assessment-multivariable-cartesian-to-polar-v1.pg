@@ -1,0 +1,133 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+         "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(Q1 => 'Real', Q2 => 'Real', Q3 => 'Real', Q4 => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+# Define Functions to get Exact numerators for typesetting automatically
+sub sin_num {
+    my ($parameter_name) = @_;
+    my $output = "UNKNOWN";
+    if ($parameter_name eq "pi/6"){ $output = ""; }
+    if ($parameter_name eq "pi/4"){ $output = "\sqrt{2}"; }
+    if ($parameter_name eq "pi/3"){ $output = "\sqrt{3}"; }
+    return $output;
+}
+sub cos_num {
+    my ($parameter_name) = @_;
+    my $output = "UNKNOWN";
+    if ($parameter_name eq "pi/3"){ $output = ""; }
+    if ($parameter_name eq "pi/4"){ $output = "\sqrt{2}"; }
+    if ($parameter_name eq "pi/6"){ $output = "\sqrt{3}"; }
+    return $output;
+}
+
+# Randomly Pick Inside Angle
+@insideangles = ("pi/3", "pi/4", "pi/6");
+$angleversion = random(0,2,1);
+$insideangle = $insideangles[$angleversion];
+
+# Randomly Pick Coefficients for sine and cosine
+$scale = non_zero_random(2,6,1);
+$signx = list_random(-1,1);
+$signy = list_random(-1,1);
+
+$xcoeff = $signx*$scale;
+$xtrig = cos_num($insideangle);
+$ycoeff = $signy*$scale;
+$ytrig = sin_num($insideangle);
+
+$r = Compute("$scale*2");
+
+# Pick Quadrant Based on Function 
+if($signx > 0){
+    if( $signy > 0 ){
+        $angle = $insideangle;
+    }     
+    if( $signy < 0 ){
+        $angle = "2pi - (" . $insideangle . ")";
+    }
+}
+if($signx < 0){
+    if( $signy > 0 ){
+        $angle = "pi -  (" . $insideangle . ")";
+    }     
+    if( $signy < 0 ){
+        $angle = "pi + (" . $insideangle . ")";
+    }
+}
+
+$angle = Real($angle)->with(period => 2*pi);
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Find a polar coordinate representation [`(r,\theta)`] with positive [`r`] for the point with Cartesian coordinates [`([$xcoeff][$xtrig],[$ycoeff][$ytrig])`].  
+
+-----
+
+[` r = `] [________________]{"$r"}
+
+[` \theta = `]  [__________]{$angle->with(period => 2*pi)}.
+
+END_PGML
+
+
+ENDDOCUMENT();
