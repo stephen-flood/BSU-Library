@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = assessment-antiderivative-withconstants-v1.pg
+source_file = CustomProblems/assessment-antiderivative-withconstants-v1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 18
-source_file = assessment-antiderivative-withconstants-v2.pg
+source_file = CustomProblems/assessment-antiderivative-withconstants-v2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

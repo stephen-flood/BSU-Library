@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = assessment-derivatives-visually-from-splines.pg
+source_file = CustomProblems/assessment-derivatives-visually-from-splines.pg
 value = 10
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = assessment_derivatives_linearization_and_tangents.pg
+source_file = CustomProblems/assessment_derivatives_linearization_and_tangents.pg
 value = 12
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = assessment_derivatives_chain-of-product.pg
+source_file = CustomProblems/assessment_derivatives_chain-of-product.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

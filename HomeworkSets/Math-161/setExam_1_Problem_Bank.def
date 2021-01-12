@@ -23,7 +23,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Academic-Honesty-Statement.pg
+source_file = CustomProblems/Academic-Honesty-Statement.pg
 value = 7
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = assessment-trig-solve-eqn-easy-3.pg
+source_file = CustomProblems/assessment-trig-solve-eqn-easy-3.pg
 value = 7
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = assessment-logarithm-laws-1.pg
+source_file = CustomProblems/assessment-logarithm-laws-1.pg
 value = 7
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = assessment-limits-rational-v1.pg
+source_file = CustomProblems/assessment-limits-rational-v1.pg
 value = 7
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = assessment-limits-rational-v2.pg
+source_file = CustomProblems/assessment-limits-rational-v2.pg
 value = 7
 max_attempts = -1
 showMeAnother = -1
