@@ -1,0 +1,145 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(A => 'Real', B => 'Real', C => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$expn1 = list_random(1,2,3,4);
+if($expn1 == 1){
+    $expd1 = list_random(2,3,4);
+}
+else { 
+    $expd1 = 1;
+}
+$sign1 = list_random(-1,1);
+#
+$expn2 = list_random(2,3,4);
+$expd2 = 1;
+$sign2 = list_random(-1,1);
+#
+if($expd1 == 1){ 
+    $expn3 = 1;
+    $expd3 = list_random(2,3,4); 
+} else { 
+    $expn3 = list_random(2,3,4);
+    $expd3 = 1;
+} 
+if($sign1 == -1 and $sign2 == -1){ 
+    $sign3=1
+} else {
+    $sign3 = list_random(-1,1);
+}
+
+sub typeset{
+    my ($letter, $numerator, $denominator) = @_;
+    my $string = "";
+    
+   if($numerator ne 1 ) { 
+        $string = $letter . "^" . $numerator ; 
+   } else {$string = $letter}
+
+if($denominator ne 1){ 
+        $string = "\sqrt[" . $denominator . "]{" . $string . "}\, " ; 
+   }
+   
+   return $string; 
+}
+
+## Build the numerator and denominator of the fraction iteratively, using the typeset command
+$numerator = "";
+$denominator = "";
+if($sign1 > 0){$numerator = $numerator . typeset("A",$expn1,$expd1) } else {$denominator = $denominator  . typeset("A",$expn1,$expd1) }
+if($sign2 > 0){$numerator = $numerator  . typeset("B",$expn2,$expd2) } else {$denominator = $denominator   . typeset("B",$expn2,$expd2)}
+if($sign3 > 0){$numerator = $numerator  . typeset("C",$expn3,$expd3) } else {$denominator = $denominator . typeset("C",$expn3,$expd3) }
+## Deal with wierd cases
+if($numerator eq ""){$numerator = "1"}
+## If the denominator is 1, just print the numerator.  
+## Otherwise, print a fraction. 
+if($denominator eq ""){$inside = $numerator;} else {$inside = "\frac{" . $numerator . "}{" . $denominator . "}";}
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Use the Laws of logarithms to rewrite the expression
+
+[``\ln\left( [$inside] \right)``]. 
+
+ 
+
+in a form with no logarithm of a product, quotient or power.
+
+Do this on paper, showing all work.  After rewriting we have 
+
+[``\ln\left([$inside]\right) ``]  
+
+[` = r \cdot \ln(A) + s\cdot \ln(B) + t \cdot \ln(C)`] 
+
+[` =  `] [______]{"$sign1*$expn1/$expd1"}
+[`  \cdot \ln(A) + `] [______]{"$sign2*$expn2/$expd2"}
+[`  \cdot \ln(B) + `] [______]{"$sign3*$expn3/$expd3"}
+[`  \cdot \ln(C) `] 
+         
+
+
+END_PGML
+
+
+ENDDOCUMENT();

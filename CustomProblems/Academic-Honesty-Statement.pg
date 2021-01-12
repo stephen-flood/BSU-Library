@@ -77,11 +77,11 @@ $HonestyStatement = PopUp(
 
 BEGIN_PGML
 
-By taking this exam, I certify that all the work 
-which appears on this exam is entirely my own.
+By taking this assignment, I certify that all the work 
+which appears on this assignment is entirely my own.
 
-- I will _not_ discuss this exam with anyone else.  
-- I will _not_ recieve or provide assistance to anyone during this exam.  
+- I will _not_ discuss this assignment with anyone else.  
+- I will _not_ recieve or provide assistance to anyone during this assignment.  
 - I will _not_ use any resources that were not *explicitly* permitted.   (including calculators, notes, etc.)
 
 _I understand that violating the above carries serious consequences,
@@ -89,7 +89,7 @@ both moral and academic._
 
   
 
-Do you certify that all of the work that appears on this exam is entirely your own?
+Do you certify that all of the work that appears on this assessment is entirely your own?
 
 [@ $HonestyStatement->menu() @]*
 

@@ -7,8 +7,8 @@
 ## DBsubject('Course')
 ## DBchapter('Section')
 ## DBsection('Subsection')
-## Date('4/07/2020')
-## Author('Stephen Flood')
+## Date('6/25/2018')
+## Author('')
 ## Institution('')
 ## TitleText1('')
 ## EditionText1('')
@@ -50,37 +50,17 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 # Context()->flags->set(tolerance => 0.01);
-Context()->variables->add(y => 'Real');
+# Context()->variables->add(t => 'Real');
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$m = non_zero_random(2,4,1);
-$n = non_zero_random(2,4,1);
-$o = non_zero_random(2,4,1);
-$p = non_zero_random(2,4,1);
 
 $a   = random(3,5,1);
 $b   = non_zero_random(-2,2,1);
-$c   = random(3,5,1);
-$d   = non_zero_random(-2,2,1);
 
-$dx = non_zero_random(0.1, 0.2, 0.1); 
-$dy = non_zero_random(-0.2, -0.1, 0.1); 
+$f = Compute("$a*x + $b")->reduce();
+$ans = $f->eval(x=>1);
 
-$x = random(1,1,1);
-$y = random(1,1,1);
-
-$f = Compute("$a*x^$m + $b*(y)^$n + $c*x*y + $d")->reduce();
-$fx = $f->D('x')->eval(x=>$x,y=>$y);
-$fy = $f->D('y')->eval(x=>$x,y=>$y);
-$height = $f->eval(x=>$x,y=>$y);
-
-$L = Compute("$fx*(x-$x) + $fy*(y-$y) + $height");
-
-$x1 = Compute("$x+$dx");
-$y1 = Compute("$y+$dy");
-
-$approx = $L->eval(x=>$x1,y=>$y1);
 
 #################################################
 # Write Problem 
@@ -92,13 +72,7 @@ $approx = $L->eval(x=>$x1,y=>$y1);
 
 BEGIN_PGML
 
-Let [`f(x,y) = [$f] `]. 
-
-1.  Find the equation for the plane tangent to [`f`] at the point [`([$x],[$y])`].  
-[`L(x,y) = `]  [__________________________________________________________________________________________]{$L}.  
-
-2.  Use your approximation from part 1 to approximate the original function at the point [`([$x1],[$y1])`]  
-[`f([$x1],[$y1]) \approx `][______________________________]{$approx}.  
+Let [`f(x) = [$f] `]. Compute [`f(1) = `]  [__________]{$ans}.
 
 
 

@@ -1,15 +1,15 @@
 assignmentType      = gateway
-openDate          = 04/22/2020 at 10:20am EDT
-reducedScoringDate = 04/22/2020 at 11:15am EDT
-dueDate           = 04/22/2020 at 11:15am EDT
-answerDate        = 04/30/2020 at 11:59pm EDT
+openDate          = 09/21/2020 at 11:59pm EDT
+reducedScoringDate = 09/25/2020 at 11:59pm EDT
+dueDate           = 09/25/2020 at 11:59pm EDT
+answerDate        = 09/27/2020 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
 attemptsPerVersion  = 2
 timeInterval        = 0
-versionsPerInterval = 1
-versionTimeLimit    = 2400
+versionsPerInterval = 2
+versionTimeLimit    = 1500
 problemRandOrder    = 0
 problemsPerPage     = 0
 hideScore           = N
@@ -23,7 +23,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Academic-Honesty-Statement.pg
+source_file = Academic-Honesty-Statement.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,8 +33,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/Union/setDervImplicit/5-4-10.pg
-value = 4
+source_file = assessment-limits-rational-v1.pg
+value = 3
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -43,8 +43,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/assessment_derivative-applications_max-min.pg
-value = 15
+source_file = assessment-limits-rational-v2.pg
+value = 3
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -53,28 +53,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/Union/setDervConcavity/4-3-49.pg
-value = 6
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 5
-source_file =  CustomProblems/assessment_antiderivatives_simple_rules.pg
-value = 12
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 6
-source_file =  CustomProblems/assessment_antiderivatives_finding_C.pg
-value = 8
+source_file = Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-05.pg
+value = 3
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1

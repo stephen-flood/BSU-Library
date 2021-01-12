@@ -7,9 +7,9 @@
 ## DBsubject('Course')
 ## DBchapter('Section')
 ## DBsection('Subsection')
-## Date('4/07/2020')
+## Date('3/23/2020')
 ## Author('Stephen Flood')
-## Institution('')
+## Institution('Bridgewater State University')
 ## TitleText1('')
 ## EditionText1('')
 ## AuthorText1('')
@@ -50,37 +50,35 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 # Context()->flags->set(tolerance => 0.01);
-Context()->variables->add(y => 'Real');
+# Context()->variables->add(t => 'Real');
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$m = non_zero_random(2,4,1);
-$n = non_zero_random(2,4,1);
-$o = non_zero_random(2,4,1);
-$p = non_zero_random(2,4,1);
+## Generate a function, making sure that the slope of the tangent is NOT zero
+do{
+    $a = non_zero_random(-1,1,1);
 
-$a   = random(3,5,1);
-$b   = non_zero_random(-2,2,1);
-$c   = random(3,5,1);
-$d   = non_zero_random(-2,2,1);
+    $n1 = random(1,5,2) ;
+    $n2 = random(2,6,2) ;
 
-$dx = non_zero_random(0.1, 0.2, 0.1); 
-$dy = non_zero_random(-0.2, -0.1, 0.1); 
+    $c1 = non_zero_random(-2,5,1) ;
+    $c2 = non_zero_random(-2,5,1) ;
+    $c3 = non_zero_random(-5,5,1) ;
+    
+    $function = Compute("$c1*x^$n1 + $c2*x^$n2 + $c3 ")->reduce();
 
-$x = random(1,1,1);
-$y = random(1,1,1);
+    $fofa = $function->eval(x=>$a);
+    $m = $function->D()->eval(x=>$a);
+    
+    $linearization = Compute("$m * (x - $a) + $fofa");
+} until ( ($m != 0) && ($fofa != 0) ) ;
 
-$f = Compute("$a*x^$m + $b*(y)^$n + $c*x*y + $d")->reduce();
-$fx = $f->D('x')->eval(x=>$x,y=>$y);
-$fy = $f->D('y')->eval(x=>$x,y=>$y);
-$height = $f->eval(x=>$x,y=>$y);
+$difference = non_zero_random(-.5, .5, 0.1);
+$test = Compute(" $a + $difference");
 
-$L = Compute("$fx*(x-$x) + $fy*(y-$y) + $height");
+$approximation = $linearization->eval(x=>$test);
 
-$x1 = Compute("$x+$dx");
-$y1 = Compute("$y+$dy");
 
-$approx = $L->eval(x=>$x1,y=>$y1);
 
 #################################################
 # Write Problem 
@@ -92,14 +90,13 @@ $approx = $L->eval(x=>$x1,y=>$y1);
 
 BEGIN_PGML
 
-Let [`f(x,y) = [$f] `]. 
+Let [`f(x) = [$function] `]. 
 
-1.  Find the equation for the plane tangent to [`f`] at the point [`([$x],[$y])`].  
-[`L(x,y) = `]  [__________________________________________________________________________________________]{$L}.  
+a. Find the equation for the linear approximation to [`f(x)`] at [`a = [$a]`].  
+[`L_{[$a]}(x) = `] [_____________________]{$linearization}
 
-2.  Use your approximation from part 1 to approximate the original function at the point [`([$x1],[$y1])`]  
-[`f([$x1],[$y1]) \approx `][______________________________]{$approx}.  
-
+b. Use your answer to part (a) to approximate [`f([$test])`].  
+[`f([$test]) = `] [_____________________]{$approximation}
 
 
 END_PGML

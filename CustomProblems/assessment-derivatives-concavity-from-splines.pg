@@ -1,0 +1,189 @@
+##DESCRIPTION
+##  Under Development -- graph complete.  still need to generate answer strings
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Proble$m1('')
+
+
+
+########################################################################
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+    "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+$refreshCachedImages = 1;
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+##
+sub spline_cubed_coefficient{
+    my ($x1, $y1, $m1, $x2, $y2, $m2) = @_;
+    return ( (($m1 + $m2)*$x1 - ($m1 + $m2)*$x2 - 2*$y1 + 2*$y2)/($x1**3 - 3*$x1**2*$x2 + 3*$x1*$x2**2 - $x2**3) ) ;
+}
+sub spline_squared_coefficient{
+    my ($x1, $y1, $m1, $x2, $y2, $m2) = @_;
+    return ( -(($m1 + 2*$m2)*$x1**2 + ($m1 - $m2)*$x1*$x2 - (2*$m1 + $m2)*$x2**2 - 3*($x1 + $x2)*$y1 + 3*($x1 + $x2)*$y2)/($x1**3 - 3*$x1**2*$x2 + 3*$x1*$x2**2 - $x2**3) ) ;
+}
+sub spline_linear_coefficient{
+    my ($x1, $y1, $m1, $x2, $y2, $m2) = @_;
+    return ( ($m2*$x1**3 + (2*$m1 + $m2)*$x1**2*$x2 - ($m1 + 2*$m2)*$x1*$x2**2 - $m1*$x2**3 - 6*$x1*$x2*$y1 + 6*$x1*$x2*$y2)/($x1**3 - 3*$x1**2*$x2 + 3*$x1*$x2**2 - $x2**3) ) ;
+}
+sub spline_constant_coefficient{
+    my ($x1, $y1, $m1, $x2, $y2, $m2) = @_;
+    return ( -($m2*$x1**3*$x2 + ($m1 - $m2)*$x1**2*$x2**2 - $m1*$x1*$x2**3 - (3*$x1*$x2**2 - $x2**3)*$y1 - ($x1**3 - 3*$x1**2*$x2)*$y2)/($x1**3 - 3*$x1**2*$x2 + 3*$x1*$x2**2 - $x2**3) ) ;
+}
+
+sub add_spline_to_graph{
+  my ($x1, $y1, $m1, $x2, $y2, $m2) = @_;
+  $a = sprintf("%.9f",spline_cubed_coefficient($x1,$y1,$m1,$x2,$y2,$m2));
+  $b = sprintf("%.9f",spline_squared_coefficient($x1,$y1,$m1,$x2,$y2,$m2));
+  $c = sprintf("%.9f",spline_linear_coefficient($x1,$y1,$m1,$x2,$y2,$m2));
+  $d = sprintf("%.9f",spline_constant_coefficient($x1,$y1,$m1,$x2,$y2,$m2));
+  add_functions($gr, "($a)*(x**3)+($b)*(x**2)+($c)*(x)+($d) for x in < " . $x1 . " , " . $x2 . " > using color:blue and weight:2");
+#    add_functions($gr, "2*x**3+1*x**2+(0)*x+3 for x in <1,2> using color:blue and weight:2");
+}
+
+
+# a graph object
+$gr = init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[600,600]);
+$gr -> lb('reset');
+foreach my $j (-6,-4,-2,0,2,4,6) {
+  $gr -> lb(new Label ($j,-1,$j,'black','center','middle'));
+}
+
+$concave_up_string = "";
+$concave_down_string = "";
+
+#$increasing_string = "";
+#$decreasing_string = "";
+
+my $lasty = random(-2,2,1);
+my $changex = 2;
+my $slope = non_zero_random(-2,2,1);
+
+# If the slope DOESN'T change between the even (zero slope->nonzero slope) and odd (nonzero slope->zero slope), then we (may?) need to extend the interval 
+my $changedslope = 1;
+my $startofinterval = -6;
+
+my $changey = $slope*$changex/2;
+
+$x = -6;
+for(my $i = 1; $i < 7; $i++){
+#    if( ($increasing_string eq "" && $decreasing_string ne "" ) || $lasty<-4 ){   
+#        $change = random(2,3,1);    
+#    }
+#    elsif( ($increasing_string ne "" && $decreasing_string eq "") || $lasty>4 )
+#    {   $change = random(-3,-2,1);  }
+#    else
+#    {  
+#        $change = list_random(-4,-3,-2,2,3,4);  
+#    }
+
+#    add_spline_to_graph( $x, $lasty, $lastslope, $x+$changex, $lasty+$change, $lastslope+$changeslope);
+    
+    # if $i is odd, go from nonzero slope to flat
+    if( $i %2 == 1){   
+        add_spline_to_graph( $x, $lasty, $slope, 
+                         $x+$changex, $lasty+$changey, 0);
+    }
+    else{ # if $i is even, go from flat to nonzero slope
+        add_spline_to_graph( $x, $lasty, 0, 
+                         $x+$changex, $lasty+$changey, $slope);
+    }
+    
+#    if($change > 0 ){
+#        if($increasing_string eq ""){ $increasing_string = "($x, $x+$changex)";}
+#        else{ $increasing_string = $increasing_string . " U ($x, $x+$changex)";}
+#    }
+#    elsif($change < 0)
+#    {
+#        if($decreasing_string eq ""){ $decreasing_string = "($x, $x+$changex)";}
+#        else{ $decreasing_string = $decreasing_string . " U ($x, $x+$changex)";}
+#    }    
+    
+    # record current values
+    $lasty = $lasty+$changey;
+    $slope=non_zero_random(-2,2,2);
+    $x = $x + $changex ;
+    
+    # pick new changes
+    $changex = 2;
+    $changey = $slope*$changex/2;
+}
+
+#$increasing = Interval("$increasing_string");
+#$decreasing = Interval("$decreasing_string");
+
+$a   = random(3,5,1);
+$b   = non_zero_random(-2,2,1);
+
+$f = Compute("$a*x + $b")->reduce();
+$ans = $f->eval(x=>1);
+
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Let [`f(x)`] be defined using the graph below. 
+
+[@ image( insertGraph($gr), width=>400, 
+    height=>400, tex_size=>800 ) @]***
+
+(a)  For what values of [`x`] is the function concave up?  Enter your answer in interval notation.  
+[________________________________]{$concave_up_answer}
+
+(b)  For what values of [`x`] is the function concave down?  Enter your answer in interval notation.  
+[________________________________]{$concave_down_answer}
+
+END_PGML
+
+
+ENDDOCUMENT();
