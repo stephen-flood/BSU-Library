@@ -84,7 +84,7 @@ sub add_spline_to_graph{
 
 
 # a graph object
-$gr = init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[600,600]);
+$gr = init_graph(-10,-15,10,15,axes=>[0,0],grid=>[20,20],size=>[600,600]);
 $gr -> lb('reset');
 foreach my $j (-6,-4,-2,0,2,4,6) {
   $gr -> lb(new Label ($j,-1,$j,'black','center','middle'));

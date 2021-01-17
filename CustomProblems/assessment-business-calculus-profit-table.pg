@@ -1,0 +1,153 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "niceTables.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$a = random(0.3,0.5, 0.05);
+$b1 = random(1,3,1);
+$b2 = random(5,8,1);
+$c = random(1000,5000,500);
+$m = random(1,5,2);
+$n = 6-$m;
+
+$basefunction = Compute("-$a * (x-$b1)^$n * (x-$b2)^$m");
+
+$deltax = list_random(1,1,1);
+
+$quantity[0] = 0;
+$quantity[1] = $quantity[0]+$deltax;
+$quantity[2] = $quantity[1]+$deltax;
+$quantity[3] = $quantity[2]+$deltax;
+$quantity[4] = $quantity[3]+$deltax;
+$quantity[5] = $quantity[4]+$deltax;
+$quantity[6] = $quantity[5]+$deltax;
+$quantity[7] = $quantity[6]+$deltax;
+$quantity[8] = $quantity[7]+$deltax;
+$quantity[9] = $quantity[8]+$deltax;
+$quantity[10] = $quantity[9]+$deltax;
+
+$profit[0]=$c+round($basefunction->eval(x=>"$quantity[0]"));
+$profit[1]=$c+round($basefunction->eval(x=>$quantity[1]));
+$profit[2]=$c+round($basefunction->eval(x=>$quantity[2]));
+$profit[3]=$c+round($basefunction->eval(x=>$quantity[3]));
+$profit[4]=$c+round($basefunction->eval(x=>$quantity[4]));
+$profit[5]=$c+round($basefunction->eval(x=>$quantity[5]));
+$profit[6]=$c+round($basefunction->eval(x=>$quantity[6]));
+$profit[7]=$c+round($basefunction->eval(x=>$quantity[7]));
+$profit[8]=$c+round($basefunction->eval(x=>$quantity[8]));
+$profit[9]=$c+round($basefunction->eval(x=>$quantity[9]));
+$profit[10]=$c+round($basefunction->eval(x=>$quantity[10]));
+
+## randomize part 1
+$firstinputindex = random(1,10,1);
+$firstquantity = $quantity[$firstinputindex];
+$firstprofit = $profit[$firstinputindex];
+
+## randomize part 2 
+$secondinputindex = random(1,10,1);
+$secondquantity = $quantity[$secondinputindex];
+$secondprofit = $profit[$secondinputindex];
+
+
+## randomize part 3 
+$thirdquantity = List($b1,$b2);
+$thirdprofit = $c;
+
+
+
+## Randomize story
+$name = "Aryanah" ; 
+$adjective = "wooden";
+$object = "sheds";
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+[$name] is in business selling [$object]. 
+The table below gives the total profit [` P = f(n) `] for [$name] to sell [`n`] [$adjective] [$object]. 
+
+[@
+  DataTable(
+    [
+      [['n', headerrow=>1], 0 , $deltax , $deltax*2 , $deltax*3 , $deltax*4, $deltax*5, $deltax*6, $deltax*7, $deltax*8, $deltax*9, $deltax*10],
+      ['f(n)', $profit[0], $profit[1], $profit[2], $profit[3], $profit[4], $profit[5], $profit[6],$profit[7],$profit[8],$profit[9],$profit[10]],
+    ],
+    caption => ' ',
+    midrules=>1,
+    align => '|c|c|c|c|c|c|c|c|c|c|c|c|',
+)
+@]***
+
+Evaluate each of the expressions:
+
+1.  [` f([$firstquantity])= `] [___________]{$firstprofit}
+
+2.  [` f(n) = `] [___________]{$secondprofit} if [`n = [$secondquantity]`]
+
+
+3.  [` f(n) = [$thirdprofit]`]  if [`n = `][___________]{$thirdquantity}.  If there is more than one value, enter your answer as a comma separated list. 
+
+
+4.  [` f(0) = `] [___________]{$profit[0]}
+END_PGML
+
+
+ENDDOCUMENT();

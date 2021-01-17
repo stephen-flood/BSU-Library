@@ -1,0 +1,111 @@
+##DESCRIPTION
+##  A synthesis problem, which combines a price/revenue/cost/profit problem with a non-quadratic max/min problem.  
+##  Students can enter exact answers for quantity and profit, but rounded answers will also be accepted
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+$a   = random(3,5,1);
+$n   = random(3,11,2);
+$b   = random(100,900,100);
+$variablecost = random(10,50,5);
+$fixedcost = 0;
+$priceofzero = Compute("$b+$variablecost");
+$price = Compute("-$a*x + $priceofzero");
+
+## For this price function: find when marginal profit is zero
+$xmaximized = Compute(" ($b/($a*($n+1)))^(1/$n) ")->with(
+  tolType => 'absolute',
+  tolerance => 1,
+);
+
+
+# Define basic functions
+$R = Compute("$price*x");
+$C = Compute("$variablecost*x + $fixedcost");
+$P = Compute("$R-$C");
+
+$maxprofit = $P->eval(x=>$xmaximized)->with(
+  tolType => 'absolute',
+  tolerance => 1,
+);
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Suppose that the unit-price function for post-post-modern paintings is given by [`[$price]`], that the cost of creating each painting is $[`[$variablecost]`], and that you already have all of the tools that you need.
+
+1. Find the revenue, cost, and profit as functions of the number of units sold.  
+[`R(x) = `] [_______________]{$R}  
+[`C(x) = `] [_______________]{$C}  
+[`P(x) = `] [_______________]{$P}  
+
+2. Use Calculus to find the quanitity that you should sell to make the maximum *profit*.  
+[`x = `][______________]{$xmaximized}.
+
+3. What is the maximum profit possible during this business venture?  
+Maximum profit [` = `] [_______________]{$maxprofit}  dollars
+
+END_PGML
+
+
+ENDDOCUMENT();

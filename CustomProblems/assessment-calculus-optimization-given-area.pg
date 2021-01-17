@@ -1,0 +1,118 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	 "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(y => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$n = random(1,5,1);
+$s = random(1,5,1);
+$e = random(1,5,1);
+$w = random(1,5,1);
+
+$targetarea = random(100,500,25);
+
+$costfn = Compute("($n+$s)*x + ($e+$w)*y ");
+$y_constraint = Compute("$targetarea/x ");
+
+# the arguments of PopUp are [list of answers], 
+#    correct answer
+$function_to_optimize = PopUp(["?", "Area", "Cost", "Beauty"], "Cost");
+$maximize_or_minimize = PopUp(["?", "Maximize", "Minimize"], "Minimize");
+
+$Cost = $costfn->substitute(y=>$y_constraint);
+
+
+$xsln = Compute("sqrt( ($targetarea*($e + $w)/($n+$s) ) )");
+$ysln = $y_constraint->eval(x=>$xsln);
+
+$critical_values = List($xsln, "0");
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+You want to build a rectangular garden.
+The fence on the north costs [`[$n]`] $/ft, on the west costs [`[$w]`] $/ft, on the south costs [`[$s]`] $/ft, and on the east costs [`[$e]`] $/ft.
+For tax reasons, you want a garden of [`[$targetarea]`] square feet, and you want to build the garden that costs the least.
+
+1.  Write down an expression that gives the cost of a garden of dimension [`x   `] feet wide, and [`y`] feet tall.  
+Cost = [__________________________]{$costfn}  
+
+2.  Which quantity must be Optimized?  Write a function for it as a function of [`x`].  Are you trying to maximize or minimize this quantity?  
+We want to 
+[_]{$maximize_or_minimize}
+the function 
+[_]{$function_to_optimize}
+[` = `] 
+[__________________________________________________]{$Cost}   
+
+3.  Find the critical values with [`x\geq 0`].  If there are more than one critical numbers, enter your answer as a comma separated list.  
+[____________________]{$critical_values}  
+
+4.  What are the dimensions that optimize the desired quantity?  
+[` x = `] [__________]{$xsln}
+and 
+[` y = `] [__________]{$ysln}
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();

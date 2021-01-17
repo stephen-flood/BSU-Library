@@ -1,0 +1,113 @@
+##DESCRIPTION
+##  A price/revenue/cost/profit problem, such that the profit function factors into integer terms. 
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+## Generate a nice problem, s.t. profit factors by hand, by first PICKING the break even points, and then working backwards
+
+# Pick change in price due to change in number of units
+# Note: this problem SHOULD work correctly for DECIMAL $a, as well as integer $a. 
+$a   = random(-5,-2,1);
+
+# Pick break even points
+$breakeven1 = random(2,5,1);
+$widthofinterval = random(1,4,1);
+$breakeven2 = Compute("$breakeven1 + $widthofinterval");
+
+# Pick variable cost 
+$variablecost = random(1,1,1);
+
+# Compute fixed cost and price of zero units
+$priceofzero = Compute("-$a*($breakeven1 + $breakeven2) + $variablecost");
+$fixedcost   = Compute("-$a*$breakeven1*$breakeven2");
+
+# Now compute the price, revenue, cost, profit functions
+$price = Compute("$a*x + $priceofzero")->reduce();
+$R = Compute("x*$price");
+$C = Compute("$variablecost * x + $fixedcost");
+$P = Compute("$R - $C");
+
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Suppose that you are planning on starting a 3D printing business. 
+
+1.  Suppose that the price function is given by price per unit [`p = [$price]`].  Write down an equation for [`R(x)`], the revenue from selling [`x`] units.  
+[____________________________________________]{$R}
+
+2.  Your top choice printer has a fixed cost of [`[$fixedcost]`], and that the plastic costs $[`[$variablecost]`] per unit produced. 
+Write an equation for [`C(x)`], the cost of producing [`x`] units.  
+[____________________________________________]{$C}
+
+3.  Find the profit function.  
+[____________________________________________]{$P}
+
+4.  Find the quantities where you break even.  If there is more than one break-even quantity, enter your answer as a comma separated list of numbers.  
+[____________________________________________]{List($breakeven1, $breakeven2)}
+
+
+END_PGML
+
+
+ENDDOCUMENT();

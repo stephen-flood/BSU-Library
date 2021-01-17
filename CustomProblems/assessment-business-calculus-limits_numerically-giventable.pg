@@ -1,0 +1,133 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('01/14/2020')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "niceTables.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	"parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+ Context()->flags->set(tolerance => 0.000000001);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$a = non_zero_random(1,10,1);
+$deltax = list_random(0.1,0.01);
+
+$xleft = $a - $deltax;
+$xleft2 = $xleft - $deltax;
+$xleft3 = $xleft2 - $deltax;
+$xright = $a + $deltax;
+$xright2 = $xright + $deltax;
+$xright3 = $xright2 + $deltax;
+
+do{
+    $c1 = random(2,5,1);
+    $c2 = random(-2,5,1);
+    $c3 = random(2,5,1);
+    $c4 = random(-2,5,1);
+    #
+    $f_left = Compute("$c1*(x-$a)^2 + $c2");
+    $f_left_a = $f_left->eval(x=>$a);
+    #
+    $f_right = Compute("$c3(x-$a) + $c4");
+    $f_right_a = $f_right->eval(x=>$a);
+}while($f_left_a == $f_right_a);
+
+$fxleft = $f_left->eval(x=>$xleft);
+$fxright = $f_right->eval(x=>$xright);
+$limitleft = $f_left->eval(x=>$a);
+$limitright = $f_right->eval(x=>$a);
+
+#1. To estimate [`\displaystyle\lim_{x\rightarrow [$a]^+} f(x)`], we should think about [_]{$popup_fromright}
+#2. To estimate [`\displaystyle\lim_{x\rightarrow [$a]^-} f(x)`], we should think about [_]{$popup_fromleft}
+#
+#$popup_fromright = PopUp(["?", "f($xleft)", "f($fxleft)", "f($xright)", "f($fxright)", "f($a)"], "f($xright)");
+#
+#$popup_fromleft = PopUp(["?", "f($xleft)", "f($fxleft)", "f($xright)", "f($fxright)", "f($a)"], "f($xleft)");
+
+$popup_doeslimitexist = PopUp(["?", "exists", "does not exist"], "does not exist");
+
+$undirectedlimit = Compute("DNE");
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+The function [`\displaystyle f(x)`] has the following table of values
+
+[@DataTable(
+  [
+    [['x', headerrow => 1], $xleft3 , $xleft2 , $xleft , $a , $xright , $xright2 , $xright3],
+    ['\(f(x)\)', $f_left->eval(x=>$xleft3),  $f_left->eval(x=>$xleft2),  $f_left->eval(x=>$xleft), '\(\qquad\qquad\)', $f_right->eval(x=>$xright), $f_right->eval(x=>$xright2), $f_right->eval(x=>$xright3)],
+  ],
+  midrules => 1,
+  align => '|r | c | c | c | c | c | c| c|',
+  );
+@]*
+
+Use the numerical information above to compute the following limits. 
+If the limit does not exist, enter [`DNE`].
+
+3. [`\displaystyle\lim_{x\rightarrow[$a]^+} f(x) =`][______________]{$f_right->eval(x=>$a)} 
+
+
+3. [`\displaystyle\lim_{x\rightarrow[$a]^-} f(x) =`][______________]{$f_left->eval(x=>$a)} 
+
+
+3. [`\displaystyle\lim_{x\rightarrow[$a]} f(x) = `][____________]{$undirectedlimit}
+
+
+END_PGML
+
+
+ENDDOCUMENT();

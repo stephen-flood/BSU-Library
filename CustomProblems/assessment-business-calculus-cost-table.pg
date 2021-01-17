@@ -1,0 +1,134 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "niceTables.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$deltax = list_random(5,10,15,20,25,50,100);
+$fixedcost = random(1000,20000,500);
+$deltacost1 = random(1000,5000,500);
+$cost[1] = $fixedcost + $deltacost1;
+$deltacost2 = random(100,500,100);
+$cost[2] = $cost[1] + $deltacost1;
+$deltacost3 = random(100,500,100);
+$cost[3] = $cost[2] + $deltacost1;
+$deltacost4 = random(100,500,100);
+$cost[4] = $cost[3] + $deltacost1;
+$deltacost5 = random(100,500,100);
+$cost[5] = $cost[4] + $deltacost1;
+$deltacost6 = random(100,500,100);
+$cost[6] = $cost[5] + $deltacost1;
+
+## randomize part 1
+$firstinputindex = random(1,6,1);
+$firstquantity = $deltax*$firstinputindex;
+$firstcost = $cost[$firstinputindex];
+
+## randomize part 2 
+$secondinputindex = random(1,6,1);
+$secondquantity = $deltax*$secondinputindex;
+$secondcost = $cost[$secondinputindex];
+
+
+## randomize part 3 
+$thirdinputindex = random(1,6,1);
+$thirdquantity = $deltax*$thirdinputindex;
+$thirdcost = $cost[$thirdinputindex];
+
+
+
+## Randomize story
+$name = "Aryanah" ; 
+$adjective = "wooden";
+$object = "sheds";
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+[$name] is in business selling [$object]. 
+The table below gives the total cost [` C = f(n) `] for [$name] to build [`n`] [$adjective] [$object]. 
+
+[@
+  DataTable(
+    [
+      [['n', headerrow=>1], 0 , $deltax , $deltax*2 , $deltax*3 , $deltax*4, $deltax*5, $deltax*6],
+      ['f(n)', $fixedcost, $cost[1], $cost[2], $cost[3], $cost[4], $cost[5], $cost[6]],
+    ],
+    caption => ' ',
+    midrules=>1,
+    align => '|c|c|c|c|c|c|c|c|',
+)
+@]***
+
+Evaluate each of the expressions:
+
+1.  [` f([$firstquantity])= `] [___________]{$firstcost}
+
+2.  [` f(n) = `] [___________]{$secondcost} if [`n = [$secondquantity]`]
+
+
+3.  [` f(n) = [$thirdcost]`]  if [`n = `][___________]{$thirdquantity}
+
+
+4.  [` f(0) = `] [___________]{$fixedcost}
+END_PGML
+
+
+ENDDOCUMENT();

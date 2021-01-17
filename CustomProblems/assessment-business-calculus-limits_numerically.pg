@@ -1,0 +1,109 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('01/14/2020')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	"parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$a = non_zero_random(1,5,1);
+$deltax = list_random(0.01,0.001);
+
+$xleft = $a - $deltax;
+$xright = $a + $deltax;
+
+do{ $b2 = non_zero_random(-4,4,1); }while( ($b1 == $a) && ($b1+$a  == 0));
+
+$c2 = Compute("-($a+$b2)");
+$c3 = Compute("$a*$b2");
+
+$numerator = Compute("x^2 + $c2*x + $c3 ")->reduce();
+$denominator = Compute("x - $a"); 
+
+$f = Compute("$numerator/$denominator");
+$simplifiedf = Compute("x - $b2");
+
+$popup_fromright = PopUp(["?", "f($xleft)", "f($xright)", "f($a)"], "f($xright)");
+
+$popup_fromleft = PopUp(["?", "f($xleft)", "f($xright)", "f($a)"], "f($xleft)");
+
+$popup_doeslimitexist = PopUp(["?", "exists", "does not exist"], "exists");
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Let [`\displaystyle f(x) = \dfrac{[$numerator]}{[$denominator]}`] 
+
+We wish to find the value of [`\displaystyle\lim_{x\rightarrow [$a]} f(x) `] *numerically*
+
+1. Compute [`f([$xleft]) = `][______________]{$f->eval(x=>$xleft)} 
+
+2. Compute [`f([$xright]) = `][______________]{$f->eval(x=>$xright)} 
+
+3. To estimate [`\displaystyle\lim_{x\rightarrow [$a]^+} f(x)`], we should think about [_]{$popup_fromright}
+
+4. To estimate [`\displaystyle\lim_{x\rightarrow [$a]^-} f(x)`], we should think about [_]{$popup_fromleft}
+
+5. Based on your answers above, [_]{$popup_doeslimitexist}  
+If the limit exists, enter your answer below.  Otherwise, enter [`DNE`]  
+[____________]{$simplifiedf->eval(x=>$a)}
+
+
+END_PGML
+
+
+ENDDOCUMENT();
