@@ -1,0 +1,159 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	"PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+Context()->flags->set(
+     reduceConstants => 0,
+     reduceConstantFunctions => 0,
+   );
+
+
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+# 
+$n1 = random(3,10,1);
+$n2 = random(3,10,1);
+# 
+$m1 = list_random(-4,-3,-2,2,3,4); 
+$c1 = non_zero_random(-5,5,1);
+$b1 = Compute("$m1*$c1");
+$linear1 = Compute("$m1*x + $b1")->reduce();
+$linear1tex= $linear1->TeX();
+$linear1inv = Compute("x/$m1 - $c1")->reduce();
+$linear1invtex = $linear1inv->TeX();
+$m2 = list_random(-4,-3,-2,2,3,4); 
+$c2 = non_zero_random(-5,5,1);
+$b2 = Compute("$m2*$c2");
+$linear2 = Compute("$m2*x + $b2")->reduce();
+$linear2tex = $linear2->TeX();
+#$linear2notinv = Compute("x/$m2 + $c2")->reduce();
+$linear2notinv = Compute("1/($m2*x + $b2)")->reduce();
+$linear2notinvtex = $linear2notinv->TeX();
+# 
+$a1 = random(2,9,1);
+$frac1 = Compute("1/(x+$a1)")->reduce();
+$frac1tex = $frac1->TeX();
+$frac1inv = Compute("1/x - $a1")->reduce();
+$frac1invtex = $frac1inv->TeX();
+$a2 = random(2,9,1);
+$frac2 = Compute("1/(x+$a2)")->reduce();
+$frac2tex = $frac2->TeX();
+#$frac2notinv = Compute("1/(x-$a2) ")->reduce();
+$frac2notinv = Compute("x+$a2")->reduce();
+$frac2notinvtex = $frac2notinv->TeX();
+
+
+# Create and use pop up lists 
+$tf = new_select_list();
+$tf->rf_print_q(~~&pop_up_list_print_q);
+
+# Specify choices presented to students
+$tf->ra_pop_up_list( 
+[ No_answer => "?", "T"=>"True", "F"=>"False"] );
+
+# Questions and answers
+$numtrue = 7;
+$numfalse = 8;
+## VERY IMPORTANT 
+##      must MANUALLY set $numtrue and $numfalse
+##      based on number of true and false options 
+$tf -> qa ( 
+#Group1
+"Let \(\displaystyle f(x) = x^{$n1}\).  Is \(\displaystyle g(x) = \sqrt[$n1]{x}\) the inverse function of \(f(x)\)?", 
+    "T",
+"Let \(\displaystyle f(x) = x^{$n2}\).  Is \(\displaystyle g(x) = \dfrac{1}{x^{$n2}}\) the inverse function of \(f(x)\)?", 
+    "F",
+#Group2
+"Let \(\displaystyle f(x) = $linear1tex \).  Is \(\displaystyle g(x) = $linear1invtex\) the inverse function of \(f(x)\)?", 
+    "T",
+"Let \(\displaystyle f(x) = $linear2tex \).  Is \(\displaystyle g(x) = $linear2notinvtex\) the inverse function of \(f(x)\)?", 
+    "F",
+#Group3
+"Let \(\displaystyle f(x) = $frac1tex \).  Is \(\displaystyle g(x) = $frac1invtex\) the inverse function of \(f(x)\)?", 
+    "T",
+"Let \(\displaystyle f(x) = $frac2tex \).  Is \(\displaystyle g(x) = $frac2notinvtex\) the inverse function of \(f(x)\)?", 
+    "F",
+);
+
+# How many questions to use
+##  ->choose(...) is defined in  pg/lib/Select.pm 
+## Option 1: select a number of random problems
+#$tf->choose(3);    # select 3 random questions
+## Option 2: Select a list of SPECIFIC problems (indexing starts at 0), as well as a given number of ADDITIONAL problems
+#$tf -> choose([3, 4], 1); # always include questions 3 and 4, then add one additional problem. 
+$group1 = random(0,1,1);
+$group2 = random(2,3,1);
+$group3 = random(4,5,1);
+$tf -> choose([$group1,$group2,$group3], 1);
+## For testing, select ALL of the options (change number to suit)
+#$tf->choose(6);
+ 
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+BEGIN_TEXT
+For each of the following statements, determine if it is true or false.
+$BR
+\{ $tf-> print_q \}
+END_TEXT
+
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($tf->ra_correct_ans));
+
+ENDDOCUMENT();
+
+
+ENDDOCUMENT();

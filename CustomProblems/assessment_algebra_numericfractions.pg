@@ -128,19 +128,20 @@ $answer3 = Compute("$answer3num/$answer3denom");
 
 BEGIN_PGML
 
-For each of the following problems, simplify the following expressions and find a completely *reduced fraction* of the form [`\dfrac{a}{b}`].
 
-Enter your answer as [`\ \ a/b \ \ `] (substituting your numerator and denominator for [`a`] and [`b`]).
-
-*Part (a).*
+*Part (a).*  Simplify the following completely, and enter a *completely reduced* fraction of the form [`\ a/b `] 
 
     [` [$a] + \dfrac{[$n1]}{[$d1]}  = `]  [________________________]{$answer1}
 
-*Part (b).*
+.
+
+*Part (b).* Simplify the following completely, and enter a *completely reduced* fraction of the form [`\ a/b `]
 
     [` \dfrac{[$n2]}{[$d2]} + \dfrac{[$n3]}{[$d3]} = `]  [_______________________]{$answer2}
 
-*Part (c).*
+.
+
+*Part (c).* Simplify the following completely, and enter a *completely reduced* fraction of the form [`\ a/b `]
 
     [` \dfrac{[$n4]}{[$d4]} - \dfrac{[$n5]}{[$d5]} = `]  [_________________________]{$answer3->cmp(studentsMustReduceFractions=>1,
                 strictFractions=>1,strictMinus=>1,

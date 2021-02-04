@@ -1,0 +1,129 @@
+##DESCRIPTION
+##  Algebra: Combining rational expressions 
+##  (answer does NOT need to be a reduced fraction)
+##ENDDESCRIPTION
+
+
+## DBsubject(Algebra)
+## DBchapter(Rational equations and functions)
+## DBsection(Simplifying)
+## Date(02/04/2021)
+## Institution(Bridgewater State University)
+## Author(Stephen Flood)
+## MLT()
+## Level(2)
+## MO(1)
+## TitleText1()
+## AuthorText1()
+## EditionText1()
+## Section1()
+## Problem1()
+## KEYWORDS()
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "parserMultiAnswer.pl",
+  "PGcourse.pl"
+);
+
+########################################################################
+
+TEXT(beginproblem());
+
+$showPartialCorrectAnswers = 1;
+
+########################################################################
+
+Context("Numeric");
+Context()->variables->add(y => "Real");
+Context()->noreduce('(-x)-y');
+Context()->noreduce('(-x)/y', 'x/(-y)' );
+  
+do{
+    $n1 = random(2,5,1);
+    $dd1 = list_random(-1,1);
+    $d1 = $n1 +$dd1;
+    $d2 = 2*$d1-1;
+    $dn2 = list_random(-1,1);
+    $n2 = $d2 +$dn2;
+    $sign = list_random(-1,1);
+    $numerator1 = Compute("$n1") -> reduce;
+    $denominator1 = Compute("$d1*x") -> reduce;
+    $numerator2 = Compute("$n2") -> reduce;
+    $denominator2 = Compute("$d2*y") -> reduce;
+} while (
+    ($n1*$d2)> 21 || ($n2*$d1)>21 ||
+    $n1==0 || $n2 ==0 || 
+    ($d1==1 && $d2==1)
+ ) ;
+
+
+if($sign > 0) 
+{   
+    $f = Compute("$numerator1/$denominator1 + $numerator2/$denominator2");
+}
+else{
+    $f = Compute("$numerator1/$denominator1 - $numerator2/$denominator2");
+}
+$ans1 = Formula("$numerator1*$denominator2 + ($sign)*$numerator2*$denominator1");
+$ans2 = Formula("$denominator1*$denominator2");
+
+########################################################################
+
+
+## Note: Answer checker from Library/UMN/algebraKaufmannSchwitters/ks_4_3_30.pg'
+$mp = MultiAnswer($ans1,$ans2)->with(
+         singleResult => 0,
+         checker => sub {
+            my ($correct,$student,$self) = @_;  # get the parameters
+            
+            my ( $p1, $p2 ) = @{$correct};      # get the correct num, denom
+            my ( $p1stu, $p2stu ) = @{$student};# get the student's num, denom
+
+            my $isPreview = $main::inputs_ref->{previewAnswers};
+
+            
+#            $numeratorValid   = ( $p1==$p1stu || Compute("-1")*$p1==$p1stu );
+#            $denominatorValid = ( $p2==$p2stu || Compute("-1")*$p2==$p2stu );
+            $quotientValid    = ( $p1/$p2 == Compute($p1stu)/Compute($p2stu) );
+
+## Uncomment to require REDUCED fractions (by checking if numerator/denominator are valid, rather than just checking the quotient.
+#            if (! $isPreview) { # Don't show messages if previewing....
+#              Value::Error("Your numerator is incorrect") 
+#                unless $numeratorValid;
+#              Value::Error("Your denominator is incorrect") 
+#                unless $denominatorValid;
+#              Value::Error("One of your answers has the wrong sign") 
+#                unless $quotientValid;
+#            }
+
+            return $quotientValid;
+            },
+        );
+########################################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+Simplify the following rational expression
+\[
+$f 
+\]
+Express your answer in the form \(\dfrac{Numerator}{Denominator}\). 
+Then enter the two parts of your answer below. $PAR
+$BR
+\(Numerator =\) \{$mp->ans_rule(20)\} 
+$BR
+\(Denominator =\) \{$mp->ans_rule(20)\}
+END_TEXT
+Context()->normalStrings;
+
+########################################################################
+
+ANS( $mp->cmp );
+
+ENDDOCUMENT();
