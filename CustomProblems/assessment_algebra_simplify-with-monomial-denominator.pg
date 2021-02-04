@@ -1,0 +1,100 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+  "contextLimitedPolynomial.pl", #Automatically loads MathObjects.pl
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+#Context("Numeric");
+Context("LimitedPolynomial");
+Context()->reductions->set("(-x)-y" => 0);
+Context()->reductions->set("(-x)+y" => 1);
+
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+$a   = random(3,5,1);
+$b   = non_zero_random(-2,2,1);
+
+$mfactored = random(2,7,1 );
+$denomexp = random(2,5,1);
+$m = $mfactored+$denomexp;
+
+$c1fac   = non_zero_random(-3,3,1);
+$c2fac   = non_zero_random(-3,3,1);
+
+$denomc = non_zero_random(-5,5,1);
+$c1 = $c1fac*$denomc;
+$c2 = $c2fac*$denomc;
+
+$numerator = Compute("$c1*x^$m + $c2*x^$denomexp")->reduce();
+$denominator = Compute("$denomc * x^$denomexp")->reduce();
+$simplified = Compute("($c1/$denomc)*x^$mfactored + ($c2/$denomc)*1");
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Simplify the following expression as much as possible
+
+[`\dfrac{[$numerator]}{[$denominator]} = `] 
+[____________________________]{$simplified}
+
+END_PGML
+
+
+ENDDOCUMENT();

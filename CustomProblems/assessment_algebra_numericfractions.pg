@@ -1,0 +1,154 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+    "contextFraction.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+$a   = random(3,5,1);
+
+$n1 = random(3,5,1);
+$dd1 = list_random(-1,1);
+$d1 = $n1 + $dd1; 
+
+do {
+    $n2 = random(2,6,2);
+    $dd2 = list_random(-1,1);
+    $d2 = $n2 + $dd2; 
+
+    $n3 = random(2,6,2);
+    $dd3 = list_random(-1,1);
+    $d3 = $n3 + $dd3; 
+} while ( 
+    ($n2 == $n3) || 
+    ($d2 == $d3) || 
+    (($n2 == $d3) && ($n3 == $d2)) || 
+    ($n2>6) || ($n3>6) || 
+    ($d2 == 1) || ($d3 == 1) || 
+    ($d3 == 0) 
+);
+
+do {
+    $dmult4 = list_random(2,3,4,5);
+    $nfactor4 = random(3,5,1);
+    $n4 = $dmult4*$nfactor4;
+    do {$dfactor4 = random(3,5,1); } while ($dfactor4 == $nfactor4);
+    $d4 = $dmult4*$dfactor4;
+
+    $dmult5 = list_random(2,3,4,5);
+    $nfactor5 = random(3,5,1);
+    $n5 = $dmult5*$nfactor5;
+    do {$dfactor5 = random(3,5,1); } while ($dfactor5 == $nfactor5);
+    $d5 = $dmult5*$dfactor5;
+} while ( 
+    ( $n4*$d5 >95) || ( $n5*$d4>95)  || 
+    ($d5 == $d4) || 
+    ($n5 == $n4) || 
+    (($n5 == $d4) || ($n4 == $d5) )||
+    ($n5*$d4 == $n4 * $d5)
+); 
+
+$answer1num = Compute("$a * $d1 + $n1");
+$answer1denom = Compute("$d1");
+
+$answer2num = Compute("$n2*$d3 + $n3*$d2");
+$answer2denom = Compute("$d2*$d3");
+
+$answer3num = Compute("$n4*$d5 - $n5*$d4");
+$answer3denom = Compute("$d5*$d4");
+
+
+Context("Fraction-NoDecimals");
+Context()->operators->undefine('+','-','*',
+                               '*','**','^');
+
+$answer1 = Compute("$answer1num/$answer1denom");
+$answer2 = Compute("$answer2num/$answer2denom");
+$answer3 = Compute("$answer3num/$answer3denom");
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+For each of the following problems, simplify the following expressions and find a completely *reduced fraction* of the form [`\dfrac{a}{b}`].
+
+Enter your answer as [`\ \ a/b \ \ `] (substituting your numerator and denominator for [`a`] and [`b`]).
+
+*Part (a).*
+
+    [` [$a] + \dfrac{[$n1]}{[$d1]}  = `]  [________________________]{$answer1}
+
+*Part (b).*
+
+    [` \dfrac{[$n2]}{[$d2]} + \dfrac{[$n3]}{[$d3]} = `]  [_______________________]{$answer2}
+
+*Part (c).*
+
+    [` \dfrac{[$n4]}{[$d4]} - \dfrac{[$n5]}{[$d5]} = `]  [_________________________]{$answer3->cmp(studentsMustReduceFractions=>1,
+                strictFractions=>1,strictMinus=>1,
+                strictMultiplication=>1) }
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();

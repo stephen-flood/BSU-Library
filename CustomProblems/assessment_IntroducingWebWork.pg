@@ -1,0 +1,166 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+$a   = random(3,5,1);
+$b   = non_zero_random(-2,2,1);
+
+$f = Compute("$a*x + $b")->reduce();
+$ans = $f->eval(x=>1);
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+# Understanding WebWork 
+
+Welcome to the WebWork Online Homework system. 
+This problem will help you learn how to enter the most common kinds of answers, both by explaining the syntax, and providing some examples for you to experiment with.  
+
+
+There are *two* slightly different ways you may be using WebWork this semester. 
+
+- *Online Homework*  
+In a normal online homework assignment, you will have unlimited attempts on most problems.  
+After entering your answer, clicking the "Submit Answer" will grade your problem.  
+A green bar means your answer was correct, and your grade will be updated immediately.  
+A red bar means that some part of your answer was incorrect, and a yellow bar means that there is a problem with the answer you entered, such as unmatched parentheses.  
+
+- *Timed Quizzes and Exams*  
+In a timed quiz or exam, you will only be able to submit your work *once* for credit, using the "Grade Test" button at the bottom of the page (at the end of all the problems).  
+As you enter your work, you can use the "Preview Answer" button next to each problem to see how WebWork is interpreting the answer you have entered.  
+This can help you make sure you are using correct order of operations, and that all parentheses are matched. 
+
+
+
+## Entering Number Answers
+
+For many questions, the correct answer is a number.  
+When this happens, you simply type the answer in to the blank.  
+
+- *Example*  
+Enter [` 9.42`] in the following blank: [_____________]{"9.42"}
+
+You can enter exact expressions using
+the [`*`] key for multiplication,
+[`/`] for division, 
+and [`^`] to indicate exponents and powers. 
+
+- *Example*  
+Enter [`\frac{2^3}{5}`] in the following blank by typing [`(2\wedge 3)/5`] in the following blank: [_____________]{"2^3/5"}
+
+To see how to enter expressions like [`\sqrt{3}`] or [`\pi`], 
+click on the small box to the right of the answer blank.  
+Selecting "Exponents" from the dropdown menu will help you to enter [`\sqrt{3}`], and selecting "Other" will help you enter [`\pi`]. 
+
+- *Example*  
+Enter [`\sqrt{3}\cdot \pi`] in the following blank [________________]{"sqrt(3)*pi"}
+
+
+
+
+
+You can use parentheses around parts of your answer to enter more involved expressions.  Clicking *Preview Answer* will give a nicely formatted version of your answer, that can help you identify any issues with parentheses. 
+
+
+## Entering Expressions with Variables
+
+Sometimes, the answer to a question will be an expression with both numbers and variables.  These are easy to answer -- just use the same operations as for numbers.  
+
+- *Example*  
+Enter [`\frac{x+5}{x+1}`] by typing [`(x+5)/(x+1)`] in the following blank: [_____________]{"(x+5)/(x+1)"}
+
+Pay careful attention to what the problem is asking for.  
+Most of the time, the variable will be [`x`], but occasionally the problem will tell you to use a different variable. 
+
+
+## Entering Lists of Numbers 
+
+In some questions, you will be asked to enter all correct answers as a comma separated list.  
+
+- *Example*  
+Enter the numbers [`5`], [`2`], and [`-3`] as a comma separated list in the following blank [________________]{List(5,2,-3)}
+
+
+## Intervals and Sets 
+
+To enter an interval or set, use standard interval notation, where ( and ) exclude endpoints, square brackets include endpoints, and [`U`] denotes union. 
+
+- *Example*  
+Enter the set of [`x`] satisfying [` 1\leq x < 5`] in interval notation by entering [`[1,5)`] = [______________________]{"[1,5)"}
+
+Use [`INF`] and [`-INF`] to represent [`\infty`] and [`-\infty`]
+
+- *Example*  
+Enter the set [`(-\infty,2] \cup (3,\infty) `] by entering [`(-INF,2]U(3,INF)`] = [_________________]{"(-INF,2]U(3,INF)"}
+
+If the set is empty, or if there are no solutions, enter [`NONE`]. 
+
+
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();

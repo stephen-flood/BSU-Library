@@ -1,0 +1,109 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+        # "contextLimitedPolynomial.pl", #Automatically loads MathObjects.pl
+    "contextPolynomialFactors.pl",
+    "contextLimitedPowers.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+ # Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+$root1mag = non_zero_random(2,3,1);
+$root1sign  = list_random(-1,1);
+$root1 = $root1sign*$root1mag;
+$rootdiff = non_zero_random(-2,2,1);
+$root2   = $root1 + $rootdiff;
+$Roots = List($root1,$root2);
+
+$c1 = Compute("1");
+$c2 = Compute("-$root1+-$root2");
+$c3 = Compute("$root1*$root2");
+
+$quadratic = Compute("$c1*x^2 + $c2*x + $c3")->reduce();
+
+
+Context("PolynomialFactors-Strict");
+Context()->flags->set(singleFactors=>0);
+LimitedPowers::OnlyIntegers(
+    minPower => 0, maxPower => 1,
+    message => "either 0 or 1",
+);
+$factoredform = Compute("(x-$root1)(x-$root2)");
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+1.  Factor the expression [` [$quadratic]  `]  
+[`\ `]  
+[`\displaystyle [$quadratic]  =  `]  [_______________________]{$factoredform}
+
+
+2.  Find all solutions to the equation  
+[`\quad [$quadratic] = 0`].  
+If there is more than one solution, enter your answer as a comma separated list.  If there are no solutions, enter [`NONE`]  
+[`\ `]  
+[_________________]{$Roots}
+
+
+END_PGML
+
+
+ENDDOCUMENT();

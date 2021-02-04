@@ -1,0 +1,142 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	"PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+# Create and use pop up lists 
+$tf = new_select_list();
+$tf->rf_print_q(~~&pop_up_list_print_q);
+
+# Specify choices presented to students
+$tf->ra_pop_up_list( 
+[ No_answer => "?", "T"=>"True", "F"=>"False"] );
+
+# Questions and answers
+$numtrue = 7;
+$numfalse = 8;
+## VERY IMPORTANT 
+##      must MANUALLY set $numtrue and $numfalse
+##      based on number of true and false options 
+$tf -> qa ( 
+#True
+"\(a(b+c) = ab + ac\)", 
+    "T",
+"\(\frac{a+b}{c} = \frac{a}{c} + \frac{b}{c}\)",
+    "T",
+"\(a^0 = 1\)",
+    "T",
+"\(\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}\)",
+    "T",
+"\(\frac{ab + ac}{a} = b + c\)",
+    "T",
+"\(\frac{a}{b}c = \frac{ac}{b}\)",
+    "T",
+"\((\frac{1}{2}a)(\frac{1}{2}b) = \frac{1}{4}ab\)",
+    "T",
+#False
+"\(a(b+c) = ab + c\)", 
+    "F",
+"\(\frac{a}{b+c} = \frac{a}{b} + \frac{a}{c}\)", 
+    "F",
+"\(\frac{ab + c}{a} = b + c\)",
+    "F",
+"\((a + b)^2 = a^2 + b^2\)",
+    "F",
+"\(\sqrt{a^2+b^2} = a + b\)",
+    "F",
+"\(\frac{a}{b} + \frac{c}{d} = \frac{a + c}{b+d} \)",
+    "F",
+"\((\frac{1}{2}a)(\frac{1}{2}b) = \frac{1}{2}ab\)",
+    "F",
+"\(\frac{a}{b}c = \frac{a}{bc}\)",
+    "F",
+#"\(\)",
+#    "",
+);
+
+# How many questions to use
+##  ->choose(...) is defined in  pg/lib/Select.pm 
+## Option 1: select a number of random problems
+#$tf->choose(3);    # select 3 random questions
+## Option 2: Select a list of SPECIFIC problems (indexing starts at 0), as well as a given number of ADDITIONAL problems
+#$tf -> choose([3, 4], 1); # always include questions 3 and 4, then add one additional problem. 
+$true1 = random(0,$numtrue-1,1);
+$false1 = random($numtrue,$numfalse-1,1);
+do{ $true2 = random(0,$numtrue-1,1); } while ($true2 == $true1);
+do{ $false2 = random($numtrue,$numtrue+$numfalse-1,1); } while ($false2 == $false1);
+$tf -> choose([$true1,$true2,$false1,$false2], 2);
+## For testing:
+#$tf->choose($numtrue + $numfalse);
+ 
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+BEGIN_TEXT
+For each of the following statements, determine if it is true or false for all real numbers \(a, b, c,\) and \(d\) .
+$BR
+\{ $tf-> print_q \}
+END_TEXT
+
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($tf->ra_correct_ans));
+
+ENDDOCUMENT();
+
+
+ENDDOCUMENT();
