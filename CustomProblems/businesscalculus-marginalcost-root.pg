@@ -7,7 +7,7 @@
 ## DBsubject('Course')
 ## DBchapter('Section')
 ## DBsection('Subsection')
-## Date('6/25/2018')
+## Date('4/22/2021')
 ## Author('Stephen Flood')
 ## Institution('')
 ## TitleText1('')
@@ -33,7 +33,7 @@ loadMacros(
 	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
         # "PGgraphmacros.pl",	   # For dynamic graphs
     	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
-    	"parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
     	# "contextInequalities.pl",
 );
 
@@ -54,25 +54,28 @@ Context("Numeric");
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$deltax = random(20,50,10);
-$deltay = random(10,50,10);
+$m   = random(3,5,1);
+$b = random(100,1000,50);
+$d = random(2,5,1);
+$e = random(2,5,1);
 
-$x1  = random(5,20,5);
-$y1  = random(25+$deltay,50+$deltay,5);
+## ROOT FUNCTION 
+$C = Compute("sqrt( $d x^$m + $e x + $b  )");
 
-$x2 = Compute("$x1+$deltax");
-$y2 = Compute("$y1-$deltay");
 
-$slope = Compute("($y2-$y1)/($x2-$x1)");
-$demand = Compute("$slope*(x - $x1) + $y1");
+$MC = $C->D();
 
-$middle = random($x1 + 5, $x2 - 5, 5);
-$priceofmiddle = $demand->eval(x=>$middle);
 
-# the arguments of PopUp are [list of answers], 
-#    correct answer
-$popup = PopUp(["???", "increases", "decreases"], "decreases");
-$slopemagnitude = Compute("abs($slope)"); 
+
+$x1 = random(50,100,10);
+$x2 = random(51,101,10);
+
+
+$Cx1 = $C->eval(x=>$x1);
+$Cx1previous = $C->eval(x=>($x1-1));
+
+$Cx2 = $C->eval(x=>$x2);
+$Cx2previous = $C->eval(x=>($x2-1));
 
 #################################################
 # Write Problem 
@@ -84,26 +87,28 @@ $slopemagnitude = Compute("abs($slope)");
 
 BEGIN_PGML
 
-Suppose that you can sell [`[$x1]`] hats for $[`[$y1]`] each, and that you can sell [`[$x2]`] hats for $[`[$y2]`] each. 
+Let [`C(x) = [$C] `]. 
 
-Assume that the demand price is linear. 
+1. Find the total cost of producing [$x1] items.  
+[__________________]{$Cx1}
+
+2. Find the marginal cost function  
+[__________________]{$C->D()}
+
+3. Use the marginal cost function to *approximate* the cost of the [$x1][`^{st}`] item only.  
+[__________________]{$MC->eval(x=>($x1-1))}
+
+4. Find the exact cost of producing the [$x1][`^{st}`] item only.  
+[__________________]{$Cx1 - $Cx1previous}
+
+3. Use the marginal cost function to *approximate* the cost of the [$x2][`^{st}`] item only.  
+[__________________]{$MC->eval(x=>($x2-1))}
+
+4. Find the exact cost of producing the [$x2][`^{st}`] item only.  
+[__________________]{$Cx2 - $Cx2previous}
 
 
-1. What is the slope of this line?  
-[___________________________________________]{$slope}  
-[`\ `]
 
-1. For each additional unit sold, the demand price  
-[_]{$popup} by 
-[___________________________________________]{$slopemagnitude}  
-[`\ `]
-
-2. Find the *demand price* which would result from selling exactly  [`[$middle]`] units.  
-[___________________________________________]{$priceofmiddle} dollars per unit.  
-[`\ `]
-
-3.  Find a formula for the demand price as function of [`x`], the number of units sold.  
-[`p(x) = `][____________________________________________]{$demand}
 END_PGML
 
 

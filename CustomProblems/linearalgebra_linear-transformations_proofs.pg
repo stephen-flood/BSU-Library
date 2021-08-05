@@ -1,0 +1,151 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('3/01/2021')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "PGchoicemacros.pl",
+    "PGanswermacros.pl",
+    "draggableProof.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+
+$CorrectProof = DraggableProof([
+## Proof in correct order
+"\(f\Big(c \vec{u} + d\vec{v}\Big)\) ",
+"= \(f\Big(c \vec{u}\Big) + f\Big( d\vec{v}\Big) \)",
+"= \(c\cdot f\Big(\vec{u}\Big) + d\cdot f\Big( \vec{v}\Big) \)",
+],
+## List of incorrect Statements
+[
+],
+
+SourceLabel => "Choose from these",
+TargetLabel =>  "Place the lines in the correct order below",
+);
+
+
+$mc1 = new_checkbox_multiple_choice();
+$mc1 -> qa (
+"Select all of the things that you can use during this part of the proof:",
+"\( T\Big(c\vec{u}\Big) = c \cdot T\Big(\vec{u}\Big) \)",
+"\( T\Big(\vec{u}+\vec{v}\Big) = T\Big(\vec{u}\Big) + T\Big(\vec{v}\Big) \)",                
+);
+$mc1 -> extra(
+"\(T\Big( c\vec{u} + d\vec{v}\Big) = c\cdot T\Big(\vec{u}\Big) + d\cdot T\Big(\vec{v}\Big)\)",
+);
+$mc1 -> makeLast("None of the above");
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_TEXT
+
+The goal of this problem is to prove the following lemma.
+
+$PAR
+A transformation \(T\) is linear $BITALICS if and only if $EITALICS 
+\(T\Big( c\vec{u} + d\vec{v}\Big) = c\cdot T\Big(\vec{u}\Big) + d\cdot T\Big(\vec{v}\Big)\)
+$PAR
+
+$HR
+$BBOLD Part 1: (\(\Rightarrow\))$EBOLD
+
+$PAR 
+$BBOLD Suppose$EBOLD that \(T\) is linear.  
+$PAR
+
+\{ $mc1 -> print_q() \}
+$BR
+\{ $mc1 -> print_a() \}
+
+$PAR
+
+Select \{ $CorrectProof->numNeeded \} of the following.
+
+$PAR
+\{ $CorrectProof->Print \}
+
+$PAR
+$HR
+
+$BBOLD Part 2 (\(\Leftarrow\))$EBOLD
+
+$PAR
+$BBOLD Suppose $EBOLD \(T\Big( c\vec{u} + d\vec{v}\Big) = c\cdot T\Big(\vec{u}\Big) + d\cdot T\Big(\vec{v}\Big)\)
+$PAR 
+
+Select all of the things that you can use during this part of the proof:
+
+(((( INSERT MULTIPLE SELECT -- Select the lines from the definition, and NOT the statement to be proved ))))
+
+
+
+END_TEXT
+Context()->normalStrings;
+
+# Answer Evaluation
+
+%ANS( checkbox_cmp( $mc1->correct_ans() ) );
+
+ANS($CorrectProof->cmp);
+
+
+
+ENDDOCUMENT();

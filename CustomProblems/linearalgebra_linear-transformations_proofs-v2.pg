@@ -29,11 +29,12 @@ loadMacros(
         "PGstandard.pl",     # Standard macros for PG language
         "PGcourse.pl",       
 	"PGML.pl",
+    "draggableProof.pl",
 	"MathObjects.pl",
-	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+	"PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
         # "PGgraphmacros.pl",	   # For dynamic graphs
     	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
-    	"parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
     	# "contextInequalities.pl",
 );
 
@@ -54,25 +55,37 @@ Context("Numeric");
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$deltax = random(20,50,10);
-$deltay = random(10,50,10);
+$mc1 = new_checkbox_multiple_choice();
+$mc1 -> qa (
+"Select all of the things that you can use during this part of the proof:",
+"\( T\Big(c\vec{u}\Big) = c \cdot T\Big(\vec{u}\Big) \)",
+"\( T\Big(\vec{u}+\vec{v}\Big) = T\Big(\vec{u}\Big) + T\Big(\vec{v}\Big) \)",                
+);
+$mc1 -> extra(
+"\(T\Big( c\vec{u} + d\vec{v}\Big) = c\cdot T\Big(\vec{u}\Big) + d\cdot T\Big(\vec{v}\Big)\)",
+);
+$mc1 -> makeLast("None of the above");
 
-$x1  = random(5,20,5);
-$y1  = random(25+$deltay,50+$deltay,5);
 
-$x2 = Compute("$x1+$deltax");
-$y2 = Compute("$y1-$deltay");
 
-$slope = Compute("($y2-$y1)/($x2-$x1)");
-$demand = Compute("$slope*(x - $x1) + $y1");
 
-$middle = random($x1 + 5, $x2 - 5, 5);
-$priceofmiddle = $demand->eval(x=>$middle);
 
-# the arguments of PopUp are [list of answers], 
-#    correct answer
-$popup = PopUp(["???", "increases", "decreases"], "decreases");
-$slopemagnitude = Compute("abs($slope)"); 
+$CorrectProof = DraggableProof([
+## Proof in correct order
+"\(f\Big(c \vec{u} + d\vec{v}\Big)\) ",
+"= \(f\Big(c \vec{u}\Big) + f\Big( d\vec{v}\Big) \)",
+"= \(c\cdot f\Big(\vec{u}\Big) + d\cdot f\Big( \vec{v}\Big) \)",
+],
+## List of incorrect Statements
+[
+],
+
+SourceLabel => "Choose from these",
+TargetLabel =>  "Place the lines in the correct order below",
+);
+
+
+
 
 #################################################
 # Write Problem 
@@ -81,30 +94,33 @@ $slopemagnitude = Compute("abs($slope)");
 # 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
 # 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
 
+BEGIN_TEXT
 
-BEGIN_PGML
-
-Suppose that you can sell [`[$x1]`] hats for $[`[$y1]`] each, and that you can sell [`[$x2]`] hats for $[`[$y2]`] each. 
-
-Assume that the demand price is linear. 
+\{ $mc1 -> print_q() \}
+$BR
+\{ $mc1 -> print_a() \}
 
 
-1. What is the slope of this line?  
-[___________________________________________]{$slope}  
-[`\ `]
 
-1. For each additional unit sold, the demand price  
-[_]{$popup} by 
-[___________________________________________]{$slopemagnitude}  
-[`\ `]
+Select \{ $CorrectProof->numNeeded \} of the following.
 
-2. Find the *demand price* which would result from selling exactly  [`[$middle]`] units.  
-[___________________________________________]{$priceofmiddle} dollars per unit.  
-[`\ `]
+$PAR
+\{ $CorrectProof->numNeeded \}
 
-3.  Find a formula for the demand price as function of [`x`], the number of units sold.  
-[`p(x) = `][____________________________________________]{$demand}
-END_PGML
+\{ $CorrectProof->Print \}
+
+
+
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+
+$showPartialCorrectAnswers = 0;
+
+ANS( checkbox_cmp( $mc1->correct_ans() ) );
+
+ANS($CorrectProof->cmp);
+
 
 
 ENDDOCUMENT();

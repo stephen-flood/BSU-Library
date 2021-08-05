@@ -94,14 +94,14 @@ BEGIN_PGML
 Suppose that you are planning on starting a 3D printing business. 
 
 1.  Suppose that the price function is given by price per unit [`p = [$price]`].  Write down an equation for [`R(x)`], the revenue from selling [`x`] units.  
-[____________________________________________]{$R}
+[`R(x)=`][____________________________________________]{$R}
 
 2.  Your top choice printer has a fixed cost of [`[$fixedcost]`], and that the plastic costs $[`[$variablecost]`] per unit produced. 
 Write an equation for [`C(x)`], the cost of producing [`x`] units.  
-[____________________________________________]{$C}
+[`C(x)=`][____________________________________________]{$C}
 
 3.  Find the profit function.  
-[____________________________________________]{$P}
+[`P(x)=`][____________________________________________]{$P}
 
 4.  Find the quantities where you break even.  If there is more than one break-even quantity, enter your answer as a comma separated list of numbers.  
 [____________________________________________]{List($breakeven1, $breakeven2)}

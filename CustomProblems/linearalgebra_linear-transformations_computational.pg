@@ -1,0 +1,240 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "niceTables.pl",
+  "parserVectorUtils.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(x1 => 'Real', x2 => 'Real', u1 => 'Real', u2 => 'Real', v1 => 'Real', v2 => 'Real', r => 'Real');
+Context()->noreduce('(-x)-y');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+do{
+    $c1   = random(-2,2,1);
+    $c2   = random(-2,2,1);
+    $c3   = random(-2,2,1);
+
+    $d1   = random(-2,2,1);
+    $d2   = random(-2,2,1);
+    $d3   = random(-2,2,1);
+} while ($c1*$c2*$c3 !=0 || $d1*$d2*$d3 !=0 || ($c1 == 0 && $c2 == 0 && $c3 == 0 ) || ($d1 == 0 && $d2 == 0 && $d3 == 0 )  || ($c1==0 && $d1==0) || ($c2==0 && $d2==0) || ($c3==0 && $d3 ==0) );
+
+do{
+    $e1 = random(-1,1,1);
+    $e2 = random(-1,1,1);
+    $e3 = random(-1,1,1);
+} while ( $e1*$e2*$e3 == 0 );
+$function1 = Compute("$c1*x1 + $d1*x2 + $e1")->reduce();
+$function2 = Compute("$c2*x1 + $d2*x2 + $e2")->reduce();
+$function3 = Compute("$c3*x1 + $d3*x2 + $e3")->reduce();
+
+$fupv1 = $function1->substitute(x1=>"u1+v1", x2=>"u2+v2");
+$fupv2 = $function2->substitute(x1=>"u1+v1", x2=>"u2+v2");
+$fupv3 = $function3->substitute(x1=>"u1+v1", x2=>"u2+v2");
+
+$fu1 = $function1->substitute(x1=>"u1", x2=>"u2");
+$fu2 = $function2->substitute(x1=>"u1", x2=>"u2");
+$fu3 = $function3->substitute(x1=>"u1", x2=>"u2");
+
+$fv1 = $function1->substitute(x1=>"v1", x2=>"v2");
+$fv2 = $function2->substitute(x1=>"v1", x2=>"v2");
+$fv3 = $function3->substitute(x1=>"v1", x2=>"v2");
+
+do{
+    $w1 = non_zero_random(-3,3,1);
+    $w2 = non_zero_random(-3,3,1);
+} while( $w1 == $w2 );
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+Context()->texStrings;
+
+BEGIN_TEXT
+
+Let \(f\left(\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}\right) = \begin{bmatrix} $function1 \\ $function2 \\ $function3 \end{bmatrix} \), 
+and let 
+\(\vec{u} = \begin{bmatrix} u_1 \\ u_2 \end{bmatrix}\),  
+\(\vec{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}\), and 
+\(\vec{w} = \begin{bmatrix} $w1 \\ $w2 \end{bmatrix}\).
+
+$PAR
+
+1. Compute \(f\Big(\vec{w}\Big)\), and enter the components below as a single vector
+\{DataTable(
+  [
+    [ans_rule(10)],
+    [ans_rule(10)],
+    [ans_rule(10)]
+  ], 
+  center => 0,
+);\}
+
+$PAR
+$HR
+
+
+In the remaining problems, we will be working with the arbitrary vectors 
+\(\vec{u} = \begin{bmatrix} u_1 \\ u_2 \end{bmatrix}\) and 
+\(\vec{v} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}\), and with the arbitrary real variable \(r\).
+When entering your answers, pay careful attention to the variables in use, and enter your answers using \(u1\), \(u2\), \(v1\), \(v2\), and \(r\).
+
+$PAR
+$HR
+2. Enter the components of \(\vec{u} + \vec{v}  \) as a single vector
+\{DataTable(
+  [
+    [ans_rule(10)],
+    [ans_rule(10)]
+  ], 
+  center => 0,
+);\}
+
+$PAR
+3. Enter the components of \(r \cdot \vec{u}\) as a single vector
+\{DataTable(
+  [
+    [ans_rule(10)],
+    [ans_rule(10)]
+  ], 
+  center => 0,
+);\}
+
+$PAR
+4. Enter the components of \( f\Big( \vec{u} + \vec{v} \Big)  \) as a single vector 
+\{DataTable(
+  [
+    [ans_rule(50)],
+    [ans_rule(50)],
+    [ans_rule(50)]
+  ], 
+  center => 0,
+);\}
+
+
+$PAR
+5. Enter the components of \( f\Big( \vec{u} \Big) + f\Big( \vec{v} \Big) \) as a single vector 
+\{DataTable(
+  [
+    [ans_rule(50)],
+    [ans_rule(50)],
+    [ans_rule(50)]
+  ], 
+  center => 0,
+);\}
+
+$PAR
+6. Enter the components of \( f\Big( r\cdot \vec{u} \Big)\) as a single vector 
+\{DataTable(
+  [
+    [ans_rule(50)],
+    [ans_rule(50)],
+    [ans_rule(50)]
+  ], 
+  center => 0,
+);\}
+
+
+$PAR
+7. Enter the components of \( r\cdot f\Big( \vec{u} \Big)\) as a single vector 
+\{DataTable(
+  [
+    [ans_rule(50)],
+    [ans_rule(50)],
+    [ans_rule(50)]
+  ], 
+  center => 0,
+);\}
+
+
+END_TEXT
+
+#f(w)
+ANS($function1->substitute(x1=>"$w1", x2=>"$w2")->cmp());
+ANS($function2->substitute(x1=>"$w1", x2=>"$w2")->cmp());
+ANS($function3->substitute(x1=>"$w1", x2=>"$w2")->cmp());
+
+# u+v
+ANS(Compute("u1 + v1")->cmp());
+ANS(Compute("u2 + v2")->cmp());
+
+# cu 
+ANS(Compute("r*u1")->cmp());
+ANS(Compute("r*u2")->cmp());
+
+# f(u+v)
+ANS($function1->substitute(x1=>"u1+v1", x2=>"u2+v2")->cmp());
+ANS($function2->substitute(x1=>"u1+v1", x2=>"u2+v2")->cmp());
+ANS($function3->substitute(x1=>"u1+v1", x2=>"u2+v2")->cmp());
+
+# f(u) + f(v) 
+ANS(($fu1+$fv1)->cmp());
+ANS(($fu2+$fv2)->cmp());
+ANS(($fu3+$fv3)->cmp());
+
+# f(r*u) 
+ANS($function1->substitute(x1=>"r*u1", x2=>"r*u2")->cmp());
+ANS($function2->substitute(x1=>"r*u1", x2=>"r*u2")->cmp());
+ANS($function3->substitute(x1=>"r*u1", x2=>"r*u2")->cmp());
+
+# r*f(u)
+ANS((r*$fu1)->cmp());
+ANS((r*$fu2)->cmp());
+ANS((r*$fu3)->cmp());
+
+
+
+ENDDOCUMENT();

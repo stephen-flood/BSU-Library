@@ -7,7 +7,7 @@
 ## DBsubject('Course')
 ## DBchapter('Section')
 ## DBsection('Subsection')
-## Date('6/25/2018')
+## Date('3/16/2021')
 ## Author('Stephen Flood')
 ## Institution('')
 ## TitleText1('')
@@ -33,7 +33,7 @@ loadMacros(
 	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
         # "PGgraphmacros.pl",	   # For dynamic graphs
     	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
-    	"parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
     	# "contextInequalities.pl",
 );
 
@@ -50,29 +50,24 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 # Context()->flags->set(tolerance => 0.01);
-# Context()->variables->add(t => 'Real');
+Context()->variables->add(u => 'Real',v => 'Real');
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$deltax = random(20,50,10);
-$deltay = random(10,50,10);
+do{
+    $a   = random(3,5,1);
+    $b   = non_zero_random(-2,2,1);
+    $Tu  = Compute("$a u + $b v")->reduce();
+    $c   = random(3,5,1);
+    $d   = non_zero_random(-2,2,1);
+    $Tv  = Compute("$c u + $d v")->reduce();
+} while ( $a==$c || $b == $d);
 
-$x1  = random(5,20,5);
-$y1  = random(25+$deltay,50+$deltay,5);
+$e   = random(3,5,1);
+$f   = non_zero_random(-2,2,1);
+$w   = Compute("$e u + $d v")->reduce();
 
-$x2 = Compute("$x1+$deltax");
-$y2 = Compute("$y1-$deltay");
-
-$slope = Compute("($y2-$y1)/($x2-$x1)");
-$demand = Compute("$slope*(x - $x1) + $y1");
-
-$middle = random($x1 + 5, $x2 - 5, 5);
-$priceofmiddle = $demand->eval(x=>$middle);
-
-# the arguments of PopUp are [list of answers], 
-#    correct answer
-$popup = PopUp(["???", "increases", "decreases"], "decreases");
-$slopemagnitude = Compute("abs($slope)"); 
+$Tw = $w->substitute(u=>"$Tu", v=>"$Tv");
 
 #################################################
 # Write Problem 
@@ -84,26 +79,17 @@ $slopemagnitude = Compute("abs($slope)");
 
 BEGIN_PGML
 
-Suppose that you can sell [`[$x1]`] hats for $[`[$y1]`] each, and that you can sell [`[$x2]`] hats for $[`[$y2]`] each. 
+You are *_given_* the following  
 
-Assume that the demand price is linear. 
+- [`T: \mathbb{R}^2 \rightarrow \mathbb{R}^2`] is a *linear* transformation,   
+- [`u,v\in \mathbb{R}^2`],  
+- [`T`] sends [`u`] to [`[$Tu]`], and  
+- [`T`] sends [`v`] to [`[$Tv]`]
 
+Compute [`T([$w]) = `]  [______________________________]{$Tw}.
 
-1. What is the slope of this line?  
-[___________________________________________]{$slope}  
-[`\ `]
+(Enter your answer in terms of the vectors [`u,v`])
 
-1. For each additional unit sold, the demand price  
-[_]{$popup} by 
-[___________________________________________]{$slopemagnitude}  
-[`\ `]
-
-2. Find the *demand price* which would result from selling exactly  [`[$middle]`] units.  
-[___________________________________________]{$priceofmiddle} dollars per unit.  
-[`\ `]
-
-3.  Find a formula for the demand price as function of [`x`], the number of units sold.  
-[`p(x) = `][____________________________________________]{$demand}
 END_PGML
 
 
