@@ -1,8 +1,8 @@
 assignmentType      = gateway
-openDate          = 01/06/2021 at 11:59pm EST
-reducedScoringDate = 01/26/2021 at 11:59pm EST
-dueDate           = 01/26/2021 at 11:59pm EST
-answerDate        = 05/31/2021 at 11:59pm EDT
+openDate          = 05/27/2022 at 11:59pm EST
+reducedScoringDate = 05/27/2022 at 11:59pm EST
+dueDate           = 05/27/2022 at 11:59pm EST
+answerDate        = 05/27/2022 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 

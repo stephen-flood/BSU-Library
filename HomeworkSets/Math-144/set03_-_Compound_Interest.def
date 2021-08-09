@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 09/17/2018 at 11:59pm EDT
-reducedScoringDate = 09/22/2018 at 11:59pm EDT
-dueDate           = 09/24/2018 at 11:59pm EDT
-answerDate        = 09/25/2018 at 11:59pm EDT
-enableReducedScoring = N
+openDate          = 02/08/2021 at 11:59pm EST
+reducedScoringDate = 02/17/2021 at 11:59pm EST
+dueDate           = 02/19/2021 at 11:59pm EST
+answerDate        = 02/21/2021 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -230,5 +230,25 @@ showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
 att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 23
+source_file = CustomProblems/businesscalc-exponentialfns-depreciation.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 24
+source_file = CustomProblems/businesscalc-exponentialfns-depreciation-findt.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
 problem_end
 

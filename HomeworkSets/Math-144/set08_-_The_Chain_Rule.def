@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 10/31/2018 at 11:59pm EDT
-reducedScoringDate = 11/07/2018 at 11:59pm EST
-dueDate           = 11/09/2018 at 11:59pm EST
-answerDate        = 11/12/2018 at 11:59pm EST
-enableReducedScoring = N
+openDate          = 03/19/2021 at 11:59pm EDT
+reducedScoringDate = 03/26/2021 at 11:59pm EDT
+dueDate           = 03/26/2021 at 11:59pm EDT
+answerDate        = 03/26/2021 at 11:59pm EDT
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -164,16 +164,6 @@ problem_end
 problem_start
 problem_id = 16
 source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-75.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 17
-source_file = Library/ASU-topics/setChainRulePowerFunctions/3-6-79.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

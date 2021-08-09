@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 11/02/2018 at 11:59pm EDT
-reducedScoringDate = 11/12/2018 at 11:59pm EST
-dueDate           = 11/14/2018 at 11:59pm EST
-answerDate        = 11/14/2018 at 11:59pm EST
-enableReducedScoring = N
+openDate          = 03/31/2021 at 11:59pm EDT
+reducedScoringDate = 04/09/2021 at 11:59pm EDT
+dueDate           = 04/10/2021 at 11:59pm EDT
+answerDate        = 04/12/2021 at 11:59pm EDT
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S07-TansVelsRates/2-7-08.pg
+source_file = CustomProblems/assessment_derivative-applications_max-min.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S01-MaxMinValues/4-1-31.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C02S07-TansVelsRates/2-7-08.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/ma117DB/set4/srw2_6_47.pg
+source_file = Library/UVA-Stew5e/setUVA-Stew5e-C04S01-MaxMinValues/4-1-31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/ASU-topics/setFirstDerivative/4-2-61.pg
+source_file = Library/ma117DB/set4/srw2_6_47.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = BSU-Problems/business-optimization-power.pg
+source_file = Library/ASU-topics/setFirstDerivative/4-2-61.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

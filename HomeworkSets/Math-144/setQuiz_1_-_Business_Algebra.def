@@ -1,0 +1,84 @@
+assignmentType      = gateway
+openDate          = 02/14/2021 at 11:59pm EST
+reducedScoringDate = 02/19/2021 at 11:59pm EST
+dueDate           = 02/20/2021 at 11:59pm EST
+answerDate        = 02/22/2021 at 11:59pm EST
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = 
+attemptsPerVersion  = 2
+timeInterval        = 0
+versionsPerInterval = 2
+versionTimeLimit    = 2400
+problemRandOrder    = 0
+problemsPerPage     = 0
+hideScore           = N
+hideScoreByProblem  = Y
+hideWork            = BeforeAnswerDate
+capTimeLimit        = 0
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = CustomProblems/Academic-Honesty-Statement.pg
+value = 5
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = CustomProblems/assessment-business-calculus-cost-table.pg
+value = 20
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = CustomProblems/assessment_businesscalc_price-revenue-cost-profit.pg
+value = 20
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = CustomProblems/assessment_businesscalc_price-from-data.pg
+value = 25
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = CustomProblems/assessment_algebra_using-graphical-defn.pg
+value = 15
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = CustomProblems/assessment_simplifiedDifferenceQuotient.pg
+value = 15
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

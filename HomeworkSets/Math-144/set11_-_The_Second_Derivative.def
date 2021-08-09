@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 11/16/2018 at 11:59pm EST
-reducedScoringDate = 11/29/2018 at 11:59pm EST
-dueDate           = 12/01/2018 at 11:59pm EST
-answerDate        = 12/03/2018 at 11:59pm EST
-enableReducedScoring = N
+openDate          = 04/12/2021 at 08:59pm EDT
+reducedScoringDate = 04/21/2021 at 11:59pm EDT
+dueDate           = 04/21/2021 at 11:59pm EDT
+answerDate        = 04/21/2021 at 11:59pm EDT
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -139,7 +139,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 14
@@ -149,7 +149,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 15
@@ -159,6 +159,16 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = CustomProblems/assessment-derivatives-concavity-from-splines.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
 problem_end
 
