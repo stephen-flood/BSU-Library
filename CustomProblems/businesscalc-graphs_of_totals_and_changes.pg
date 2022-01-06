@@ -1,0 +1,218 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('8/31/2021')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "niceTables.pl",
+    "PGtikz.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false    questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(y => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+# Randomization
+$a = non_zero_random(-6,6);  # horizonatal translation
+$b = random(-4,4);           # vertical translation
+
+## To use TikZ to graph a function defined by a Compute object, use the following:
+#$f = Compute("(x-$a)^2 + $b")->reduce();
+#$ftikz = $f->string;
+#$ftikz=~ s/x/\\x/g ;   #this comment fixes a highlighting bug //
+
+$Dx = 1;
+$x1 = 1;
+$x2 = $x1 + $Dx;
+$x3 = $x2 + $Dx;
+$x4 = $x3 + $Dx;
+$x5 = $x4 + $Dx;
+$xmin = $x1; 
+$xmax = $x5; 
+$xfirststep = $xmin + $Dx; #used to typeset tick marks
+$xgraphshift = Compute("$xmax + .75*($xmax-$xmin)");  #used to shift the graph of the change right
+
+do{
+    $Dy = 0.5;
+    $Dy1 = Compute("DNE");
+    $Dy2 = random(-1,1,$Dy); 
+    $Dy2 = Compute("$Dy2");
+    $Dy3 = random(-1,1,$Dy);
+    $Dy3 = Compute("$Dy3");
+    $Dy4 = random(-1,1,$Dy);
+    $Dy4 = Compute("$Dy4");
+    $Dy5 = random(-1,1,$Dy);
+    $Dy5 = Compute("$Dy5");
+    ## Use built in Perl functions to identify max and min elements of an array
+    @list_of_Dy = ($Dy2,$Dy3,$Dy4,$Dy5);
+    $dymax = max(@list_of_Dy);
+    $dymin = min(@list_of_Dy);
+    $dyfirststep = $dymin+$Dy;
+
+    $y1 = random(-1,2,0.5); 
+    $y1 = Compute("$y1");
+    $y2 = Compute("$y1 + $Dy2");
+    $y3 = Compute("$y2 + $Dy3");
+    $y4 = Compute("$y3 + $Dy4");
+    $y5 = Compute("$y4 + $Dy5");
+    @list_of_y = ($y1, $y2, $y3, $y4, $y5);
+    $ymax = max(@list_of_y);
+    $ymin = min(@list_of_y);
+    $yfirststep = $ymin+$Dy;
+  # basic rerandomize if everything is too uniform
+} while (    
+    ($ymin == $ymax)   
+    || ($dymin == $dymax)
+    || ($dymin == $ymin && $dymax == $ymax)  );
+
+## Define macro to typeset histogram
+sub tikzhistogram {
+    my($x, $y) = @_;
+    return "\draw[fill=blue,opacity=0.3] ({$x+$Dx*0.45},$y) rectangle ({$x-$Dx*0.45},0); \draw[draw,thick] ({$x+$Dx*0.45},$y) rectangle ({$x-$Dx*0.45},0); \node[draw,fill=blue, circle,inner sep=2pt] at ($x,$y) {};" ;
+}
+
+$totalhistogram1 = tikzhistogram($x1,$y1);
+$totalhistogram2 = tikzhistogram($x2,$y2);
+$totalhistogram3 = tikzhistogram($x3,$y3);
+$totalhistogram4 = tikzhistogram($x4,$y4);
+$totalhistogram5 = tikzhistogram($x5,$y5);
+
+$changehistogram2 = tikzhistogram($x2+$xgraphshift,$Dy2);
+$changehistogram3 = tikzhistogram($x3+$xgraphshift,$Dy3);
+$changehistogram4 = tikzhistogram($x4+$xgraphshift,$Dy4);
+$changehistogram5 = tikzhistogram($x5+$xgraphshift,$Dy5);
+
+## Variables for adjusting the scale of the x and y axes
+## Use if graph is too tall, wide, or otherwise hard to read
+## due to "interesting" y values, or Dx of greater than 2.
+$xscale=Compute("1/($Dx)");
+$yscale=1;
+
+$graph_of_total = createTikZImage();
+$graph_of_total->tikzOptions("xscale=$xscale,yscale=$yscale");
+$graph_of_total->tikzLibraries("arrows.meta");
+$graph_of_total->BEGIN_TIKZ
+%\draw[latex-latex,thick] ({$xmin-1.5*$Dx},0) -- ({$xmax+1*$Dx},0) node[right]{\(x\)};
+\draw[latex-latex,thick] ({0-1*$Dx},0) -- ({$xmax+1*$Dx},0) node[right]{\(x\)};
+\draw[latex-latex,thick] (0,{$ymin-1}) -- (0,{$ymax+1}) node[above]{\(y\)};
+\foreach \x in {$xmin,$xfirststep,...,$xmax} \draw[thin] (\x,0.15) -- (\x,-0.15) node[below]{\(\x\)};
+\foreach \y in {$ymin,$yfirststep,...,$ymax} \draw[thin] (0.15*$Dx,\y) -- (-0.15*$Dx,\y) node[left]{\(\y\)};
+% Graph the totals
+{$totalhistogram1}
+{$totalhistogram2}
+{$totalhistogram3}
+{$totalhistogram4}
+{$totalhistogram5}
+%\draw[latex-latex,thick] ({$xmin-1.5*$Dx+$xgraphshift},0) -- ({$xmax+1*$Dx+$xgraphshift},0) node[right]{\(x\)};
+\draw[latex-latex,thick] ({0-1*$Dx+$xgraphshift},0) -- ({$xmax+1*$Dx+$xgraphshift},0) node[right]{\(x\)};
+\draw[latex-latex,thick] ({0+$xgraphshift},{$dymin-1}) -- ({0+$xgraphshift},{$dymax+1}) node[above]{\(\Delta y\)};
+\foreach \x in {$xmin,$xfirststep,...,$xmax} \draw[thin] ({\x+$xgraphshift},{0.15}) -- ({\x+$xgraphshift},{-0.15}) node[below]{\(\x\)};
+\foreach \y in {$dymin,$dyfirststep,...,$dymax} \draw[thin] ({0.15*$Dx+$xgraphshift},\y) -- ({-0.15*$Dx+$xgraphshift},\y) node[left]{\(\y\)};
+% Graph the totals
+{$changehistogram2}
+{$changehistogram3}
+{$changehistogram4}
+{$changehistogram5}
+END_TIKZ
+
+### TO USE WITH PGML: 
+## [@ image($graph_of_total, width => 900, height =>300, tex_size => 1000) @]*
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_TEXT
+
+The graphs below display a graph of a total  function 
+\(y\) on the left, and a graph of the corresponding change \(\Delta y
+\) on the right.
+$PAR
+\{image($graph_of_total, width => 900, height =>300, tex_size => 1000) \}
+$PAR
+Enter the values for \(y\) and \(\Delta y\) in the table below.  Enter \(DNE\) if an entry is undefined or lacks a definite value. 
+$PAR
+\{
+DataTable(
+  [
+    [['\(\quad x\quad \)', headerrow => 1],'\(y\)', '\(\Delta y\)'],
+    ['\(\ $x1\ \)',ans_rule(3),ans_rule(3)],
+    ['\(\ $x2\ \)',ans_rule(3),ans_rule(3)],
+    ['\(\ $x3\ \)',ans_rule(3),ans_rule(3)],
+    ['\(\ $x4\ \)',ans_rule(3),ans_rule(3)],
+    ['\(\ $x5\ \)',ans_rule(3),ans_rule(3)]
+  ], 
+  align => '| c | c | c |',
+  midrules => 1,
+  center => 0,
+);
+\}
+
+END_TEXT
+
+ANS($y1->cmp());
+ANS($Dy1->cmp());
+
+ANS($y2->cmp());
+ANS($Dy2->cmp());
+
+ANS($y3->cmp());
+ANS($Dy3->cmp());
+
+ANS($y4->cmp());
+ANS($Dy4->cmp());
+
+ANS($y5->cmp());
+ANS($Dy5->cmp());
+ENDDOCUMENT();

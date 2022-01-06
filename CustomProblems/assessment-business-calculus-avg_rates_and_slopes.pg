@@ -156,7 +156,7 @@ BEGIN_PGML
 Give your answer with decimal accuracy of [`0.00001`]  
 [____________]{$slope_at_a}
 
-3. Write the equation for the line tangent to [`f(x)`] at [`x=7`].  
+3. Write the equation for the line tangent to [`f(x)`] at [`x=[$a]`].  
 [` y = `] [_____________________]{Compute("$slope_at_a*(x-$a) + $f_a")}
 
 

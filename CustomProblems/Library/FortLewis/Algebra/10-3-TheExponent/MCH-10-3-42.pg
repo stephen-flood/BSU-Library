@@ -51,6 +51,10 @@ Annual growth rate as a $BITALIC percent $EITALIC \(= \)\{ ans_rule(10) \}%
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 If you do not get the problem after $showHint attempts, you will get a detailed hint.
+
+$PAR
+$BBOLD Note: $EBOLD 
+The daily rate \($rdaily\) is given to you as a $BBOLD percent$EBOLD. As a decimal, the daily rate is \($rdecimal\).  
 END_TEXT
 
 ANS( Real("$r")->cmp() );

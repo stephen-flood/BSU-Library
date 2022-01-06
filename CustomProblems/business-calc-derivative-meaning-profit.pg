@@ -2,19 +2,14 @@
 ##  Problem Description
 ##ENDDESCRIPTION
 
-##KEYWORDS('sample')
 
-## DBsubject('Course')
-## DBchapter('Section')
-## DBsection('Subsection')
-## Date('10/8/2018')
-## Author('Stephen Flood')
-## Institution('')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Calculus - single variable)
+## DBchapter(Differentiation)
+## DBsection(Conceptual understanding of derivatives)
+## Date(10/8/2018)
+## Author(Stephen Flood)
+## Level(3)
+## KEYWORDS('sample')
 
 
 
@@ -60,6 +55,9 @@ $xone  = random(300 ,500,25);
 $yone  = random(1000,2000,500);
 $rate   = non_zero_random(-20,20,10);
 
+$DeltaX = random(100,500,50);
+$xtwo = $xone + $DeltaX;
+
 $a = random(3 , 15,1);
 $b = random(-10,10,5);
 $m = non_zero_random(-10,10,5);
@@ -87,17 +85,17 @@ $tf -> qa (
 "True",
 "When you are selling around \($xone\) units, selling more units will change  the total profit by  \($yone\) dollars for each additional unit.",
 "False",
-"When \(P'(x)\) is positive, selling more units will increase the total profit",
+"If \(P'($xtwo)\) is positive, and if you are currently selling $xtwo units, you can know for sure that selling more units will increase the total profit",
 "True",
-"When \(P(x)\) is positive, selling more units will increase the total profit",
+"If \(P($xtwo)\) is positive, and if you are currently selling $xtwo units, you can know for sure that selling more units will increase the total profit",
 "False",
-"When \(P'(x)\) is negative, selling more units will decrease the total profit",
+"If \(P'($xtwo)\) is negative, and if you are currently selling $xtwo units, you can know for sure that selling more units will decrease the total profit",
 "True",
-"When \(P'(x)\) is negative, selling more units will increase the total profit",
+"If \(P'($xtwo)\) is negative, and if you are currently selling $xtwo units, you can know for sure that selling more units will increase the total profit",
 "False",
-"When \(P(x)=0\), selling more units will not change the total profit",
-"False",
-"When \(P'(x)=0\), selling more units will not change the total profit",
+#"If \(P($xtwo)=0\), and if you are currently selling $xtwo units, you can know for sure that selling more units will not change the total profit",
+#"False",
+"If \(P'($xtwo)=0\), and if you are currently selling $xtwo units, you can know for sure that selling more units will not change the total profit",
 "True",
 );
 

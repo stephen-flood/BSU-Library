@@ -1,8 +1,8 @@
 assignmentType      = gateway
-openDate          = 09/01/2021 at 11:59pm EDT
-reducedScoringDate = 09/17/2021 at 11:59pm EDT
-dueDate           = 09/17/2021 at 11:59pm EDT
-answerDate        = 12/10/2021 at 09:59pm EST
+openDate          = 11/09/2021 at 11:59pm EST
+reducedScoringDate = 11/12/2021 at 11:59pm EST
+dueDate           = 11/12/2021 at 11:59pm EST
+answerDate        = 11/14/2021 at 11:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
@@ -10,7 +10,7 @@ attemptsPerVersion  = 2
 timeInterval        = 0
 versionsPerInterval = 2
 versionTimeLimit    = 7200
-problemRandOrder    = 1
+problemRandOrder    = 0
 problemsPerPage     = 0
 hideScore           = N
 hideScoreByProblem  = Y
@@ -23,8 +23,8 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/Mizzou/College_Algebra/Real_Numbers/Interval_Notation/Graph_One_Interval_Finite_Endpts.pg
-value = 1
+source_file = CustomProblems/Academic-Honesty-Statement.pg
+value = 2
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -33,8 +33,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/assessment_algebra_laws-of-arithmetic.pg
-value = 1
+source_file = CustomProblems/assessment-derivatives-visually-from-splines.pg
+value = 8
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -43,8 +43,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/Exponent-rules.pg
-value = 1
+source_file = CustomProblems/assessment_derivatives_combined_simple_rules.pg
+value = 12
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -53,8 +53,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = CustomProblems/Library/FortLewis/Algebra/2-3-Expanding-and-factoring/MCH1-2-3-08-Expanding-and-factoring-2.pg
-value = 1
+source_file = CustomProblems/businesscalculus-marginalcost.pg
+value = 18
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -63,8 +63,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = CustomProblems/assessment_algebra_using-graphical-defn.pg
-value = 1
+source_file = Library/Rochester/setDerivatives2Formulas/s2_2_11.pg
+value = 6
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -73,8 +73,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/CollegeOfIdaho/setAlgebra_02_04_PointSlopeFormofLine/24IntAlg_07_LinearFunction.pg
-value = 1
+source_file = Library/Utah/AP_Calculus_I/set8_Exponentials_and_Logarithms/1220s2p3.pg
+value = 6
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -83,8 +83,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = CustomProblems/assessment_algebra_numericfractions.pg
-value = 1
+source_file = CustomProblems/business-calc-derivative-meaning-profit.pg
+value = 6
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -93,8 +93,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = CustomProblems/assessment_algebra_adding-rational-expressions.pg
-value = 1
+source_file = CustomProblems/assessment_businesscalc_derivatives-marginal-price-revenue-cost-profit.pg
+value = 18
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -103,8 +103,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = CustomProblems/assessment_algebra_identifying-inverses.pg
-value = 1
+source_file = Library/ASU-topics/setDerivativeFunction/3-3-36.pg
+value = 6
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -113,8 +113,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = CustomProblems/assessment_algebra_simplify-with-monomial-denominator.pg
-value = 1
+source_file = Library/Union/setDervBasic/s2_2_22.pg
+value = 6
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -123,8 +123,18 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = CustomProblems/assessment_algebra_factorquadratic.pg
-value = 2
+source_file = CustomProblems/Library/Union/setDervBasic/3-4-45.pg
+value = 6
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/ASU-topics/setProductQuotientRule/3-5-35.pg
+value = 6
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1

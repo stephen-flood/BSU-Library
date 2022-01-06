@@ -1,8 +1,8 @@
 assignmentType      = default
-openDate          = 02/03/2021 at 11:59pm EST
-reducedScoringDate = 02/10/2021 at 11:59pm EST
-dueDate           = 02/12/2021 at 11:59pm EST
-answerDate        = 02/14/2021 at 11:59pm EST
+openDate          = 09/08/2021 at 11:59pm EDT
+reducedScoringDate = 09/15/2021 at 11:59pm EDT
+dueDate           = 09/17/2021 at 11:59pm EDT
+answerDate        = 09/19/2021 at 11:59pm EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
@@ -13,8 +13,8 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/assessment_businesscalc_price-revenue-cost-profit.pg
-value = 1
+source_file = math132-hw02-about_this_set.pg
+value = 0
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph30.pg
+source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap5Review/Q30.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/FortLewis/Algebra/5-4-Equations-for-lines/MCH1-5-4-16-Equations-for-lines.pg
+source_file = Library/LoyolaChicago/Precalc/Chap1Sec1/Q19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/NAU/setLines/supplydemand1.pg
+source_file = CustomProblems/Library/CollegeOfIdaho/setAlgebra_03_02_ProblemSolvingBusinessApp/32IntAlg_15_Functions_Review.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,16 +53,6 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/ASU-topics/setLinesInPlane/srw1_10_13.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 6
 source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-18-Input-and-output.pg
 value = 1
 max_attempts = -1
@@ -72,8 +62,28 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
+problem_id = 6
+source_file = CustomProblems/Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph30.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/ASU-topics/setLinesInPlane/lines2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
 problem_id = 8
-source_file = CustomProblems/Library/Utah/Business_Algebra/set7_Matrices/p09.pg
+source_file = Library/FortLewis/Algebra/5-4-Equations-for-lines/MCH1-5-4-14-Equations-for-lines.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/UMN/algebraKaufmannSchwitters/ks_8_1_prob01.pg
+source_file = local/Library/NAU/setLines/supplydemand1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = CustomProblems/simplifiedDifferenceQuotient.pg
+source_file = Library/FortLewis/Algebra/5-4-Equations-for-lines/MCH1-5-4-16-Equations-for-lines.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = CustomProblems/Library/Mizzou/Algebra/linear_functions_apps/linear_sales_game_system_01.pg
+source_file = local/Library/Mizzou/Algebra/linear_functions_apps/linear_sales_game_system_01-noappliedomain.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = CustomProblems/businesscalc_solvingequations_solveforquantity.pg
+source_file = businesscalc-graphs_of_totals_and_changes.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = CustomProblems/businesscalc_solvingequations_solveforprice.pg
+source_file = businesscalc-graphs_of_totals_and_changes_basic-interpretation.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/ASU-topics/setGraphFunctions/jj1.pg
+source_file = CustomProblems/Library/FortLewis/Algebra/9-4-Factoring-quadratics/MCH1-9-4-20-Factoring-quadratics.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,26 +153,6 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = CustomProblems/simplifiedDifferenceQuotient-v2.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 16
-source_file = Library/Mizzou/College_Algebra/Factoring_x2_bx_c/Factoring11.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 17
 source_file = Library/Mizzou/College_Algebra/Factoring_x2_bx_c/Factoring12.pg
 value = 1
 max_attempts = -1
@@ -172,8 +162,28 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
+problem_id = 16
+source_file = CustomProblems/assessment_businesscalc_price-revenue-cost-profit.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = CustomProblems/Library/maCalcDB/setAlgebra15Functions/jay5.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
 problem_id = 18
-source_file = Library/Rochester/setAlgebra28ExpFunctions/srw4_1_1.pg
+source_file = Library/ASU-topics/setInequalities/zhu28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/Rochester/setAlgebra28ExpFunctions/srw4_1_3.pg
+source_file = CustomProblems/Library/Utah/Business_Algebra/set7_Matrices/p09.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +203,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = Library/Utah/Business_Algebra/set8_Exponential_and_Logarithmic_Functions/p01/p01.pg
+source_file = Library/ASU-topics/setGraphFunctions/jj1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = BSU-Problems/Exponent-rules.pg
+source_file = Library/Mizzou/College_Algebra/Factoring_x2_bx_c/Factoring11.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -213,57 +223,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 22
-source_file = BSU-Problems/Exponent-rules-neg-exponent.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 23
-source_file = BSU-Problems/Exponent-rules-neg-exponent2.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 24
-source_file = Library/Utah/Intermediate_Algebra/set14_Review/s14p1.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 25
-source_file = Library/Mizzou/Algebra/exponents_rational/conv_exp_to_rad_one_term_01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 26
-source_file = Library/Mizzou/Algebra/exponents_rational/conv_exp_to_exp_two_term_mult_01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 27
-source_file = Library/UMN/algebraKaufmannSchwitters/ks_5_1_30.pg
+source_file = Library/UMN/algebraKaufmannSchwitters/ks_6_4_42.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

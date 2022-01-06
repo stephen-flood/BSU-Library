@@ -1,0 +1,244 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+
+## DBsubject(Algebra)
+## DBchapter(Functions)
+## DBsection(Interpretation and applications)
+## Date(8/31/2021)
+## Author(Stephen Flood)
+## Level(3)
+## KEYWORDS('sample')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "niceTables.pl",
+    "PGtikz.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false    questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(y => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+# Randomization
+$a = non_zero_random(-6,6);  # horizonatal translation
+$b = random(-4,4);           # vertical translation
+
+## To use TikZ to graph a function defined by a Compute object, use the following:
+#$f = Compute("(x-$a)^2 + $b")->reduce();
+#$ftikz = $f->string;
+#$ftikz=~ s/x/\\x/g ;   #this comment fixes a highlighting bug //
+
+$Dx = 1;
+$x1 = 1;
+$x2 = $x1 + $Dx;
+$x3 = $x2 + $Dx;
+$x4 = $x3 + $Dx;
+$x5 = $x4 + $Dx;
+$xmin = $x1; 
+$xmax = $x5; 
+$xfirststep = $xmin + $Dx; #used to typeset tick marks
+$xgraphshift = Compute("$xmax + .75*($xmax-$xmin)");  #used to shift the graph of the change right
+
+do{
+    $Dy = 0.5;
+    @Dyarray;
+    $Dyarray[0] = 0; # Assert this to make errors go away
+    $Dyarray[1] = 0; # Assert this to make errors go away
+    $Dyarray[2] = random(-1,1,$Dy); 
+    $Dyarray[3] = random(-1,1,$Dy); 
+    $Dyarray[4] = random(-1,1,$Dy); 
+    $Dyarray[5] = random(-1,1,$Dy);
+    ## hack to make $dymin identification work below :(
+    $Dyarray[0] = $Dyarray[2];
+    $Dyarray[1] = $Dyarray[2];
+    ##
+    $Dy1 = Compute("DNE");
+    $Dy2 = Compute("$Dyarray[2]");
+    $Dy3 = Compute("$Dyarray[3]");
+    $Dy4 = Compute("$Dyarray[4]");
+    $Dy5 = Compute("$Dyarray[5]");
+    ## Use built in Perl functions to identify max and min elements of an array
+    $dymax = max(@Dyarray);
+    $dymin = min(@Dyarray);
+    $dyfirststep = $dymin+$Dy;
+
+    $y1 = random(-1,2,0.5); 
+    $y1 = Compute("$y1");
+    $y2 = Compute("$y1 + $Dy2");
+    $y3 = Compute("$y2 + $Dy3");
+    $y4 = Compute("$y3 + $Dy4");
+    $y5 = Compute("$y4 + $Dy5");
+    @yarray = ($y1, $y2, $y3, $y4, $y5);
+    $ymax = max(@yarray);
+    $ymin = min(@yarray);
+    $yfirststep = $ymin+$Dy;
+  # basic rerandomize if everything is too uniform
+} while (    
+    ($ymin == $ymax)   
+    || ($dymin == $dymax)
+    || ($dymin == $ymin && $dymax == $ymax)  );
+    
+## Find x values of all maximum values of y
+$xofmax = "";
+for my $iminusone (0,1,2,3,4){
+	if ($yarray[$iminusone] == $ymax ){
+        if ($xofmax == "") { $xofmax = $iminusone+1; }
+        else { $xofmax = "$xofmax , $iminusone+1"; }
+    }
+}
+$xofmax = List( $xofmax );
+
+## Find x values of all maximum values of y
+$xofmin = "";
+for my $iminusone (0,1,2,3,4){
+	if ($yarray[$iminusone] == $ymin ){
+        if ($xofmin == "") { $xofmin = $iminusone+1; }
+        else { $xofmin = "$xofmin,$iminusone+1"; }
+    }
+}
+$xofmin = List( $xofmin );
+
+## Find x values of all maximum values of Dy
+$xofmaxD = "";
+for my $i (2,3,4,5){
+	if ($Dyarray[$i] == $dymax ){
+        if ($xofmaxD == "") { $xofmaxD = "$i"; }
+        else { $xofmaxD = "$xofmaxD,$i"; }
+    }
+}
+$xofmaxD = List( $xofmaxD );
+## Find x values of all minimum values of Dy
+$xofminD = "";
+for my $i (2,3,4,5){
+	if ($Dyarray[$i] == $dymin ){
+        if ($xofminD == "") { $xofminD = "$i"; }
+        else { $xofminD = "$xofminD,$i"; }
+    }
+}
+$xofminD = List( $xofminD );
+
+
+
+## Define macro to typeset histogram
+sub tikzhistogram {
+    my($x, $y) = @_;
+    return "\draw[fill=blue,opacity=0.3] ({$x+$Dx*0.45},$y) rectangle ({$x-$Dx*0.45},0); \draw[draw,thick] ({$x+$Dx*0.45},$y) rectangle ({$x-$Dx*0.45},0); \node[draw,fill=blue, circle,inner sep=2pt] at ($x,$y) {};" ;
+}
+
+$totalhistogram1 = tikzhistogram($x1,$y1);
+$totalhistogram2 = tikzhistogram($x2,$y2);
+$totalhistogram3 = tikzhistogram($x3,$y3);
+$totalhistogram4 = tikzhistogram($x4,$y4);
+$totalhistogram5 = tikzhistogram($x5,$y5);
+
+$changehistogram2 = tikzhistogram($x2+$xgraphshift,$Dy2);
+$changehistogram3 = tikzhistogram($x3+$xgraphshift,$Dy3);
+$changehistogram4 = tikzhistogram($x4+$xgraphshift,$Dy4);
+$changehistogram5 = tikzhistogram($x5+$xgraphshift,$Dy5);
+
+## Variables for adjusting the scale of the x and y axes
+## Use if graph is too tall, wide, or otherwise hard to read
+## due to "interesting" y values, or Dx of greater than 2.
+$xscale=Compute("1/($Dx)");
+$yscale=1;
+
+$graph_of_total = createTikZImage();
+$graph_of_total->tikzOptions("xscale=$xscale,yscale=$yscale");
+$graph_of_total->tikzLibraries("arrows.meta");
+$graph_of_total->BEGIN_TIKZ
+%\draw[latex-latex,thick] ({$xmin-1.5*$Dx},0) -- ({$xmax+1*$Dx},0) node[right]{\(x\)};
+\draw[latex-latex,thick] ({0-1*$Dx},0) -- ({$xmax+1*$Dx},0) node[right]{\(x\)};
+\draw[latex-latex,thick] (0,{$ymin-1}) -- (0,{$ymax+1}) node[above]{\(y\)};
+\foreach \x in {$xmin,$xfirststep,...,$xmax} \draw[thin] (\x,0.15) -- (\x,-0.15) node[below]{\(\x\)};
+\foreach \y in {$ymin,$yfirststep,...,$ymax} \draw[thin] (0.15*$Dx,\y) -- (-0.15*$Dx,\y) node[left]{\(\y\)};
+% Graph the totals
+{$totalhistogram1}
+{$totalhistogram2}
+{$totalhistogram3}
+{$totalhistogram4}
+{$totalhistogram5}
+%\draw[latex-latex,thick] ({$xmin-1.5*$Dx+$xgraphshift},0) -- ({$xmax+1*$Dx+$xgraphshift},0) node[right]{\(x\)};
+\draw[latex-latex,thick] ({0-1*$Dx+$xgraphshift},0) -- ({$xmax+1*$Dx+$xgraphshift},0) node[right]{\(x\)};
+\draw[latex-latex,thick] ({0+$xgraphshift},{$dymin-1}) -- ({0+$xgraphshift},{$dymax+1}) node[above]{\(\Delta y\)};
+\foreach \x in {$xmin,$xfirststep,...,$xmax} \draw[thin] ({\x+$xgraphshift},{0.15}) -- ({\x+$xgraphshift},{-0.15}) node[below]{\(\x\)};
+\foreach \y in {$dymin,$dyfirststep,...,$dymax} \draw[thin] ({0.15*$Dx+$xgraphshift},\y) -- ({-0.15*$Dx+$xgraphshift},\y) node[left]{\(\y\)};
+% Graph the totals
+{$changehistogram2}
+{$changehistogram3}
+{$changehistogram4}
+{$changehistogram5}
+END_TIKZ
+
+### TO USE WITH PGML: 
+## [@ image($graph_of_total, width => 900, height =>300, tex_size => 1000) @]*
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+The graphs below display a graph of a total  function 
+[`y`] on the left, and a graph of the corresponding change [`\Delta y
+`] on the right.
+[@ image($graph_of_total, width => 900, height =>300, tex_size => 1000) @]*
+
+1. What is the change in the value of [`y`] change between [`x=[$x2]`] and [`x=[$x3]`]?  [_________________]{"$Dy3"}
+
+2. What is the change in the value of [`y`] change between [`x=[$x2]`] and [`x=[$x4]`]?  [_________________]{"$Dy3+$Dy4"}
+
+3. What is the change in the value of [`y`] change between [`x=[$x1]`] and [`x=[$x5]`]?  [_________________]{"$Dy2+$Dy3+$Dy4+$Dy5"}
+
+4. For what [`x`] is the value of [`y`] the largest?  If there is more than one value, enter your answer as a comma separated list. [`x=`][_________________]{"$xofmax"}
+
+5. For what [`x`] is the value of [`y`] the smallest?  If there is more than one value, enter your answer as a comma separated list. [`x=`][_________________]{"$xofmin"}
+
+6. For what [`x`] is the value of [`\Delta y`] the largest?  If there is more than one value, enter your answer as a comma separated list. [`x=`][_________________]{"$xofmaxD"}
+
+7. For what [`x`] is the value of [`\Delta y`] the smallest?  If there is more than one value, enter your answer as a comma separated list. [`x=`][_________________]{"$xofminD"}
+
+
+END_PGML
+
+
+
+ENDDOCUMENT();

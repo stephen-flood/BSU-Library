@@ -1,21 +1,11 @@
-assignmentType      = gateway
-openDate          = 05/27/2022 at 11:59pm EST
-reducedScoringDate = 05/27/2022 at 11:59pm EST
-dueDate           = 05/27/2022 at 11:59pm EST
-answerDate        = 05/27/2022 at 11:59pm EST
+assignmentType      = default
+openDate          = 12/30/2022 at 10:59pm EST
+reducedScoringDate = 12/30/2022 at 10:59pm EST
+dueDate           = 12/30/2022 at 10:59pm EST
+answerDate        = 12/30/2022 at 10:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
-attemptsPerVersion  = 1
-timeInterval        = 0
-versionsPerInterval = 1
-versionTimeLimit    = 5400
-problemRandOrder    = 1
-problemsPerPage     = 0
-hideScore           = N
-hideScoreByProblem  = Y
-hideWork            = BeforeAnswerDate
-capTimeLimit        = 0
 description       = 
 restrictProbProgression = 0
 emailInstructor   = 0
@@ -174,6 +164,26 @@ problem_end
 problem_start
 problem_id = 16
 source_file = CustomProblems/assessment-business-calculus-avg_rates_and_slopes.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = businesscalc-graphs_of_totals_and_changes.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = businesscalc-graphs_of_totals_and_changes_basic-interpretation.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

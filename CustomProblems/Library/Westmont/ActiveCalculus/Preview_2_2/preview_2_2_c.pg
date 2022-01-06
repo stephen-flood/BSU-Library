@@ -65,12 +65,12 @@ width=>200,height=>200,tex_size=>800 ) \}
 $BR
 $ECENTER
 $PAR
-Use the difference quotient, with \(h=0.01\), to estimate
+Use the difference quotient \(\dfrac{g(0+h)-g(0)}{h}\), with \(h=0.01\), to estimate
 the slope of  \(g\) at \(0\). 
 $BR
 The slope of  \(g\) at \(0 \approx \) \{ ans_rule(10) \} $PAR
 
-Use the difference quotient, with \(h=0.001\), to estimate
+Use the difference quotient \(\dfrac{g(0+h)-g(0)}{h}\), with \(h=0.001\), to estimate
 the slope of  \(g\) at \(0\).
 $BR
 The slope of  \(g\) at \(0 \approx \) \{ ans_rule(10) \} $PAR

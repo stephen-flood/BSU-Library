@@ -1,21 +1,11 @@
-assignmentType      = gateway
-openDate          = 05/27/2022 at 11:59pm EST
-reducedScoringDate = 05/27/2022 at 11:59pm EST
-dueDate           = 05/27/2022 at 11:59pm EST
-answerDate        = 05/27/2022 at 11:59pm EST
+assignmentType      = default
+openDate          = 12/30/2022 at 10:59pm EST
+reducedScoringDate = 12/30/2022 at 10:59pm EST
+dueDate           = 12/30/2022 at 10:59pm EST
+answerDate        = 12/30/2022 at 10:59pm EST
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
-attemptsPerVersion  = 1
-timeInterval        = 0
-versionsPerInterval = 1
-versionTimeLimit    = 5400
-problemRandOrder    = 0
-problemsPerPage     = 0
-hideScore           = N
-hideScoreByProblem  = Y
-hideWork            = BeforeAnswerDate
-capTimeLimit        = 0
 description       = 
 restrictProbProgression = 0
 emailInstructor   = 0
@@ -139,7 +129,7 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
 problem_end
 problem_start
 problem_id = 13
@@ -149,6 +139,46 @@ max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
 counts_parent_grade = 0
-att_to_open_children = 1 
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/Michigan/Chap3Sec6/Q01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Library/Rochester/setDerivatives5ChainRule/s2_5_3.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = Library/Union/setDervChainRule/an4_4_20.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Library/ASU-topics/setDerivativeFunction/3-3-36.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
 problem_end
 

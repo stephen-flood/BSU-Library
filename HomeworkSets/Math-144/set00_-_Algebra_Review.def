@@ -1,11 +1,11 @@
 assignmentType      = default
-openDate          = 01/27/2021 at 11:59pm EST
-reducedScoringDate = 01/30/2021 at 11:59pm EST
-dueDate           = 01/30/2021 at 11:59pm EST
-answerDate        = 02/01/2021 at 11:59pm EST
+openDate          = 09/01/2021 at 11:59pm EDT
+reducedScoringDate = 09/04/2021 at 11:59pm EDT
+dueDate           = 09/04/2021 at 11:59pm EDT
+answerDate        = 09/06/2021 at 11:59pm EDT
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
-screenHeaderFile  = defaultHeader 
+screenHeaderFile  = defaultHeader
 description       = 
 restrictProbProgression = 0
 emailInstructor   = 0
