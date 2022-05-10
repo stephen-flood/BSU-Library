@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 09/19/2018 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 09/25/2018 at 11:59pm EDT
-answerDate        = 09/26/2018 at 11:59pm EDT
-enableReducedScoring = N
+openDate          = 09/16/2019 at 11:59pm EDT
+reducedScoringDate = 09/20/2019 at 11:59pm EDT
+dueDate           = 09/23/2019 at 11:59pm EDT
+answerDate        = 09/25/2019 at 11:59pm EDT
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -43,16 +43,6 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = CustomProblems/Library/CollegeOfIdaho/setStatistics_Ch10Probability/10Stats_12_Probability.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 5
 source_file = Library/ASU-topics/setStat/kolossa25.pg
 value = 1
 max_attempts = -1
@@ -62,7 +52,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 6
+problem_id = 5
 source_file = Library/ASU-topics/setStat/kolossa24.pg
 value = 1
 max_attempts = -1
@@ -72,8 +62,18 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
+problem_id = 6
+source_file = Library/Rochester/setAlgebra39Probability/sw10_3_7.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
 problem_id = 7
-source_file = Library/maCalcDB/setAlgebra39Probability/sw10_3_5.pg
+source_file = CustomProblems/Library/CollegeOfIdaho/setStatistics_Ch10Probability/10Stats_12_Probability.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/maCalcDB/setAlgebra39Probability/prob_num.pg
+source_file = Library/maCalcDB/setAlgebra39Probability/sw10_3_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,16 +113,6 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/Rochester/setAlgebra39Probability/sw10_3_7.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 12
 source_file = CustomProblems/Library/Rochester/setProbability3Events/ur_pb_3_6a.pg
 value = 1
 max_attempts = -1
@@ -132,7 +122,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 13
+problem_id = 12
 source_file = Library/NewHampshire/NECAP/grade5/gr5-2007/n5-2007-14s.pg
 value = 1
 max_attempts = -1
@@ -142,7 +132,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 14
+problem_id = 13
 source_file = Library/Rochester/setProbability3Events/p10.pg
 value = 1
 max_attempts = -1
@@ -152,7 +142,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 15
+problem_id = 14
 source_file = Library/UMN/algebraKaufmannSchwitters/ks_15_4_34.pg
 value = 1
 max_attempts = -1
@@ -162,7 +152,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 16
+problem_id = 15
 source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-19.pg
 value = 1
 max_attempts = -1
@@ -172,7 +162,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 17
+problem_id = 16
 source_file = Library/ASU-topics/setStat/kolossa27.pg
 value = 1
 max_attempts = -1
@@ -182,7 +172,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 18
+problem_id = 17
 source_file = CustomProblems/watch_or_bracelet.pg
 value = 1
 max_attempts = -1
@@ -192,7 +182,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 19
+problem_id = 18
 source_file = Library/UVA-Stat/setStat212-Homework03/stat212-HW03-18.pg
 value = 1
 max_attempts = -1
@@ -202,7 +192,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 20
+problem_id = 19
 source_file = Library/ASU-topics/setStat/dueck5_3_6.pg
 value = 1
 max_attempts = -1
@@ -212,7 +202,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 21
+problem_id = 20
 source_file = CustomProblems/union_rule.pg
 value = 1
 max_attempts = -1
@@ -222,7 +212,7 @@ counts_parent_grade = 0
 att_to_open_children = 0 
 problem_end
 problem_start
-problem_id = 22
+problem_id = 21
 source_file = CustomProblems/intersection_bounds.pg
 value = 1
 max_attempts = -1

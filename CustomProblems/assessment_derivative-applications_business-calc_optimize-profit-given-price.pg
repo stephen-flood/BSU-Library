@@ -57,12 +57,12 @@ Context("Numeric");
 
 
 $a   = random(3,5,1);
-$n   = random(3,11,2);
+$n   = random(1,1,2);
 $b   = random(100,900,100);
 $variablecost = random(10,50,5);
 $fixedcost = 0;
 $priceofzero = Compute("$b+$variablecost");
-$price = Compute("-$a*x + $priceofzero");
+$price = Compute("-$a*x^($n) + $priceofzero")->reduce();
 
 ## For this price function: find when marginal profit is zero
 $xmaximized = Compute(" ($b/($a*($n+1)))^(1/$n) ")->with(

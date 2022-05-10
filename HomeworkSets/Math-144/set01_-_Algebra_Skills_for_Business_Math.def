@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = math132-hw01-about_this_set.pg
+source_file = CustomProblems/math132-hw01-about_this_set.pg
 value = 0
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = BSU-Problems/Exponent-rules-neg-exponent.pg
+source_file = CustomProblems/Exponent-rules-neg-exponent.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

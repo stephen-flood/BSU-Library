@@ -1,0 +1,99 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('9/5/2019')
+## Author('Stephen Flood')
+## Institution('Bridgewater State University')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+"draggableProof.pl",
+        "PGcourse.pl",       
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+Context()->texStrings;
+
+$CorrectProof = DraggableProof([
+"Suppose that \(x\in A\cap B\)",
+"Therefore \(x\in A\) and \(x \in B\)",
+"Therefore \(x\in A\)",
+],
+
+[
+"Suppose that \(x\in A \)",
+"Therefore \(x\in A\) or \(x \in B\)",
+"Therefore \(x\in A\cap B\)",
+"Therefore \(x\in B\)",
+],
+
+SourceLabel => "Choose from these statements:",
+TargetLabel =>  "Place your proof here:",
+);
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_TEXT
+
+Order \{ $CorrectProof->numNeeded \} of the following sentences 
+to give a proof that 
+\[ (A\cap B) \subseteq A \].
+
+$PAR
+\{ $CorrectProof->Print \}
+
+END_TEXT
+
+Context()->normalStrings;
+
+# Answer Evaluation
+ANS($CorrectProof->cmp);
+
+ENDDOCUMENT();

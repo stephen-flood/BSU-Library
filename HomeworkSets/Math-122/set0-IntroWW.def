@@ -1,21 +1,11 @@
-assignmentType      = gateway
-openDate          = 02/14/2021 at 11:59pm EST
-reducedScoringDate = 02/19/2021 at 11:59pm EST
-dueDate           = 02/20/2021 at 11:59pm EST
-answerDate        = 02/22/2021 at 11:59pm EST
+assignmentType      = default
+openDate          = 09/01/2021 at 06:00am EDT
+reducedScoringDate = 09/10/2021 at 11:59pm EDT
+dueDate           = 09/17/2021 at 11:59pm EDT
+answerDate        = 12/31/2021 at 11:59pm EST
 enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
-screenHeaderFile  = 
-attemptsPerVersion  = 2
-timeInterval        = 0
-versionsPerInterval = 2
-versionTimeLimit    = 2400
-problemRandOrder    = 0
-problemsPerPage     = 0
-hideScore           = N
-hideScoreByProblem  = Y
-hideWork            = BeforeAnswerDate
-capTimeLimit        = 0
+screenHeaderFile  = defaultHeader
 description       = 
 restrictProbProgression = 0
 emailInstructor   = 0
@@ -23,8 +13,8 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Academic-Honesty-Statement.pg
-value = 5
+source_file = Library/Utah/Intermediate_Algebra/set1_WebWork_Demo/s1p1.pg
+value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -33,8 +23,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/assessment-business-calculus-cost-table.pg
-value = 20
+source_file = Library/Utah/Intermediate_Algebra/set1_WebWork_Demo/s1p8.pg
+value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -43,8 +33,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = CustomProblems/assessment_businesscalc_price-revenue-cost-profit.pg
-value = 20
+source_file = Library/Utah/Intermediate_Algebra/set1_WebWork_Demo/s1p9.pg
+value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -53,8 +43,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = CustomProblems/assessment_businesscalc_price-from-data.pg
-value = 25
+source_file = Library/Utah/Intermediate_Algebra/set1_WebWork_Demo/s1p16.pg
+value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -63,8 +53,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = CustomProblems/assessment_algebra_using-graphical-defn.pg
-value = 15
+source_file = Library/Utah/Intermediate_Algebra/set1_WebWork_Demo/s1p17.pg
+value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -73,8 +63,8 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = CustomProblems/assessment_simplifiedDifferenceQuotient.pg
-value = 15
+source_file = Library/Utah/Intermediate_Algebra/set1_WebWork_Demo/s1p24.pg
+value = 1
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1

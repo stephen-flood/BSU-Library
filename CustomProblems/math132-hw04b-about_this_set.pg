@@ -1,0 +1,95 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('')
+## DBchapter('')
+## DBsection('')
+## Date('7/02/2021')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	"parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+## Link to a URL, and display the URL name in the text
+# [@ htmlLink( protect_underbar("URL"), protect_underbar("URL"), "TARGET='_blank'"); @]*
+
+## Link to a URL, and display DISPLAYTEXT 
+# [@ htmlLink( protect_underbar("URL"), "DISPLAYTEXT", "TARGET='_blank'"); @]*
+
+## Example of use 
+# [@ htmlLink( protect_underbar("http://webwork.maa.org/wiki/Available_Functions"), protect_underbar("http://webwork.maa.org/wiki/Available_Functions") , "TARGET='_blank'"); @]*
+
+$agree = PopUp(["I am ready to begin, and will ask questions if I run into any problems."], "I am ready to begin, and will ask questions if I run into any problems.");
+
+
+BEGIN_PGML
+
+Some content and examples relevant to this assignment can be found at the following sections in the OER (free) ebook by Calaway, Hoffman, and Lippman: 
+
+- 2.1 - [@ htmlLink( protect_underbar( "http://www.opentextbookstore.com/buscalc/buscalc/chapter2/section2-1.php#main-nav"),"Average Rates of Change", "TARGET='_blank'"); @]*  
+
+
+Your class notes should also have a variety of examples and explanations that are relevant to the questions in this assignment. 
+For more specific questions or issues, talk to your instructor, attend office hours, or visit the [@ htmlLink( protect_underbar("https://studentbridgew.sharepoint.com/sites/LearningAssistance/SitePages/Math-Services.aspx"), "Academic Achievement Center", "TARGET='_blank'"); @]*  for free tutoring and study groups. 
+
+If you get stuck, look for similar examples in your notes and/or the course textbook.  You can also get one-on-one assistance by going to office hours, asking questions after class, and visting Math Services in the library.  
+
+[_]{$agree}
+
+
+END_PGML
+
+
+ENDDOCUMENT();

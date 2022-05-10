@@ -23,7 +23,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = local/Academic-Honesty-Statement-graphingcalc.pg
+source_file = CustomProblems/Academic-Honesty-Statement-graphingcalc.pg
 value = 3
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = local/CustomProblems/assessment_derivative-applications_business-calc_optimize-profit-given-price.pg
+source_file = CustomProblems/assessment_derivative-applications_business-calc_optimize-profit-given-price.pg
 value = 20
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = assessment-derivative-secondderivative-simpleproduct.pg
+source_file = CustomProblems/assessment-derivative-secondderivative-simpleproduct.pg
 value = 6
 max_attempts = -1
 showMeAnother = -1

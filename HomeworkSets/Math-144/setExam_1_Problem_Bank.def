@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = CustomProblems/Academic-Honesty-Statement.pg
+source_file = CustomProblems/Academic-Honesty-Statement-graphingcalc.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = businesscalc-graphs_of_totals_and_changes.pg
+source_file = CustomProblems/businesscalc-graphs_of_totals_and_changes.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = businesscalc-graphs_of_totals_and_changes_basic-interpretation.pg
+source_file = CustomProblems/businesscalc-graphs_of_totals_and_changes_basic-interpretation.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

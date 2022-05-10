@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 10/15/2018 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 10/31/2018 at 11:59pm EDT
-answerDate        = 10/31/2018 at 11:59pm EDT
-enableReducedScoring = N
+openDate          = 10/14/2019 at 11:59pm EDT
+reducedScoringDate = 10/25/2019 at 11:59pm EDT
+dueDate           = 10/28/2019 at 11:59pm EDT
+answerDate        = 10/30/2019 at 11:59pm EDT
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -94,16 +94,6 @@ problem_end
 problem_start
 problem_id = 9
 source_file = Library/Mizzou/Finite_Math/Circuit/Circuit.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 10
-source_file = CustomProblems/Library/UMN/algebraKaufmannSchwitters/ks_15_6_prob02.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

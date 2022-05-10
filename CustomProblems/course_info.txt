@@ -5,7 +5,7 @@ Welcome to WebWork at BSU!
 <p> 
 <b>How To Use Webwork:</b> 
 Visit 
-<a href="http://webwork.bridgew.edu">http://webwork.bridgew.edu</a>
+<a href="https://webwork.bridgew.edu">https://webwork.bridgew.edu</a>
 for 
 <ul>
 	<li> How to input Mathematics 

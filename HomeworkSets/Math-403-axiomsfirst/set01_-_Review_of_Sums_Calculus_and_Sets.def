@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 09/05/2018 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 09/14/2018 at 11:59pm EDT
-answerDate        = 09/19/2018 at 11:59pm EDT
-enableReducedScoring = N
+openDate          = 09/04/2019 at 11:59pm EDT
+reducedScoringDate = 09/10/2019 at 11:59pm EDT
+dueDate           = 09/12/2019 at 11:59pm EDT
+answerDate        = 09/13/2019 at 11:59pm EDT
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/NewHampshire/NECAP/grade4/gr4-2009/n4-2009-10s.pg
+source_file = Library/Hope/Calc1/05-02-Sigma-notation/sigma-notation-01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = CustomProblems/Library/NewHampshire/NECAP/grade6/gr6-2005/n6-2005-15s.pg
+source_file = Library/Valdosta/APEX_Calculus/5.3/APEX_5.3_8-10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/ASU-topics/setStat/kolossa24.pg
+source_file = CustomProblems/geom_sum_arbitrary_endpts.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/SDSU/Discrete/Sets/unionB2.pg
+source_file = Library/ASU-topics/setSequenceandSeries/faris1a.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = CustomProblems/Library/NAU/setSet/Sets_4.pg
+source_file = Library/Utah/Calculus_II/set7_Infinite_Series/set7_pr16.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/UBC/STAT/STAT302/HW02/HW02-05.pg
+source_file = Library/Rochester/setSeries4Geometric/ur_sr_4_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/UBC/STAT/STAT302/HW02/HW02-04.pg
+source_file = CustomProblems/geometric_series_linear_ratio_easy.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Library/ASU-topics/setSets/ur_st_1_2.pg
+source_file = Library/Dartmouth/setStewartCh12S2/problem_11.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Library/NAU/setSet/Sets_2.pg
+source_file = Library/UMN/calculusStewartCCC/s_11_2_41.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/SDSU/Discrete/Sets/subsetB1.pg
+source_file = Library/Rochester/setSeries9Taylor/e8_7_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = CustomProblems/Library/SDSU/Discrete/Sets/differenceB2.pg
+source_file = Library/ASU-topics/setDerivativeBasicFunctions/3-4-37.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/UBC/STAT/STAT302/HW02/HW02-03.pg
+source_file = Library/Utah/Quantitative_Analysis/set5_Derivatives/pr_1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = CustomProblems/Library/SDSU/Discrete/Sets/VennB7/VennB7.pg
+source_file = Library/UMN/calculusStewartCCC/s_3_2_16.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/SDSU/Discrete/Sets/VennB10/VennB10.pg
+source_file = Library/ASU-topics/setProductQuotientRule/5-2-15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/SDSU/Discrete/Sets/VennB9/VennB9.pg
+source_file = CustomProblems/probability-geometric-maximization-easy.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Library/SDSU/Discrete/Sets/VennB5/VennB5.pg
+source_file = Library/ASU-topics/setCalculusFundamentalTheorem/6-5-28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/SDSU/Discrete/Sets/VennB6/VennB6.pg
+source_file = Library/Union/setIntSubstitution/an6_3_01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = CustomProblems/Library/NAU/setSet/Sets_4.pg
+source_file = Library/Valdosta/APEX_Calculus/6.1/APEX_6.1_79.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/NAU/setSet/Sets_1.pg
+source_file = Library/Union/setIntByParts/sc5_6_01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,7 +203,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = CustomProblems/Library/NAU/setSet/Sets_3.pg
+source_file = Library/Valdosta/APEX_Calculus/6.1/APEX_6.1_25-26.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -213,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = CustomProblems/Library/MontanaState/Sets/1.2B39Sets1.pg
+source_file = Library/UCSB/Stewart5_7_1/Stewart5_7_1_22.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -223,7 +223,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 22
-source_file = Library/NAU/setFoundations/MAT320_0403.pg
+source_file = Library/SDSU/Discrete/Sets/unionB2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -233,7 +233,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 23
-source_file = CustomProblems/Library/ASU-topics/setSets/psets5.pg
+source_file = CustomProblems/Library/NAU/setSet/Sets_4.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -243,7 +243,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 24
-source_file = Library/NUIG/DiscreteMaths/Sets_prob1_OPL.pg
+source_file = Library/ASU-topics/setStat/kolossa24.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -253,7 +253,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 25
-source_file = Library/NUIG/DiscreteMaths/Sets_prob2_OPL.pg
+source_file = Library/UBC/STAT/STAT302/HW02/HW02-05.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -263,7 +263,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 26
-source_file = Library/NAU/setSet/incl_excl1.pg
+source_file = Library/UBC/STAT/STAT302/HW02/HW02-04.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -273,7 +273,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 27
-source_file = CustomProblems/Library/Mizzou/Finite_Math/Set_Theory_Introduction/WordProblem3.pg
+source_file = Library/ASU-topics/setSets/ur_st_1_2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -283,7 +283,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 28
-source_file = CustomProblems/Library/Mizzou/Finite_Math/Set_Theory_Addition_and_Multiplication_Principles/SizeOfUnions3.pg
+source_file = CustomProblems/Library/SDSU/Discrete/Sets/differenceB2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -293,7 +293,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 29
-source_file = CustomProblems/Library/SDSU/Discrete/Sets/inclexclA2.pg
+source_file = Library/SDSU/Discrete/Sets/subsetB1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -303,7 +303,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 30
-source_file = Library/MontanaState/Misc.Logic/1.6A43Logic1.pg
+source_file = Library/UBC/STAT/STAT302/HW02/HW02-03.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -313,7 +313,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 31
-source_file = CustomProblems/induction-sum-1.pg
+source_file = CustomProblems/Library/NAU/setSet/Sets_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -323,7 +323,27 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 32
-source_file = CustomProblems/induction-inequality-2.pg
+source_file = CustomProblems/Library/MontanaState/Sets/1.2B39Sets1.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 33
+source_file = proof-subset-01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 34
+source_file = proof-setbuilder-demorgan-01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

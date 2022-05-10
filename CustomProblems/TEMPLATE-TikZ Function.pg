@@ -1,0 +1,100 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('8/31/2021')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "PGtikz.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false    questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(y => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+$graph_image = createTikZImage();
+$graph_image->tikzLibraries("arrows.meta");
+
+# Randomization
+$a = non_zero_random(-6,6);  # horizonatal translation
+$b = random(-4,4);           # vertical translation
+
+
+$f = Compute("(x-$a)^2 + $b")->reduce();
+$ftikz = $f->string;
+$ftikz=~ s/x/\\x/g ;  #string to fix highlighting bug: //
+$ans = $f->eval(x=>1);
+
+$graph_image->BEGIN_TIKZ
+\draw[<->,thick] (-11,0) -- (11,0) node[above left,outer sep=2pt]{\(x\)};
+\draw[<->,thick] (0,-11) -- (0,11) node[below right,outer sep=2pt]{\(y\)};
+\foreach \x in {-10,-8,...,-2,2,4,...,10} \draw[thin] (\x,5pt) -- (\x,-5pt) node[below]{\(\x\)};
+\foreach \y in {-10,-8,...,-2,2,4,...,10} \draw[thin] (5pt,\y) -- (-5pt,\y) node[left]{\(\y\)};
+\draw[<->,red] plot[domain={-3.2+$a}:{3.2+$a}] (\x,{$ftikz});
+END_TIKZ
+
+
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+Let [`f(x) = [$f] `]. Compute [`f(1) = `]  [__________]{$ans}.
+
+[@ image($graph_image, width => 300, tex_size => 1000) @]*
+
+
+END_PGML
+
+
+ENDDOCUMENT();

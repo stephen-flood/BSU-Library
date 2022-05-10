@@ -1,0 +1,104 @@
+assignmentType      = gateway
+openDate          = 09/13/2021 at 06:00am EDT
+reducedScoringDate = 09/17/2021 at 11:59pm EDT
+dueDate           = 09/24/2021 at 11:59pm EDT
+answerDate        = 12/31/2021 at 11:59pm EST
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = 
+attemptsPerVersion  = 1
+timeInterval        = 0
+versionsPerInterval = 1
+versionTimeLimit    = 7200
+problemRandOrder    = 1
+problemsPerPage     = 1
+hideScore           = N
+hideScoreByProblem  = Y
+hideWork            = N
+capTimeLimit        = 0
+description       = You have one attempt.  You have 120 minutes to complete the quiz.  Do your work on paper, then enter enter your answer carefully into Webwork.  Clicking "Preview" shows you what Webwork thinks your entered answer is.  Does it look like you intended?<n><n>When you are finished, click the blue "Grade Test" button to end your quiz attempt.  Then submit pictures of your work on paper via the Blackboard assignment.
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/PCC/BasicMath/OrderOfOperations_More/orderOfOperations82.pg
+value = 3
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/PCC/BasicAlgebra/OrderOfOperations/orderOfOperations180.pg
+value = 3
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/CollegeOfIdaho/setAlgebra_01_04_SolveLinearEq/14IntAlg_04_SolveLinear.pg
+value = 3
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/PCC/BasicAlgebra/Exponents/negExp155.pg
+value = 3
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/PCC/BasicAlgebra/Exponents/negExp110.pg
+value = 3
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = CustomProblems/Exponent-rules.pg
+value = 3
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/LoyolaChicago/Precalc/Chap3Tools/Connally3-3-Tools-46.pg
+value = 4
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = Library/Mizzou/Algebra/radicals_simplifying/two_rad_mult_03.pg
+value = 3
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

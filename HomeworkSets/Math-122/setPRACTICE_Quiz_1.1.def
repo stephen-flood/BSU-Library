@@ -1,0 +1,54 @@
+assignmentType      = gateway
+openDate          = 09/03/2021 at 06:00am EDT
+reducedScoringDate = 09/10/2021 at 11:59pm EDT
+dueDate           = 09/17/2021 at 11:59pm EDT
+answerDate        = 12/31/2021 at 11:59pm EST
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = 
+attemptsPerVersion  = 1
+timeInterval        = 0
+versionsPerInterval = 0
+versionTimeLimit    = 7200
+problemRandOrder    = 1
+problemsPerPage     = 1
+hideScore           = N
+hideScoreByProblem  = Y
+hideWork            = N
+capTimeLimit        = 0
+description       = THIS IS A PRACTICE QUIZ.  The purpose is to get you comfortable with the format of quizzes.  You have 120 minutes per attempt and unlimited attempts at this PRACTICE quiz.  The quiz is worth 3 points, so it's still worth your time to make sure you can solve everything correctly.<n>Do your work on paper, then enter enter your answer carefully into Webwork.  Clicking "Preview" shows you what Webwork thinks your entered answer is.  Does it look like you intended?<n><n>When you are finished, click the blue "Grade Test" button to end your quiz attempt.
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/PCC/BasicAlgebra/OrderOfOperations/orderOfOperations120.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/PCC/BasicAlgebra/Exponents/ExponentDefinition40.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/PCC/BasicMath/OrderOfOperations_More/orderOfOperations108.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

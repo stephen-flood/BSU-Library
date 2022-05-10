@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 10/29/2018 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/09/2018 at 11:59pm EST
-answerDate        = 11/09/2018 at 11:59pm EST
-enableReducedScoring = N
+openDate          = 10/23/2019 at 11:59pm EDT
+reducedScoringDate = 11/04/2019 at 11:59pm EST
+dueDate           = 11/06/2019 at 11:59pm EST
+answerDate        = 11/06/2019 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -284,6 +284,16 @@ problem_end
 problem_start
 problem_id = 28
 source_file = CustomProblems/squarecolors.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 29
+source_file = CustomProblems/Library/UMN/algebraKaufmannSchwitters/ks_15_6_prob02.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

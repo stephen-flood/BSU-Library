@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 09/05/2018 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 09/13/2018 at 11:59pm EDT
-answerDate        = 09/14/2018 at 11:59pm EDT
-enableReducedScoring = N
+openDate          = 01/19/2022 at 11:59pm EST
+reducedScoringDate = 01/24/2022 at 11:59pm EST
+dueDate           = 01/26/2022 at 11:59pm EST
+answerDate        = 02/02/2022 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -13,8 +13,8 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/Hope/Calc1/05-02-Sigma-notation/sigma-notation-01.pg
-value = 1
+source_file = CustomProblems/math132-hw01-about_this_set.pg
+value = 0
 max_attempts = -1
 showMeAnother = -1
 prPeriod = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Library/Valdosta/APEX_Calculus/5.3/APEX_5.3_8-10.pg
+source_file = CustomProblems/assessment_IntroducingWebWork.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Library/Rochester/setSeries4Geometric/ur_sr_4_1.pg
+source_file = Library/CollegeOfIdaho/setAlgebra_02_01_IntroFunctions/21IntAlg_14_function.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Library/ASU-topics/setSequenceandSeries/faris1a.pg
+source_file = CustomProblems/Library/FortLewis/Algebra/9-4-Factoring-quadratics/MCH1-9-4-20-Factoring-quadratics.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Library/UMN/calculusStewartCCC/s_11_2_41.pg
+source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap5Review/Q30.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/Dartmouth/setStewartCh12S2/problem_11.pg
+source_file = Library/LoyolaChicago/Precalc/Chap1Sec1/Q19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/Utah/Calculus_II/set7_Infinite_Series/set7_pr16.pg
+source_file = Library/ASU-topics/setLinesInPlane/lines2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = CustomProblems/geometric_series_linear_ratio_easy.pg
+source_file = Library/FortLewis/Algebra/5-4-Equations-for-lines/MCH1-5-4-14-Equations-for-lines.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = CustomProblems/geom_sum_arbitrary_endpts.pg
+source_file = Library/Mizzou/Algebra/exponents_rational/conv_exp_to_exp_two_term_mult_01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Library/Rochester/setSeries9Taylor/e8_7_4.pg
+source_file = Library/UMN/algebraKaufmannSchwitters/ks_5_1_30.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Library/ASU-topics/setDerivativeBasicFunctions/3-4-37.pg
+source_file = CustomProblems/Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph30.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Library/Valdosta/APEX_Calculus/2.6/APEX_2.6_10.pg
+source_file = CustomProblems/Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-18-Input-and-output.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Library/Utah/Quantitative_Analysis/set5_Derivatives/pr_1.pg
+source_file = Library/Utah/Intermediate_Algebra/set14_Review/s14p1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Library/UMN/calculusStewartCCC/s_3_2_16.pg
+source_file = CustomProblems/Exponent-rules-neg-exponent.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Library/ASU-topics/setProductQuotientRule/5-2-15.pg
+source_file = Library/Utah/Trigonometry/set2_Algebra/s2p1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = CustomProblems/probability-geometric-maximization-easy.pg
+source_file = Library/Utah/Trigonometry/set2_Algebra/s2p2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Library/ASU-topics/setOptimization/jj2.pg
+source_file = Library/Utah/College_Algebra/set2_Functions_and_Their_Graphs/1050s2p7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = CustomProblems/probability-geometric-maximization.pg
+source_file = CustomProblems/Library/Utah/Trigonometry/set2_Algebra/s2p3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Library/ASU-topics/setCalculusFundamentalTheorem/6-5-28.pg
+source_file = Library/Mizzou/College_Algebra/Real_Numbers/Interval_Notation/Graph_One_Interval_Finite_Endpts.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -203,7 +203,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 20
-source_file = Library/Union/setIntSubstitution/an6_3_01.pg
+source_file = Library/Mizzou/College_Algebra/Real_Numbers/Interval_Notation/Graph_One_Interval_Left_Inf.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -213,7 +213,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 21
-source_file = Library/UVA-Stew5e/setUVA-Stew5e-C05S03-FundThmCalc/5-3-40.pg
+source_file = Library/Mizzou/College_Algebra/Real_Numbers/Interval_Notation/Graph_Two_Intervals_Union.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -223,7 +223,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 22
-source_file = Library/Union/setIntBasic/an7_2_7.pg
+source_file = Library/FortLewis/Algebra/2-3-Expanding-and-factoring/MCH1-2-3-08-Expanding-and-factoring.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -233,37 +233,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 23
-source_file = Library/Valdosta/APEX_Calculus/6.1/APEX_6.1_79.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 24
-source_file = Library/Valdosta/APEX_Calculus/6.1/APEX_6.1_25-26.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 25
-source_file = Library/Union/setIntByParts/sc5_6_01.pg
-value = 1
-max_attempts = -1
-showMeAnother = -1
-prPeriod = -1
-counts_parent_grade = 0
-att_to_open_children = 0 
-problem_end
-problem_start
-problem_id = 26
-source_file = Library/UCSB/Stewart5_7_1/Stewart5_7_1_22.pg
+source_file = CustomProblems/Library/FortLewis/Algebra/2-3-Expanding-and-factoring/MCH1-2-3-08-Expanding-and-factoring-2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

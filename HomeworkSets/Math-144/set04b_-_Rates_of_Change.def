@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = math132-hw04b-about_this_set.pg
+source_file = CustomProblems/math132-hw04b-about_this_set.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = local/assessment-business-calculus-avg_rates_and_slopes.pg
+source_file = CustomProblems/assessment-business-calculus-avg_rates_and_slopes.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = local/Library/Westmont/ActiveCalculus/Preview_2_2/preview_2_2_c.pg
+source_file = CustomProblems/Library/Westmont/ActiveCalculus/Preview_2_2/preview_2_2_c.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

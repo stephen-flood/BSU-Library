@@ -1,0 +1,204 @@
+assignmentType      = default
+openDate          = 09/29/2021 at 06:00am EDT
+reducedScoringDate = 10/04/2021 at 11:59pm EDT
+dueDate           = 10/11/2021 at 11:59pm EDT
+answerDate        = 12/31/2021 at 11:59pm EST
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/RRCC_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_6.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/RRCC_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_8.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/CCD_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/FortLewis/Algebra/1-2-Equations/MCH1-1-2-18-Equations.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/Mizzou/Intermediate_Algebra/Equations_Rational/Eq2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = Library/Mizzou/Intermediate_Algebra/Equations_Rational/Like_5.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/maCalcDB/setAlgebra08LinearEqns/sw1_6_19.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = Library/UMN/algebraKaufmannSchwitters/ks_7_4_20.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 9
+source_file = Library/Mizzou/Algebra/linear_functions_slope/find_slope_given_line_01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 10
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/RRCC_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_23.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 11
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/RRCC_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_30.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 12
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/RRCC_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_22.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/CollegeOfIdaho/setAlgebra_02_04_PointSlopeFormofLine/24IntAlg_07_LinearFunction.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/CCD_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_36.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/RRCC_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_36ver3.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/CCD_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_39.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/CCD_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_37.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/CCD_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_45.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = Contrib/CCCS/CollegeAlgebra/2.2/RRCC_CCCS_Openstax_AlgTrig_AT-1-001-AS_2_2_29.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

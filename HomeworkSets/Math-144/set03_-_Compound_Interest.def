@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = math132-hw03-about_this_set.pg
+source_file = CustomProblems/math132-hw03-about_this_set.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = local/Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-42.pg
+source_file = CustomProblems/Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-42.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -243,7 +243,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 24
-source_file = local/businesscalc-exponentialfns-depreciation.pg
+source_file = CustomProblems/businesscalc-exponentialfns-depreciation.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -253,7 +253,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 25
-source_file = local/businesscalc-exponentialfns-depreciation-findt.pg
+source_file = CustomProblems/businesscalc-exponentialfns-depreciation-findt.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -263,7 +263,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 26
-source_file = BSU-Problems/Exponent-rules.pg
+source_file = CustomProblems/Exponent-rules.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -273,7 +273,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 27
-source_file = BSU-Problems/Exponent-rules-neg-exponent.pg
+source_file = CustomProblems/Exponent-rules-neg-exponent.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

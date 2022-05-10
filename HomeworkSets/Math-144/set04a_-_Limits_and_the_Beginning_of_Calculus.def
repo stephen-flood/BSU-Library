@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = math132-hw04a-about_this_set.pg
+source_file = CustomProblems/math132-hw04a-about_this_set.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

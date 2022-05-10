@@ -1,9 +1,9 @@
 assignmentType      = default
-openDate          = 05/27/2019 at 11:59pm EDT
-reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 05/27/2019 at 11:59pm EDT
-answerDate        = 05/27/2019 at 11:59pm EDT
-enableReducedScoring = N
+openDate          = 02/16/2022 at 11:59pm EST
+reducedScoringDate = 02/23/2022 at 11:59pm EST
+dueDate           = 02/23/2022 at 11:59pm EST
+answerDate        = 02/23/2022 at 11:59pm EST
+enableReducedScoring = Y
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = defaultHeader
 description       = 
@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = Library/MontanaState/Misc.Logic/1.6A43Logic1.pg
+source_file = CustomProblems/math132-hw04a-about_this_set.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = induction-sum-1.pg
+source_file = CustomProblems/Library/Michigan/Chap1Sec8/Q15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = induction-power-1.pg
+source_file = Library/ASU-topics/setLimitConcepts/3-2-36.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = induction-inequality-1.pg
+source_file = Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = induction-inequality-2.pg
+source_file = CustomProblems/Library/UMN/calculusStewartCCC/s_2_2_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Library/SDSU/Discrete/Logic/ttlogicequivA1.pg
+source_file = Library/UMN/calculusStewartCCC/s_2_4_prob01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Library/SDSU/Discrete/Logic/ttlogicequivA5.pg
+source_file = Library/ASU-topics/setContinuity/4-1-53.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

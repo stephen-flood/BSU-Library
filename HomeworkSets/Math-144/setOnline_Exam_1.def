@@ -23,7 +23,7 @@ emailInstructor   = 0
 problemListV2 
 problem_start
 problem_id = 1
-source_file = local/CustomProblems/Academic-Honesty-Statement-permitsgraphingcalculator.pg
+source_file = CustomProblems/Academic-Honesty-Statement-graphingcalc.pg
 value = 2
 max_attempts = -1
 showMeAnother = -1
