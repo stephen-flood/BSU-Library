@@ -54,7 +54,7 @@ $BCENTER
 $ECENTER
 $BR
 $BR
-(a) Estimate the bicyclist's average velocity over the 
+(a) Find the bicyclist's average velocity over the 
 following time intervals.
 $BR
 Over \( \lbrack 0,1 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
@@ -64,7 +64,7 @@ $BR
 Over \( \lbrack 2.5,3.5 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
 $BR
 $BR
-(b) Estimate the bicyclist's instantaneous velocity at the following times.
+(b) Find the bicyclist's instantaneous velocity at the following times.
 $BR
 At \( t = 1/2 \) hour, the instantaneous velocity is approximately \{ ans_rule(10) \} mi/hr.
 $BR
@@ -73,7 +73,7 @@ $BR
 At \( t = 3 \) hours, the instantaneous velocity is approximately \{ ans_rule(10) \} mi/hr.
 $BR
 $BR
-(c) Estimate the bicyclist's maximum velocity and the specific time at which it occurs.
+(c) Use your work above to find the bicyclist's maximum velocity and the specific time at which it occurs.
 $BR
 The maximum velocity is approximately \{ ans_rule(10) \} mi/hr, which occurs when \( t \approx \) \{ ans_rule(10) \} hr.
 END_TEXT

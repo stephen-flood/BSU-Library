@@ -88,13 +88,14 @@ a. Compute [`f([$xzero])`]
 
     [`f([$xzero])`] = [________]{"$fofxzero"}
 
-b. Write down a formula for [`f(h)`]  
-
-    [`f(h)`] = [________]{"$fh"}
-
-c. Simplify the following expression completely [`f(x + [$xzero])`] 
+b. Simplify the following expression completely [`f(x + [$xzero])`] 
 
     [`f(x + [$xzero])`] = [________]{"$fxplusxzero"}
+
+
+c. Simplify the following expression completely [`f(x+[$xzero]) - f([$xzero])`].
+
+    [`f(x+[$xzero]) - f([$xzero])`] =  [____________]{"$fxplusxzero-$fofxzero"}
 
 d. Simplify the following expression completely [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`].
 
