@@ -78,6 +78,9 @@ $agree = PopUp(["I am ready to begin, and will ask questions if I run into any p
 
 BEGIN_PGML
 
+[@ htmlLink( "https://webwork.bridgew.edu/oer/Business_Calculus", "Course Textbook" ) @]*
+
+
 Some content and examples relevant to this assignment can be found at the following sections in the OER (free) ebook by Calaway, Hoffman, and Lippman: 
 
 - 1.1 - [@ htmlLink( protect_underbar( "http://www.opentextbookstore.com/buscalc/buscalc/chapter1/section1-1.php#main-nav"),"Functions and the Rule of Three", "TARGET='_blank'"); @]*  
