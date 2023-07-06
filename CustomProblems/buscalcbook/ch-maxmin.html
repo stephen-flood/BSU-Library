@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Finding Maxima and Minima</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="http://mathlogic.org/oerbook/buscalcchange/external/Delta_logo.gif">
+<meta property="book:title" content="Business Calculus">
+<meta property="book:author" content="Stephen Flood">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="buscalcchange" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\newcommand{\red}[1]{   {\color{red}   #1}   }
+\newcommand{\blue}[1]{  {\color{blue}  #1}  }
+\newcommand{\green}[1]{ {\color{green} #1} }
+
+\newcommand{\ddx}[1]{ \dfrac{d}{dx} \Big[ #1 \Big]  } 
+\newcommand{\ddt}[1]{ \dfrac{d}{dt} \Big[ #1 \Big]  } 
+\newcommand{\ddu}[1]{ \dfrac{d}{du} \Big[ #1 \Big]  } 
+\newcommand{\ddxfrac}[1]{ \dfrac{d}{dx} \left[ #1 \right]  } 
+\newcommand{\D}[1]{ \Big[ #1 \Big]'  } 
+
+\newcommand{\intdx}[1]{{\,\int#1\,\,dx}}
+\newcommand{\dint}[1]{\displaystyle\intdx{#1}}
+
+\def \tikzhistogram (#1,#2){\draw[fill=blue,opacity=0.3] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \draw[draw,thick] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \node[draw,fill=blue, circle,inner sep=2.5pt] at (#1,#2) {};}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="external/Delta_logo.gif" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="home.html"><span class="title">Business Calculus:</span> <span class="subtitle">A Study of Marginal Change</span></a></h1>
+<p class="byline">Stephen Flood</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="part-applyingslopes.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-applyingslopes.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-secondderivatives.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="part-applyingslopes.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="part-applyingslopes.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch-secondderivatives.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-algebra.html" data-scroll="part-algebra" class="internal"><span class="codenumber">I</span> <span class="title">Algebra For Business</span></a></li>
+<li class="link">
+<a href="ch-functions.html" data-scroll="ch-functions" class="internal"><span class="codenumber">1</span> <span class="title">Functions of Economics</span></a><ul>
+<li><a href="ch-functions.html#sec-function-concepts" data-scroll="sec-function-concepts" class="internal">Function Concepts</a></li>
+<li><a href="ch-functions.html#sec-functions-readinggraphs" data-scroll="sec-functions-readinggraphs" class="internal">Graphs of Functions</a></li>
+<li><a href="ch-functions.html#sec-combining_functions" data-scroll="sec-combining_functions" class="internal">Combining Functions</a></li>
+<li><a href="ch-functions.html#sec_graphsoftotalsandchanges" data-scroll="sec_graphsoftotalsandchanges" class="internal">Graphs of Totals and Changes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-algebra_linearfunctions.html" data-scroll="ch-algebra_linearfunctions" class="internal"><span class="codenumber">2</span> <span class="title">Lines and Linear Functions</span></a><ul>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-equations" data-scroll="sec-algebra-linear-equations" class="internal">Finding the Equation of a Line</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-demandprice" data-scroll="sec-algebra-linear-demandprice" class="internal">Demand Price and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algeba-linear-cost" data-scroll="sec-algeba-linear-cost" class="internal">Item Cost, Total Cost, and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-applied_domain" data-scroll="sec-applied_domain" class="internal">Models and Applied Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_polynomials_and_rationals.html" data-scroll="ch_polynomials_and_rationals" class="internal"><span class="codenumber">3</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="ch_polynomials_and_rationals.html#sec_quadratic_functions" data-scroll="sec_quadratic_functions" class="internal">Quadratic and Polynomial Functions</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_revenue" data-scroll="sec_revenue" class="internal">Revenue with Fair Pricing</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec-understandingprofit" data-scroll="sec-understandingprofit" class="internal">Understanding Profit</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_rationalfns" data-scroll="sec_rationalfns" class="internal">Rational Functions</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-explog.html" data-scroll="part-explog" class="internal"><span class="codenumber">II</span> <span class="title">Mathematics of Compound Interest</span></a></li>
+<li class="link">
+<a href="ch_exponentials.html" data-scroll="ch_exponentials" class="internal"><span class="codenumber">4</span> <span class="title">Compound Interest and Depreciation</span></a><ul>
+<li><a href="ch_exponentials.html#sec_introducing_exponentials" data-scroll="sec_introducing_exponentials" class="internal">Exponential Functions</a></li>
+<li><a href="ch_exponentials.html#sec_percent_change" data-scroll="sec_percent_change" class="internal">Percents and Percent Change</a></li>
+<li><a href="ch_exponentials.html#sec_compound_interest" data-scroll="sec_compound_interest" class="internal">Compound Interest and Depreciation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logarithms.html" data-scroll="ch_logarithms" class="internal"><span class="codenumber">5</span> <span class="title">Logarithms and Solving for Time</span></a><ul>
+<li><a href="ch_logarithms.html#sec-inverses" data-scroll="sec-inverses" class="internal">Inverse Functions</a></li>
+<li><a href="ch_logarithms.html#sec_logartims" data-scroll="sec_logartims" class="internal">Logarithms Undo Exponentials</a></li>
+<li><a href="ch_logarithms.html#sec-lawsoflogs" data-scroll="sec-lawsoflogs" class="internal">Laws of Logarithms</a></li>
+<li><a href="ch_logarithms.html#sec_solvingfortime" data-scroll="sec_solvingfortime" class="internal">Solving Compound Interest for Time</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rates.html" data-scroll="part-rates" class="internal"><span class="codenumber">III</span> <span class="title">Introducing Change and Rates</span></a></li>
+<li class="link">
+<a href="ch_limits.html" data-scroll="ch_limits" class="internal"><span class="codenumber">6</span> <span class="title">Limits</span></a><ul>
+<li><a href="ch_limits.html#sec_readingdynamically" data-scroll="sec_readingdynamically" class="internal">Reading Graphs Dynamically</a></li>
+<li><a href="ch_limits.html#sec-econlimits" data-scroll="sec-econlimits" class="internal">Macroeconomics and Mostly Continous Functions</a></li>
+<li><a href="ch_limits.html#sec-ComputingLimitsNumerically" data-scroll="sec-ComputingLimitsNumerically" class="internal">Computing Limits Numerically</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_totalschanges.html" data-scroll="ch_totalschanges" class="internal"><span class="codenumber">7</span> <span class="title">Average Rates of Change</span></a><ul>
+<li><a href="ch_totalschanges.html#sec-AROC" data-scroll="sec-AROC" class="internal">Average Rates of Change</a></li>
+<li><a href="ch_totalschanges.html#sec_graphsofrateschangesandtotals" data-scroll="sec_graphsofrateschangesandtotals" class="internal">Graphs of Rates, Changes, and Totals</a></li>
+<li><a href="ch_totalschanges.html#sec_velocityAndIROC" data-scroll="sec_velocityAndIROC" class="internal">Velocity and Instantaneous Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_tangentsecant.html" data-scroll="ch_tangentsecant" class="internal"><span class="codenumber">8</span> <span class="title">Understanding Slope</span></a><ul>
+<li><a href="ch_tangentsecant.html#sec_slope" data-scroll="sec_slope" class="internal">Slopes and Rates of Change</a></li>
+<li><a href="ch_tangentsecant.html#sec_secantangent" data-scroll="sec_secantangent" class="internal">Approximating Slope with Secant Lines</a></li>
+<li><a href="ch_tangentsecant.html#sec_slopealgebraically" data-scroll="sec_slopealgebraically" class="internal">Defining Slope Algebraically</a></li>
+<li><a href="ch_tangentsecant.html#sec-slopefunction" data-scroll="sec-slopefunction" class="internal">Defining a Slope Function</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-slopeshortcuts.html" data-scroll="part-slopeshortcuts" class="internal"><span class="codenumber">IV</span> <span class="title">Shortcuts for Computing Slope Functions</span></a></li>
+<li class="link">
+<a href="ch_basicderivativerules.html" data-scroll="ch_basicderivativerules" class="internal"><span class="codenumber">9</span> <span class="title">Slope Shortcuts for Basic Functions</span></a><ul>
+<li><a href="ch_basicderivativerules.html#sec_basicrules1" data-scroll="sec_basicrules1" class="internal">Basic Derivative Rules</a></li>
+<li><a href="ch_basicderivativerules.html#sec-derivativesexplog" data-scroll="sec-derivativesexplog" class="internal">Derivatives of Exponentials and Logarithms</a></li>
+<li><a href="ch_basicderivativerules.html#sec-marginalcost" data-scroll="sec-marginalcost" class="internal">Marginal Cost</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_productquotientrule.html" data-scroll="ch_productquotientrule" class="internal"><span class="codenumber">10</span> <span class="title">Product and Quotient Rule</span></a><ul>
+<li><a href="ch_productquotientrule.html#sec_productrule" data-scroll="sec_productrule" class="internal">Derivatives of Products</a></li>
+<li><a href="ch_productquotientrule.html#sec_quotientrule" data-scroll="sec_quotientrule" class="internal">Derivatives of Fractions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_chainrule.html" data-scroll="ch_chainrule" class="internal"><span class="codenumber">11</span> <span class="title">The Chain Rule</span></a><ul>
+<li><a href="ch_chainrule.html#sec_generalizedpowerrule" data-scroll="sec_generalizedpowerrule" class="internal">The Generalized Power Rule</a></li>
+<li><a href="ch_chainrule.html#sec-chainrule" data-scroll="sec-chainrule" class="internal">The Chain Rule</a></li>
+<li><a href="ch_chainrule.html#sec-derivativesummary" data-scroll="sec-derivativesummary" class="internal">List of All Derivative Rules</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-applyingslopes.html" data-scroll="part-applyingslopes" class="internal"><span class="codenumber">V</span> <span class="title">Applying Marginals and Slopes</span></a></li>
+<li class="link active">
+<a href="ch-maxmin.html" data-scroll="ch-maxmin" class="internal"><span class="codenumber">12</span> <span class="title">Finding Maxima and Minima</span></a><ul>
+<li><a href="ch-maxmin.html#sec_understandingextrema" data-scroll="sec_understandingextrema" class="internal">Finding Local Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_absolutemaxmin" data-scroll="sec_absolutemaxmin" class="internal">Finding Absolute Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_maximaminimaandchangegraphs" data-scroll="sec_maximaminimaandchangegraphs" class="internal">Maxima, Minima, and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-secondderivatives.html" data-scroll="ch-secondderivatives" class="internal"><span class="codenumber">13</span> <span class="title">Dimishing Returns and Changing Rates</span></a><ul>
+<li><a href="ch-secondderivatives.html#sec-secondderivative" data-scroll="sec-secondderivative" class="internal">The Second Derivative</a></li>
+<li><a href="ch-secondderivatives.html#sec-concavity" data-scroll="sec-concavity" class="internal">Concavity and Graphs</a></li>
+<li><a href="ch-secondderivatives.html#sec_seconderivativeconcavityandchange" data-scroll="sec_seconderivativeconcavityandchange" class="internal">The Second Derivative and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-integrals.html" data-scroll="part-integrals" class="internal"><span class="codenumber">VI</span> <span class="title">Integral Calculus</span></a></li>
+<li class="link">
+<a href="ch_antiderivatives.html" data-scroll="ch_antiderivatives" class="internal"><span class="codenumber">14</span> <span class="title">Antiderivatives</span></a><ul>
+<li><a href="ch_antiderivatives.html#sec_undoingderivatives" data-scroll="sec_undoingderivatives" class="internal">Undoing Derivatives</a></li>
+<li><a href="ch_antiderivatives.html#sec-indefiniteintegrals" data-scroll="sec-indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_antiderivatives.html#sec-applyingantiderivatives" data-scroll="sec-applyingantiderivatives" class="internal">Applying Antiderivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_introducingarea.html" data-scroll="ch_introducingarea" class="internal"><span class="codenumber">15</span> <span class="title">Understanding Areas</span></a><ul>
+<li><a href="ch_introducingarea.html#sec_indefiniteintegrals" data-scroll="sec_indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_introducingarea.html#sec_geometricarea" data-scroll="sec_geometricarea" class="internal">Understanding Geometrically of Area</a></li>
+<li><a href="ch_introducingarea.html#sec_fundamentaltheorem" data-scroll="sec_fundamentaltheorem" class="internal">Area, Antiderivatives, and Graphs of Change</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="algebrareview.html" data-scroll="algebrareview" class="internal"><span class="codenumber">A</span> <span class="title">Algebra Review</span></a><ul>
+<li><a href="algebrareview.html#section-50" data-scroll="section-50" class="internal">Laws of Algebra</a></li>
+<li><a href="algebrareview.html#sec-IntervalsandGraphs" data-scroll="sec-IntervalsandGraphs" class="internal">Intervals and Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="chapter" id="ch-maxmin"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">12</span> <span class="title">Finding Maxima and Minima</span>
+</h2>
+<section class="introduction" id="introduction-53"><p id="p-1313"></p></section><section class="section" id="sec_understandingextrema"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">12.1</span> <span class="title">Finding Local Extrema</span>
+</h3>
+<p id="p-1314">In any economic system, and in any business, there are <em class="emphasis">many</em> different choices you can make. Of these choices, some are better than others.</p>
+<p id="p-1315">Ideally, you will want to make the <em class="emphasis">best</em> choice. In practice, limits on resources and time often limit the amount of change that is feasible. In these cases, you want to make the <em class="emphasis">locally optimal</em> choice -- the choice that is better than all the alternatives that are "nearby" to your current location.</p>
+<p id="p-1316">Part of the complexity of economic systems are the  large number of vairables and different ways of comparing which options are "better." In this course, we will focus on functions of a single variable, and we will always compare the magnitude of the outputs.</p>
+<p id="p-1317">To help define our terms precisely, we will start with a more concrete, physical example.</p>
+<article class="exploration project-like" id="explore_introducemaxmin"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">12.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-54">
+<p id="p-1318">The example below shows a cross section of a path through a set of hills in the forest. In other words, the <em class="emphasis">height</em> of the trial at mile marker <span class="process-math">\(x\)</span> is give by <span class="process-math">\(y=f(x)\text{.}\)</span></p>
+<figure class="figure figure-like" id="fig_maxminintroimage"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/img_maxminintroimage.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div>
+<article class="task exercise-like" id="task-148"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1319">At which values does <span class="process-math">\(f\)</span> have a <em class="emphasis">local/relavive maximum</em>?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-186" id="solution-186"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-186"><div class="solution solution-like">
+<p id="p-1320">The graph has local maxima at <span class="process-math">\(x=-1\)</span> and <span class="process-math">\(x=3\text{,}\)</span> because <span class="process-math">\(f\)</span> has <em class="emphasis"></em></p>
+<p id="p-1321">These are local maxima because if you imagine standing on the graph at those points, moving left or right will <em class="emphasis">decrease</em> your height.</p>
+<p id="p-1322">Said another way, there is a local maxima because when you read the graph from left to right, these are the <span class="process-math">\(x\)</span>-values where the graph looks like <span class="process-math">\(\nearrow\, \searrow\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-149"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1323">At which values does <span class="process-math">\(f\)</span> have a <em class="emphasis">local/relavive minimum</em>?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like">
+<p id="p-1324">The graph has a local minimum at <span class="process-math">\(x=-2\text{,}\)</span> <span class="process-math">\(x=1\text{,}\)</span> or <span class="process-math">\(x=4\)</span></p>
+<p id="p-1325">These are local minima because if you imagine standing on the graph at those points, moving left or right will <em class="emphasis">increase</em> your height.</p>
+<p id="p-1326">Said another way, there is a local minima because when you read the graph from left to right, these are the <span class="process-math">\(x\)</span>-values where the graph looks like <span class="process-math">\(\searrow\, \nearrow\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-150"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1327">At which values does <span class="process-math">\(f\)</span> have a <em class="emphasis">absolute/global maximum</em>?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-188" id="solution-188"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-188"><div class="solution solution-like">
+<p id="p-1328">The graph has a global maximum of <span class="process-math">\(y=4\)</span> at <span class="process-math">\(x=3\)</span></p>
+<p id="p-1329">These is a global maximum because if you imagine standing on the graph at those points, there is <em class="emphasis">no way place you could to move to to increase your height</em>.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-151"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1330">At which values does <span class="process-math">\(f\)</span> have a <em class="emphasis">absolute/global minimum</em>?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-189" id="solution-189"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-189"><div class="solution solution-like">
+<p id="p-1331">The graph has a global minimum of <span class="process-math">\(y=-1\)</span> at <span class="process-math">\(x=-2\)</span></p>
+<p id="p-1332">These is a global maximum because if you imagine standing on the graph at those points, there is <em class="emphasis">no way place you could to move to to decrease your height</em>.</p>
+</div></div>
+</div></article></article><p id="p-1333">In the exercise above, there are three special kinds of points that mostly (but do not exactly) correspond to locations of maxima and minima:</p>
+<ol class="decimal">
+<li id="li-232">
+<p id="p-1334">The curve <span class="process-math">\(y=f\)</span> is <em class="emphasis">horizontal</em> at <span class="process-math">\(x=-1,1,2\text{.}\)</span></p>
+<p id="p-1335">This is because <span class="process-math">\(f'(x)=0\)</span> at these points.</p>
+</li>
+<li id="li-233">
+<p id="p-1336">The curve <span class="process-math">\(y=f\)</span> is has a <em class="emphasis">singularity</em> at <span class="process-math">\(x=3\text{.}\)</span></p>
+<p id="p-1337">This is because <span class="process-math">\(f'(x)=DNE\)</span> at this points.</p>
+</li>
+<li id="li-234"><p id="p-1338">The curve <span class="process-math">\(y=f\)</span> is has an <em class="emphasis">endpoint</em> at <span class="process-math">\(x=-2\)</span> and <span class="process-math">\(x=4\text{.}\)</span></p></li>
+</ol>
+<article class="theorem theorem-like" id="thm-maxminonlyat"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span>
+</h4>
+<p id="p-1339">A function <span class="process-math">\(f\)</span> can <em class="emphasis">only</em> have a maxima or minima at <span class="process-math">\(x=a\)</span> if one of the following are true</p>
+<ol class="decimal">
+<li id="li-235"><p id="p-1340"><span class="process-math">\(f\)</span> is horizontal at <span class="process-math">\(a\text{.}\)</span>  This happens when <span class="process-math">\(f'=0\text{.}\)</span></p></li>
+<li id="li-236"><p id="p-1341"><span class="process-math">\(f\)</span> has a singularity at <span class="process-math">\(a\text{.}\)</span>  This happens when <span class="process-math">\(f'\ DNE\text{.}\)</span></p></li>
+<li id="li-237"><p id="p-1342"><span class="process-math">\(a\)</span> is an endpoint of the height function <span class="process-math">\(f\text{.}\)</span></p></li>
+</ol></article><p id="p-1343">The values of <span class="process-math">\(x\)</span> where <span class="process-math">\(f'(x)=0\)</span> or <span class="process-math">\(f'(x)\ DNE\)</span> are called the <dfn class="terminology">critical points</dfn> of <span class="process-math">\(f\text{.}\)</span> This is because finding these points is one of the most important steps when you are looking for the maxima and minima of the function <span class="process-math">\(f\text{.}\)</span></p>
+<p id="p-1344"><em class="alert">Warning:</em> Not every critical point is a maxima or minima. In <a href="" class="xref" data-knowl="./knowl/fig_maxminintroimage.html" title="Figure 12.1">Figure 12.1</a>, <span class="process-math">\(2\)</span> is a critical point of <span class="process-math">\(f\)</span> because <span class="process-math">\(f'(2)=0\text{,}\)</span> and so the function is horizontal at <span class="process-math">\(x=2\text{.}\)</span>  However, <span class="process-math">\(x=2\)</span> is <em class="emphasis">not</em> a local maxima or minima, since you can increase your height by moving right and decrease it by moving left.</p>
+<p id="p-1345">To be able to check if a point is indeed a maxima or minima, we need a more precise definition.</p>
+<article class="definition definition-like" id="def-localmaximin"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span>
+</h4>
+<p id="p-1346">Let <span class="process-math">\(f\)</span> be a function which is continuous at <span class="process-math">\(x=a\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-238"><p id="p-1347"><span class="process-math">\(f\)</span> has a <dfn class="terminology">local maxima</dfn> at <span class="process-math">\(x=a\)</span> if the graph goes from increasing to decreasing at <span class="process-math">\(a\)</span> (the function looks like <span class="process-math">\(\nearrow\,\searrow\)</span> at <span class="process-math">\(a\)</span>).</p></li>
+<li id="li-239"><p id="p-1348"><span class="process-math">\(f\)</span> has a <dfn class="terminology">local minima</dfn> at <span class="process-math">\(x=a\)</span> if the graph goes from decreasing to increasing at <span class="process-math">\(a\)</span> (the function looks like <span class="process-math">\(\searrow\,\nearrow\)</span> at <span class="process-math">\(a\)</span>).</p></li>
+<li id="li-240"><p id="p-1349"><span class="process-math">\(f\)</span> has an <dfn class="terminology">extrema</dfn> at <span class="process-math">\(x=a\)</span> if there is either a maxima or minima at <span class="process-math">\(x=a\text{.}\)</span></p></li>
+</ol></article><article class="theorem theorem-like" id="thm-increasingfunction"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.4</span><span class="period">.</span>
+</h4>
+<p id="p-1350">Suppose that <span class="process-math">\(f\)</span> is a differentiable function at <span class="process-math">\(x\)</span></p>
+<ol class="decimal">
+<li id="li-241"><p id="p-1351">height <span class="process-math">\(f\)</span> is increasing (<span class="process-math">\(\,\nearrow\,\)</span>) at <span class="process-math">\(x\)</span> <em class="emphasis">if and only if</em> the slope <span class="process-math">\(f'(x)\)</span> is positive <span class="process-math">\((+)\)</span></p></li>
+<li id="li-242"><p id="p-1352">height <span class="process-math">\(f\)</span> is decreasing (<span class="process-math">\(\,\searrow\,\)</span>) at <span class="process-math">\(x\)</span> <em class="emphasis">if and only if</em> the slope <span class="process-math">\(f'(x)\)</span> is positive <span class="process-math">\((-)\)</span></p></li>
+</ol></article><p id="p-1353">In <a href="" class="xref" data-knowl="./knowl/explore_introducemaxmin.html" title="Exploration 12.1">Exploration 12.1</a>, the function <span class="process-math">\(f\)</span> is increasing  on the interval <span class="process-math">\((-2,-1) \cup (1,2)\cup (2,3)\)</span> <em class="emphasis">because</em> <span class="process-math">\(f'\)</span> is positive on that interval.</p>
+<article class="exploration project-like" id="exploration_maxminexample1"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-55"><p id="p-1354">Let <span class="process-math">\(f(x) = \dfrac{-x^3}{3} + x + 1\)</span></p></div>
+<article class="task exercise-like" id="task-152"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1355">Find the critical points of <span class="process-math">\(f\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-190" id="solution-190"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-190"><div class="solution solution-like">
+<p id="p-1356">Recall that the <em class="emphasis">critical points</em> of <span class="process-math">\(f\)</span> are the <span class="process-math">\(x\)</span> values where  <span class="process-math">\(f'(x) =0\)</span> or <span class="process-math">\(f'(x) \ DNE\text{.}\)</span></p>
+<p id="p-1357">To find when <span class="process-math">\(f'=0\)</span> or <span class="process-math">\(f'\ DNE\text{,}\)</span> we must first find an equation for the derivative <span class="process-math">\(f'\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-123">
+\begin{align*}
+f'(x) = \amp \ddx{ \frac{-1}{3} x^3 + x + 1  } \\
+= \amp \ddx{ \frac{-1}{3} x^3 } + \ddx{x} + \ddx{1} \\
+= \amp \frac{-1}{3} \ddx{x^3} + 1 + 0\\
+= \amp \frac{-1}{3}\cdot 3x^2 + + 1\\
+= \amp -x^2 + 1
+\end{align*}
+</div>
+<p id="p-1358">To find when <span class="process-math">\(f'=0\text{,}\)</span> simply solve the equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+-x^2 + 1 = 0
+\end{equation*}
+</div>
+<p class="continuation">Solve the equation by factoring. It is easier to factor equations when the highest power term has a factor of 1.  To do this, multiply both sides of the equation by -1, simplifying, and factoring</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-124">
+\begin{align*}
+(-1) \cdot (-x^2 + 1) \amp =(-1) \cdot = 0 \\
+x^2 - 1 \amp = 0 \\
+(x+1) (x-1) \amp  = 0
+\end{align*}
+</div>
+<p class="continuation">The only way this can happen is if either the first or second terms equal 0.  In other words, solve</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-125">
+\begin{align*}
+x+1 = 0 \amp \text{ or } \amp x-1=0 \\
+x = -1 \amp \text{ or } \amp x=1
+\end{align*}
+</div>
+<p id="p-1359">We have a singularity when <span class="process-math">\(f'\ DNE\text{.}\)</span> Looking at the graph of <span class="process-math">\(f\text{,}\)</span> it does not look like there are any singularities.</p>
+<p id="p-1360">Looking at the function, the derivative <span class="process-math">\(f'(x) = -x^2+1\)</span> is always defined. This confirms that this function <span class="process-math">\(f\)</span> does not have any singularities.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-153"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1361">Use a calculator to find the local extrema for <span class="process-math">\(f\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution solution-like">
+<p id="p-1362">Graphing the function we see <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_maxminexample1graphed.svg" role="img" class="contained"></div></p>
+<p id="p-1363">Looking at the graph, we can see that there is a local maxima at <span class="process-math">\(x=1\)</span> and a local minima at <span class="process-math">\(x=-1\text{.}\)</span> We also know that there are no other locations where there <em class="emphasis">might</em> be a maxima or minima, even off the screen of the calculator.</p>
+<p id="p-1364">In particular, this tells us that there are <em class="emphasis">no</em> absolute maxima or minima.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-154"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1365">Use the first derivative to find the local extrema for <span class="process-math">\(f\text{.}\)</span> Find the intervals where <span class="process-math">\(f\)</span> is increasing and when it is decreasing.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-192" id="solution-192"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-192"><div class="solution solution-like">
+<p id="p-1366">We are asked to locate the maxima and minima without looking at the graph of the function.</p>
+<p id="p-1367">The <em class="emphasis">key idea</em> is that we can use  the derivative function <span class="process-math">\(f'\)</span> to make a very rough sketch of the function by using <a href="" class="xref" data-knowl="./knowl/thm-increasingfunction.html" title="Theorem 12.4">Theorem 12.4</a>.</p>
+<p id="p-1368">We have already used <span class="process-math">\(f'\)</span> to find all values of <span class="process-math">\(x\)</span> where <span class="process-math">\(f'=0\)</span> or <span class="process-math">\(f'\ DNE\text{.}\)</span> To make our sketch <em class="alert">plot these points on a number line</em>.</p>
+<p id="p-1369"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample1_signchartv1.svg" role="img" class="contained"></div></p>
+<p id="p-1370">Next, we must compute the derivative <span class="process-math">\(f'\)</span> to the left and right of each of the points above. There are three intervals: to the left of -1, between -1 and 1, and to the right of 1.  You can chose any number in those intervals.</p>
+<dl class="description-list">
+<dt id="li-243">left of -1</dt>
+<dd> <span class="process-math">\(f'(-2) = -(-2)^2 + 1 = -3 = (-)\)</span>
+</dd>
+<dt id="li-244">between -1 and 1</dt>
+<dd> <span class="process-math">\(f'(0) = -(0)^2 + 1 = 1 = (+)\)</span>
+</dd>
+<dt id="li-245">right of -1</dt>
+<dd> <span class="process-math">\(f'(2) = -(2)^2 + 1 = -3 = (-)\)</span>
+</dd>
+</dl>
+<p class="continuation">Mark the magnitude of the derivative below the interval, and draw an <span class="process-math">\(\nearrow\)</span> or <span class="process-math">\(\searrow\)</span> above the line to indicate the behavior of the function.</p>
+<p id="p-1371"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample1_signchartv2.svg" role="img" class="contained"></div></p>
+<p id="p-1372">This sign chart is a very rough sketch of the function, but it is complete enough to show that there is a local minima at <span class="process-math">\(x=-1\)</span> (due to the <span class="process-math">\(\searrow\,\nearrow\)</span>) and that there is a local maxima at <span class="process-math">\(x=1\)</span> (due to the <span class="process-math">\(\nearrow\,\searrow\)</span>).</p>
+<p id="p-1373">It is also clear from the sign chart that the function is increasing on the interval between -1 and 1.  In interval notation, it is increasing on the interval <span class="process-math">\((-1,1)\)</span></p>
+<p id="p-1374">The function is decreasing on two intervals: to the left of -1 and to the right of 1.  In interval notation, <span class="process-math">\(f\)</span> is decreasing on the interval <span class="process-math">\((-\infty, -1)\cup (1,\infty)\text{.}\)</span></p>
+</div></div>
+</div></article></article><article class="assemblage assemblage-like" id="assemblage-maxminmethod"><h4 class="heading"><span class="title">A Strategy for Finding Extrema.</span></h4>
+<p id="p-1375">Let <span class="process-math">\(f\)</span> be any function which is continuous on an open interval. To find the local extrema,</p>
+<ol class="decimal">
+<li id="li-246">
+<p id="p-1376">Use the derivative function <span class="process-math">\(f'\)</span> to find where <span class="process-math">\(f'=0\)</span> and when <span class="process-math">\(f'\ DNE\text{.}\)</span></p>
+<ul class="disc">
+<li id="li-247"><p id="p-1377"><em class="emphasis">Polynomials:</em> factor to find the 0's.</p></li>
+<li id="li-248"><p id="p-1378"><em class="emphasis">Fractions:</em> <span class="process-math">\(\dfrac{A}{B}\)</span> is equal to zero if when <span class="process-math">\(A=0\)</span> and is undefined when <span class="process-math">\(B=0\text{.}\)</span></p></li>
+</ul>
+</li>
+<li id="li-249">
+<p id="p-1379">Plot these points on a number line. This cuts the real numbers into several intervals.</p>
+<p id="p-1380">Use a closed dot for <span class="process-math">\(f'=0\)</span> and an open circle for <span class="process-math">\(f'\ DNE\text{.}\)</span></p>
+</li>
+<li id="li-250"><p id="p-1381">Compute <span class="process-math">\(f'\)</span> on each of the intervals you have found above. Mark whether <span class="process-math">\(f'\)</span> is <span class="process-math">\((+)\)</span> or <span class="process-math">\((-)\)</span> below the interval, and draw <span class="process-math">\(\nearrow\)</span> or <span class="process-math">\(\searrow\)</span> above the interval.</p></li>
+<li id="li-251"><p id="p-1382">Read off the answer to the question, using your sign chart as a very rough sketch of the function.</p></li>
+</ol></article><article class="exploration project-like" id="exploration_maxminexample2"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-56"><p id="p-1383">Let <span class="process-math">\(f(x) = \dfrac{-x^4}{4} + \frac{8}{3}x^3 + 4\)</span></p></div>
+<article class="task exercise-like" id="task-155"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1384">Find the intervals where <span class="process-math">\(f\)</span> is increasing and decreasing..</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-193" id="solution-193"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-193"><div class="solution solution-like">
+<p id="p-1385">First, we must find the critical points. In other words, find the <span class="process-math">\(x\)</span> such that <span class="process-math">\(f'(x) =0\)</span> or <span class="process-math">\(f'(x) \ DNE\text{.}\)</span></p>
+<p id="p-1386">First, find an equation for the derivative <span class="process-math">\(f'\text{,}\)</span> and factor it.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-126">
+\begin{align*}
+f'(x) = \amp \ddx{ \frac{-1}{4} x^4 + \frac{8}{3} x^3 + 4   } \\
+= \amp \frac{-1}{4}\cdot 4x^3 + \frac{8}{3} \cdot 3x^2 + 0 \\
+= \amp -x^3 + 8x^2
+\end{align*}
+</div>
+<p id="p-1387">To find when <span class="process-math">\(f'=0\text{,}\)</span> simply solve the equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+-x^3 + 8x^2     = 0
+\end{equation*}
+</div>
+<p class="continuation">Solve the equation by factoring. It is easier to factor equations when the highest power term has a factor of 1. To do this, factor out a <span class="process-math">\(-x^2\)</span> from both terms</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-127">
+\begin{align*}
+(-x^2) \cdot (x - 8) \amp =  0 
+\end{align*}
+</div>
+<p class="continuation">The only way this can happen is if either the first or second terms equal 0.  In other words, solve</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-128">
+\begin{align*}
+x = 0 \amp \text{ or } \amp x-8=0 \\
+x = 0 \amp \text{ or } \amp x=8   
+\end{align*}
+</div>
+<p id="p-1388">We have a singularity when <span class="process-math">\(f'\ DNE\text{.}\)</span> Looking at the graph of <span class="process-math">\(f\text{,}\)</span> it does not look like there are any singularities.</p>
+<p id="p-1389">Looking at the function, the derivative <span class="process-math">\(f'(x) = -x^2(x-8)\)</span> is always defined. This confirms that this function <span class="process-math">\(f\)</span> does not have any singularities.</p>
+<p id="p-1390">To find when the function is increasing and decreasing without looking at the graph of the function, we must use  the derivative function <span class="process-math">\(f'\)</span> to make a very rough sketch of the function by using <a href="" class="xref" data-knowl="./knowl/thm-increasingfunction.html" title="Theorem 12.4">Theorem 12.4</a>. We will do this by making the sign chart of <span class="process-math">\(f'\text{.}\)</span></p>
+<p id="p-1391"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/image_maxminexample2_signchartv1.svg" role="img" class="contained"></div></p>
+<p id="p-1392">Next, we must compute the derivative <span class="process-math">\(f'\)</span> to the left and right of each of the points above. There are three intervals: to the left of 0, between 0 and 8, and to the right of 8. You can chose any number in those intervals.</p>
+<dl class="description-list">
+<dt id="li-252">left of 0</dt>
+<dd> <span class="process-math">\(f'(-5) = (-5)^3 - 8(-5)^2 = \dots = (-)\)</span>
+</dd>
+<dt id="li-253">between 0 and 8</dt>
+<dd> <span class="process-math">\(f'(1) = (1)^3 - 8(-1)^2 = \dots = (-)\)</span>
+</dd>
+<dt id="li-254">right of 8</dt>
+<dd> <span class="process-math">\(f'(10) = (10)^3 - 8(10)^2 = \dots = (+)\)</span>
+</dd>
+</dl>
+<p class="continuation">Mark the magnitude of the derivative below the interval, and draw an <span class="process-math">\(\nearrow\)</span> or <span class="process-math">\(\searrow\)</span> above the line to indicate the behavior of the function.</p>
+<p id="p-1393"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample2_signchartv2.svg" role="img" class="contained"></div></p>
+<p id="p-1394">Using the sign chart, we an read off the behavior of the function. <span class="process-math">\(f\)</span> is <em class="emphasis">increasing</em> on the interval <span class="process-math">\((8,\infty)\text{,}\)</span> and <span class="process-math">\(f\)</span> is <em class="emphasis">decreasing</em> on the interval <span class="process-math">\((-\infty,0)\cup(0,8)\)</span></p>
+<p id="p-1395">We can also see that <span class="process-math">\(f\)</span> has a local maxima at <span class="process-math">\(x=8\text{,}\)</span> but <span class="process-math">\(f\)</span> has <em class="emphasis">no</em> local minima (the local minima <span class="process-math">\(DNE\)</span>).</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-156"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1396">Use your answers above to sketch the graph of <span class="process-math">\(f\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-194" id="solution-194"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-194"><div class="solution solution-like">
+<p id="p-1397"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample2_sketched.svg" role="img" class="contained"></div></p>
+<p id="p-1398">Why would you want a sketch when you could just use a graphing calculator? In this case, trying to graph the function will give you the following image, which is harder to interpret, since it doesn't tell you what happens in the middle of the function, or off of the screen. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_maxminexample2_calculator.svg" role="img" class="contained"></div></p>
+</div></div>
+</div></article></article><p id="p-1399">We now have a precise, repeatable strategy for finding maxima and minima. The following definition and theorem make this strategy precise.</p>
+<article class="definition definition-like" id="def-criticalpoints"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.5</span><span class="period">.</span>
+</h4>
+<p id="p-1400">The <dfn class="terminology">critical numbers</dfn> of <span class="process-math">\(f\)</span> are the numbers <span class="process-math">\(c\)</span> such that <span class="process-math">\(\)</span></p>
+<dl class="description-list">
+<dt id="li-255">Both</dt>
+<dd><p id="p-1401"><span class="process-math">\(f(c)\)</span> is defined</p></dd>
+<dt id="li-256">And</dt>
+<dd><dl id="p-1402" class="description-list">
+<dt id="li-257">either</dt>
+<dd> <span class="process-math">\(f'(c) = 0\)</span>
+</dd>
+<dt id="li-258">or</dt>
+<dd> <span class="process-math">\(f'(c)\ DNE\)</span>
+</dd>
+</dl></dd>
+</dl></article><article class="theorem theorem-like" id="thm-firstderivativetest"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span><span class="space"> </span><span class="title">The First Derivative Test.</span>
+</h4>
+<p id="p-1403">Suppose that <span class="process-math">\(c\)</span> is a critical number of a function <span class="process-math">\(f\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-259"><p id="p-1404"><em class="emphasis">If</em> <span class="process-math">\(f'\)</span> goes from <span class="process-math">\((+)\)</span> to <span class="process-math">\((-)\)</span> at <span class="process-math">\(c\)</span> (<span class="process-math">\(f\)</span> goes from <span class="process-math">\(\nearrow\)</span> to <span class="process-math">\(\searrow\)</span>) <em class="emphasis">then</em> <span class="process-math">\(f\)</span> has a local <em class="emphasis">maximum</em> at <span class="process-math">\(c\text{.}\)</span></p></li>
+<li id="li-260"><p id="p-1405"><em class="emphasis">If</em> <span class="process-math">\(f'\)</span> goes from <span class="process-math">\((-)\)</span> to <span class="process-math">\((+)\)</span> at <span class="process-math">\(c\)</span> (<span class="process-math">\(f\)</span> goes from <span class="process-math">\(\searrow\)</span> to <span class="process-math">\(\nearrow\)</span>) <em class="emphasis">then</em> <span class="process-math">\(f\)</span> has a local <em class="emphasis">minimum</em> at <span class="process-math">\(c\text{.}\)</span></p></li>
+<li id="li-261"><p id="p-1406">If <span class="process-math">\(f'\)</span> does not change sign at <span class="process-math">\(c\)</span> (if <span class="process-math">\(f\)</span> goes <span class="process-math">\(\searrow\,\searrow\)</span> or <span class="process-math">\(\nearrow\,\nearrow\)</span>), <em class="emphasis">then</em> <span class="process-math">\(f\)</span> does <em class="emphasis">not</em> have a local maximum or minimum at <span class="process-math">\(c\text{.}\)</span></p></li>
+</ol></article><p id="p-1407">In some cases, we will have more knowledge about the derivative <span class="process-math">\(f'\)</span> than we have about the height function. The key thing to notice is that we have been using the <em class="emphasis">slope function <span class="process-math">\(f'\)</span></em> to teach us about the <em class="emphasis">height function <span class="process-math">\(f\)</span></em>.</p>
+<article class="exploration project-like" id="image_maxminexample3"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">12.4</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-57">
+<p id="p-1408">Suppose that <span class="process-math">\(f(x)\)</span> is an uknown (or mystery) position function, with known derivative function</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \dfrac{(x+3)e^x}{(x-2)^2}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-157"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1409">Find the intervals where <span class="process-math">\(f\)</span> is increasing and decreasing.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-195" id="solution-195"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-195"><div class="solution solution-like">
+<p id="p-1410">In this example, we are <em class="emphasis">given</em> a factored version of the derivative <span class="process-math">\(f'\text{,}\)</span> so we do not need to use any of our rules.</p>
+<p id="p-1411">Next, we must find the points where <span class="process-math">\(f'=0\)</span> or <span class="process-math">\(f'\ DNE\text{.}\)</span>  Recall that a fraction <span class="process-math">\(\dfrac{A}{B}=0\)</span> if and only if <span class="process-math">\(A=0\text{,}\)</span> and <span class="process-math">\(\dfrac{A}{B}\ DNE\)</span> if and only if <span class="process-math">\(B=0\text{.}\)</span>  We must therefore solve two equations.</p>
+<p id="p-1412">For the first,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-129">
+\begin{align*}
+f' = \amp 0\\
+(x+3)e^x \amp =0
+\end{align*}
+</div>
+<p class="continuation">Because <span class="process-math">\(e^x \neq 0\)</span> for all <span class="process-math">\(x\text{,}\)</span> this can only happen if <span class="process-math">\(x+3=0\text{,}\)</span> which means when <span class="process-math">\(x=-3\text{.}\)</span></p>
+<p id="p-1413">For the second,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-130">
+\begin{align*}
+f' \amp DNE \\
+(x-2^2) \amp =0 \\
+x-2 \amp =0\\
+x \amp = 2
+\end{align*}
+</div>
+<p class="continuation">Plotting these on a number line, we get <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_maxminexample3_signchartv1.svg" role="img" class="contained"></div></p>
+<p id="p-1414">Recall that we were <em class="emphasis">given</em> the derivative function, which we now use to check the sign of each interal. We can either use a calculator as before</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-131">
+\begin{align*}
+f'(-4) \amp  = \dfrac{(-4+3)e^{-4}}{(-4-2)^2} = \dots = (-)\\
+f'(0) \amp = \dfrac{(0+3)e^0}{(0-2)^2} = \dots = (+)\\
+f'(3) \amp = \dfrac{(3+3)e^3}{(3-2)^2} = \dots = (+)
+\end{align*}
+</div>
+<p class="continuation">or we can do basic "sign arithmetic" in our head</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-132">
+\begin{align*}
+f'(-4) \amp  = \dfrac{(-)(+))}{(-)^2} = \frac{(-)}{(+)} =  (-)\\
+f'(0) \amp = \dfrac{(+)(+)}{(-)^2} = \frac{(+)}{(+)} = (+)\\
+f'(3) \amp = \dfrac{(+)(+))}{(+)^2} = (+)
+\end{align*}
+</div>
+<p id="p-1415">Either way, we obtain <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_maxminexample3_signchartv2.svg" role="img" class="contained"></div></p>
+<p id="p-1416">Reading off of the sign chart for <span class="process-math">\(f'\text{,}\)</span> we see that the <em class="emphasis">original</em> (mystery) function <span class="process-math">\(f\)</span> is increasing on the intervals <span class="process-math">\((-3,2)\cup(2,\infty)\text{,}\)</span> and the <em class="emphasis">original</em> (mystery) function <span class="process-math">\(f\)</span> is decreasing on the interval <span class="process-math">\((-\infty,-3)\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-158"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1417">Find the <span class="process-math">\(x\)</span> values of all relative extrema.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-196"><div class="solution solution-like">
+<p id="p-1418">Using the sign chart for <span class="process-math">\(f'\text{,}\)</span> we see that there is a local minima at <span class="process-math">\(x=-3\text{,}\)</span> and there is no local maxima.</p>
+<p id="p-1419"><em class="alert">Aside:</em> Note that the something very strange happens at <span class="process-math">\(x=-2\text{.}\)</span>  With a little more information about the original function, we would learn that <span class="process-math">\(f\)</span> is undefined at <span class="process-math">\(x=-2\)</span> and therefore could not be an extrema regardless of the sign chart.  However, these details are beyond the scope of this course, and won't come up in any of our examples.</p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-41"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span>
+</h4>
+<p id="p-1420">Find all maxima and minima for the function</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = \dfrac{x^2 + 1}{x}
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-197" id="solution-197"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-197"><div class="solution solution-like">
+<p id="p-1421">First, we must find an equation for <span class="process-math">\(f'\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddxfrac{\dfrac{ \red{x^2 + 1} }{\blue{x}}} 
+\end{equation*}
+</div>
+<p class="continuation">We are taking the derivative of a fraction, so we must use the quotient rule <span class="process-math">\(\D{\frac{t}{b}} = \frac{b\cdot t' - t\cdot b'}{b^2}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-133">
+\begin{align*}
+f'(x)  \amp = \dfrac{\blue{x}\D{\red{x^2+1}} - \red{(x^2+1)}\D{\blue{x}} }{(\blue{x})^2}\\
+\amp = \dfrac{\blue{x} (\red{2x+0}) - \red{(x^2+1)}\blue{1} }{(\blue{x})^2}\\
+\amp = \dfrac{ 2x^2 - x^2 - 1 }{x^2}\\
+\amp = \dfrac{ x^2 - 1 }{x^2}\\
+\amp = \dfrac{(x+1)(x-1)}{x^2}
+\end{align*}
+</div>
+<p class="continuation">Next, we must find all values of <span class="process-math">\(x\)</span> such that <span class="process-math">\(f'=0\)</span> and <span class="process-math">\(f'\ DNE\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-134">
+\begin{align*}
+f' \amp =0 \\
+(x+1)(x-1) \amp =0\\
+x=1,-1 
+\end{align*}
+</div>
+<p class="continuation">similarly</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-135">
+\begin{align*}
+f' \amp DNE\\
+x \amp =0
+\end{align*}
+</div>
+<p class="continuation">Plotting these on the number line gives</p>
+<p id="p-1422"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/image_maxminexample4_signchartv1.svg" role="img" class="contained"></div></p>
+<p id="p-1423">Evaluating <span class="process-math">\(f' = \frac{x^2-1}{x^2}\)</span> on each of these intervals gives <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/image_maxminexample4_signchartv2.svg" role="img" class="contained"></div></p>
+<p id="p-1424">The function has a local <em class="emphasis">maxima</em> at <span class="process-math">\(x=-1\)</span> and a local <em class="emphasis">minima</em> at <span class="process-math">\(x=1\)</span></p>
+<p id="p-1425">Note again that the orignal function is undefined (<span class="process-math">\(DNE\)</span>) at <span class="process-math">\(x=0\text{,}\)</span> so <span class="process-math">\(x=0\)</span> cannot be a max or a min regardless of the sign chart.</p>
+</div></div>
+</div></article><p id="p-1426">As we have seen, the steps in every max/min problem are the same</p>
+<ol class="decimal">
+<li id="li-262"><p id="p-1427">Find an equation for <span class="process-math">\(f'\)</span> (if you are not already given it)</p></li>
+<li id="li-263"><p id="p-1428">Solve <span class="process-math">\(f'=0\)</span></p></li>
+<li id="li-264"><p id="p-1429">Solve <span class="process-math">\(f'\ DNE\)</span></p></li>
+<li id="li-265"><p id="p-1430">Make the sign chart for <span class="process-math">\(f'\)</span></p></li>
+<li id="li-266"><p id="p-1431">Read off the answer.</p></li>
+</ol></section><section class="section" id="sec_absolutemaxmin"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">12.2</span> <span class="title">Finding Absolute Extrema</span>
+</h3>
+<p id="p-1432">In this class, we focus on local maxima and minima because of their close connections to calculus and their applications to marginal profit. But in many cases, global (also called absolute) maxima and minima are often of much greater interest. To see why, we begin with one more example.</p>
+<article class="exploration project-like" id="exploration_maxminexample5"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">12.5</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-58"><p id="p-1433">Suppose that <span class="process-math">\(P(x) = x^3 - 6x^2 + 9x +10 \)</span> is a total profit function.</p></div>
+<article class="task exercise-like" id="task-159"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1434">Find the quantities where all local maximum and minimum profits occur.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-198" id="solution-198"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-198"><div class="solution solution-like">
+<p id="p-1435">First, find the marginal profit function</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-136">
+\begin{align*}
+P'(x) \amp  = \ddx{x^3 - 6x^2 + 9x +10 } \\
+\amp = \ddx{x^3} - \ddx{ 6x^2 } + \ddx{ 9x } + \ddx{10}\\
+\amp = 3x^2 - 6\cdot 2x^1 + 9 + 0\\
+\amp = 3x^2 - 12x + 9
+\end{align*}
+</div>
+<p id="p-1436">Next, find when <span class="process-math">\(P'=0\)</span> or <span class="process-math">\(P'\ DNE\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-137">
+\begin{align*}
+P' \amp = 0\\
+3x^2 - 12x + 9 \amp =0\\
+3(x^2 - 4x + 3) \amp =0\\
+3(x-3)(x-1) \amp =0
+\end{align*}
+</div>
+<p class="continuation">This happens if and only if <span class="process-math">\(x=3\)</span> or <span class="process-math">\(x=1\text{,}\)</span> so these are the locations of the horizontal tangents.</p>
+<p id="p-1437">On the other hand, because <span class="process-math">\(P'\)</span> is a polynomial, it is always defined.  Therfore, <span class="process-math">\(P'\)</span> does not have any sigular points.</p>
+<p id="p-1438">Making a sign chart as usual gives <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample5_signchartv2.svg" role="img" class="contained"></div></p>
+<p id="p-1439">According to this analysis, a local maximum of profit occurs at <span class="process-math">\(x=1\text{,}\)</span> and a local minimum occurs at <span class="process-math">\(x=3\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-160"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1440">If you were able to decide how many items to sell, should you sell 1 item, 3 items, 10 items, or 100 items?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-199" id="solution-199"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-199"><div class="solution solution-like">
+<p id="p-1441">The easiest way to answer this question is to compute the total profit from each of the number of items given:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-138">
+\begin{align*}
+P(1) \amp = (1)^3 - 6(1)^2 + 9(1) + 10 = 14\\
+P(3) \amp = (3)^3 - 6(3)^2 + 9(3) + 10 = 10\\
+P(10) \amp = (10)^3 - 6(10)^2 + 9(10) + 10 = 500\\
+P(100) \amp = (100)^3 - 6(100)^2 + 9(100) + 10 = 940,910
+\end{align*}
+</div>
+<p class="continuation">Clearly, if you are given these options you should sell 100 items and make a total profit of $940,910</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-161"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1442">Use your work above to sketch the total profit function.  Use this graph to explain how to decide how many items you should sell.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-200" id="solution-200"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-200"><div class="solution solution-like">
+<p id="p-1443">Graphing total profit shows that although the function decreases between <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=3\text{,}\)</span> the function rapidly increases after <span class="process-math">\(x=3\)</span> and then proceeds to grow without bound. In other words, you should always sell as many items as possible.</p>
+<p id="p-1444"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample5_sketch.svg" role="img" class="contained"></div></p>
+</div></div>
+</div></article></article><p id="p-1445">The example above helps illustrate the way that some mathematical models oversimplify reality. Mathematically, the function <span class="process-math">\(P(x) = x^3 - 6x^2 + 9x + 10\)</span> can grow without bound.</p>
+<p id="p-1446">In real life, however, there are always limits on the quanitites involved. In fact, there are only a finite number of atoms in the universe!</p>
+<article class="definition definition-like" id="def-restrictfunction"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">Real Life Restricts Quanitites.</span>
+</h4>
+<p id="p-1447">Let <span class="process-math">\(f\)</span> be anu function and let <span class="process-math">\(l,r\)</span> be any numbers.</p>
+<p id="p-1448">The <dfn class="terminology">restriction of <span class="process-math">\(f(x)\)</span> to the interval <span class="process-math">\([l,r]\)</span></dfn> is the function that you get if you cut off the parts of the graph of the function that are less than <span class="process-math">\(l\)</span> and greater than <span class="process-math">\(r\text{.}\)</span></p>
+<p id="p-1449">The image below shows the result of restricting <span class="process-math">\(P(x) = x^3 - 6x^2 + 9x + 10\)</span> to the interval <span class="process-math">\([0,5]\text{.}\)</span>  The restricted function is shown as solid, and the parts of the function that were removed are shown as dotted.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample5_restrictedsketch.svg" role="img" class="contained"></div></article><article class="theorem theorem-like" id="thm-absoluteextrema"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span>
+</h4>
+<p id="p-1450">Suppose that <span class="process-math">\(f\)</span> is a function restricted to the closed interval <span class="process-math">\([l,r]\text{.}\)</span> This restriction of <span class="process-math">\(f\)</span> can have an absolute maxima or minima only at</p>
+<ul class="disc">
+<li id="li-267"><p id="p-1451">one of the endpoints (<span class="process-math">\(l\)</span> or <span class="process-math">\(r\)</span>)</p></li>
+<li id="li-268"><p id="p-1452">a horiziontal tangent (a point <span class="process-math">\(c\)</span> where <span class="process-math">\(f'(c)=0\)</span>)</p></li>
+<li id="li-269"><p id="p-1453">a singularity (a point <span class="process-math">\(c\)</span> where <span class="process-math">\(f'(c)\ DNE\)</span>).</p></li>
+</ul></article><p id="p-1454">That means that to find <em class="emphasis">all</em> of the absolute extrema for <span class="process-math">\(f\)</span> on a closed interval, it sufficies to find the three kinds of <em class="emphasis">possible</em> locations listed above, and then to compare the <em class="emphasis">height</em> of <span class="process-math">\(f\)</span> at each of these points.</p>
+<article class="assemblage assemblage-like" id="assemblage-absolutemaxmin"><h4 class="heading"><span class="title">Finding Absolute Extrema.</span></h4>
+<p id="p-1455">Suppose you are given a height function <span class="process-math">\(f\text{.}\)</span> To find the absolute maximum height and minimum height of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([l,r]\text{,}\)</span></p>
+<ol class="decimal">
+<li id="li-270"><p id="p-1456">Find the derivative (slope) function <span class="process-math">\(f'(x)\)</span></p></li>
+<li id="li-271"><p id="p-1457">Find all critical points <span class="process-math">\(c\)</span> where <span class="process-math">\(f'(c) = 0\)</span> (horizontal tangents) or <span class="process-math">\(f'(c)\ DNE\)</span> (singluar points).</p></li>
+<li id="li-272"><p id="p-1458">Find the height of the function at each of the critical points <span class="process-math">\(c\)</span></p></li>
+<li id="li-273"><p id="p-1459">Find the height of the function at the two endpoints (find <span class="process-math">\(f(l)\)</span> and <span class="process-math">\(f(r)\)</span>).</p></li>
+</ol>
+<p id="p-1460">The above computation will give you things like <span class="process-math">\(P(c_1) = y_1\text{,}\)</span> <span class="process-math">\(P(c_2) = y_2\text{,}\)</span> <span class="process-math">\(\dots\text{.}\)</span> If <span class="process-math">\(y_2\)</span> were the largest of all the <span class="process-math">\(y\)</span> values, it would be the <dfn class="terminology">absolute maximum</dfn> profit, and it would occur at quanitity <span class="process-math">\(x_2\)</span> If <span class="process-math">\(y_3\)</span> were the least of all the <span class="process-math">\(y\)</span> values, it would be the <dfn class="terminology">absolute minimum</dfn> profit, and it would occur at quanitity <span class="process-math">\(x_3\text{.}\)</span></p></article><article class="exploration project-like" id="exploration-63"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-59"><p id="p-1461">Let <span class="process-math">\(P(x)  = x^3 - 6x^2  + 9x + 10\)</span></p></div>
+<article class="task exercise-like" id="task-162"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1462">Find the absolute maximum and minimum profit for  <span class="process-math">\(P(x)\)</span> restricted to the interval <span class="process-math">\([0,5]\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-201" id="solution-201"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-201"><div class="solution solution-like">
+<p id="p-1463">In <a href="" class="xref" data-knowl="./knowl/exploration_maxminexample5.html" title="Exploration 12.5">Exploration 12.5</a>, we already found that the critical numbers for <span class="process-math">\(P(x)  = x^3 - 6x^2  + 9x + 10\)</span> are <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=3\)</span></p>
+<p id="p-1464">If we were to graph the function on the restricted domain, and to label the critical points, we would have <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample6_sketchdom1.svg" role="img" class="contained"></div></p>
+<p id="p-1465">From our picture, it looks like the point at <span class="process-math">\(x=5\)</span> will give us the largest profit, and the points at <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=3\)</span> will give us the same smallest profit</p>
+<p id="p-1466">To confirm this, we evaluate the <em class="emphasis">original</em>, total profit function <span class="process-math">\(P(x)\)</span> at these four points:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exploration_maxminexample5.html" id="md-139">
+\begin{align*}
+\color{red}  P(1) \amp = (1)^3 - 6(1)^2 + 9(1) + 10 = 14\\
+\color{red}  P(3) \amp = (3)^3 - 6(3)^2 + 9(3) + 10 = 10\\
+\color{blue} P(0) \amp = (0)^3 - 6(0)^2 + 9(0) + 10 = 10\\
+\color{blue} P(5) \amp = (5)^3 - 6(5)^2 + 9(5) + 10 = 30
+\end{align*}
+</div>
+<p id="p-1467">This confirms that on this interval, an absolute maximum proift of $30 occurs when <span class="process-math">\(x=5\text{,}\)</span> and that an absolute mininmum profit of $10 occurs when either <span class="process-math">\(x=0\)</span> or <span class="process-math">\(x=3\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-163"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1468">Find the absolute maximum and minimum profit for  <span class="process-math">\(P(x)\)</span> restricted to the interval <span class="process-math">\([0,2]\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-202" id="solution-202"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-202"><div class="solution solution-like">
+<p id="p-1469">In <a href="" class="xref" data-knowl="./knowl/exploration_maxminexample5.html" title="Exploration 12.5">Exploration 12.5</a>, we already found that the critical numbers for <span class="process-math">\(P(x)  = x^3 - 6x^2  + 9x + 10\)</span> are <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=3\)</span></p>
+<p id="p-1470">If we were to graph the function on the restricted domain, and to label the critical points, we would discover that the critical number <span class="process-math">\(x=3\)</span> is <em class="emphasis">not</em> in our restricted domain, so we must leave it out. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_maxminexample6_sketchdom2.svg" role="img" class="contained"></div></p>
+<p id="p-1471">From our picture, it looks like the point at <span class="process-math">\(x=1\)</span> will give us the largest profit. It is not entirely clear which points will give us the same smallest profit</p>
+<p id="p-1472">Therefore this, we evaluate the <em class="emphasis">original</em>, total profit function <span class="process-math">\(P(x)\)</span> at these three points:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exploration_maxminexample5.html" id="md-140">
+\begin{align*}
+\color{red}  P(1) \amp = (1)^3 - 6(1)^2 + 9(1) + 10 = 14\\
+\color{blue} P(0) \amp = (0)^3 - 6(0)^2 + 9(0) + 10 = 10\\
+\color{blue} P(2) \amp = (2)^3 - 6(2)^2 + 9(2) + 10 = 12
+\end{align*}
+</div>
+<p id="p-1473">We now see that on this interval, an absolute maximum proift of $14 occurs when <span class="process-math">\(x=1\text{,}\)</span> and that an absolute mininmum profit of $10 occurs when <span class="process-math">\(x=0\text{.}\)</span></p>
+</div></div>
+</div></article></article></section><section class="section" id="sec_maximaminimaandchangegraphs"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">12.3</span> <span class="title">Maxima, Minima, and Change Graphs</span>
+</h3>
+<p id="p-1474">Why are the techniques in this chapter important for the study of economics and business?</p>
+<section class="paragraphs" id="paragraphs-13"><h4 class="heading"><span class="title">Beautiful Fact.</span></h4>
+<p id="p-1475">The total profit function has a local maximum or minimum at the quantity <span class="process-math">\(c\)</span> <em class="emphasis">if and only if</em> the marginal profit function <span class="process-math">\(P'\)</span> goes between <span class="process-math">\((+)\)</span> and <span class="process-math">\((-)\)</span> at <span class="process-math">\(c\text{.}\)</span></p>
+<p id="p-1476">Recall that the derivative <span class="process-math">\(P'\)</span> and change function <span class="process-math">\(\Delta P\)</span> are closely related:</p>
+<ul class="disc">
+<li id="li-274"><p id="p-1477"><dfn class="terminology">Total profit is increasing</dfn> when the <dfn class="terminology">change in profit is positive</dfn></p></li>
+<li id="li-275"><p id="p-1478"><dfn class="terminology">Total profit is decreasing</dfn> when the <dfn class="terminology">change in profit is negative</dfn></p></li>
+</ul>
+<p class="continuation">This means we can illustrate our method for finding maxima and minima using total and change graphs.</p></section><p id="p-1479">Recall that the graph on the left gives the total profit from selling a certain number of units, while the graph on the right shows the change in profit due to each unit.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_maxmin1.svg" role="img" class="contained"></div>
+<p id="p-1480">In the graph above right, the <dfn class="terminology">change in profit</dfn> goes <dfn class="terminology">from positive to negative</dfn> at <span class="process-math">\(x=6\text{.}\)</span> That means that the <dfn class="terminology">total</dfn> profit has a <dfn class="terminology">maximum</dfn> at <span class="process-math">\(x=6\)</span> units. This matches our graph of total profit in the graph above left exactly.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_maxmin2.svg" role="img" class="contained"></div>
+<p id="p-1481">In the graph above right, the <dfn class="terminology">change in profit</dfn> goes <dfn class="terminology">from negative to positive</dfn> at <span class="process-math">\(x=5\text{.}\)</span> That means that the <dfn class="terminology">total</dfn> profit has a <dfn class="terminology">minimum</dfn> at <span class="process-math">\(x=5\)</span> units. This also matches exactly our graph of total profit, above left.</p>
+<article class="exploration project-like" id="exploration-64"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-60"><p id="p-1482"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_totalchange_maxmin3.svg" role="img" class="contained"></div></p></div>
+<article class="task exercise-like" id="task-164"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1483">Use your knowledge of calculus to make a rough sketch of the derivative of profit.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-203" id="solution-203"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-203"><div class="solution solution-like"><p id="p-1484"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_totalchange_maxmin4.svg" role="img" class="contained"></div></p></div></div>
+</div></article><article class="task exercise-like" id="task-165"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1485">Use the graph you are given to fill in the table defining <span class="process-math">\(P\)</span> and <span class="process-math">\(\Delta P\)</span></p></article><article class="task exercise-like" id="task-166"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1486">Describe the maxima and minima for the profit function <span class="process-math">\(P\)</span></p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

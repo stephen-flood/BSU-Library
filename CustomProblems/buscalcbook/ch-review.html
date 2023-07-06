@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>An Applied Review of Algebra</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Business Calculus">
+<meta property="book:author" content="Stephen Flood">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="buscalcchange" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\def \ddx #1 {\dfrac{d}{dx} \Big[ #1 \Big] }
+\def \tikzhistogram (#1,#2){\draw[fill=blue,opacity=0.3] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \draw[draw,thick] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \node[draw,fill=blue, circle,inner sep=2.5pt] at (#1,#2) {};}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Business Calculus:</span> <span class="subtitle">A Study of Marginal Changes</span></a></h1>
+<p class="byline">Stephen Flood</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="part-algebra.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-algebra.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-functions.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="part-algebra.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="part-algebra.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch-functions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link part"><a href="part-algebra.html" data-scroll="part-algebra" class="internal"><span class="codenumber">I</span> <span class="title">Algebra For Business</span></a></li>
+<li class="link active">
+<a href="ch-review.html" data-scroll="ch-review" class="internal"><span class="codenumber">1</span> <span class="title">An Applied Review of Algebra</span></a><ul><li><a href="ch-review.html#algebrareview" data-scroll="algebrareview" class="internal">Algebra Review</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-functions.html" data-scroll="ch-functions" class="internal"><span class="codenumber">2</span> <span class="title">Functions of Economics</span></a><ul>
+<li><a href="ch-functions.html#sec-function-concepts" data-scroll="sec-function-concepts" class="internal">Function Concepts</a></li>
+<li><a href="ch-functions.html#sec-functions-readinggraphs" data-scroll="sec-functions-readinggraphs" class="internal">Graphs of Functions</a></li>
+<li><a href="ch-functions.html#sec_graphsoftotalsandchanges" data-scroll="sec_graphsoftotalsandchanges" class="internal">Graphs of Totals and Changes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-algebra_linearfunctions.html" data-scroll="ch-algebra_linearfunctions" class="internal"><span class="codenumber">3</span> <span class="title">Lines and Linear Functions</span></a><ul>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-equations" data-scroll="sec-algebra-linear-equations" class="internal">Finding the Equation of a Line</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-demandprice" data-scroll="sec-algebra-linear-demandprice" class="internal">Demand Price and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algeba-linear-cost" data-scroll="sec-algeba-linear-cost" class="internal">Item Cost, Total Cost, and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-applied_domain" data-scroll="sec-applied_domain" class="internal">Models and Applied Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_polynomials_and_rationals.html" data-scroll="ch_polynomials_and_rationals" class="internal"><span class="codenumber">4</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="ch_polynomials_and_rationals.html#sec_quadratic_functions" data-scroll="sec_quadratic_functions" class="internal">Quadratic and Polynomial Functions</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_revenue" data-scroll="sec_revenue" class="internal">Revenue with Fair Pricing</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec-understandingprofit" data-scroll="sec-understandingprofit" class="internal">Understanding Profit</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_rationalfns" data-scroll="sec_rationalfns" class="internal">Rational Functions</a></li>
+</ul>
+</li>
+<li class="link"><a href="ch-combining_functions.html" data-scroll="ch-combining_functions" class="internal"><span class="codenumber">5</span> <span class="title">Combining Functions</span></a></li>
+<li class="link part"><a href="part-explog.html" data-scroll="part-explog" class="internal"><span class="codenumber">II</span> <span class="title">Mathematics of Compound Interest</span></a></li>
+<li class="link">
+<a href="ch_exponentials.html" data-scroll="ch_exponentials" class="internal"><span class="codenumber">6</span> <span class="title">Compound Interest and Depreciation</span></a><ul>
+<li><a href="ch_exponentials.html#sec_introducing_exponentials" data-scroll="sec_introducing_exponentials" class="internal">Exponential Functions</a></li>
+<li><a href="ch_exponentials.html#sec_compound_interest" data-scroll="sec_compound_interest" class="internal">Compound Interest</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logarithms.html" data-scroll="ch_logarithms" class="internal"><span class="codenumber">7</span> <span class="title">Logarithms and Solving for Time</span></a><ul>
+<li><a href="ch_logarithms.html#sec-inverses" data-scroll="sec-inverses" class="internal">Inverse Functions</a></li>
+<li><a href="ch_logarithms.html#sec_logartims" data-scroll="sec_logartims" class="internal">Logarithms Undo Exponentials</a></li>
+<li><a href="ch_logarithms.html#sec-lawsoflogs" data-scroll="sec-lawsoflogs" class="internal">Laws of Logarithms</a></li>
+<li><a href="ch_logarithms.html#sec_solvingfortime" data-scroll="sec_solvingfortime" class="internal">Solving Compound Interest for Time</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rates.html" data-scroll="part-rates" class="internal"><span class="codenumber">III</span> <span class="title">Introducing Change and Rates</span></a></li>
+<li class="link">
+<a href="ch_limits.html" data-scroll="ch_limits" class="internal"><span class="codenumber">8</span> <span class="title">Limits</span></a><ul>
+<li><a href="ch_limits.html#sec_readingdynamically" data-scroll="sec_readingdynamically" class="internal">Reading Graphs Dynamically</a></li>
+<li><a href="ch_limits.html#sec-econlimits" data-scroll="sec-econlimits" class="internal">Macroeconomics and Mostly Continous Functions</a></li>
+<li><a href="ch_limits.html#sec-ComputingLimitsNumerically" data-scroll="sec-ComputingLimitsNumerically" class="internal">Computing Limits Numerically</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_totalschanges.html" data-scroll="ch_totalschanges" class="internal"><span class="codenumber">9</span> <span class="title">Average Rates of Change</span></a><ul>
+<li><a href="ch_totalschanges.html#sec-AROC" data-scroll="sec-AROC" class="internal">Average Rates of Change</a></li>
+<li><a href="ch_totalschanges.html#sec_graphsofrateschangesandtotals" data-scroll="sec_graphsofrateschangesandtotals" class="internal">Graphs of Rates, Changes, and Totals</a></li>
+<li><a href="ch_totalschanges.html#sec_velocityAndIROC" data-scroll="sec_velocityAndIROC" class="internal">Velocity and Instantaneous Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_tangentsecant.html" data-scroll="ch_tangentsecant" class="internal"><span class="codenumber">10</span> <span class="title">Understanding Slope</span></a><ul>
+<li><a href="ch_tangentsecant.html#sec_slope" data-scroll="sec_slope" class="internal">Slopes and Rates of Change</a></li>
+<li><a href="ch_tangentsecant.html#sec_secantangent" data-scroll="sec_secantangent" class="internal">Approximating Slope with Secant Lines</a></li>
+<li><a href="ch_tangentsecant.html#sec_slopealgebraically" data-scroll="sec_slopealgebraically" class="internal">Defining Slope Algebraically</a></li>
+<li><a href="ch_tangentsecant.html#sec-slopefunction" data-scroll="sec-slopefunction" class="internal">Defining a Slope Function</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-slopeshortcuts.html" data-scroll="part-slopeshortcuts" class="internal"><span class="codenumber">IV</span> <span class="title">Shortcuts for Computing Slope Functions</span></a></li>
+<li class="link"><a href="ch_basicderivativerules.html" data-scroll="ch_basicderivativerules" class="internal"><span class="codenumber">11</span> <span class="title">Slope Shortcuts for Basic Functions</span></a></li>
+<li class="link">
+<a href="ch_marginalcost.html" data-scroll="ch_marginalcost" class="internal"><span class="codenumber">12</span> <span class="title">Marginal Change and Linear Approximation</span></a><ul>
+<li><a href="ch_marginalcost.html#sec-marginalcost" data-scroll="sec-marginalcost" class="internal">Marginal Cost</a></li>
+<li><a href="ch_marginalcost.html#sec-linearapproximation" data-scroll="sec-linearapproximation" class="internal">Linear Approximations</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-applyingslopes.html" data-scroll="part-applyingslopes" class="internal"><span class="codenumber">V</span> <span class="title">Applying Marginals and Slopes</span></a></li>
+<li class="link">
+<a href="ch-maxmin.html" data-scroll="ch-maxmin" class="internal"><span class="codenumber">13</span> <span class="title">Finding Maxima and Minima</span></a><ul><li><a href="ch-maxmin.html#sec_maximaminimaandchangegraphs" data-scroll="sec_maximaminimaandchangegraphs" class="internal">Maxima, Minima, and Change Graphs</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-secondderivatives.html" data-scroll="ch-secondderivatives" class="internal"><span class="codenumber">14</span> <span class="title">Dimishing Returns and Changing Rates</span></a><ul><li><a href="ch-secondderivatives.html#sec_seconderivativeconcavityandchange" data-scroll="sec_seconderivativeconcavityandchange" class="internal">The Second Derivative, Concavity, and Change</a></li></ul>
+</li>
+<li class="link part"><a href="part-integrals.html" data-scroll="part-integrals" class="internal"><span class="codenumber">VI</span> <span class="title">Integral Calculus</span></a></li>
+<li class="link"><a href="ch-antiderivatives.html" data-scroll="ch-antiderivatives" class="internal"><span class="codenumber">15</span> <span class="title">Undoing Derivatives</span></a></li>
+<li class="link"><a href="ch-area.html" data-scroll="ch-area" class="internal"><span class="codenumber">16</span> <span class="title">Understanding Areas</span></a></li>
+<li class="link part"><a href="part-applications.html" data-scroll="part-applications" class="internal"><span class="codenumber">VII</span> <span class="title">Assorted Applications</span></a></li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="chapter" id="ch-review"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">An Applied Review of Algebra</span>
+</h2>
+<section class="section" id="algebrareview"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Algebra Review</span>
+</h3>
+<section class="subsection" id="subsection-1"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Laws of Algebra</span>
+</h4>
+<article class="assemblage assemblage-like" id="assemblage-distributing"><h5 class="heading"><span class="title">Distributing and FOIL-ing.</span></h5>
+<p id="p-1">Distribute <span class="process-math">\(a\)</span> to all terms:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a \cdot (b+c) = a\cdot b + a \cdot c
+\end{equation*}
+</div>
+<p id="p-2">FOIL the expression:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(a + b) \cdot (c + d) = a\cdot c + a \cdot d + b\cdot c + b\cdot d
+\end{equation*}
+</div></article><article class="axiom theorem-like" id="fraction-arithmetic"><h5 class="heading">
+<span class="type">Axiom</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Laws of Fractions.</span>
+</h5>
+<p id="p-3">Suppose that <span class="process-math">\(b,e\neq 0\)</span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel top" style="width:50%;"><ul class="circle">
+<li id="li-1"><p id="p-derived-li-1"><span class="process-math">\(\displaystyle \frac{a}{b} + \frac{c}{b}=  \frac{a+c}{b}\)</span></p></li>
+<li id="li-2"><p id="p-derived-li-2"><span class="process-math">\(\displaystyle \frac{a}{b} \cdot \frac{c}{e} =  \frac{a\cdot c}{b\cdot e}\)</span></p></li>
+<li id="li-3"><p id="p-derived-li-3"><span class="process-math">\(\displaystyle \frac{a}{b}=  \frac{a\cdot e}{b\cdot e}\)</span></p></li>
+</ul></div>
+<div class="sbspanel top" style="width:50%;"><ul class="circle">
+<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(\displaystyle \frac{a}{b} - \frac{c}{b} =  \frac{a-c}{b}\)</span></p></li>
+<li id="li-5"><p id="p-derived-li-5"><span class="process-math">\(\displaystyle \frac{1}{\ \frac{b}{e}\ }=  \frac{e}{b}\)</span></p></li>
+<li id="li-6"><p id="p-derived-li-6"><span class="process-math">\(\displaystyle a\cdot \frac{c}{b}=  \frac{a\cdot c}{b}\)</span></p></li>
+</ul></div>
+</div></div></article><article class="axiom theorem-like" id="exponential-arithmetic"><h5 class="heading">
+<span class="type">Axiom</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Laws of Exponents.</span>
+</h5>
+<p id="p-4">Let <span class="process-math">\(a,b&gt; 0\)</span> in the following.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel top" style="width:50%;"><ul class="circle">
+<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\displaystyle \sqrt[r]{a}=  a^{1/r}\)</span></p></li>
+<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle a^{r+s} =  a^r\cdot a^s \)</span></p></li>
+<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\displaystyle {\left(a^{r}\right)}^s=  a^{r\cdot s}\)</span></p></li>
+<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\displaystyle {\left(a\cdot b\right)}^{r}=  a^{r}\cdot b^{r}\)</span></p></li>
+<li id="li-11"><p id="p-derived-li-11"><span class="process-math">\(\displaystyle \sqrt[r]{a\cdot b}=  \sqrt[r]{a}\cdot \sqrt[r]{b}\)</span></p></li>
+</ul></div>
+<div class="sbspanel top" style="width:50%;"><ul class="circle">
+<li id="li-12"><p id="p-derived-li-12"><span class="process-math">\(\displaystyle a^{r-s}=  \frac{a^r}{a^s}\)</span></p></li>
+<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(\displaystyle a^{-s}=  \frac{1}{a^s}\)</span></p></li>
+<li id="li-14"><p id="p-derived-li-14"><span class="process-math">\(\displaystyle a^{s}=  \frac{1}{a^{-s}}\)</span></p></li>
+<li id="li-15"><p id="p-derived-li-15"><span class="process-math">\(\displaystyle \frac{1}{a^{s}} =  \left(\frac{1}{a}\right)^s\)</span></p></li>
+</ul></div>
+</div></div></article><article class="example example-like" id="fractions-which-do-not-simplify-easily"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-fractions-which-do-not-simplify-easily"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Fractions which do NOT simplify easily.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-fractions-which-do-not-simplify-easily"><article class="example example-like"><p id="p-5">Doesn't simplify at all: <span class="process-math">\(\dfrac{3}{x+1}\)</span></p>
+<p id="p-6">Must find a common denomiator before you can combine terms:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{x+1}{x-1} + \dfrac{1}{x} = \dfrac{\,x\cdot (x+1) + (x-1)\cdot 1\,}{x\cdot (x-1)} = \dfrac{x^2+2x-1}{x^2-x}
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="exponents-and-products-that-do-not-simplify-easily"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exponents-and-products-that-do-not-simplify-easily"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Exponents and Products that do NOT simplify easily.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exponents-and-products-that-do-not-simplify-easily"><article class="example example-like"><p id="p-7">Doesn't simplify at all: <span class="process-math">\(\sqrt{x+1} = (x+1)^{1/2}\)</span></p>
+<p id="p-8">You must FOIL to simplify: <span class="process-math">\((x+1)^2 = (x+1)(x+1) = x^2 + 2x + 1\)</span></p></article></div></section><section class="subsection" id="sec-IntervalsandGraphs"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Intervals and Graphs</span>
+</h4>
+<section class="subsubsection" id="interval-notation"><h5 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.1.2.1</span> <span class="title">Interval Notation</span>
+</h5>
+<p id="p-9">When using <em class="emphasis">interval notation</em> to represent sets, square brackets include the endpoint and parentheses exclude the endpoint. Multiple intervals can be combined using <span class="process-math">\(\cup\)</span> (or U).</p>
+<ul id="p-10" class="disc">
+<li id="li-16">
+<p id="p-11"><span class="process-math">\([-1,1)\)</span> represents the numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(-1\leq x &lt;1\text{.}\)</span></p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_intervals1.svg" role="img" class="contained"></div>
+</li>
+<li id="li-17">
+<p id="p-12"><span class="process-math">\([0,\infty)\)</span> represents the numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(0\leq x \text{.}\)</span></p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_intervals2.svg" role="img" class="contained"></div>
+</li>
+<li id="li-18">
+<p id="p-13"><span class="process-math">\((-\infty,-1)\bigcup (1,2]\)</span> represents the numbers <span class="process-math">\(x\)</span> such that <em class="emphasis">either</em> <span class="process-math">\(x&lt;-1\)</span> <em class="emphasis">or</em> <span class="process-math">\(1&lt;x\leq 2\text{.}\)</span></p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_intervals3.svg" role="img" class="contained"></div>
+</li>
+</ul></section><section class="subsubsection" id="graphs-of-common-functions"><h5 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.1.2.2</span> <span class="title">Graphs of Common Functions</span>
+</h5>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_graphs1.svg" role="img" class="contained"></div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_graphs2.svg" role="img" class="contained"></div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_graphs3.svg" role="img" class="contained"></div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_graphs4.svg" role="img" class="contained"></div></section></section></section></section></div></main>
+</div>
+</body>
+</html>

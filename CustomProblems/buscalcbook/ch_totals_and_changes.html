@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Economics of Totals and Changes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Business Calculus">
+<meta property="book:author" content="Stephen Flood">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="buscalcchange" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\def \ddx #1 {\dfrac{d}{dx} \Big[ #1 \Big] }
+\def \tikzhistogram (#1,#2){\draw[fill=blue,opacity=0.3] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \draw[draw,thick] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \node[draw,fill=blue, circle,inner sep=2.5pt] at (#1,#2) {};}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Business Calculus:</span> <span class="subtitle">A Study of Marginal Changes</span></a></h1>
+<p class="byline">Stephen Flood</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch-functions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-algebra.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-algebra_linearfunctions.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch-functions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="part-algebra.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch-algebra_linearfunctions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link part"><a href="part-algebra.html" data-scroll="part-algebra" class="internal"><span class="codenumber">I</span> <span class="title">Algebra For Business</span></a></li>
+<li class="link"><a href="ch-review.html" data-scroll="ch-review" class="internal"><span class="codenumber">1</span> <span class="title">An Applied Review of Algebra</span></a></li>
+<li class="link">
+<a href="algebrareview.html" data-scroll="algebrareview" class="internal"><span class="codenumber">2</span> <span class="title">Algebra Review</span></a><ul>
+<li><a href="algebrareview.html#section-1" data-scroll="section-1" class="internal">Laws of Algebra</a></li>
+<li><a href="algebrareview.html#sec-IntervalsandGraphs" data-scroll="sec-IntervalsandGraphs" class="internal">Intervals and Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-functions.html" data-scroll="ch-functions" class="internal"><span class="codenumber">3</span> <span class="title">Functions of Economics</span></a><ul>
+<li><a href="ch-functions.html#sec-function-concepts" data-scroll="sec-function-concepts" class="internal">Function Concepts</a></li>
+<li><a href="ch-functions.html#sec-functions-readinggraphs" data-scroll="sec-functions-readinggraphs" class="internal">Graphs of Functions</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="ch_totals_and_changes.html" data-scroll="ch_totals_and_changes" class="internal"><span class="codenumber">4</span> <span class="title">Economics of Totals and Changes</span></a><ul><li><a href="ch_totals_and_changes.html#sec_graphsoftotalsandchanges" data-scroll="sec_graphsoftotalsandchanges" class="internal">Graphs of Totals and Changes</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-algebra_linearfunctions.html" data-scroll="ch-algebra_linearfunctions" class="internal"><span class="codenumber">5</span> <span class="title">Lines and Linear Functions</span></a><ul>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-equations" data-scroll="sec-algebra-linear-equations" class="internal">Finding the Equation of a Line</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-demandprice" data-scroll="sec-algebra-linear-demandprice" class="internal">Demand Price and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algeba-linear-cost" data-scroll="sec-algeba-linear-cost" class="internal">Item Cost, Total Cost, and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-applied_domain" data-scroll="sec-applied_domain" class="internal">Models and Applied Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_polynomials_and_rationals.html" data-scroll="ch_polynomials_and_rationals" class="internal"><span class="codenumber">6</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="ch_polynomials_and_rationals.html#sec_quadratic_functions" data-scroll="sec_quadratic_functions" class="internal">Quadratic and Polynomial Functions</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_revenue" data-scroll="sec_revenue" class="internal">Revenue with Fair Pricing</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec-understandingprofit" data-scroll="sec-understandingprofit" class="internal">Understanding Profit</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_rationalfns" data-scroll="sec_rationalfns" class="internal">Rational Functions</a></li>
+</ul>
+</li>
+<li class="link"><a href="ch-combining_functions.html" data-scroll="ch-combining_functions" class="internal"><span class="codenumber">7</span> <span class="title">Combining Functions</span></a></li>
+<li class="link part"><a href="part-explog.html" data-scroll="part-explog" class="internal"><span class="codenumber">II</span> <span class="title">Mathematics of Compound Interest</span></a></li>
+<li class="link">
+<a href="ch_exponentials.html" data-scroll="ch_exponentials" class="internal"><span class="codenumber">8</span> <span class="title">Compound Interest and Depreciation</span></a><ul>
+<li><a href="ch_exponentials.html#sec_introducing_exponentials" data-scroll="sec_introducing_exponentials" class="internal">Exponential Functions</a></li>
+<li><a href="ch_exponentials.html#sec_compound_interest" data-scroll="sec_compound_interest" class="internal">Compound Interest</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logarithms.html" data-scroll="ch_logarithms" class="internal"><span class="codenumber">9</span> <span class="title">Logarithms and Solving for Time</span></a><ul>
+<li><a href="ch_logarithms.html#sec-inverses" data-scroll="sec-inverses" class="internal">Inverse Functions</a></li>
+<li><a href="ch_logarithms.html#sec_logartims" data-scroll="sec_logartims" class="internal">Logarithms Undo Exponentials</a></li>
+<li><a href="ch_logarithms.html#sec-lawsoflogs" data-scroll="sec-lawsoflogs" class="internal">Laws of Logarithms</a></li>
+<li><a href="ch_logarithms.html#sec_solvingfortime" data-scroll="sec_solvingfortime" class="internal">Solving Compound Interest for Time</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rates.html" data-scroll="part-rates" class="internal"><span class="codenumber">III</span> <span class="title">Introducing Change and Rates</span></a></li>
+<li class="link">
+<a href="ch_limits.html" data-scroll="ch_limits" class="internal"><span class="codenumber">10</span> <span class="title">Limits</span></a><ul>
+<li><a href="ch_limits.html#sec_readingdynamically" data-scroll="sec_readingdynamically" class="internal">Reading Graphs Dynamically</a></li>
+<li><a href="ch_limits.html#sec-econlimits" data-scroll="sec-econlimits" class="internal">Macroeconomics and Mostly Continous Functions</a></li>
+<li><a href="ch_limits.html#sec-ComputingLimitsNumerically" data-scroll="sec-ComputingLimitsNumerically" class="internal">Computing Limits Numerically</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_totalschanges.html" data-scroll="ch_totalschanges" class="internal"><span class="codenumber">11</span> <span class="title">Average Rates of Change</span></a><ul>
+<li><a href="ch_totalschanges.html#sec-AROC" data-scroll="sec-AROC" class="internal">Average Rates of Change</a></li>
+<li><a href="ch_totalschanges.html#sec_graphsofrateschangesandtotals" data-scroll="sec_graphsofrateschangesandtotals" class="internal">Graphs of Rates, Changes, and Totals</a></li>
+<li><a href="ch_totalschanges.html#sec_velocityAndIROC" data-scroll="sec_velocityAndIROC" class="internal">Velocity and Instantaneous Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_tangentsecant.html" data-scroll="ch_tangentsecant" class="internal"><span class="codenumber">12</span> <span class="title">Understanding Slope</span></a><ul>
+<li><a href="ch_tangentsecant.html#sec_slope" data-scroll="sec_slope" class="internal">Slopes and Rates of Change</a></li>
+<li><a href="ch_tangentsecant.html#sec_secantangent" data-scroll="sec_secantangent" class="internal">Approximating Slope with Secant Lines</a></li>
+<li><a href="ch_tangentsecant.html#sec_slopealgebraically" data-scroll="sec_slopealgebraically" class="internal">Defining Slope Algebraically</a></li>
+<li><a href="ch_tangentsecant.html#sec-slopefunction" data-scroll="sec-slopefunction" class="internal">Defining a Slope Function</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-slopeshortcuts.html" data-scroll="part-slopeshortcuts" class="internal"><span class="codenumber">IV</span> <span class="title">Shortcuts for Computing Slope Functions</span></a></li>
+<li class="link"><a href="ch_basicderivativerules.html" data-scroll="ch_basicderivativerules" class="internal"><span class="codenumber">13</span> <span class="title">Slope Shortcuts for Basic Functions</span></a></li>
+<li class="link">
+<a href="ch_marginalcost.html" data-scroll="ch_marginalcost" class="internal"><span class="codenumber">14</span> <span class="title">Marginal Change and Linear Approximation</span></a><ul>
+<li><a href="ch_marginalcost.html#sec-marginalcost" data-scroll="sec-marginalcost" class="internal">Marginal Cost</a></li>
+<li><a href="ch_marginalcost.html#sec-linearapproximation" data-scroll="sec-linearapproximation" class="internal">Linear Approximations</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-applyingslopes.html" data-scroll="part-applyingslopes" class="internal"><span class="codenumber">V</span> <span class="title">Applying Marginals and Slopes</span></a></li>
+<li class="link">
+<a href="ch-maxmin.html" data-scroll="ch-maxmin" class="internal"><span class="codenumber">15</span> <span class="title">Finding Maxima and Minima</span></a><ul><li><a href="ch-maxmin.html#sec_maximaminimaandchangegraphs" data-scroll="sec_maximaminimaandchangegraphs" class="internal">Maxima, Minima, and Change Graphs</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-secondderivatives.html" data-scroll="ch-secondderivatives" class="internal"><span class="codenumber">16</span> <span class="title">Dimishing Returns and Changing Rates</span></a><ul><li><a href="ch-secondderivatives.html#sec_seconderivativeconcavityandchange" data-scroll="sec_seconderivativeconcavityandchange" class="internal">The Second Derivative, Concavity, and Change</a></li></ul>
+</li>
+<li class="link part"><a href="part-integrals.html" data-scroll="part-integrals" class="internal"><span class="codenumber">VI</span> <span class="title">Integral Calculus</span></a></li>
+<li class="link"><a href="ch-antiderivatives.html" data-scroll="ch-antiderivatives" class="internal"><span class="codenumber">17</span> <span class="title">Undoing Derivatives</span></a></li>
+<li class="link"><a href="ch-area.html" data-scroll="ch-area" class="internal"><span class="codenumber">18</span> <span class="title">Understanding Areas</span></a></li>
+<li class="link part"><a href="part-applications.html" data-scroll="part-applications" class="internal"><span class="codenumber">VII</span> <span class="title">Assorted Applications</span></a></li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="chapter" id="ch_totals_and_changes"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">4</span> <span class="title">Economics of Totals and Changes</span>
+</h2>
+<section class="introduction" id="introduction-4"><p id="p-55"></p></section><section class="section" id="sec_graphsoftotalsandchanges"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Graphs of Totals and Changes</span>
+</h3>
+<section class="subsection" id="introduction-gas-prices-change-over-time"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.1</span> <span class="title">Introduction - Gas Prices Change Over Time</span>
+</h4>
+<p id="p-56">Many things change over time, such as the cost of gasoline. There are different ways of thinking about describing this change. For example, suppose the price of gas over the course of a single week is given by the following table:</p>
+<figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b3 r2 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</th>
+<th scope="col" class="c m b3 r2 l0 t0 lines">1</th>
+<th scope="col" class="c m b3 r2 l0 t0 lines">2</th>
+<th scope="col" class="c m b3 r2 l0 t0 lines">3</th>
+<th scope="col" class="c m b3 r2 l0 t0 lines">4</th>
+<th scope="col" class="c m b3 r2 l0 t0 lines">5</th>
+<th scope="col" class="c m b3 r2 l0 t0 lines">6</th>
+<th scope="col" class="c m b3 r0 l0 t0 lines">7</th>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">cost of gas (<span class="process-math">\(y\)</span>)</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">3.75</td>
+<td class="c m b0 r2 l0 t0 lines">3.25</td>
+<td class="c m b0 r2 l0 t0 lines">3.75</td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">2.5</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+</tr>
+</table></div></figure><p id="p-57">This gives us the <dfn class="terminology">total</dfn> cost of gas per day. There are also another way to think about this: how much does the price change each day? Over the course of the week the price decreases 25 cents, then decreases another 50 cents, then increases 50 cents, then increases <span class="process-math">\(\$1.25\text{,}\)</span> then decreases <span class="process-math">\(\$2.50\text{,}\)</span> and finally increases another 50 cents.</p>
+<p id="p-58">We will write <span class="process-math">\(\Delta y\)</span> to emphasize that this is the <dfn class="terminology">change</dfn> in price each day in a table.</p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.2<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">1</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">2</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">3</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">4</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">5</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">6</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">7</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">change in cost (<span class="process-math">\(\Delta y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(-\)</span>0.25</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(-\)</span>0.50</td>
+<td class="c m b0 r0 l0 t0 lines">0.50</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(-\)</span>1.75</td>
+<td class="c m b0 r0 l0 t0 lines">0.50</td>
+<td class="c m b0 r0 l0 t0 lines">0.50</td>
+</tr>
+</table></div></figure><article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-59">How are we computing <span class="process-math">\(\Delta y\text{?}\)</span> Day 1 is a special case. Because it is our first data point, there's nothing to compare it to.</p>
+<p id="p-60">On day 2 our cost <span class="process-math">\(y\)</span> was 3.75, and on day 1 our cost <span class="process-math">\(y\)</span> was 4. Then the <dfn class="terminology">change in y on day 2</dfn> is <span class="process-math">\(\Delta y = (3.75 - 4) = -0.25\text{.}\)</span> We can also translate this into function language.</p>
+<ul id="p-61" class="disc">
+<li id="li-19"><p id="p-62">The cost on day 1 is $4, so we write <span class="process-math">\(f(1) = 4\)</span></p></li>
+<li id="li-20"><p id="p-63">The cost on day 2 is $3.75, so we write <span class="process-math">\(f(2) = 3.75\)</span></p></li>
+<li id="li-21"><p id="p-64">To compute <span class="process-math">\(\Delta y\)</span> on day 2, we compute <span class="process-math">\(\Delta y = f(2)-f(1) = 3.75-4.00=-0.25\)</span></p></li>
+</ul></article></div>
+<p id="p-65">Now we have two tables, which <em class="emphasis">both give functions</em> that describe a different perspective on how the cost of gas changes over time: the total value (<span class="process-math">\(y\)</span>) of gas graphed with respect to time, and the change in value (<span class="process-math">\(\Delta y\)</span>) graphed with respect to time.</p>
+<p id="p-66">To see how they're related, we can graph both functions side by side:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_1.svg" role="img" class="contained"></div></section><article class="exploration project-like" id="exploration-3"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-5"><p id="p-67">Use the graph of the total and change functions above to answer the following questions</p></div>
+<article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(a)</span></h5>How much does the price of gas change between days 3 and 4?</article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(b)</span></h5>How much does the price of gas change between days 3 and 6?</article><article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(c)</span></h5>How much does the price of gas change between days 1 and 7?</article><article class="task exercise-like" id="task-13"><h5 class="heading"><span class="codenumber">(d)</span></h5>On which days does the price of gas change the most? When does it change the least?</article></article><article class="example example-like" id="exercise-1-using-total-value-to-compute-change"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-exercise-1-using-total-value-to-compute-change"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Using Total Value to Compute Change.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1-using-total-value-to-compute-change"><article class="example example-like"><p id="p-68">In most examples, we will only be given one of these types of graphs, and we will need to create the other type of graph. In the next example you are only given the graph of the total value (<span class="process-math">\(y\)</span>), and asked to find the graph of the change (<span class="process-math">\(\Delta y\)</span>).</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_2.svg" role="img" class="contained"></div>
+<ol id="p-69" class="decimal">
+<li id="li-22"><p id="p-70">What is the cost of gas (y) on days 5 and 6? What is the change of cost (<span class="process-math">\(\Delta y\)</span>) between days 5 and 6?</p></li>
+<li id="li-23">
+<p id="p-71">Use the graph you are given to fill in the following table.</p>
+<figure class="table table-like" id="table-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.5<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">1</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">2</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">3</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">4</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">5</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">6</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">7</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">total cost (<span class="process-math">\(y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">change in cost (<span class="process-math">\(\Delta y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><p id="p-72">(By convention, the initial change in cost is undefined, since you don't have anything to compare it to.)</p>
+</li>
+<li id="li-24"><p id="p-73">Graph the “Change in Cost” function in the axes given above</p></li>
+</ol></article></div>
+<article class="example example-like" id="exercise-2-adding-up-changes-to-find-total-value"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-exercise-2-adding-up-changes-to-find-total-value"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Adding Up Changes to Find Total Value.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2-adding-up-changes-to-find-total-value"><article class="example example-like"><p id="p-74">In other situations, we know the <em class="emphasis">change</em> in cost (<span class="process-math">\(\Delta y\)</span>) and we want to use this to find the total cost function (<span class="process-math">\(y\)</span>).</p>
+<p id="p-75">In the example below, we are given that the total cost on day 1 is $3. We can find the original total value function by repeatedly adding the change to the total.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_3.svg" role="img" class="contained"></div>
+<ol id="p-76" class="decimal">
+<li id="li-25"><p id="p-77">Based on the graphs given above, how much does gas cost on day 1?</p></li>
+<li id="li-26"><p id="p-78">How much does the cost of gas change between days 1 and 2?</p></li>
+<li id="li-27"><p id="p-79">Find the total cost of gas on day 2. (<em class="emphasis">Hint: use your answers to the first two parts</em>)</p></li>
+<li id="li-28">
+<p id="p-80">Use the graphs you are given to fill in the following table.</p>
+<figure class="table table-like" id="table-4"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.7<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">1</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">2</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">3</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">4</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">5</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">6</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">7</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">total cost (<span class="process-math">\(y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">change in cost (<span class="process-math">\(\Delta y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure>
+</li>
+<li id="li-29"><p id="p-81">Graph the “Change in Cost” function in the axes given above</p></li>
+</ol></article></div>
+<article class="insight remark-like" id="economics-debts-and-deficits"><a href="" data-knowl="" class="id-ref insight-knowl original has-image" data-refid="hk-economics-debts-and-deficits"><h4 class="heading">
+<span class="type">Application</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Debts and Deficits.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-economics-debts-and-deficits"><article class="insight remark-like"><p id="p-82">The <dfn class="terminology">US national debt</dfn> in a given year is the total amount of money that the government owed in that year. The <dfn class="terminology">net revenue</dfn> from a given year is the difference between money taken in (through taxes) and money spent by the government. The government is running an <dfn class="terminology">annual deficit</dfn> if it spends more than it takes in. In other words, having negative net revenue in a given year is the same thing as a positive deficit in that year.</p>
+<p id="p-83">The page <a class="external" href="https://datalab.usaspending.gov/americas-finance-guide/deficit/trends/" target="_blank">https://datalab.usaspending.gov/americas-finance-guide/deficit/trends/</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> lists US budget deficits in <em class="emphasis">trillions of dollars</em> since the year 2000, rounded to two decimal places. The same page indicates that the US debt in 2000 was 5.65 trillions.</p>
+<p id="p-84">As before, we can compute the debt <span class="process-math">\(y\)</span> for each year since 2000 by starting with 5.65 and repeatedly adding the <span class="process-math">\(\Delta y\)</span> for each year.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a> This gives us our familiar graphs of the total <span class="process-math">\(y\)</span> and change <span class="process-math">\(\Delta y\text{.}\)</span></p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_debtanddeficit.svg" role="img" class="contained"></div></article></div>
+<article class="example example-like" id="changes-and-formulas"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-changes-and-formulas"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Changes and Formulas.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-changes-and-formulas"><article class="example example-like"><p id="p-86">Often, we are working with <em class="emphasis">formulas</em> that define (or model) the quantity of interest. For example, suppose that on day <span class="process-math">\(x\text{,}\)</span> the value of a certain stock is given by <span class="process-math">\(f(x) = x-0.1x^{2}\text{.}\)</span></p>
+<ol id="p-87" class="decimal">
+<li id="li-30">
+<p id="p-88">Use the formula you are given to fill in the following table. You can use the “Table” mode of a graphing calculator to speed this up significantly.</p>
+<figure class="table table-like" id="table-5"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.10<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">1</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">2</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">3</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">4</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">5</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">6</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">7</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">current value (<span class="process-math">\(y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">change in value (<span class="process-math">\(\Delta y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><p id="p-89">Note that the change <span class="process-math">\(\Delta y = y_2 - y_1 = f(x_2) - f(x_1)\)</span> implicitly depends on the distance <span class="process-math">\(\Delta x=x_2-x_1\text{.}\)</span> Here, all our x values are consecutive, but you could imagine computing <span class="process-math">\(\Delta y\)</span> (the change in <span class="process-math">\(y\)</span>) in different increments (e.g. for <span class="process-math">\(x=0,5,10,15\)</span> or for <span class="process-math">\(x=1,3,5,7\)</span>)</p>
+</li>
+<li id="li-31">
+<p id="p-90">Using the same function <span class="process-math">\(f(x) = x-0.1x^{2}\)</span> as above, complete the following table</p>
+<figure class="table table-like" id="table-6"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.11<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">1</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">3</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">5</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">7</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">current value (<span class="process-math">\(y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">change in value (<span class="process-math">\(\Delta y\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure>
+</li>
+<li id="li-32">
+<p id="p-91">Re-making the table for different <span class="process-math">\(\Delta x\)</span> can be tedious, but the relationship between <span class="process-math">\(\Delta y\)</span> and <span class="process-math">\(\Delta x\)</span> will be a central question in calculus.</p>
+<p id="p-92">To decribe <span class="process-math">\(\Delta y\)</span> algebraically, use the function <span class="process-math">\(f(x) = x-0.1x^{2}\)</span> to simplify the expression</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Delta y = f(x + \Delta x) - f(x)
+\end{equation*}
+</div>
+</li>
+</ol></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">datalab.usaspending.gov/americas-finance-guide/deficit/trends/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><p id="p-85"><dfn class="terminology">Note:</dfn> Actually, the debt is always more than the sum of the deficits, since the government must also pay <dfn class="terminology">interest</dfn> on the money it borrows to cover a deficit. The true debt for each year is shown using a red dot.</p></div></div>
+</div></main>
+</div>
+</body>
+</html>

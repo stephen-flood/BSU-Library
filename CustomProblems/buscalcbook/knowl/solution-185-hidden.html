@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Always start by setting up the derivative</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddx{\ln\big(15x^2\big)}
+\end{equation*}
+</div>
+<p class="continuation">Use order of operations to identify the outermost operation. In this case the outermost operation is the <em class="alert">logarithmic function</em> <span class="process-math">\(\blue{f(u)} = \blue{\ln(u)}\text{,}\)</span> and the argument is <span class="process-math">\(\red{g(x)} = \red{15x^2}\text{.}\)</span>  That means we can either use the full chain rule <span class="process-math">\(\D{ f(g) } = f'(g)\cdot g'\text{,}\)</span> or we can use the shortcut <span class="process-math">\(\D{\ln\big(g(x)\big)} = \frac{1}{g(x)}\cdot g'(x)\text{.}\)</span>  In either case, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f'(x) = \amp \ddx{ \blue{\ln\big(\red{15x^2}\big)} }  \\
+= \amp \blue{f'(\red{g(x)})}\cdot \ddx{\red{g(x)}}\\
+= \amp \blue{\dfrac{1}{\ \red{15x^2} \ }}\cdot (\red{30x})  \\
+= \amp \dfrac{30x}{15x^2}\\
+= \amp \dfrac{2}{x}
+\end{align*}
+</div>
+</div></body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="insight remark-like"><p>So far, we have seen the notation <span class="process-math">\(\intdx{_a^b f(x)}\)</span> in two very different contexts: antiderivatives and geometric area. But why are these concepts connected?</p>
+<p>We have already seen the foundational idea: given a complex area we have <em class="emphasis">sliced</em> it into <em class="emphasis">small regions</em>, where we can find the area of each slice more easily.</p>
+<p>Suppose you are given any curved function <span class="process-math">\(f\)</span> an enclosed area you want to compute as below.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_ftcinsight_v1.svg" role="img" class="contained"></div>
+<p>Slicing the shaded region into thin, vertical strips gives the image below on the left.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_ftcinsight_v2.svg" role="img" class="contained"></div>
+<p>Notice that if the function is continuous (doesn't jump) and if the strips are thin enough, each strip will <em class="emphasis">approximately</em> be a rectangle with height <span class="process-math">\(h = f(x)\)</span> and base <span class="process-math">\(b=\Delta x\text{.}\)</span> This is illustrated in the image above on the right.</p>
+<ul class="disc">
+<li><p>The area of <em class="emphasis">one</em> strip will be approximately <span class="process-math">\(h\cdot b  = f(x) \cdot \Delta x\text{.}\)</span></p></li>
+<li>
+<p>The area of the <em class="emphasis">whole</em> region is <em class="emphasis">approximately</em> the Sum of all slices from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=b\text{.}\)</span> Mathematically, this is written</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\text{area of whole} \amp \approx \text{Sum of slices from} a \text{ to } b\\
+\amp \approx \text{Sum of } f(x)\cdot \Delta x \tet{ from } a \text{ to } b
+\end{align*}
+</div>
+<p class="continuation">To emphasize that the slices are very thin, we replace the blocky <span class="process-math">\(\Delta x\)</span> with a smooth <span class="process-math">\(dx\text{,}\)</span> and we summarize the word "Sum" with the symbol <span class="process-math">\(\int\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\amp \approx \text{Sum of } f(x)\cdot dx \text{ from } a \text{ to } b\\
+\amp \approx \intdx{_a^b f(x) }
+\end{align*}
+</div>
+</li>
+</ul></article></body>
+</html>

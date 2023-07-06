@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>How do we decide which rule we can use? We use the order of operations to figure out the "outermost" or "weakest" operation. Following the acronym PEMDAS, subtraction and addition are the <em class="emphasis">weakest</em> operations, so we can think of the expression as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddx{ \red{15x^4} + \red{2x^{-1}} + \red{13} }
+\end{equation*}
+</div>
+<p class="continuation">Now we have the derivative of a sum, which is equal to the sum of the derivatives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddx{ \red{15x^4} } + \ddx{ \red{2x^{-1} } } + \ddx{\red{13}} 
+\end{equation*}
+</div>
+<p class="continuation">Using the other, more familiar rules we can now compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+= \amp 15\ddx{x^4} + 2\ddx{x^{-1}} + \ddx{13}\\
+= \amp 15\cdot 4x^3 + 2\cdot -1 x^{-2} + 0\\
+= \amp 60x^3 - 2 x^{-2} = 60 x^3 - \dfrac{2}{x^2}
+\end{align*}
+</div>
+<span class="incontext"><a href="ch_basicderivativerules.html#p-1137" class="internal">in-context</a></span>
+</body>
+</html>

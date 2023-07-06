@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- Code from lolo posted on 
+http://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file -->
+<html> 
+<head> 
+
+  <TITLE>Stephen Flood - Teaching </TITLE>
+  <META NAME="Generator" CONTENT="HTML/gvim">
+  <META NAME="Language" CONTENT="english">
+  <META NAME="AUTHOR" CONTENT="Stephen Flood">
+  <META NAME="DESCRIPTION" CONTENT="Stephen Flood's Homepage">
+  <META NAME="KEYWORDS" CONTENT="Stephen, Steve, Flood, Notre Dame, mathematics, math, logic">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >  
+
+
+<!--Include jQuery script-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Define jQuery includes-->
+<script type="text/javascript"> 
+$(function(){$("#algebra-function-notation").load("algebra-function-notation.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"algebra-function-notation"]);}); });
+$(function(){$("#algebra-compound-interest").load("algebra-compound-interest.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"algebra-compound-interest"]);}); });
+$(function(){$("#algebra-function-transformation").load("algebra-function-transformation.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"algebra-function-transformation"]);}); });
+$(function(){$("#algebra-general-exponential").load("algebra-general-exponential.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"algebra-general-exponential"]);}); });
+$(function(){$("#trig-unit-circle").load("trig-unit-circle.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"trig-unit-circle"]);}); });
+
+$(function(){$("#derivative-graphical").load("derivative-graphical.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"derivative-graphical"]);}); });
+$(function(){$("#derivative-limit-of-secant").load("derivative-limit-of-secant.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"derivative-limit-of-secant"]);}); });
+$(function(){$("#derivative-linear-approximation").load("derivative-linear-approximation.html", function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,"derivative-linear-approximation"]);}); });
+
+    </script> 
+<!--End jQuery -->
+
+
+
+
+<!-- Local CSS Style -->
+<style type="text/css">
+@import url(../flood.css);
+</style>
+
+<!-- Load MathJax -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Load JSX Graph files (for interactive JavaScript graphics) -->
+ <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css">
+ <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js">
+ JXG.Options.text.useMathJax = true;
+</script>
+<!-- END Loading JSX Graph -->
+
+<!-- JavaScript for Hiding Boxes -->
+<!-- Based on code from http://www.webdeveloper.com/forum/showthread.php?101307-Show-Hide-checkbox -->
+<script type="text/javascript">
+function showMe (it, box) {
+//  var vis = (box.checked) ? "block" : "none";	// Hide by default
+  var vis = (box.checked) ? "none" : "block";	// Show by default
+  document.getElementById(it).style.display = vis;
+}
+</script>
+<!-- END JavaScript for Hiding Boxes -->
+
+</head> 
+
+<body> 
+
+<h1>Interactive Mathematics Graphics </h1>
+<!--Begin Navigation-->
+<table style="width:500px;padding-left:40px"><tr>
+<th style="padding-right:25px"> <a href="../index.html">Home</a> </th>
+<th style="padding-right:25px;padding-left:25px"> <a href="../teaching.html">Teaching</a></th>
+<th style="padding-right:25px;padding-left:25px"> <a href="../research/index.html">Research</a> </th>
+<th style="padding-right:25px;padding-left:25px"> <a href="../funmath/index.html">Fun Math</a> </th>
+</tr></table>
+<!--End Navigation-->
+
+
+<div class="b1">
+
+<noscript>
+<div style="
+  width: 500px ;
+  margin-bottom: 20px ;
+  margin-top: 20px ;
+  margin-left: 20px ;
+  margin-right: 20px ;
+
+  border-style:outset;
+  border-width:3px;
+  border-color:red;
+
+  padding:20px;"><b>Warning:</b> This page will not work unless JavaScript is enabled!
+</div>
+</noscript>
+
+<h2> Contents </h2>
+<div class="b2">
+
+<h3>Precalculus and Algebra</h3>
+<ul>
+	<li> <a href="#functionnotation">Function Notation</a>
+	<li> <a href="#functiontransform">Function Transformations</a>
+	<li> <a href="#generalexponential">General Exponential Functions</a>
+	<li> <a href="#compoundinterest">Compund Interest</a>
+</ul>
+
+<h3>Trigonometry</h3>
+<ul>
+	<li> <a href="#unitcircle">Unit Circle</a>
+</ul>
+
+<h3>Calculus I</h3>
+<ul>
+	<li> <a href="#secant">Using Secant Lines to Approximate the Tangent </a>
+	<li> <a href="#derivative">The graphical meaning of \(f'(a)\)</a>
+	<li> <a href="#linapprox">Linear Approximations and the Tangent Line</a>
+</ul>
+</div>
+
+
+<br><br>
+
+<h1> Precalculus and Algebra </h1>
+	
+
+<h2 id="functionnotation">Function Notation</h2>
+<div class="b2"> 	
+<p style="width:500px">
+<b>Directions:</b> 
+Try moving around the top slider, which adjusts the input \(x\) which we are using to compute \(f(x)\).  
+</p>
+<ul>
+	<li> What happens to the output as you change the input? 
+	<li> What is \( f(0) \)?  
+	<li> For what \(x\) is  \( f(x) = 0 \)?  
+	<li> How many \(x\) are there with \( f(x) = 5 \)?  What are the values of these \(x\)?
+	<li> What is the approximate range of \(f(x)\)?
+</ul> 
+	<!--iframe id="algebra-function-notation" src="algebra-function-notation.html" width=750 height=750></iframe-->
+	<div id="algebra-function-notation"></div>
+</div>
+
+
+
+
+<br>
+
+<h2 id="functiontransform"> Function Transformations </h2>
+<div class="b2"> 	
+	
+<p style="width:500px">
+Changing the base of the exponential changes the graph significantly.  
+</p>
+
+<p style="width:500px">
+<b>Directions:</b> Move the slider around to examine the graph of \(y=a^x\) for different values of \(a\).  What happens when \(a > 1\)?  What about when \(a = 1\), or when \(a < 1\)?  
+</p>
+
+<div id="algebra-function-transformation"></div>
+
+<!--iframe  id="algebra-function-transformation" src="algebra-function-transformation.html" style="height:550px; width:750px; resize:both; overflow:visible;"></iframe-->
+	
+
+</div>
+
+
+
+
+<br>
+
+<h2 id="generalexponential"> General Exponential Functions </h2>
+<div class="b2"> 	
+	
+<p style="width:500px">
+Changing the base of the exponential changes the graph significantly.  
+</p>
+
+<p style="width:500px">
+<b>Directions:</b> Move the slider around to examine the graph of \(y=a^x\) for different values of \(a\).  What happens when \(a > 1\)?  What about when \(a = 1\), or when \(a < 1\)?  
+</p>
+
+	<div id="algebra-general-exponential"></div>
+</div>
+
+
+
+
+
+<br>
+
+<h2 id="compoundinterest"> Compound Interest </h2>
+<div class="b2"> 	
+	
+<p style="width:500px">
+Understanding the impact of different interest rates is an important life skill.  Use this graphic to get a concrete picture of the impact of the interest on the principal.
+
+</p>
+
+<p style="width:500px">
+<b>Directions:</b> 
+The top slider controls the interest rate (as a decimal), the middle slider controls the number of compoundings per year, and the bottom slider controls the principle (in thousands).  
+</p>
+<ul>
+	<li> Most investments have interest rates between 1% and 5%.  What does this look like?  
+	<li> Most credit cards have interest rates around 25% or 30%.  What does this look like?  
+	<li> How does the graph change when you adjust the number of compoundings per year?  
+	<li>What impact does changing the principal have?
+</ul>
+<br>
+
+<div id="algebra-compound-interest"></div>
+
+</div>
+
+
+
+<br><br>
+
+
+<h1> Trigonometry </h1>
+	
+
+
+<h2 id="unitcircle"> The Unit Circle </h2>
+<div class="b2"> 	
+	
+<p style="width:500px">
+Understanding the impact of different interest rates is an important life skill.  Use this graphic to get a concrete picture of the impact of the interest on the principal.
+
+</p>
+
+<p style="width:500px">
+<b>Directions:</b> 
+The slider controls the angle (in radians).  
+</p>
+<ul>
+	<li> 
+</ul>
+<br>
+
+<div id="trig-unit-circle"></div>
+
+</div>
+
+
+
+<br><br>
+
+
+<h1> Calculus I </h1>
+	
+
+<h2 id="secant"> Using Secant Lines to Approximate the Tangent </h2>
+
+<div class="b2"> 	
+
+<p style="width:500px">
+Computing the slope of the line tangent to \(f(x)\) at \(a\) is tricky.  Our formula for the slope of a line requires two points, but the tangent is defined using a single point. 
+</p>
+
+<p style="width:500px">
+As \(h\) gets smaller, the slope of the secant line between \((a,f(a))\) and \((a+h,f(a+h))\) approaches the slope of the tangent to \(f(x)\) at \(a\).
+<br>
+When \(h\) is very small, the slope of the secant is nearly identical to the slope of the tangent.  
+</p>
+
+<p style="width:500px">
+<b>Directions:</b> Try moving the slider for \(h\).  What happens when you make \(h\) closer to 0?  Next try moving the slider for \(a\), to approximate the tangent at a different point.     
+</p>
+
+<div id="derivative-limit-of-secant"></div>
+
+</div>
+
+
+
+
+
+<br>
+
+<h2 id="derivative"> The graphical meaning of \(f'(a)\)</h2>
+<div class="b2"> 	
+
+<p style="width:500px">
+There are two sides to the definition of \(f'(x)\).  Graphically, \(f'(a)\) is the  slope of the tangent to \(f(x)\) at \(a\).  Algebraically, \(\displaystyle f'(a) =  \lim_{h\rightarrow 0} \frac{f(a+h)-f(a)}{h}\). 
+</p>
+
+<p style="width:500px">
+<b>Directions:</b> Move the slider to view the tangent line and \(f'(a)\) for different values of \(a\).  What do you notice?
+</p>
+
+<div id="derivative-graphical"></div>
+
+</div>
+
+
+
+
+<br>
+
+<h2 id="linapprox"> Linear Approximations and the Tangent Line</h2>
+<div class="b2"> 	
+
+<p style="width:500px">
+The line tangent to \(f(x)\) at \(a\) gives a good approximation to \(f(x)\) for \(x\) near \(a\).
+This interactive graphic can help you get a sense of how accurate this approximation is.  </p>
+
+<p style="width:500px">
+<b>Directions:</b> 
+Try moving around the top slider, which adjusts the point \(x\) where we want to approximate \(f\).  What happens to the error and percent error? 
+<br>
+Now use the bottom slider to adjust the location \(a\) of the tangent line approximation to \(f\).   For example, center the linear approximation to \(f\) at the point \(a= 0\).  Now how does adjusting the point \(x\) impact the error and percent error?   
+</p>
+
+<div id="derivative-linear-approximation"></div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+</body> 
+</html>
+
+

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions of Economics</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="http://mathlogic.org/oerbook/buscalcchange/external/Delta_logo.gif">
+<meta property="book:title" content="Business Calculus">
+<meta property="book:author" content="Stephen Flood">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="buscalcchange" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\newcommand{\red}[1]{   {\color{red}   #1}   }
+\newcommand{\blue}[1]{  {\color{blue}  #1}  }
+\newcommand{\green}[1]{ {\color{green} #1} }
+
+\newcommand{\ddx}[1]{ \dfrac{d}{dx} \Big[ #1 \Big]  } 
+\newcommand{\ddt}[1]{ \dfrac{d}{dt} \Big[ #1 \Big]  } 
+\newcommand{\ddu}[1]{ \dfrac{d}{du} \Big[ #1 \Big]  } 
+\newcommand{\ddxfrac}[1]{ \dfrac{d}{dx} \left[ #1 \right]  } 
+\newcommand{\D}[1]{ \Big[ #1 \Big]'  } 
+
+\newcommand{\intdx}[1]{{\,\int#1\,\,dx}}
+\newcommand{\dint}[1]{\displaystyle\intdx{#1}}
+
+\def \tikzhistogram (#1,#2){\draw[fill=blue,opacity=0.3] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \draw[draw,thick] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \node[draw,fill=blue, circle,inner sep=2.5pt] at (#1,#2) {};}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="external/Delta_logo.gif" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="home.html"><span class="title">Business Calculus:</span> <span class="subtitle">A Study of Marginal Change</span></a></h1>
+<p class="byline">Stephen Flood</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="part-algebra.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-algebra.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-algebra_linearfunctions.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="part-algebra.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="part-algebra.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch-algebra_linearfunctions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-algebra.html" data-scroll="part-algebra" class="internal"><span class="codenumber">I</span> <span class="title">Algebra For Business</span></a></li>
+<li class="link active">
+<a href="ch-functions.html" data-scroll="ch-functions" class="internal"><span class="codenumber">1</span> <span class="title">Functions of Economics</span></a><ul>
+<li><a href="ch-functions.html#sec-function-concepts" data-scroll="sec-function-concepts" class="internal">Function Concepts</a></li>
+<li><a href="ch-functions.html#sec-functions-readinggraphs" data-scroll="sec-functions-readinggraphs" class="internal">Graphs of Functions</a></li>
+<li><a href="ch-functions.html#sec-combining_functions" data-scroll="sec-combining_functions" class="internal">Combining Functions</a></li>
+<li><a href="ch-functions.html#sec_graphsoftotalsandchanges" data-scroll="sec_graphsoftotalsandchanges" class="internal">Graphs of Totals and Changes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-algebra_linearfunctions.html" data-scroll="ch-algebra_linearfunctions" class="internal"><span class="codenumber">2</span> <span class="title">Lines and Linear Functions</span></a><ul>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-equations" data-scroll="sec-algebra-linear-equations" class="internal">Finding the Equation of a Line</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-demandprice" data-scroll="sec-algebra-linear-demandprice" class="internal">Demand Price and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algeba-linear-cost" data-scroll="sec-algeba-linear-cost" class="internal">Item Cost, Total Cost, and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-applied_domain" data-scroll="sec-applied_domain" class="internal">Models and Applied Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_polynomials_and_rationals.html" data-scroll="ch_polynomials_and_rationals" class="internal"><span class="codenumber">3</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="ch_polynomials_and_rationals.html#sec_quadratic_functions" data-scroll="sec_quadratic_functions" class="internal">Quadratic and Polynomial Functions</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_revenue" data-scroll="sec_revenue" class="internal">Revenue with Fair Pricing</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec-understandingprofit" data-scroll="sec-understandingprofit" class="internal">Understanding Profit</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_rationalfns" data-scroll="sec_rationalfns" class="internal">Rational Functions</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-explog.html" data-scroll="part-explog" class="internal"><span class="codenumber">II</span> <span class="title">Mathematics of Compound Interest</span></a></li>
+<li class="link">
+<a href="ch_exponentials.html" data-scroll="ch_exponentials" class="internal"><span class="codenumber">4</span> <span class="title">Compound Interest and Depreciation</span></a><ul>
+<li><a href="ch_exponentials.html#sec_introducing_exponentials" data-scroll="sec_introducing_exponentials" class="internal">Exponential Functions</a></li>
+<li><a href="ch_exponentials.html#sec_percent_change" data-scroll="sec_percent_change" class="internal">Percents and Percent Change</a></li>
+<li><a href="ch_exponentials.html#sec_compound_interest" data-scroll="sec_compound_interest" class="internal">Compound Interest and Depreciation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logarithms.html" data-scroll="ch_logarithms" class="internal"><span class="codenumber">5</span> <span class="title">Logarithms and Solving for Time</span></a><ul>
+<li><a href="ch_logarithms.html#sec-inverses" data-scroll="sec-inverses" class="internal">Inverse Functions</a></li>
+<li><a href="ch_logarithms.html#sec_logartims" data-scroll="sec_logartims" class="internal">Logarithms Undo Exponentials</a></li>
+<li><a href="ch_logarithms.html#sec-lawsoflogs" data-scroll="sec-lawsoflogs" class="internal">Laws of Logarithms</a></li>
+<li><a href="ch_logarithms.html#sec_solvingfortime" data-scroll="sec_solvingfortime" class="internal">Solving Compound Interest for Time</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rates.html" data-scroll="part-rates" class="internal"><span class="codenumber">III</span> <span class="title">Introducing Change and Rates</span></a></li>
+<li class="link">
+<a href="ch_limits.html" data-scroll="ch_limits" class="internal"><span class="codenumber">6</span> <span class="title">Limits</span></a><ul>
+<li><a href="ch_limits.html#sec_readingdynamically" data-scroll="sec_readingdynamically" class="internal">Reading Graphs Dynamically</a></li>
+<li><a href="ch_limits.html#sec-econlimits" data-scroll="sec-econlimits" class="internal">Macroeconomics and Mostly Continous Functions</a></li>
+<li><a href="ch_limits.html#sec-ComputingLimitsNumerically" data-scroll="sec-ComputingLimitsNumerically" class="internal">Computing Limits Numerically</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_totalschanges.html" data-scroll="ch_totalschanges" class="internal"><span class="codenumber">7</span> <span class="title">Average Rates of Change</span></a><ul>
+<li><a href="ch_totalschanges.html#sec-AROC" data-scroll="sec-AROC" class="internal">Average Rates of Change</a></li>
+<li><a href="ch_totalschanges.html#sec_graphsofrateschangesandtotals" data-scroll="sec_graphsofrateschangesandtotals" class="internal">Graphs of Rates, Changes, and Totals</a></li>
+<li><a href="ch_totalschanges.html#sec_velocityAndIROC" data-scroll="sec_velocityAndIROC" class="internal">Velocity and Instantaneous Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_tangentsecant.html" data-scroll="ch_tangentsecant" class="internal"><span class="codenumber">8</span> <span class="title">Understanding Slope</span></a><ul>
+<li><a href="ch_tangentsecant.html#sec_slope" data-scroll="sec_slope" class="internal">Slopes and Rates of Change</a></li>
+<li><a href="ch_tangentsecant.html#sec_secantangent" data-scroll="sec_secantangent" class="internal">Approximating Slope with Secant Lines</a></li>
+<li><a href="ch_tangentsecant.html#sec_slopealgebraically" data-scroll="sec_slopealgebraically" class="internal">Defining Slope Algebraically</a></li>
+<li><a href="ch_tangentsecant.html#sec-slopefunction" data-scroll="sec-slopefunction" class="internal">Defining a Slope Function</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-slopeshortcuts.html" data-scroll="part-slopeshortcuts" class="internal"><span class="codenumber">IV</span> <span class="title">Shortcuts for Computing Slope Functions</span></a></li>
+<li class="link">
+<a href="ch_basicderivativerules.html" data-scroll="ch_basicderivativerules" class="internal"><span class="codenumber">9</span> <span class="title">Slope Shortcuts for Basic Functions</span></a><ul>
+<li><a href="ch_basicderivativerules.html#sec_basicrules1" data-scroll="sec_basicrules1" class="internal">Basic Derivative Rules</a></li>
+<li><a href="ch_basicderivativerules.html#sec-derivativesexplog" data-scroll="sec-derivativesexplog" class="internal">Derivatives of Exponentials and Logarithms</a></li>
+<li><a href="ch_basicderivativerules.html#sec-marginalcost" data-scroll="sec-marginalcost" class="internal">Marginal Cost</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_productquotientrule.html" data-scroll="ch_productquotientrule" class="internal"><span class="codenumber">10</span> <span class="title">Product and Quotient Rule</span></a><ul>
+<li><a href="ch_productquotientrule.html#sec_productrule" data-scroll="sec_productrule" class="internal">Derivatives of Products</a></li>
+<li><a href="ch_productquotientrule.html#sec_quotientrule" data-scroll="sec_quotientrule" class="internal">Derivatives of Fractions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_chainrule.html" data-scroll="ch_chainrule" class="internal"><span class="codenumber">11</span> <span class="title">The Chain Rule</span></a><ul>
+<li><a href="ch_chainrule.html#sec_generalizedpowerrule" data-scroll="sec_generalizedpowerrule" class="internal">The Generalized Power Rule</a></li>
+<li><a href="ch_chainrule.html#sec-chainrule" data-scroll="sec-chainrule" class="internal">The Chain Rule</a></li>
+<li><a href="ch_chainrule.html#sec-derivativesummary" data-scroll="sec-derivativesummary" class="internal">List of All Derivative Rules</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-applyingslopes.html" data-scroll="part-applyingslopes" class="internal"><span class="codenumber">V</span> <span class="title">Applying Marginals and Slopes</span></a></li>
+<li class="link">
+<a href="ch-maxmin.html" data-scroll="ch-maxmin" class="internal"><span class="codenumber">12</span> <span class="title">Finding Maxima and Minima</span></a><ul>
+<li><a href="ch-maxmin.html#sec_understandingextrema" data-scroll="sec_understandingextrema" class="internal">Finding Local Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_absolutemaxmin" data-scroll="sec_absolutemaxmin" class="internal">Finding Absolute Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_maximaminimaandchangegraphs" data-scroll="sec_maximaminimaandchangegraphs" class="internal">Maxima, Minima, and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-secondderivatives.html" data-scroll="ch-secondderivatives" class="internal"><span class="codenumber">13</span> <span class="title">Dimishing Returns and Changing Rates</span></a><ul>
+<li><a href="ch-secondderivatives.html#sec-secondderivative" data-scroll="sec-secondderivative" class="internal">The Second Derivative</a></li>
+<li><a href="ch-secondderivatives.html#sec-concavity" data-scroll="sec-concavity" class="internal">Concavity and Graphs</a></li>
+<li><a href="ch-secondderivatives.html#sec_seconderivativeconcavityandchange" data-scroll="sec_seconderivativeconcavityandchange" class="internal">The Second Derivative and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-integrals.html" data-scroll="part-integrals" class="internal"><span class="codenumber">VI</span> <span class="title">Integral Calculus</span></a></li>
+<li class="link">
+<a href="ch_antiderivatives.html" data-scroll="ch_antiderivatives" class="internal"><span class="codenumber">14</span> <span class="title">Antiderivatives</span></a><ul>
+<li><a href="ch_antiderivatives.html#sec_undoingderivatives" data-scroll="sec_undoingderivatives" class="internal">Undoing Derivatives</a></li>
+<li><a href="ch_antiderivatives.html#sec-indefiniteintegrals" data-scroll="sec-indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_antiderivatives.html#sec-applyingantiderivatives" data-scroll="sec-applyingantiderivatives" class="internal">Applying Antiderivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_introducingarea.html" data-scroll="ch_introducingarea" class="internal"><span class="codenumber">15</span> <span class="title">Understanding Areas</span></a><ul>
+<li><a href="ch_introducingarea.html#sec_indefiniteintegrals" data-scroll="sec_indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_introducingarea.html#sec_geometricarea" data-scroll="sec_geometricarea" class="internal">Understanding Geometrically of Area</a></li>
+<li><a href="ch_introducingarea.html#sec_fundamentaltheorem" data-scroll="sec_fundamentaltheorem" class="internal">Area, Antiderivatives, and Graphs of Change</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="algebrareview.html" data-scroll="algebrareview" class="internal"><span class="codenumber">A</span> <span class="title">Algebra Review</span></a><ul>
+<li><a href="algebrareview.html#section-50" data-scroll="section-50" class="internal">Laws of Algebra</a></li>
+<li><a href="algebrareview.html#sec-IntervalsandGraphs" data-scroll="sec-IntervalsandGraphs" class="internal">Intervals and Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="chapter" id="ch-functions"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">Functions of Economics</span>
+</h2>
+<section class="introduction" id="introduction-1"><p id="p-5">Mathematical knowledge has been described as <em class="emphasis">synthetic</em>. This is both because we learn mathematics by doing, and because we must incorproate each new concept into a broader system of knowledge. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
+<p id="p-6">Mastery of <em class="emphasis">College Algebra</em>, or an equivalent class, is absolutely essential for success in this course, and <em class="emphasis">will be assumed throughout</em>. If you would like a brief summary of selected formluas and ideas from algebra, see <a href="algebrareview.html" class="internal" title="Appendix A: Algebra Review">Appendix A</a>. If your algebraic skills are weaker, talk to your instructor to obtain resources for additional practice.</p>
+<p id="p-7">The goal of this course is to provide a first introduction to two related topics</p>
+<ol class="decimal">
+<li id="li-1">
+<p id="p-8">In <a href="part-algebra.html" class="internal" title="Part I: Algebra For Business">Part I–II</a>, we will discuss a range of applications of mathematics, including algebra, to economics and business contexts.</p>
+<p id="p-9">Most of the mathematical techniques in this section should be familiar, although the applications will not. The main exception to this will be <a href="part-explog.html" class="internal" title="Part II: Mathematics of Compound Interest">Part II</a>, where we will introduce the mathematics of exponential and logarithmic functions in some detail.</p>
+</li>
+<li id="li-2"><p id="p-10">In <a href="part-rates.html" class="internal" title="Part III: Introducing Change and Rates">Part III–VI</a>, we will introduce and apply mathemtical techniques for studing change, rates, and area. These tools will teach us a <em class="emphasis">method for calculation</em> of rates and areas, and are therefore often given the name <em class="alert">calculus</em>.</p></li>
+</ol></section><section class="section" id="sec-function-concepts"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Function Concepts</span>
+</h3>
+<p id="p-11">In this section, we will briefly review some key function concepts.  However, our main focus will be on beginning to connect these mathematical ideas to the central economic and business concepts, applications, and examples that we will study over the course of this semester.</p>
+<article class="exploration project-like" id="exploration-1"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-2">
+<p id="p-12">If you are manufacturing t-shirts, then the <em class="emphasis">total cost</em> will be a function  of the number of items you make. This is because there will be a rule which, given  of the number of items to be made (the input) tells you a unique total cost in $ (the output).</p>
+<p id="p-13">If <span class="process-math">\(x\)</span> represents the number of items, we often write <span class="process-math">\(C(x)\)</span> to denote the total cost of these <span class="process-math">\(x\)</span> items.</p>
+</div>
+<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-14">Write the mathematical expression that says "the cumulative cost of making 97 items costs $350.42"</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-15"><span class="process-math">\(C(97) = 350.42\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-16">Translate the statment <span class="process-math">\(C(52) = 253.19\)</span> into natural language.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-17">This statement says that the cumulative cost of making 52 items is $253.19.</p></div></div>
+</div></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-18">Write a mathematical expression that describes the cost of items 53-97 <em class="emphasis">only</em>.  Use the information from the previous parts to find the cost of these items.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-19">We have seen already that <span class="process-math">\(C(92)\)</span> tells us the cost of items 0-92, and that <span class="process-math">\(C(52)\)</span> tells us the cost of items 0-52.</p>
+<p id="p-20">To find the cost of <em class="emphasis">only</em> items 53-92, we must subtract the cost of items 0-52 from the cost of itmes 0-92. Mathematicall, this is written</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+\begin{align*}
+\text{Cost of items 53-92} \amp = C(92) - C(52) \\
+\amp = 350.42 - 253.19\\
+\amp = 97.23
+\end{align*}
+</div>
+<p class="continuation">The total cost of items 53-92 is $97.23.</p>
+</div></div>
+</div></article></article><p id="p-21">Functions are important because they give us a single language that can describe an enormous number of different situations.</p>
+<p id="p-22">The next example uses the same language of functions to describe the very different situation of a very simple investment.</p>
+<article class="example example-like" id="example_function_notation_and_investment"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example_function_notation_and_investment"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Function notation and a simple investment..</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_function_notation_and_investment"><article class="example example-like"><p id="p-23">You begin with $1000 in a safe, and add $365 each year, spread out evenly over the year. Furthermore, you commit to keeping this up for ten years. You want to study the value in the safe as a function of time.</p>
+<p id="p-24">To allow the amount of time to vary, we introduce an independent variable. Often, we use <span class="process-math">\(x\)</span> for the independent variable, which in this case is time. We also often use <span class="process-math">\(y\)</span> for the dependent variable, which in this case is the amount saved. Although <span class="process-math">\(x,y\)</span> are common variables, we could also have chosen other letters, such as <span class="process-math">\(v\)</span> for value and <span class="process-math">\(t\)</span> for time.</p>
+<p id="p-25">Putting this together, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y = f(x) = 1000 + 365 x \text{ for }x\text{ in } [0,10]
+\end{equation*}
+</div>
+<p class="continuation">Reading from left to right, this says that the output balance <span class="process-math">\(y\)</span> in $ is equal to a function of the input time <span class="process-math">\(x\text{,}\)</span> and that we will use the letter <span class="process-math">\(f\)</span> to refer this function.</p>
+<p id="p-26">It also says that this function is defined by a <em class="emphasis">rule</em>, which says to take the number of years <span class="process-math">\(x\text{,}\)</span> to multiply that by 365, and then to add $1000.</p>
+<p id="p-27">Finally, that sentence says that this rule applies only when the input <span class="process-math">\(x\)</span> is in the closed interval <span class="process-math">\([0,10]\text{,}\)</span> which means that <span class="process-math">\(x\)</span> can be any number in the interval <span class="process-math">\(0\leq x\leq 10\text{.}\)</span> In other words, this rule specifies its <em class="alert">domain</em>.</p>
+<p id="p-28">Because our savings are spread out <em class="emphasis">evenly over the year</em>, we can find the value of our savings after “four and a half years”, as well as finding the value after three years exactly. In other words, the domain of our savings function contains decimals like <span class="process-math">\(4.5\)</span> years, as well as whole numbers like <span class="process-math">\(3\)</span> years. This even will us to find the amount in the safe after <span class="process-math">\(40\)</span> <em class="alert">days</em>.  Assuming that there are 365 days in a year, day <span class="process-math">\(40\)</span> happens at <em class="alert">year</em> <span class="process-math">\(x=\frac{40}{365}=0.1096\text{.}\)</span></p></article></div>
+<article class="exploration project-like" id="eg-savedaily"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-3"><p id="p-29">Suppose that you  begin with $1000 in a safe, and add $365 each year for ten years, spread out evenly over the year.</p></div>
+<article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-30">Write the equation for the value in the safe as a function of time.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-31">This problem does not specify the variables that we should use for our function.  If <span class="process-math">\(y\)</span> represents value and <span class="process-math">\(x\)</span> represents time in years, then we have the same equation tjat that we found in <a href="" class="xref" data-knowl="./knowl/example_function_notation_and_investment.html" title="Example 1.1: Function notation and a simple investment.">Example 1.1</a>.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example_function_notation_and_investment.html">
+\begin{equation*}
+y = f(x) = 1000 + 365 x \text{ for }x\text{ in } [0,10]
+\end{equation*}
+</div>
+<p class="continuation">If we instead used <span class="process-math">\(v\)</span> for value and <span class="process-math">\(t\)</span> for time, the equation would become</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example_function_notation_and_investment.html">
+\begin{equation*}
+v = f(t) = 1000 + 365 t \text{ for }t\text{ in } [0,10]
+\end{equation*}
+</div>
+<p class="continuation">We could also use any other variables we decided were most appropriate.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-32">Graph the value of your savings as a function of time.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-33">We are told that this rule only applies between year <span class="process-math">\(x=0\)</span> and year <span class="process-math">\(x=10\text{.}\)</span> That means that we should start our graph at <span class="process-math">\((0,f(0))\text{,}\)</span> and end it at <span class="process-math">\((10,f(10))\text{.}\)</span> In this case, the value is a linear function, so we can complete the graph by connecting these points.</p>
+<figure class="figure figure-like" id="fig_algebra_domainrange"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/algebra_domainrange.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div></div>
+</div></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-34">Find the value of savings after four and a half years.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-35">We know the value after <span class="process-math">\(x\)</span> years is equal to <span class="process-math">\(f(x) = 1000 + 365 x 
+\text{.}\)</span> To find the value after <span class="process-math">\(x=4.5\)</span> years, we simply compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(4.5) = 1000 + 365\cdot 4.5 = 2642.5\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-36">Find the value of savings after 40 <em class="alert">days</em>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-37">We know the value after <span class="process-math">\(x\)</span> years is equal to <span class="process-math">\(f(x) = 1000 + 365 x 
+\text{.}\)</span></p>
+<p id="p-38">To apply this rule, we must first convert 40 <em class="alert">days</em> to <em class="emphasis">years</em>.  In a standard calendar year, there are 365 days, so 1 day = 1/365 year.  So day 40 is just a little bit over 10% of a year.  More precisely, we can do a unit conversion as follows</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+\begin{align*}
+40\text{ days } \amp = 40 \text{ days }\cdot \frac{1 \text{ year}}{365\text{ days}} \\
+\amp = \frac{40}{365} \frac{days\cdot year}{days}\\
+\amp = \frac{40}{365} year\\
+\amp = 0.10958\dots year
+\end{align*}
+</div>
+<p class="continuation">We can now plug this year into our value function</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+\begin{align*}
+\text{value on day 40} \amp = \text{value in year }0.10958 \\
+\amp = f(0.10958) \\
+\amp = 1000 + 365\cdot 0.10958\\
+\amp = 1039.9967 
+\end{align*}
+</div>
+<p class="continuation">After 40 days, the value will be approximately $1040.</p>
+</div></div>
+</div></article></article><article class="definition definition-like" id="def-domainrange"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h4>
+<p id="p-39">The <dfn class="terminology">domain</dfn> of a function is the set of inputs where the rule is defined.</p>
+<p id="p-40">The <dfn class="terminology">range</dfn> of a function is the set of all outputs that occur.</p></article><p id="p-41">In many applications, a rule only “makes sense” for specific inputs. In this case, we talk about the <dfn class="terminology">applied domain</dfn> of the function. For example, you cannot buy a negative number of items, and the price of an item cannot be negative.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p>
+<article class="exploration project-like" id="exploration-3"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-4"><p id="p-42">This example continues <a href="" class="xref" data-knowl="./knowl/eg-savedaily.html" title="Exploration 1.2">Exploration 1.2</a>. In that example, we started with $1000 in savings and added $365 per year for 10 years, spread evenly across the whole year.</p></div>
+<article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-43">Find the domain of the savings function.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-44">In <a href="" class="xref" data-knowl="./knowl/eg-savedaily.html" title="Exploration 1.2">Exploration 1.2</a>, we are explicitly told that our savings function is not defined before year 0, and not defined after year 10. In other words, we are explicitly told that the domain of that function is the interval <span class="process-math">\([0,10]\text{,}\)</span> or equivalently, the set <span class="process-math">\(0\leq x \leq 10\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-45">Find the range of the savings function.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-46">The range of the savings function is the set of all values that will occur in the account. The smallest value that will occur is $1000, and the largest value that will occur is $4,650.  That means that the <em class="emphasis">range</em> is the set of all numbers between those values.  In interval notation, this is <span class="process-math">\([1000,4650]\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-47">The question of the range in that example is more complex. In words, a number will be in the range of our savings function if there is that amount in the safe at some year <span class="process-math">\(x\)</span> between 0 and 10.</p>
+<p id="p-48">If you think about it, you'll never have a value of $900 in your account since it starts at $1000 and increases. You'll also never have  $1,000,000 in your account, since you are only adding about a dollar a day for 10 years. In other words, the numbers 900 and $1,000,000 are not in the range of our savings function.</p>
+<p id="p-49">On the other hand, the value $1000 will definitely be in the range because you start on the first day of the first year with <span class="process-math">\(1000=f(0)\)</span> dollars in your account. And  $4,650 will be in the range because you end the 10th year with <span class="process-math">\(4650=f(10)=1000+365\cdot 10\)</span> in your account. Finally, every value between 1000 and 4650 will also be in the range, because you are continuously adding money to the account. But does that mean only the values for whole number years?  What about fractional years?   To answer that question, it helps to look at the graph of the savings function.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/algebra_domainrange2.svg" role="img" class="contained"></div>
+<p id="p-50">In the graph of our function, we see that the value is added continuously (uniformly), so all <span class="process-math">\(y\)</span> values between 1000 and 4650 can be achieved. Thus, the domain is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1000 \leq y \leq 4650
+\end{equation*}
+</div>
+<p class="continuation">In interval notation, this is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+[1000,4650]
+\end{equation*}
+</div>
+</div></div>
+</div></article></article><p id="p-51">There are also certain <em class="emphasis">forbidden computations</em>.</p>
+<ol class="decimal">
+<li id="li-3"><p id="p-52"><em class="alert">Dividing by Zero:</em> For any numerator <span class="process-math">\(a\text{,}\)</span> the fraction <span class="process-math">\(\dfrac{a}{0}\)</span> is <em class="alert">undefined</em>.  We often express this by writing <span class="process-math">\(\ \dfrac{\#}{0} \quad DNE\)</span></p></li>
+<li id="li-4"><p id="p-53"><em class="alert">Square Roots of Negative Numbers:</em> The square root of any negative number is undefined. For example, <span class="process-math">\(\ \sqrt{-1}\quad DNE\text{.}\)</span></p></li>
+</ol>
+<p class="continuation">For the purposes of this course, a function is defined on an input as long as neither of the above computations occur.</p>
+<article class="exploration project-like" id="ex_finddomainfromrule"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-54">Write the domain of <span class="process-math">\(f(x) = \dfrac{2}{3-x}\)</span> in interval notation.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-55">A fraction <span class="process-math">\(\dfrac{A}{B}\)</span> is defined as long as the denominator <span class="process-math">\(B\neq 0\text{.}\)</span></p>
+<p id="p-56">That means that the fraction <span class="process-math">\(\dfrac{2}{3-x}\)</span> is defined if and only if the denominator <span class="process-math">\(3-x \neq 0\text{.}\)</span></p>
+<p id="p-57">Rewriting this, we see that the the fraction is defined if and only if <span class="process-math">\(3 \neq x\text{.}\)</span></p>
+<p id="p-58">To write this in interval notation, draw the points where the function <em class="emphasis">is</em> defined on a number line. Use an open circle at <span class="process-math">\(x=3\)</span> to <em class="emphasis">exclude</em> that value, and draw a thick line to include all other numbers</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_finddomain_1.svg" role="img" class="contained"></div>
+<p id="p-59">We can now read the domain off of our number line. The function is defined on the interval <span class="process-math">\((-\infty,3)\cup(3,\infty)\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-60">Write the domain of <span class="process-math">\(g(x) = \sqrt{x}\ \)</span> in interval notation.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-61">A fraction <span class="process-math">\(\sqrt{\ A\ }\)</span> is defined as long as the denominator <span class="process-math">\(A\geq 0\text{.}\)</span></p>
+<p id="p-62">That means that the fraction <span class="process-math">\(\sqrt{x}\)</span> is defined if and only if the inside <span class="process-math">\(x \geq 0\text{.}\)</span></p>
+<p id="p-63">To write this in interval notation, draw the points where the function <em class="emphasis">is</em> defined on a number line. Use a closed circle at <span class="process-math">\(x=0\)</span> to <em class="emphasis">include</em> that value, and draw a thick line to the right to include all positive numbers.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_finddomain_2.svg" role="img" class="contained"></div>
+<p id="p-64">We can now read the domain off of our number line. The function is defined on the interval <span class="process-math">\([0,\infty)\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-65">Write the domain of <span class="process-math">\(h(x) = 3x^2 - 2x + 5\ \)</span> in interval notation.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-66">At first, this problem can be confusing, because it doesn't have any fractions or roots. But actually, that makes this example very easy.</p>
+<p id="p-67">We are able to multiply, add, and subtract any real number. In other words, the function is defined for <em class="emphasis">all</em> inputs. To write this in interval notation, fill in the <em class="emphasis">entire</em> real line.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_finddomain_3.svg" role="img" class="contained"></div>
+<p id="p-68">We can now read the domain off of our number line. The function is defined on the interval <span class="process-math">\((-\infty,\infty)\)</span></p>
+</div></div>
+</div></article></article></section><section class="section" id="sec-functions-readinggraphs"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Graphs of Functions</span>
+</h3>
+<p id="p-69">Nothing is truly constant in economics, business, and life. Time and quantities change, and things like cost, revenue and profit change along with them.</p>
+<p id="p-70">In terms of functions, we can say that changing the <em class="emphasis">input</em>  changes the <em class="emphasis">output</em>. On a graph, that means that moving the input <span class="process-math">\(x\)</span> left and right causes the output <span class="process-math">\(y\)</span> to go up and down.</p>
+<div style="width:600px;">
+<p id="p-71"><em class="alert">Graphs show how Functions Change</em> Use the interactive graphic below to get comfortable reasing graphs dynamically.</p>
+<ul class="disc">
+<li id="li-5"><p id="p-72">The slider changes the input <span class="process-math">\(x\text{.}\)</span></p></li>
+<li id="li-6"><p id="p-73">The graphic shows the corresponding point on the graph and output <span class="process-math">\(y\)</span> (height).</p></li>
+<li id="li-7"><p id="p-74">Move the slider back and forth. See how changing the input <span class="process-math">\(x\)</span>-value left and right forces the height (<span class="process-math">\(y\)</span>-value) to go up and down.</p></li>
+</ul>
+</div>
+<iframe id="interactive-1" width="600" height="600" src="interactive-1-if.html"></iframe><article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-example-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-75">Here is a static version of the interactive graphic above.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/algebra_functionsandchange.svg" role="img" class="contained"></div></article></div>
+<p id="p-76">Reading graphs dynamically will play an essential role in the course, beginning in <a href="ch_limits.html" class="internal" title="Chapter 6: Limits">Chapter 6</a>. But this skill also plays an important role in answering much more basic questions about graphs.</p>
+<article class="exploration project-like" id="exploration-5"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-5">
+<p id="p-77">The graph of a function <span class="process-math">\(f\)</span> is given below.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/algebra_readinggraphs.svg" role="img" class="contained"></div>
+</div>
+<article class="task exercise-like" id="task-13"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-78">Compute <span class="process-math">\(f(0)\text{,}\)</span> <span class="process-math">\(f(2)\text{,}\)</span> <span class="process-math">\(f(4)\text{,}\)</span> and <span class="process-math">\(f(5)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-79"><span class="process-math">\(f(0)=1\text{,}\)</span> <span class="process-math">\(f(2)=4\text{,}\)</span> <span class="process-math">\(f(4)=0\text{,}\)</span> and <span class="process-math">\(f(5)=2\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-14"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-80">For what <span class="process-math">\(x\)</span> is <span class="process-math">\(f(x)=2\text{?}\)</span>  For what  <span class="process-math">\(x\)</span> is <span class="process-math">\(f(x)=3\text{?}\)</span> For what  <span class="process-math">\(x\)</span> is <span class="process-math">\(f(x)=0\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like">
+<p id="p-81"><span class="process-math">\(f(x)=2\)</span> when <span class="process-math">\(x=1\)</span> or when <span class="process-math">\(x=3\)</span> or when <span class="process-math">\(x=5\text{.}\)</span></p>
+<p id="p-82"><span class="process-math">\(f(x)=3\)</span> when <span class="process-math">\(x=1.5\)</span> or when <span class="process-math">\(x=2.5\text{.}\)</span></p>
+<p id="p-83"><span class="process-math">\(f(x)=0\)</span> when <span class="process-math">\(x=4\text{.}\)</span></p>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/algebra_readinggraphs_sln1.svg" role="img" class="contained"></div>
+<p id="p-84">Remember that the equation <span class="process-math">\(f(x)=2\)</span> means that you are looking for the <em class="emphasis">inputs</em> <span class="process-math">\(x\)</span> which correspond to an <em class="emphasis">output</em> of <span class="process-math">\(2\text{.}\)</span> Looking at the graph, we see that <span class="process-math">\(f(1)=2\)</span> and that <span class="process-math">\(f(3)=2\)</span> and that <span class="process-math">\(f(5)=2\text{.}\)</span>  That means that the solution set is <span class="process-math">\(x=1\ or\ x=3\ or\ x=5\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-1"><p id="p-85"><em class="alert">Note:</em> Endpoints require special care. In this case, there was a <em class="emphasis">filled in dot</em> at the point <span class="process-math">\((5,2)\text{,}\)</span> which means that <span class="process-math">\(f(5)\)</span> is defined and equal to 2. If there was an <em class="emphasis">open circle</em> at the point, then the function would be defined <em class="emphasis">near</em> <span class="process-math">\(x=5\text{,}\)</span> but not <em class="emphasis">at</em> <span class="process-math">\(x=5\text{.}\)</span></p></aside><p id="p-86">Similarly, solving the equation <span class="process-math">\(f(x) = 3\)</span> means finding the inputs <span class="process-math">\(x\)</span> that correspond to an output (height) <span class="process-math">\(y\)</span> of 3. Looking at the graph, we see that <span class="process-math">\(f(1.5)=3\)</span> and <span class="process-math">\(f(2.5)=3\text{.}\)</span>  That means that the solutions set is <span class="process-math">\(x=1.5\ or\ x=2.5\)</span></p>
+<p id="p-87">Finally, solving <span class="process-math">\(f(x) = 0\)</span> means finding the inputs <span class="process-math">\(x\)</span> that have a height <span class="process-math">\(y\)</span> of zero.  Looking at the graph, this happens only for <span class="process-math">\(x=4\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-15"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-88">For what  <span class="process-math">\(x\)</span> is <span class="process-math">\(f(x)\lt 2\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-89">The output of the function is <em class="emphasis">strictly less than</em> 2 on the set <span class="process-math">\([0,1)\bigcup(3,5)\text{,}\)</span> or equivalently when <span class="process-math">\(0\leq x\leq 1\ or\ 3\leq x\leq 5\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/algebra_readinggraphs_sln2.svg" role="img" class="contained"></div>
+<p id="p-90">Remember that the equation <span class="process-math">\(f(x)\lt 2\)</span> means that you are looking for the <em class="emphasis">inputs</em> <span class="process-math">\(x\)</span> which correspond to an output of <em class="emphasis">strictly less than</em> <span class="process-math">\(2\text{.}\)</span> To understand this inequality, follow the graph of the function, moving through  <span class="process-math">\(x\)</span>-values from left to right.</p>
+<p id="p-91">Above <span class="process-math">\(x=0\text{,}\)</span> the height is <span class="process-math">\(1\)</span> which is less than <span class="process-math">\(2\text{.}\)</span> Moving right, the height of the function increases, but stays below <span class="process-math">\(2\)</span> until we reach <span class="process-math">\(x=1\text{.}\)</span> That means that the function is <em class="emphasis">less than</em> or <em class="emphasis">equal to</em> 2 on the interval <span class="process-math">\([0,1]\text{.}\)</span> But because we want the height to be <em class="emphasis">strictly less than</em> 2, we must exclude 1, giving us the interval <span class="process-math">\([0,1)\text{.}\)</span></p>
+<p id="p-92">Similarly, the height is also less than 2 between <span class="process-math">\(x=3\)</span> and <span class="process-math">\(x=5\text{,}\)</span> and equal to 2 at those endpoints, so the function is <em class="emphasis">strictly less than</em> 2 on the interval <span class="process-math">\((3,5)\)</span></p>
+<p id="p-93">Putting it all together, we have that <span class="process-math">\(f(x)\lt 2\)</span> on the set <span class="process-math">\([0,1)\bigcup (3,5)\text{,}\)</span> or equivalently when <span class="process-math">\(0\leq x\lt 1\ or\ 3\lt x\lt 5\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-16"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-94">For what  <span class="process-math">\(x\)</span> is <span class="process-math">\(f(x)\leq 3\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-95">Remember that the equation <span class="process-math">\(f(x)\leq 2\)</span> means that you are looking for the <em class="emphasis">inputs</em> <span class="process-math">\(x\)</span> which correspond to an output of <em class="emphasis">less than</em> or <em class="emphasis">equal to</em> <span class="process-math">\(3\text{.}\)</span> This happens for values of <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(0\leq x\leq 1.5\ or\ 2.5 \leq x\text{.}\)</span> In interval notation, this corresponds to the set <span class="process-math">\([0,1.5]\bigcup [2.5,5]\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/algebra_readinggraphs_sln3.svg" role="img" class="contained"></div></div></div>
+</div></article><article class="task exercise-like" id="task-17"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-96">For what  <span class="process-math">\(x\)</span> is <span class="process-math">\(f(x)&gt;0\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-97">The inequality <span class="process-math">\(f(x)\gt 0\)</span> is true for all inputs that correspond to an output that is strictly greater than 0. This is true for all values of <span class="process-math">\(x\)</span> <em class="emphasis">except</em> <span class="process-math">\(x=4\text{.}\)</span> So this is true for values of <span class="process-math">\(x\)</span> in the interval <span class="process-math">\([0,4)\bigcup(4,5]\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-18"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-98">What is the domain and range of <span class="process-math">\(f\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like">
+<p id="p-99">The domain of <span class="process-math">\(f(x)\)</span> is the set of <span class="process-math">\(x\)</span>-values where the function is defined.  In this example, the function is defined starting at <span class="process-math">\(x=0\)</span> and stopping at <span class="process-math">\(x=5\text{.}\)</span> Therefore the domain is <span class="process-math">\([0,5]\text{.}\)</span></p>
+<p id="p-100">The range of <span class="process-math">\(f(x)\)</span> is the set of <span class="process-math">\(y\)</span>-values that are output by the function.  Looking at the function, note that you can achieve outputs as small as <span class="process-math">\(f(x)=0\)</span> (at <span class="process-math">\(x=4\)</span>) and as large as <span class="process-math">\(f(x)=4\)</span> (at <span class="process-math">\(x=2\)</span>), as well as every output between those <span class="process-math">\(y\)</span>-values. Furthermore, no larger or smaller <span class="process-math">\(y\)</span> can be achieved.  As a result, the range of the function is the interval <span class="process-math">\([0,4]\text{.}\)</span></p>
+</div></div>
+</div></article></article></section><section class="section" id="sec-combining_functions"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Combining Functions</span>
+</h3>
+<p id="p-101">The “big idea” behind all of algebra is the use of a symbols to represent a different object. The simplest thing you can do in algebra is to replace the symbol with the value it represents, often called “plugging in”  the value.</p>
+<article class="exploration project-like" id="exploration-6"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-6"><p id="p-102">Let <span class="process-math">\(f(x) = x^2 - 3x\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-19"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-103">Evaluate <span class="process-math">\(f(5)\text{,}\)</span> and simplify completely.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-104">The expression <span class="process-math">\(f(5)\)</span> is really an instruction to take the definition of <span class="process-math">\(f(x) = x^2 - 3x\text{,}\)</span> and to replace every occurance of <span class="process-math">\(x\)</span> with the value <span class="process-math">\(5\text{.}\)</span>  Performing this subsitution, and the simplifying, gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+\begin{align*}
+f(5) \amp= 5^2 - 3\cdot 5\\
+\amp= 25 - 15\\
+\amp= 10
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-20"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-105">Evaluate <span class="process-math">\(f(5+h)\text{,}\)</span> and simplify completely.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-106">Again, the expression <span class="process-math">\(f(5+h)\)</span> is really an instruction to take the definition of <span class="process-math">\(f(x) = x^2 - 3x\text{,}\)</span> and to replace every occurance of <span class="process-math">\(x\)</span> with the value <span class="process-math">\((5+h)\text{.}\)</span>  Performing this subsitution, gives the expression</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(5+h) = (5+h)^2 - 3\cdot (5+h)
+\end{equation*}
+</div>
+<p class="continuation">It is <em class="alert">very important</em> to include parentheses when you are subtituting <span class="process-math">\(x\)</span> with the term <span class="process-math">\((5+h)\text{.}\)</span></p>
+<p id="p-107">To simplify this expression, you should separately simplify the first term and the second term.  Expanding out (FOIL-ing) the first term gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(5+h)^2 = (5+h)\cdot(5+h) = 5\cdot 5 + 5\cdot h + h\cdot 5 + h\cdot h = 25 + 10h +h^2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Distributing out the second term gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3\cdot (5+h) = 3\cdot 5 + 3\cdot h = 15 + 3h
+\end{equation*}
+</div>
+<p class="continuation">Putting it all together we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+f(5+h)   \amp=  (5+h)^2 - 3\cdot (5+h) \\
+\amp= (25+10h+h^2) - (15+3h) \\
+\amp= 25 + 10h + h^2 - 15 - 3h \\
+\amp= 10 + 7h + h^2 
+\end{align*}
+</div>
+<p class="continuation"><em class="alert">Note:</em> Whenever substituing an expression into another expression, such as when we substitued the simplifications for <span class="process-math">\((5+h)^2\)</span> and <span class="process-math">\(3\cdot (5+h)\)</span> above, you must always include parentheses around each term.  Above, that helped us remember that we needed to distribute the subtraction to <em class="emphasis">both</em> terms of <span class="process-math">\(15+3h\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-21"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-108">Evaluate <span class="process-math">\(f(x^5)\text{,}\)</span> and simplify completely.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-109">Again, the expression <span class="process-math">\(f(x^5)\)</span> is really an instruction to take the definition of <span class="process-math">\(f(x) = x^2 - 3x\text{,}\)</span> and to replace every occurance of <span class="process-math">\(x\)</span> with the value <span class="process-math">\(x^5\text{.}\)</span>  Performing this subsitution, gives the expression</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x^5) = (x^5)^2 - 3\cdot (x^5)
+\end{equation*}
+</div>
+<p class="continuation">We could separately simplify the first and second term as before, or we can do it all together in a single sequence of steps.  You can take whichever approach you are most comfortable with.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{align*}
+f(x^5) \amp= (x^5)^2 - 3\cdot (x^5) \\
+\amp= x^5 \cdot x^5 - 3 x^5 \\
+\amp= x^{5+5} - 3x^5 \\
+\amp= x^{10} - 3x^5 
+\end{align*}
+</div>
+</div></div>
+</div></article></article><p id="p-110">Note that in our last example, we plugged a expression for x into another expression for x. In the language of <a href="ch-functions.html" class="internal" title="Chapter 1: Functions of Economics">Chapter 1</a>, that means we plugged one function into another.  In mathematics, we call this process of plugging one function into another "composing" the functions.</p>
+<article class="exploration project-like" id="exploration-7"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h4>
+<p id="p-111">Let <span class="process-math">\(f(x) = \dfrac{1}{x}\)</span> and <span class="process-math">\(g(x) = x+5\text{.}\)</span>  Compute <span class="process-math">\(f\Big(g(x)\Big)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
+<p id="p-112">The problem asks us to evaluate the result of plugging the  function <span class="process-math">\(g(x)=x+5\)</span> into the every occurance of <span class="process-math">\(x\)</span> in the equation <span class="process-math">\(f(x) = \dfrac{1}{x}\)</span></p>
+<p id="p-113">First, we can look at <span class="process-math">\(f\Big(g(x)\Big)\text{,}\)</span> and notice that we have already been told  that the expression <span class="process-math">\(g(x)\)</span> refers to <span class="process-math">\((x+5)\text{.}\)</span>  As a result, we can replace the argument to <span class="process-math">\(f\)</span> as follows</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f\Big(g(x)\Big)  = f\Big( x+5 \Big) 
+\end{equation*}
+</div>
+<p id="p-114">Next, we just replace every ocurance of <span class="process-math">\(x\)</span> in the definition <span class="process-math">\(f(x) = \dfrac{1}{x}\)</span> with the expression <span class="process-math">\((x+5)\text{.}\)</span>  This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f\Big(x+5\Big)  = \dfrac{1}{( x+5)} 
+\end{equation*}
+</div>
+<p id="p-115">Putting it all together, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{align*}
+f\Big(g(x)\Big)  \amp= f\Big( x+5 \Big)  \\
+\amp= \dfrac{1}{( x+5)}  
+\end{align*}
+</div>
+</div></div>
+</div></article><p id="p-116">We'll need to do a lot of composition later in the semester. For now, we will use these concepts to practice our algebra skills.</p>
+<article class="exploration project-like" id="exploration-8"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-7"><p id="p-117">Let <span class="process-math">\(f(x) = 3x^2 - x + 1\text{.}\)</span> Simplify the following expressions completely</p></div>
+<article class="task exercise-like" id="task-22"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-118"><span class="process-math">\(f(2)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><p id="p-119"><span class="process-math">\(f(2) = 3\cdot (2)^2 - (2) + 1 = 12 - 2 + 1 = 11\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-23"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-120"><span class="process-math">\(f(2+h)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+\begin{align*}
+f(2+h) \amp = 3\cdot (2+h)^2 - (2+h) + 1\\
+\amp = 3\cdot (2+h)\cdot (2 + h) - 2 - h + 1\\
+\amp = 3\cdot (4 + 4h + h^2) - 2 - h + 1\\
+\amp = 12 + 12h + 3h^2 - 2 - h + 1\\
+\amp = 3h^2 + 11h + 11
+\end{align*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-24"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-122"><span class="process-math">\(\dfrac{f(2+h)-f(2)}{h}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like">
+<p id="p-123">This expression is slightly more complex.  The key idea is to realize that the numerator contains two <em class="emphasis">separate</em> expressions <span class="process-math">\(f(2+h)\)</span> and <span class="process-math">\(f(2)\text{,}\)</span> and that we have already found that they equal <span class="process-math">\((3h^2+11h+11)\)</span> and <span class="process-math">\((11)\)</span> respectively.  Making the appropriate replacements gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{f(2+h)-f(2)}{h} = \dfrac{(3h^2+11h+11)-(11)}{h}
+\end{equation*}
+</div>
+<p class="continuation">Now we can use basic algebra to simplify the expression as before.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+\begin{align*}
+\amp = \dfrac{3h^2+11h}{h}\\
+\amp = \dfrac{h(3h+11)}{h}\\
+\amp = \dfrac{h}{h}\cdot \dfrac{3h+11}{1}\\
+\amp = 3h+11
+\end{align*}
+</div>
+</div></div>
+</div></article></article><p id="p-124">The previous example is complicated because it combines a number of different kinds of steps. To see what's going on, it can help to think of these different steps separately.</p>
+<article class="exploration project-like" id="exploration-9"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-8"><p id="p-125">Let <span class="process-math">\(f(x) = 2x^2-4x\)</span> and <span class="process-math">\(g(x)=2x-4\text{.}\)</span>  Simplify the following expressions completely.</p></div>
+<article class="task exercise-like" id="task-25"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-126"><span class="process-math">\(f(x)+g(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like">
+<p id="p-127">To evaluate the expression <span class="process-math">\(f(x)+g(x)\text{,}\)</span> first replace <span class="process-math">\(f(x)\)</span> with the expression <span class="process-math">\((2x^2-4x)\text{,}\)</span> and replace <span class="process-math">\(g(x)\)</span> with the expression <span class="process-math">\((2x-4)\text{.}\)</span>  Then, simplify the remaining expression completely using algebra.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{align*}
+f(x)+g(x)\amp =(2x^2-4x) + (2x-4)\\
+\amp = 2x^2-4x + 2x - 4\\
+\amp = 2x^2 -2x -4 
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-26"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-128"><span class="process-math">\(f(x)-g(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like">
+<p id="p-129">To evaluate the expression <span class="process-math">\(f(x)-g(x)\text{,}\)</span> first replace <span class="process-math">\(f(x)\)</span> with the expression <span class="process-math">\((2x^2-4x)\text{,}\)</span> and replace <span class="process-math">\(g(x)\)</span> with the expression <span class="process-math">\((2x-4)\text{.}\)</span>  Then, simplify the remaining expression completely using algebra.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+\begin{align*}
+f(x)+g(x)\amp =(2x^2-4x) - (2x-4)\\
+\amp = 2x^2-4x - 2x + 4\\
+\amp = 2x^2 -6x + 4
+\end{align*}
+</div>
+<p class="continuation">Note that subtracting both terms of <span class="process-math">\(2x-4\)</span> was the same thing as adding <span class="process-math">\(-2x\)</span> and adding a positive <span class="process-math">\(4x\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-27"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-130"><span class="process-math">\(f(x)\cdot g(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like">
+<p id="p-131">To evaluate the expression <span class="process-math">\(f(x)\cdot g(x)\text{,}\)</span> first replace <span class="process-math">\(f(x)\)</span> with the expression <span class="process-math">\((2x^2-4x)\text{,}\)</span> and replace <span class="process-math">\(g(x)\)</span> with the expression <span class="process-math">\((2x-4)\text{.}\)</span>  Then, simplify the remaining expression completely using algebra.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
+\begin{align*}
+f(x)\cdot g(x)\amp =(2x^2-4x) \cdot (2x-4)\\
+\amp = 2x^2\cdot 2x + 2x^2 \cdot (-4) + (-4x)\cdot 2x + (-4x)\cdot (-4) \\
+\amp = 4x^3 - 8x^2 - 8x^2 + 16x\\
+\amp = 4x^3 - 16x^2 + 16x
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-28"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-132"><span class="process-math">\(\dfrac{f(x)}{g(x)}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">
+<p id="p-133">To evaluate the expression <span class="process-math">\(\dfrac{f(x)}{g(x)}\text{,}\)</span> first replace <span class="process-math">\(f(x)\)</span> with the expression <span class="process-math">\((2x^2-4x)\text{,}\)</span> and replace <span class="process-math">\(g(x)\)</span> with the expression <span class="process-math">\((2x-4)\text{.}\)</span>  Then, simplify the remaining expression completely using algebra.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
+\begin{align*}
+\dfrac{f(x)}{g(x)} \amp = \dfrac{(2x^2-4x)}{(2x-4)} 
+\end{align*}
+</div>
+<p class="continuation">The only way to simplify a fraction is to factor the top and bottom separately, and see if any of the terms cancel.  The top factors as <span class="process-math">\(2x^2-4x = 2\cdot(x^2-2x) = 2\cdot x\cdot (x-2)\text{.}\)</span>  The bottom factors as <span class="process-math">\(2x-4= 2 \cdot (x-2)\text{.}\)</span>  Using this, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+\begin{align*}
+\dfrac{f(x)}{g(x)} \amp = \dfrac{(2x^2-4x)}{(2x-4)} \\
+\amp = \dfrac{2\cdot x\cdot (x-2)}{2\cdot (x-2)}\\
+\amp = \dfrac{x}{1}\\
+\amp = x
+\end{align*}
+</div>
+<p class="continuation">Surprisingly, the expression <span class="process-math">\(\dfrac{f(x)}{g(x)}\)</span> simplifies down to the identifty function <span class="process-math">\(\dfrac{f(x)}{g(x)} = x\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-29"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-135"><span class="process-math">\(f\Big(g(x)\Big)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
+<p id="p-136">To evaluate the expression <span class="process-math">\(f\Big(g(x)\Big)\text{,}\)</span> first replace <span class="process-math">\(g(x)\)</span> with teh expression <span class="process-math">\((2x-4)\text{.}\)</span>  This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f\Big(g(x)\Big) = f\Big(2x-4\Big)
+\end{equation*}
+</div>
+<p class="continuation">But the expression <span class="process-math">\(f(2x-4)\)</span> is just the instruction to take the equation <span class="process-math">\(f(x) = 2x^2-4x\text{,}\)</span> and to replace each copy of <span class="process-math">\(x\)</span> with the expression <span class="process-math">\((2x-4)\text{.}\)</span> This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(2x-4) = 2(2x-4)^2 - 4(2x-4)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Simplifying this gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
+\begin{align*}
+f\Big(g(x)\Big) \amp = f\Big(2x-4\Big) \\
+\amp = 2(2x-4)^2 - 4(2x-4)\\
+\amp = 2(2x-4)(2x-4) - 4(2x-4)\\
+\amp = 2(4x^2-16x+16) - 8x + 16\\
+\amp = 8x^2 -32x + 32 - 8x + 16\\
+\amp = 8x^2 - 40x + 48 
+\end{align*}
+</div>
+</div></div>
+</div></article></article><p id="p-137">In the examples above, we have seen how to simplify various combinations of functions algebraically.</p>
+<p id="p-138">For a few ways of combining of functions, it is also possible to explain very precisely how the combination changes the graph of the function. Let <span class="process-math">\(y = f(x)\)</span> be the graph of some function, and let <span class="process-math">\(a,b,c,d\)</span> be constant numbers.</p>
+<ul class="disc">
+<li id="li-8"><p id="p-139">The graph of <span class="process-math">\(y = a\cdot f(x)\)</span> is obtained by scaling the graph of <span class="process-math">\(y=f(x)\)</span> by <span class="process-math">\(a\text{.}\)</span></p></li>
+<li id="li-9"><p id="p-140">The graph of <span class="process-math">\(y = f(x + b)\)</span> is obtained by scaling the graph of <span class="process-math">\(y=f(x)\)</span> left <span class="process-math">\(b\)</span> units when <span class="process-math">\(b\)</span> is positive (and right when <span class="process-math">\(b\)</span> is negative).</p></li>
+<li id="li-10"><p id="p-141">The graph of <span class="process-math">\(y = f(x) + c\)</span> is obtained by shifting the graph of <span class="process-math">\(y=f(x)\)</span> up by <span class="process-math">\(c\)</span> units when <span class="process-math">\(c\)</span> is positive (and down when <span class="process-math">\(c\)</span> is negative).</p></li>
+</ul></section><section class="section" id="sec_graphsoftotalsandchanges"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Graphs of Totals and Changes</span>
+</h3>
+<p id="p-142">Many things change over time, such as the cost of gasoline. There are different ways of thinking about describing this change. For example, suppose the price of gas over the course of a single week is given by the following table:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c|c|c}
+\text{day }(x)         
+&amp;  1 
+&amp;  2   
+&amp;  3  
+&amp;  4  
+&amp;  5 
+&amp;  6 
+&amp;  7  
+\\ \hline
+\text{cost of gas }(y) 
+&amp; 4  
+&amp; 3.75
+&amp; 3.25
+&amp; 3.75
+&amp; 2  
+&amp; 2.5
+&amp; 3
+\end{array}
+\end{equation*}
+</div>
+<p id="p-143">This gives us the <dfn class="terminology">total</dfn> cost of gas per day. There are also another way to think about this: how much does the price change each day? Over the course of the week the price decreases 25 cents, then decreases another 50 cents, then increases 50 cents, then increases <span class="process-math">\(\$1.25\text{,}\)</span> then decreases <span class="process-math">\(\$2.50\text{,}\)</span> and finally increases another 50 cents.</p>
+<p id="p-144">We will write <span class="process-math">\(\Delta y\)</span> to emphasize that this is the <dfn class="terminology">change</dfn> in price each day in a table.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c|c|c}
+\text{day }(x)
+&amp;  1 
+&amp;  2   
+&amp;  3  
+&amp;  4  
+&amp;  5 
+&amp;  6 
+&amp;  7  
+\\ \hline
+\text{change in gas }(\Delta y) 
+&amp; N/A  
+&amp; -0.25 
+&amp; -0.50 
+&amp;  0.50 
+&amp; -1.75 
+&amp;  0.50 
+&amp;  0.50
+\end{array}
+\end{equation*}
+</div>
+<article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A Strategy for Computing <span class="process-math">\(\Delta y\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-145">In the example above, we described the change in words, and summarized this in a table. But we can also find the change <span class="process-math">\(\Delta y\)</span> using mathematical language.</p>
+<p id="p-146">Day 1 is a special case. Because it is our first data point, there's nothing to compare it to.</p>
+<p id="p-147">On day 2 our cost <span class="process-math">\(y\)</span> was 3.75, and on day 1 our cost <span class="process-math">\(y\)</span> was 4. Then the <dfn class="terminology">change in y on day 2</dfn> is <span class="process-math">\(\Delta y = (3.75) - (4) = -0.25\text{.}\)</span> We can also translate this into function language.</p>
+<ul class="disc">
+<li id="li-11"><p id="p-148">The cost on day 1 is $4, so we write <span class="process-math">\(f(1) = 4\)</span></p></li>
+<li id="li-12"><p id="p-149">The cost on day 2 is $3.75, so we write <span class="process-math">\(f(2) = 3.75\)</span></p></li>
+<li id="li-13"><p id="p-150">To compute <span class="process-math">\(\Delta y\)</span> on day 2, we compute <span class="process-math">\(\Delta y = f(2)-f(1) = 3.75-4.00=-0.25\)</span></p></li>
+</ul>
+<p class="continuation">Repeating this process, we can find <span class="process-math">\(\Delta y\)</span> for days 3, 4, 5, 6, and 7.</p>
+<p id="p-151">We can also summarize this technique using even more general mathemaitcal language by defining the <em class="alert">change in <span class="process-math">\(y\)</span></em> due to <em class="alert">changing from <span class="process-math">\(x_1\)</span> to <span class="process-math">\(x_2\)</span></em> to be the expression</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Delta y = f(x_2) - f(x_1)
+\end{equation*}
+</div></article></div>
+<p id="p-152">Now we have two tables, which <em class="emphasis">both give functions</em> that describe a different perspective on how the cost of gas changes over time: the total value (<span class="process-math">\(y\)</span>) of gas graphed with respect to time, and the change in value (<span class="process-math">\(\Delta y\)</span>) graphed with respect to time.</p>
+<p id="p-153">To see how they're related, we can graph both functions side by side:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_1.svg" role="img" class="contained"></div>
+<p id="p-154">In the example above, the biggest drop in the total <span class="process-math">\(y\)</span> (left) occurs on day 5.  This matches the graph on the right, where day 5 has the largest negative movement (change) <span class="process-math">\(\Delta y\text{.}\)</span> On the other hand, there is almost no change on day 2 in the total graph on the left (only a small drop in <span class="process-math">\(y\)</span>), which matches the small value of <span class="process-math">\(\Delta y\)</span> in the change graph on the right.</p>
+<p id="p-155">Graphs of totals and changes occur in a wide variety of economic, business, and other contexts. But one of the most common and important applications is in the important distinction between <em class="emphasis">debts</em> and <em class="emphasis">deficits</em>.</p>
+<section class="paragraphs" id="economics-debts-and-deficits"><h4 class="heading"><span class="title">Debts and Deficits.</span></h4>
+<p id="p-156">The <dfn class="terminology">US national debt</dfn> in a given year is the total amount of money that the government owed in that year. The <dfn class="terminology">net revenue</dfn> from a given year is the difference between money taken in (through taxes) and money spent by the government. The government is running an <dfn class="terminology">annual deficit</dfn> if it spends more than it takes in. In other words, having negative net revenue in a given year is the same thing as a positive deficit in that year.</p>
+<p id="p-157">The page <a class="external" href="https://datalab.usaspending.gov/americas-finance-guide/deficit/trends/" target="_blank">https://datalab.usaspending.gov/americas-finance-guide/deficit/trends/</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a> lists US budget deficits in <em class="emphasis">trillions of dollars</em> since the year 2000, rounded to two decimal places. The same page indicates that the US debt in 2000 was 5.65 trillions.</p>
+<p id="p-158">As before, we can compute the debt <span class="process-math">\(y\)</span> for each year since 2000 by starting with 5.65 and repeatedly adding the <span class="process-math">\(\Delta y\)</span> for each year. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a> This gives us our familiar graphs of the total <span class="process-math">\(y\)</span> and change <span class="process-math">\(\Delta y\text{.}\)</span></p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_debtanddeficit.svg" role="img" class="contained"></div></section><p id="p-159">In most examples, we will only be given one of these types of graphs, and we will need to create the other type of graph. In the next example you are only given the graph of the total value (<span class="process-math">\(y\)</span>), and asked to find the graph of the change (<span class="process-math">\(\Delta y\)</span>).</p>
+<article class="exploration project-like" id="exercise-1-using-total-value-to-compute-change"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Using Total Value to Compute Change.</span>
+</h4>
+<div class="introduction" id="introduction-9">
+<p id="p-160">The graph of gas price as a function of the day <span class="process-math">\(x\)</span> is given below on the left.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_2given.svg" role="img" class="contained"></div>
+</div>
+<article class="task exercise-like" id="task-30"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-161">What is the cost of gas (y) on days 5 and 6? What is the change of cost (<span class="process-math">\(\Delta y\)</span>) between days 5 and 6?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
+<p id="p-162">From our graph, we see that <span class="process-math">\(f(5) = 4.5\)</span> and that <span class="process-math">\(f(6) = 2\text{.}\)</span>  That means that the change is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Delta y = f(6) - f(5) = 2 - 4.5 = -2.5
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-31"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-163">Write down a table giving the actual price <span class="process-math">\(y\)</span> and change in price <span class="process-math">\(\Delta y\)</span> on all seven days.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="p-164">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c|c|c}
+\text{day }(x)
+&amp;  1 
+&amp;  2   
+&amp;  3  
+&amp;  4  
+&amp;  5 
+&amp;  6 
+&amp;  7  
+\\ \hline
+\text{price }(y) 
+&amp;  2
+&amp;  3.5
+&amp;  4
+&amp;  3
+&amp;  4.5
+&amp;  2
+&amp;  3.5
+\\ \hline
+\text{change in gas }(\Delta y) 
+&amp; N/A  
+&amp;  1.50 
+&amp;  0.50 
+&amp; -1.00 
+&amp;  1.50 
+&amp; -2.50 
+&amp;  1.50
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-32"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-165">Graph the “Change in Cost” function.  (Use the graph provided on the right).</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_2sln.svg" role="img" class="contained"></div></div></div>
+</div></article></article><p id="p-166">Often, we are working with <em class="emphasis">formulas</em> that define (or model) the quantity of interest.</p>
+<article class="exploration project-like" id="changes-and-formulas"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Changes and Formulas.</span>
+</h4>
+<div class="introduction" id="introduction-10"><p id="p-167">Suppose that on day <span class="process-math">\(x\text{,}\)</span> the value of a certain stock is given by <span class="process-math">\(f(x) = x-0.1x^{2}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-33"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-168">Use the formula you are given to fill in the following table.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c|c|c}
+\text{day } (x)
+&amp;  1 
+&amp;  2   
+&amp;  3  
+&amp;  4  
+&amp;  5 
+&amp;  6 
+&amp;  7  
+\\ \hline
+price \ (y)
+&amp;  \quad
+&amp;  \quad
+&amp;  \quad
+&amp;  \quad
+&amp;  \quad
+&amp;  \quad 
+&amp;  \quad  
+\\ \hline
+\text{change in price } (\Delta y) 
+&amp;   
+&amp;  
+&amp;  
+&amp;  
+&amp;  
+&amp;  
+&amp; 
+\end{array}
+\end{equation*}
+</div>
+<p id="p-169"><em class="emphasis">Hint:</em> You can use the “Table” mode of a graphing calculator to speed this up significantly.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="p-170">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c|c|c}
+\text{day }(x)
+&amp;  1 
+&amp;  2   
+&amp;  3  
+&amp;  4  
+&amp;  5 
+&amp;  6 
+&amp;  7  
+\\ \hline
+\text{price }(y) 
+&amp;  f(1) = 0.9
+&amp;  f(2) = 1.6
+&amp;  f(3) = 2.1
+&amp;  f(4) = 2.4
+&amp;  f(5) = 2.5
+&amp;  f(6) = 2.4
+&amp;  f(7) = 2.1
+\\ \hline
+\text{change in price }(\Delta y) 
+&amp; N/A  
+&amp; f(2) - f(1) = 0.7
+&amp; f(3) - f(2) = 0.5
+&amp; f(4) - f(3) = 0.3
+&amp; f(5) - f(4) = 0.1
+&amp; f(6) - f(5) = -0.1
+&amp; f(7) - f(6) = -0.3
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-34"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-171">Note that the change <span class="process-math">\(\Delta y = y_2 - y_1 = f(x_2) - f(x_1)\)</span> implicitly depends on the distance <span class="process-math">\(\Delta x=x_2-x_1\text{.}\)</span> Here, all our x values are consecutive, but you could imagine computing <span class="process-math">\(\Delta y\)</span> (the change in <span class="process-math">\(y\)</span>) in different increments, such as for <span class="process-math">\(x=1,3,5,7\text{.}\)</span></p>
+<p id="p-172">Using the same function <span class="process-math">\(f(x) = x-0.1x^{2}\)</span> as above, complete the following table</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{c|c|c|c|c}
+\text{day }(x)
+&amp;  1 
+&amp;  3  
+&amp;  5 
+&amp;  7  
+\\ \hline
+price\ (y)
+&amp;  \quad
+&amp;  \quad
+&amp;  \quad
+&amp;  \quad
+\\ \hline
+\text{change in price }(\Delta y) 
+&amp;  
+&amp;  
+&amp;  
+&amp; 
+\end{array}
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="p-173">
+\begin{equation*}
+\begin{array}{c|c|c|c|c|c|c|c}
+\text{day }(x)
+&amp;  1 
+&amp;  3  
+&amp;  5 
+&amp;  7  
+\\ \hline
+\text{price }(y) 
+&amp;  f(1) = 0.9
+&amp;  f(3) = 2.1
+&amp;  f(5) = 2.5
+&amp;  f(7) = 2.1
+\\ \hline
+\text{change in price }(\Delta y) 
+&amp; N/A  
+&amp; f(3) - f(1) = 1.2
+&amp; f(5) - f(3) = 0.4
+&amp; f(7) - f(5) = -0.4
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Much more can be said about this, which gets into the broader foundations of mathematics.  You can read a little bit about this <a class="external" href="https://en.wikipedia.org/wiki/Analytic%E2%80%93synthetic_distinction" target="_blank">online</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Analytic%E2%80%93synthetic_distinction</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">You can pay people to take an item, but in this case it is not correct to call that payment a “price”.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">datalab.usaspending.gov/americas-finance-guide/deficit/trends/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">
+<dfn class="terminology">Note:</dfn> Actually, the debt is always more than the sum of the deficits, since the government must also pay <dfn class="terminology">interest</dfn> on the money it borrows to cover a deficit. The true debt for each year is shown using a red dot. The actual value of the debt (not adjusted for inflation) can be found at <a class="external" href="https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny" target="_blank"><code class="code-inline tex2jax_ignore">https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny</code></a>.</div></div>
+</div></main>
+</div>
+</body>
+</html>

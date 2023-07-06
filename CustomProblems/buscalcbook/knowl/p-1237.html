@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>As always,  start by setting up the derivative.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddx{ \dfrac{ \red{x^2 + x + 1} }{ \blue{x^2 -1} } }
+\end{equation*}
+</div>
+<p class="continuation">The outermost operation is a fraction, so we must use the quotient rule <span class="process-math">\(\left[\dfrac{\red{t}}{\blue{b}}\right]' = \dfrac{\blue{b}\cdot \red{t'} - \red{t}\cdot \blue{b'}}{(\blue{b})^2}\)</span> with</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+t = x^2 + x + 1
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+b = x^2 - 1\text{.}
+\end{equation*}
+</div>
+<p class="continuation">For the quotient rule, we need to subsitute expressions for <span class="process-math">\(t\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(t'\text{,}\)</span> and <span class="process-math">\(b'\text{.}\)</span> We already have expressions for <span class="process-math">\(t\)</span> and <span class="process-math">\(b\text{.}\)</span>  We next do some "scrap work" to find <span class="process-math">\(t'\)</span> and <span class="process-math">\(b'\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+t' = \amp \ddx{x^2 + x + 1} \\
+= \amp \ddx{x^2} + \ddx{x} + \ddx{1}\\
+t'= \amp 2x+1+ 0\\
+t'= \amp 2x+1
+\end{align*}
+</div>
+<p class="continuation">Similarly, we can compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+b' = \amp \ddx{x^2 - 1} \\
+= \amp \ddx{x^2} - \ddx{1}\\
+b'= \amp 2x - 0\\
+b'= \amp 2x
+\end{align*}
+</div>
+<p class="continuation">We now can go back to our original question, and apply the quotient rule</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f'(x) = \amp \ddx{ \dfrac{ \red{x^2 + x + 1} }{ \blue{x^2 -1} } }\\
+=  \amp \dfrac{\blue{b}\cdot \red{t'} - \red{t}\cdot \blue{b'}}{(\blue{b})^2}\\
+= \amp \dfrac{\blue{(x^2 - 1)}\cdot \red{(2x+1)} - \red{(x^2 + x + 1)}\cdot \blue{2x}}{(\blue{x^2 - 1})^2} 
+\end{align*}
+</div>
+<span class="incontext"><a href="ch_productquotientrule.html#p-1237" class="internal">in-context</a></span>
+</body>
+</html>

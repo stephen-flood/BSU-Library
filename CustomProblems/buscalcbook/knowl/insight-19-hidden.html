@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="insight remark-like"><p>What is the connection between derivatives and approximate item cost?</p>
+<p>Looking at the units of measurement provides one way of understanding the connection.  If total cost <span class="process-math">\(C(x)\)</span> is measured in dollars, and quantity <span class="process-math">\(x\)</span> is measured in items, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C'(x) = \lim_{\Delta x\rightarrow 0} = \dfrac{\Delta C}{\Delta x} \ \dfrac{\text{\$}}{\text{item}} 
+\end{equation*}
+</div>
+<p class="continuation">In other words, because the derivative of cost has units $/item, it tells you approximately how many $ an individual item will cost.</p>
+<p>Why does the marginal cost tell us the cost of the <em class="emphasis">next</em> item?</p>
+<p>Remember that limits arise in business when quantities are large.  For example, suppose that <span class="process-math">\(x\)</span> is 5000 items.</p>
+<p>Expanding out the limit definition of slope/IROC, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+C'(5000) \amp = \lim_{\Delta x \rightarrow 0}\dfrac{\Delta C}{\Delta x} \\
+= \amp \lim_{\Delta x \rightarrow 0} \dfrac{C_2 - C_1}{x_2 - x_1}\\
+= \amp \lim_{\Delta x \rightarrow 0} \dfrac{C(5000 + \Delta x) - C(5000)}{\Delta x}
+\end{align*}
+</div>
+<p class="continuation">Because <span class="process-math">\(x=5000\)</span> is large, then a change of <span class="process-math">\(\Delta x=1\)</span> more item is (relatively) small. This means that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C'(5000) \approx  \dfrac{C(5000 + 1) - C(5000)}{\Delta x}
+\end{equation*}
+</div>
+<p class="continuation">simpilfying this gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C'(5000) \approx  C(5001) - C(5000) 
+\end{equation*}
+</div>
+<p class="continuation">which is equal to the 5001st item, which is the <em class="emphasis">next</em> item after 5000.</p></article></body>
+</html>

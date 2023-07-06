@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.6/jsxgraph.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.6/jsxgraphcore.js"></script>
+</head>
+<body class="pretext-content ignore-math" id="buscalcchange"><div style="width:450px; height:450px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
+<div id="jsxgraph-business-depreciation" class="jxgbox" style="width:450px; height:450px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"></div>
+<script type="text/jessiecode" container="jsxgraph-business-depreciation" axis="true" grid="true">$board.setBoundingBox( [ -2, 5, 8, -5 ] , keepaspectratio=false) ;
+
+r = slider(
+      // Specify slider location
+        [0.5,-1.5], [3.5,-1.5], 
+      // Specify smallest/starting/largest value for slider
+        [0,0.3,1])
+    <<
+        name:"r",
+        snapWidth:0.01
+    >>  ;
+
+P = slider(
+      // Specify slider location
+        [0.5,-2.5], [3.5,-2.5], 
+      // Specify smallest/starting/largest value for slider
+        [2,3,5])
+    <<
+        name:"start value",
+        snapWidth:0.01
+    >>  ;      
+
+scrap = slider(
+      // Specify slider location
+        [0.5,-3.5], [3.5,-3.5], 
+      // Specify smallest/starting/largest value for slider
+        [0,0.75,1.5])
+    <<
+        name:"scrap value",
+        snapWidth:0.01
+    >>  ;      
+
+fGraph1 = functiongraph(function(x) { return 
+              // Define Function Here
+              P.Value() * pow( (1-r.Value()) , x )  
+              //
+          ;})  << 
+              strokeColor:"red"  
+          >>;
+fName1 = text(0.5,-0.75, function(){ return ( 
+                  '<span class="process-math">' + 
+                      //Typeset Math Text Here
+                      'V(t) = ' + P.Value().toFixed(2) + ' (1-' + r.Value().toFixed(2) + ')^t' + 
+                      //
+                  '</span>'
+                );} )  << 
+                      color:"red"  
+                >>;
+
+fGraph2 = functiongraph(function(x) { return 
+              // Define Function Here
+              scrap.Value() 
+              //
+          ;})  << 
+              strokeColor:"green", 
+              dash:2  
+          >>;
+</script>
+</div></body>
+</html>

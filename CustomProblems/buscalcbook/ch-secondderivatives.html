@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dimishing Returns and Changing Rates</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="http://mathlogic.org/oerbook/buscalcchange/external/Delta_logo.gif">
+<meta property="book:title" content="Business Calculus">
+<meta property="book:author" content="Stephen Flood">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="buscalcchange" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\newcommand{\red}[1]{   {\color{red}   #1}   }
+\newcommand{\blue}[1]{  {\color{blue}  #1}  }
+\newcommand{\green}[1]{ {\color{green} #1} }
+
+\newcommand{\ddx}[1]{ \dfrac{d}{dx} \Big[ #1 \Big]  } 
+\newcommand{\ddt}[1]{ \dfrac{d}{dt} \Big[ #1 \Big]  } 
+\newcommand{\ddu}[1]{ \dfrac{d}{du} \Big[ #1 \Big]  } 
+\newcommand{\ddxfrac}[1]{ \dfrac{d}{dx} \left[ #1 \right]  } 
+\newcommand{\D}[1]{ \Big[ #1 \Big]'  } 
+
+\newcommand{\intdx}[1]{{\,\int#1\,\,dx}}
+\newcommand{\dint}[1]{\displaystyle\intdx{#1}}
+
+\def \tikzhistogram (#1,#2){\draw[fill=blue,opacity=0.3] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \draw[draw,thick] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \node[draw,fill=blue, circle,inner sep=2.5pt] at (#1,#2) {};}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="external/Delta_logo.gif" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="home.html"><span class="title">Business Calculus:</span> <span class="subtitle">A Study of Marginal Change</span></a></h1>
+<p class="byline">Stephen Flood</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch-maxmin.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-applyingslopes.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="part-integrals.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch-maxmin.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="part-applyingslopes.html" title="Up">Up</a><a class="next-button button toolbar-item" href="part-integrals.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-algebra.html" data-scroll="part-algebra" class="internal"><span class="codenumber">I</span> <span class="title">Algebra For Business</span></a></li>
+<li class="link">
+<a href="ch-functions.html" data-scroll="ch-functions" class="internal"><span class="codenumber">1</span> <span class="title">Functions of Economics</span></a><ul>
+<li><a href="ch-functions.html#sec-function-concepts" data-scroll="sec-function-concepts" class="internal">Function Concepts</a></li>
+<li><a href="ch-functions.html#sec-functions-readinggraphs" data-scroll="sec-functions-readinggraphs" class="internal">Graphs of Functions</a></li>
+<li><a href="ch-functions.html#sec-combining_functions" data-scroll="sec-combining_functions" class="internal">Combining Functions</a></li>
+<li><a href="ch-functions.html#sec_graphsoftotalsandchanges" data-scroll="sec_graphsoftotalsandchanges" class="internal">Graphs of Totals and Changes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-algebra_linearfunctions.html" data-scroll="ch-algebra_linearfunctions" class="internal"><span class="codenumber">2</span> <span class="title">Lines and Linear Functions</span></a><ul>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-equations" data-scroll="sec-algebra-linear-equations" class="internal">Finding the Equation of a Line</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-demandprice" data-scroll="sec-algebra-linear-demandprice" class="internal">Demand Price and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algeba-linear-cost" data-scroll="sec-algeba-linear-cost" class="internal">Item Cost, Total Cost, and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-applied_domain" data-scroll="sec-applied_domain" class="internal">Models and Applied Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_polynomials_and_rationals.html" data-scroll="ch_polynomials_and_rationals" class="internal"><span class="codenumber">3</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="ch_polynomials_and_rationals.html#sec_quadratic_functions" data-scroll="sec_quadratic_functions" class="internal">Quadratic and Polynomial Functions</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_revenue" data-scroll="sec_revenue" class="internal">Revenue with Fair Pricing</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec-understandingprofit" data-scroll="sec-understandingprofit" class="internal">Understanding Profit</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_rationalfns" data-scroll="sec_rationalfns" class="internal">Rational Functions</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-explog.html" data-scroll="part-explog" class="internal"><span class="codenumber">II</span> <span class="title">Mathematics of Compound Interest</span></a></li>
+<li class="link">
+<a href="ch_exponentials.html" data-scroll="ch_exponentials" class="internal"><span class="codenumber">4</span> <span class="title">Compound Interest and Depreciation</span></a><ul>
+<li><a href="ch_exponentials.html#sec_introducing_exponentials" data-scroll="sec_introducing_exponentials" class="internal">Exponential Functions</a></li>
+<li><a href="ch_exponentials.html#sec_percent_change" data-scroll="sec_percent_change" class="internal">Percents and Percent Change</a></li>
+<li><a href="ch_exponentials.html#sec_compound_interest" data-scroll="sec_compound_interest" class="internal">Compound Interest and Depreciation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logarithms.html" data-scroll="ch_logarithms" class="internal"><span class="codenumber">5</span> <span class="title">Logarithms and Solving for Time</span></a><ul>
+<li><a href="ch_logarithms.html#sec-inverses" data-scroll="sec-inverses" class="internal">Inverse Functions</a></li>
+<li><a href="ch_logarithms.html#sec_logartims" data-scroll="sec_logartims" class="internal">Logarithms Undo Exponentials</a></li>
+<li><a href="ch_logarithms.html#sec-lawsoflogs" data-scroll="sec-lawsoflogs" class="internal">Laws of Logarithms</a></li>
+<li><a href="ch_logarithms.html#sec_solvingfortime" data-scroll="sec_solvingfortime" class="internal">Solving Compound Interest for Time</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rates.html" data-scroll="part-rates" class="internal"><span class="codenumber">III</span> <span class="title">Introducing Change and Rates</span></a></li>
+<li class="link">
+<a href="ch_limits.html" data-scroll="ch_limits" class="internal"><span class="codenumber">6</span> <span class="title">Limits</span></a><ul>
+<li><a href="ch_limits.html#sec_readingdynamically" data-scroll="sec_readingdynamically" class="internal">Reading Graphs Dynamically</a></li>
+<li><a href="ch_limits.html#sec-econlimits" data-scroll="sec-econlimits" class="internal">Macroeconomics and Mostly Continous Functions</a></li>
+<li><a href="ch_limits.html#sec-ComputingLimitsNumerically" data-scroll="sec-ComputingLimitsNumerically" class="internal">Computing Limits Numerically</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_totalschanges.html" data-scroll="ch_totalschanges" class="internal"><span class="codenumber">7</span> <span class="title">Average Rates of Change</span></a><ul>
+<li><a href="ch_totalschanges.html#sec-AROC" data-scroll="sec-AROC" class="internal">Average Rates of Change</a></li>
+<li><a href="ch_totalschanges.html#sec_graphsofrateschangesandtotals" data-scroll="sec_graphsofrateschangesandtotals" class="internal">Graphs of Rates, Changes, and Totals</a></li>
+<li><a href="ch_totalschanges.html#sec_velocityAndIROC" data-scroll="sec_velocityAndIROC" class="internal">Velocity and Instantaneous Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_tangentsecant.html" data-scroll="ch_tangentsecant" class="internal"><span class="codenumber">8</span> <span class="title">Understanding Slope</span></a><ul>
+<li><a href="ch_tangentsecant.html#sec_slope" data-scroll="sec_slope" class="internal">Slopes and Rates of Change</a></li>
+<li><a href="ch_tangentsecant.html#sec_secantangent" data-scroll="sec_secantangent" class="internal">Approximating Slope with Secant Lines</a></li>
+<li><a href="ch_tangentsecant.html#sec_slopealgebraically" data-scroll="sec_slopealgebraically" class="internal">Defining Slope Algebraically</a></li>
+<li><a href="ch_tangentsecant.html#sec-slopefunction" data-scroll="sec-slopefunction" class="internal">Defining a Slope Function</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-slopeshortcuts.html" data-scroll="part-slopeshortcuts" class="internal"><span class="codenumber">IV</span> <span class="title">Shortcuts for Computing Slope Functions</span></a></li>
+<li class="link">
+<a href="ch_basicderivativerules.html" data-scroll="ch_basicderivativerules" class="internal"><span class="codenumber">9</span> <span class="title">Slope Shortcuts for Basic Functions</span></a><ul>
+<li><a href="ch_basicderivativerules.html#sec_basicrules1" data-scroll="sec_basicrules1" class="internal">Basic Derivative Rules</a></li>
+<li><a href="ch_basicderivativerules.html#sec-derivativesexplog" data-scroll="sec-derivativesexplog" class="internal">Derivatives of Exponentials and Logarithms</a></li>
+<li><a href="ch_basicderivativerules.html#sec-marginalcost" data-scroll="sec-marginalcost" class="internal">Marginal Cost</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_productquotientrule.html" data-scroll="ch_productquotientrule" class="internal"><span class="codenumber">10</span> <span class="title">Product and Quotient Rule</span></a><ul>
+<li><a href="ch_productquotientrule.html#sec_productrule" data-scroll="sec_productrule" class="internal">Derivatives of Products</a></li>
+<li><a href="ch_productquotientrule.html#sec_quotientrule" data-scroll="sec_quotientrule" class="internal">Derivatives of Fractions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_chainrule.html" data-scroll="ch_chainrule" class="internal"><span class="codenumber">11</span> <span class="title">The Chain Rule</span></a><ul>
+<li><a href="ch_chainrule.html#sec_generalizedpowerrule" data-scroll="sec_generalizedpowerrule" class="internal">The Generalized Power Rule</a></li>
+<li><a href="ch_chainrule.html#sec-chainrule" data-scroll="sec-chainrule" class="internal">The Chain Rule</a></li>
+<li><a href="ch_chainrule.html#sec-derivativesummary" data-scroll="sec-derivativesummary" class="internal">List of All Derivative Rules</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-applyingslopes.html" data-scroll="part-applyingslopes" class="internal"><span class="codenumber">V</span> <span class="title">Applying Marginals and Slopes</span></a></li>
+<li class="link">
+<a href="ch-maxmin.html" data-scroll="ch-maxmin" class="internal"><span class="codenumber">12</span> <span class="title">Finding Maxima and Minima</span></a><ul>
+<li><a href="ch-maxmin.html#sec_understandingextrema" data-scroll="sec_understandingextrema" class="internal">Finding Local Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_absolutemaxmin" data-scroll="sec_absolutemaxmin" class="internal">Finding Absolute Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_maximaminimaandchangegraphs" data-scroll="sec_maximaminimaandchangegraphs" class="internal">Maxima, Minima, and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="ch-secondderivatives.html" data-scroll="ch-secondderivatives" class="internal"><span class="codenumber">13</span> <span class="title">Dimishing Returns and Changing Rates</span></a><ul>
+<li><a href="ch-secondderivatives.html#sec-secondderivative" data-scroll="sec-secondderivative" class="internal">The Second Derivative</a></li>
+<li><a href="ch-secondderivatives.html#sec-concavity" data-scroll="sec-concavity" class="internal">Concavity and Graphs</a></li>
+<li><a href="ch-secondderivatives.html#sec_seconderivativeconcavityandchange" data-scroll="sec_seconderivativeconcavityandchange" class="internal">The Second Derivative and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-integrals.html" data-scroll="part-integrals" class="internal"><span class="codenumber">VI</span> <span class="title">Integral Calculus</span></a></li>
+<li class="link">
+<a href="ch_antiderivatives.html" data-scroll="ch_antiderivatives" class="internal"><span class="codenumber">14</span> <span class="title">Antiderivatives</span></a><ul>
+<li><a href="ch_antiderivatives.html#sec_undoingderivatives" data-scroll="sec_undoingderivatives" class="internal">Undoing Derivatives</a></li>
+<li><a href="ch_antiderivatives.html#sec-indefiniteintegrals" data-scroll="sec-indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_antiderivatives.html#sec-applyingantiderivatives" data-scroll="sec-applyingantiderivatives" class="internal">Applying Antiderivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_introducingarea.html" data-scroll="ch_introducingarea" class="internal"><span class="codenumber">15</span> <span class="title">Understanding Areas</span></a><ul>
+<li><a href="ch_introducingarea.html#sec_indefiniteintegrals" data-scroll="sec_indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_introducingarea.html#sec_geometricarea" data-scroll="sec_geometricarea" class="internal">Understanding Geometrically of Area</a></li>
+<li><a href="ch_introducingarea.html#sec_fundamentaltheorem" data-scroll="sec_fundamentaltheorem" class="internal">Area, Antiderivatives, and Graphs of Change</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="algebrareview.html" data-scroll="algebrareview" class="internal"><span class="codenumber">A</span> <span class="title">Algebra Review</span></a><ul>
+<li><a href="algebrareview.html#section-50" data-scroll="section-50" class="internal">Laws of Algebra</a></li>
+<li><a href="algebrareview.html#sec-IntervalsandGraphs" data-scroll="sec-IntervalsandGraphs" class="internal">Intervals and Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="chapter" id="ch-secondderivatives"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">13</span> <span class="title">Dimishing Returns and Changing Rates</span>
+</h2>
+<section class="introduction" id="introduction-61"><p id="p-1487"></p></section><section class="section" id="sec-secondderivative"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.1</span> <span class="title">The Second Derivative</span>
+</h3>
+<p id="p-1488">Recall that if <span class="process-math">\(P(x)\)</span> is total profit, then it's slope function <span class="process-math">\(P'(x)\)</span> is used to approximate the profit from the <em class="emphasis">next</em> item.</p>
+<p id="p-1489">The concept of <dfn class="terminology">diminishing returns</dfn> plays an important role in economics. <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/image_diminishingreturns.svg" role="img" class="contained"></div></p>
+<ul class="disc">
+<li id="li-276">
+<p id="p-1490">To the left of the point of diminishing returns, the <em class="emphasis">slope is increasing</em>.</p>
+<p id="p-1491">That means that each item contributes more and more to the total profit. In other words, <em class="emphasis">returns are accelerating</em>.</p>
+</li>
+<li id="li-277">
+<p id="p-1492">To the right of the point of diminishing returns, the <em class="emphasis">slope is decreasing</em>.</p>
+<p id="p-1493">That means that each item contributes less and less to the total profit. In other words, <em class="emphasis">returns are decellerating</em>. At first, the items increase the profit, but by less and less. Eventually, the items cause the profit to decrease.</p>
+</li>
+</ul>
+<p id="p-1494">Most descriptions in economics of diminishing returns are very wordy, and somewhat vague. To make this concept precise, we need an additional mathematical concept.</p>
+<article class="definition definition-like" id="def-secondderivative"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
+</h4>
+<p id="p-1495">Suppose that <span class="process-math">\(f\)</span> is a differentiable function. The <dfn class="terminology">second derivative</dfn> of <span class="process-math">\(f\text{,}\)</span> written <span class="process-math">\(f''\text{,}\)</span> is a function that gives the <em class="emphasis">slope of <span class="process-math">\(f'\)</span></em>.  In symbols,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f''(x) = \ddx{ f'(x) } = \ddxfrac{\frac{df}{dx} } = \dfrac{d^2f}{dx^2}
+\end{equation*}
+</div>
+<p class="continuation">In practice, find the second derivative by finding the derivative of the derivative.</p></article><p id="p-1496">In physics,</p>
+<ul class="disc">
+<li id="li-278"><p id="p-1497">If <span class="process-math">\(s(t) = \)</span> position</p></li>
+<li id="li-279"><p id="p-1498">then <span class="process-math">\(s'(t) = \)</span> velocity</p></li>
+<li id="li-280"><p id="p-1499">and <span class="process-math">\(s''(t) = \)</span> acceleration.</p></li>
+</ul>
+<article class="exploration project-like" id="exploration-65"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-62"><p id="p-1500">Suppose that <span class="process-math">\(P(x) = -0.1x^2  + 30x - 1000 \text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-167"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1501">Find the marginal profit from items #10, #11, and #12.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-204" id="solution-204"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-204"><div class="solution solution-like">
+<p id="p-1502">The marginal profit function is <span class="process-math">\(P'(x)\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-141">
+\begin{align*}
+P'(x) \amp = \ddx{-0.1x^2  + 30x - 1000 }\\
+\amp =-0.1\cdot 2x + 30 - 0 \\
+\amp = -0.2 x + 30
+\end{align*}
+</div>
+<p class="continuation">The marginal profit function is equal to <span class="process-math">\(P' = -0.2 x + 30 \text{.}\)</span> This tells us how much the <em class="emphasis">next item</em> contributes to the total profit.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-142">
+\begin{align*}
+P'(10) \amp = 28 \$/item \\
+P'(11) \amp = 27.8 \$/item \\
+P'(12) \amp = 27.6 \$/item 
+\end{align*}
+</div>
+<p class="continuation">Notice that the 10th, 11th, and 12th items all increase the total profit. However, they contribute less and less to the total profit. In fact, the addional profit is decreasing by $0.20 every additional item.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-168"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1503">Find <span class="process-math">\(P''(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-205" id="solution-205"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-205"><div class="solution solution-like">
+<p id="p-1504">We have already found <span class="process-math">\(P'(x)\text{.}\)</span></p>
+<p id="p-1505">We can now find the second derivative</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-143">
+\begin{align*}
+P''(x) \amp = \ddx{ P'(x) } \\
+\amp = \ddx{ -0.2 x + 30 } \\
+\amp = -0.2 + 0 \\
+\amp = -0.2 \ \$/item\text{ per } item 
+\end{align*}
+</div>
+<p class="continuation">This tells us that the <em class="emphasis">unit profit</em> is decreasing by $0.20 $/item for each additional item sold.</p>
+</div></div>
+</div></article></article><article class="exploration project-like" id="exploration-66"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
+</h4>
+<p id="p-1506">Let <span class="process-math">\(f(x) = \dfrac{3}{2x+1}\)</span> is the position function. Find the acceleration <span class="process-math">\(\dfrac{d^2f}{dx^2}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-206" id="solution-206"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-206"><div class="solution solution-like">
+<p id="p-1507">We must take the derivative twice.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-144">
+\begin{align*}
+f' \amp = \ddxfrac{\frac{\red{3}}{\blue{2x+1}} } 
+\end{align*}
+</div>
+<p class="continuation">You can find this derivative as written using the quotient rule. You can also rewrite the derivative as <span class="process-math">\(\ddx{ 3\cdot(2x+1)^{-1}}\)</span> and use the chain rule.</p>
+<p id="p-1508">We will use the quotient rule <span class="process-math">\(\D{\frac{\red{t}}{\blue{b}}} = \frac{\blue{b}\red{t'}-\red{t}\blue{b'}}{\blue{b}^2}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-145">
+\begin{align*}
+f' \amp = \dfrac{\blue{(2x+1)}\red{0} - \red{3}\blue{(2+0)}}{\blue{(2x+1)^2}}  \\
+\amp = \dfrac{-6}{(2x+1)^2}  \\
+\amp = \dfrac{-6}{4x^2 + 4x + 1}  
+\end{align*}
+</div>
+<p id="p-1509">We can now take the derivative the second time, also using the quotient rule</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-146">
+\begin{align*}
+f'' \amp = \ddx{f'} \\
+\amp = \ddxfrac{ \dfrac{\red{-6}}{\blue{4x^2 + 4x + 1}} }\\
+\amp =  \dfrac{\blue{(4x^2 + 4x + 1)}\red{0}-\red{-6}\blue{(4\cdot 2x + 4 + 0)}}{\blue{ (4x^2 + 4x + 1)^2}} \\
+f'' \amp =  \dfrac{  48x + 16  }{  (4x^2 + 4x + 1)^2  } 
+\end{align*}
+</div>
+</div></div>
+</div></article><section class="paragraphs" id="paragraphs-14"><h4 class="heading"><span class="title">Understanding Acceleration.</span></h4>
+<p id="p-1510">A physical perspective provides one of the most straightforward ways to think about the connection between position, velocity, and acceleration. To make things concrete, suppose that you are driving on a highway, and that</p>
+<ul id="p-1511" class="disc">
+<li id="li-281"><p id="p-1512">If <span class="process-math">\(s(t) = \)</span> your mile marker at time <span class="process-math">\(t\)</span></p></li>
+<li id="li-282"><p id="p-1513">then <span class="process-math">\(s'(t) = \)</span> is your velocity at time <span class="process-math">\(t\)</span></p></li>
+<li id="li-283"><p id="p-1514">and <span class="process-math">\(s''(t) = \)</span> your acceleration at time <span class="process-math">\(t\text{.}\)</span> This tells us <em class="emphasis">how fast</em> the velocity <span class="process-math">\(s'\)</span> is changing.</p></li>
+</ul>
+<p class="continuation">In other words,</p>
+<p id="p-1515"><em class="emphasis">Positive</em> acceleration <span class="process-math">\(s''\)</span> means that velocity is <em class="emphasis">increasing</em>.  This happens when you put your foot on the gas, as long as the car is in drive.</p>
+<p id="p-1516"><em class="emphasis">Negative</em> acceleration <span class="process-math">\(s''\)</span> means that your velocity is <em class="emphasis">decreasing</em>.  This happens when you put your foot on the break, as long as you are moving forward.</p></section><article class="exploration project-like" id="exploration-67"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-63"><p id="p-1517">Suppose that your <em class="emphasis">velocity</em> is given by the following table <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(t\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">0</td>
+<td class="l m b2 r2 l0 t0 lines">1</td>
+<td class="l m b2 r2 l0 t0 lines">2</td>
+<td class="l m b2 r2 l0 t0 lines">3</td>
+<td class="l m b2 r2 l0 t0 lines">4</td>
+<td class="l m b2 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(s'(t)\)</span></td>
+<td class="l m b0 r2 l0 t0 lines">60</td>
+<td class="l m b0 r2 l0 t0 lines">65</td>
+<td class="l m b0 r2 l0 t0 lines">85</td>
+<td class="l m b0 r2 l0 t0 lines">30</td>
+<td class="l m b0 r2 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+</table></div></p></div>
+<article class="task exercise-like" id="task-169"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1518">On what interval is your acceleration <span class="process-math">\(s''\)</span> positive? Justify your answer</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-207" id="solution-207"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-207"><div class="solution solution-like">
+<p id="p-1519">Positive acceleration means increasing velocity. The velocity increases between <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=2\)</span> (the velocity increases from 60 to 65 to 85).</p>
+<p id="p-1520">That means that acceleration is positive between <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=2\text{,}\)</span> which corresponds to the interval <span class="process-math">\((0,2)\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-170"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1521">On what interval is your acceleration <span class="process-math">\(s''\)</span> negative? Justify your answer</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-208" id="solution-208"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-208"><div class="solution solution-like">
+<p id="p-1522">Negative acceleration means decreasing velocity. The velocity decreases between <span class="process-math">\(t=2\)</span> and <span class="process-math">\(t=5\)</span> (the velocity increases from 85 to 30, to 10, to 0).</p>
+<p id="p-1523">That means that acceleration is negative between <span class="process-math">\(t=2\)</span> and <span class="process-math">\(t=5\text{,}\)</span> which corresponds to the interval <span class="process-math">\((2,5)\text{.}\)</span></p>
+</div></div>
+</div></article></article><article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-16"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Maximum and Minimum Velocity.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-1524">The above examples show that the <em class="emphasis">velocity</em> function <span class="process-math">\(f'\)</span> has a maxmium or minimum value when the <em class="emphasis">acceleration</em> goes from <span class="process-math">\(f''=(+)\)</span> to <span class="process-math">\(f''=(-)\)</span> (for a maximum velocity <span class="process-math">\(f'\)</span>) or from <span class="process-math">\(f''=(-)\)</span> to <span class="process-math">\(f''=(+)\)</span> (for a minimum velocity <span class="process-math">\(f'\)</span>).</p></article></div></section><section class="section" id="sec-concavity"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.2</span> <span class="title">Concavity and Graphs</span>
+</h3>
+<p id="p-1525">In <a href="ch-maxmin.html" class="internal" title="Chapter 12: Finding Maxima and Minima">Chapter 12</a>, we used the derivative function <span class="process-math">\(f'\)</span> to give a very rough sketch of a height function <span class="process-math">\(f\text{.}\)</span> However, this sketch is only a partial description of the original function.</p>
+<p id="p-1526">For example, the following graph is more than just the sketch <span class="process-math">\(\nearrow\,\searrow\)</span> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/image_bellcurve1.svg" role="img" class="contained"></div> In particular, the graph first curves up, then curves down, and then curves up again.</p>
+<p id="p-1527">The term <dfn class="terminology">concave</dfn> means "curved like a bowl." In our context, there are two kinds of bowls: ones that open up, and ones that open down. Graphically, you can tell if a curve is concave up by putting eyes over the curve, and seeing if it is <span class="process-math">\(\stackrel{\cdot\,\cdot}{\smile}\)</span> or <span class="process-math">\(\stackrel{\cdot\,\cdot}{\frown}\)</span></p>
+<dl class="description-list">
+<dt id="li-284">Concave Up</dt>
+<dd>
+<p id="p-1528">The curve <em class="emphasis">opens up</em> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_concaveupfaces.svg" role="img" class="contained"></div></p>
+<p id="p-1529">The <em class="emphasis">slope <span class="process-math">\(f'\)</span></em> is <em class="emphasis">increasing</em> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/image_slopeincreasing.svg" role="img" class="contained"></div></p>
+<p id="p-1530">Because <span class="process-math">\(f'\)</span> is increasing, the second derivative <em class="emphasis"><span class="process-math">\(f''\)</span> is positive</em>.</p>
+</dd>
+<dt id="li-285">Concave Down</dt>
+<dd>
+<p id="p-1531">The curve <em class="emphasis">opens down</em> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_concavedownface.svg" role="img" class="contained"></div></p>
+<p id="p-1532">The <em class="emphasis">slope <span class="process-math">\(f'\)</span></em> is <em class="emphasis">decreasing</em> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/image_slopedecreasing.svg" role="img" class="contained"></div></p>
+<p id="p-1533">Because <span class="process-math">\(f'\)</span> is decreasing, the second derivative <em class="emphasis"><span class="process-math">\(f''\)</span> is negative</em>.</p>
+</dd>
+</dl>
+<p id="p-1534">We can summarize this as the following result.</p>
+<article class="theorem theorem-like" id="thm-testingconcavity"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
+</h4>
+<p id="p-1535">Suppose that <span class="process-math">\(f\)</span> is a function with second derivative <span class="process-math">\(f''\text{.}\)</span></p>
+<ul class="disc">
+<li id="li-286"><p id="p-1536"><span class="process-math">\(f\)</span> is <dfn class="terminology">concave up</dfn> on an interval <em class="emphasis">if and only if</em> the second derivative <span class="process-math">\(f''=(+)\)</span> on that interval.</p></li>
+<li id="li-287"><p id="p-1537"><span class="process-math">\(f\)</span> is <dfn class="terminology">concave down</dfn> on an interval <em class="emphasis">if and only if</em> the second derivative <span class="process-math">\(f''=(-)\)</span> on that interval.</p></li>
+</ul></article><p id="p-1538">Something interesting happens when concavity changes. Suppose the bell curve below represents the number of people ill with a new illness. In the bell curve below, the curve starts out concave up (CU), becomes concave down (CD), and ends concave up (CU). <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/image_bellcurve2.svg" role="img" class="contained"></div> The curve is <em class="emphasis">bent</em> at the two transitions.</p>
+<ul class="disc">
+<li id="li-288">
+<p id="p-1539">At the first "bending point," the number of new cases continues to rise. However, the daily change in cases (i.e. the slope <span class="process-math">\(f'\)</span>) stops getting bigger and starts getting smaller.</p>
+<p id="p-1540">In other words, because the second derivative  goes from <span class="process-math">\(f''=(+)\)</span> to <span class="process-math">\(f''=(-)\text{,}\)</span> the fastest daily change in cases occurs at the first bend in the curve.</p>
+</li>
+<li id="li-289"><p id="p-1541">At the second "bending point," the number of new cases continues to decrease. However, the daily change in cases (i.e. the slope <span class="process-math">\(f'\)</span>) starts to decrease less rapidly.</p></li>
+</ul>
+<p class="continuation">This is an important mathematical feature, but "bending point" does not a mathematical term.  The word <dfn class="terminology">inflect</dfn> means to bend, to change pitch, or to alter noticeably.</p>
+<article class="definition definition-like" id="def-inflection"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span>
+</h4>
+<p id="p-1542">Suppose that <span class="process-math">\(f\)</span> is a function with second derivative <span class="process-math">\(f''\text{.}\)</span> We say that <span class="process-math">\(f\)</span> has an <dfn class="terminology">inflection point</dfn> at <span class="process-math">\(x\)</span> <em class="emphasis">if and only if</em> <span class="process-math">\(f\)</span> changes concavity at <span class="process-math">\(x\text{.}\)</span></p>
+<p id="p-1543">In other words, <span class="process-math">\(f\)</span> has an inflection point at <span class="process-math">\(x\)</span> if <span class="process-math">\(f''\)</span> goes between <span class="process-math">\((+)\)</span> and <span class="process-math">\((-)\)</span> at <span class="process-math">\(x\text{.}\)</span></p></article><article class="assemblage assemblage-like" id="assemblage-findingconcavity"><h4 class="heading"><span class="title">To Find Intervals of Concavity.</span></h4>
+<ol id="p-1544" class="decimal">
+<li id="li-290">
+<p id="p-1545">Find an equation for <span class="process-math">\(f''\text{.}\)</span></p>
+<p id="p-1546">If you are given an equation for <span class="process-math">\(f\text{,}\)</span> take the derivative twice. If you are given an equation for <span class="process-math">\(f'\text{,}\)</span> take the derivative once. If you are given an equation for <span class="process-math">\(f''\text{,}\)</span> no derivative rules are needed.</p>
+</li>
+<li id="li-291"><p id="p-1547">Find all <span class="process-math">\(x\)</span> such that <span class="process-math">\(f''(x)=0\text{.}\)</span></p></li>
+<li id="li-292"><p id="p-1548">Find all <span class="process-math">\(x\)</span> such that <span class="process-math">\(f''(x)\ DNE\)</span></p></li>
+<li id="li-293"><p id="p-1549">Make a sign chart for <span class="process-math">\(f''\)</span></p></li>
+<li id="li-294"><p id="p-1550">Read off your answer.  If <span class="process-math">\(f''=(+)\text{,}\)</span> then <span class="process-math">\(f\)</span> is <span class="process-math">\(\stackrel{\cdot\,\cdot}{\smile}\text{.}\)</span>  If <span class="process-math">\(f''=(-)\text{,}\)</span> then <span class="process-math">\(f\)</span> is <span class="process-math">\(\stackrel{\cdot\,\cdot}{\frown}\text{.}\)</span></p></li>
+</ol></article><article class="exploration project-like" id="exploration-68"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-64"><p id="p-1551">Let <span class="process-math">\(f(x) = x^3 - 9x^2 + 24x - 3 \)</span> be a function that gives the height of a mountain.</p></div>
+<article class="task exercise-like" id="task-171"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1552">Find where <span class="process-math">\(f\)</span> is concave up, where it is concave down, and find all inflection points.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-209" id="solution-209"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-209"><div class="solution solution-like">
+<p id="p-1553">To find concavity and inflection points, we must work with the <em class="emphasis">second</em> derivative <span class="process-math">\(f''\text{.}\)</span> First, we must find <span class="process-math">\(f''\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddx{x^3 - 9x^2 + 24x - 3 } = 3x^2 -18x +24
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f''(x) = \ddx{3x^2 -18x +24} = 6x - 18
+\end{equation*}
+</div>
+<p id="p-1554">Next, find when <span class="process-math">\(f''=0\)</span> by solving</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-147">
+\begin{align*}
+6x-18 \amp =0\\
+6x    \amp =18\\
+x 	\amp =3
+\end{align*}
+</div>
+<p class="continuation">Because <span class="process-math">\(f''\)</span> is a polynomial, it is defined on all <span class="process-math">\(x\text{.}\)</span>  In other words, there are no <span class="process-math">\(x\)</span> that make <span class="process-math">\(f''\ DNE\)</span></p>
+<p id="p-1555">Next, make a sign chart for <span class="process-math">\(f''\)</span> as before, checking whether  <span class="process-math">\(f''\)</span> is positive or negative on each interval. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_concavityexample1_signchartv1.svg" role="img" class="contained"></div> Using our graph, we see that the function is concave up on the interval <span class="process-math">\((3,\infty)\text{,}\)</span> it is concave down on the interval <span class="process-math">\((-\infty,3)\text{,}\)</span> and has a point of inflection at <span class="process-math">\(x=3\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-172"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1556">Find all local maxima and minima.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-210" id="solution-210"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-210"><div class="solution solution-like">
+<p id="p-1557">To find maxima and minima, we must work with the <em class="emphasis">first</em> derivative <span class="process-math">\(f'\text{.}\)</span> We have already found that <span class="process-math">\(f'(x) = \ddx{x^3 - 9x^2 + 24x - 3 } = 3x^2 -18x +24 \text{.}\)</span></p>
+<p id="p-1558">Next, we must find when <span class="process-math">\(f'=0\)</span> by solving the equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-148">
+\begin{align*}
+3x^2 - 18x + 24 \amp = 0\\
+3(x^2 - 6x +  8) \amp =0\\
+3(x - 4)(x - 2) \amp =0
+\end{align*}
+</div>
+<p class="continuation"><span class="process-math">\(f'=0\)</span> if and only if <span class="process-math">\(x=4\)</span> or <span class="process-math">\(x=2\text{.}\)</span></p>
+<p id="p-1559">Because <span class="process-math">\(f'\)</span> is a polynomial, it is defined for all <span class="process-math">\(x\text{.}\)</span>  In other words, there are no places where <span class="process-math">\(f'\ DNE\text{.}\)</span></p>
+<p id="p-1560">We now make a sign chart for <span class="process-math">\(f'\)</span> as usual. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_concavityexample2_maxminsignchart.svg" role="img" class="contained"></div> The function has a local maximum at <span class="process-math">\(x=2\text{,}\)</span> and a local minimum at <span class="process-math">\(x=4\text{.}\)</span></p>
+</div></div>
+</div></article></article><article class="exploration project-like" id="exploration-69"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-65">
+<p id="p-1561">Suppose that <span class="process-math">\(f\)</span> is an unknown (mystery) function with known <em class="emphasis">acceleration</em> function</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'' = \dfrac{(x+2)(x-7)}{x^2}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-173"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1562">Find where the original function <span class="process-math">\(f\)</span> is concave up or down.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-211" id="solution-211"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-211"><div class="solution solution-like">
+<p id="p-1563">You are <em class="emphasis">given</em> the formula for the derivative <span class="process-math">\(f''\text{,}\)</span> so you do <em class="emphasis">not</em> need to do any calculus.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'' = \dfrac{(x+2)(x-7)}{x^2} = \dfrac{A}{B}
+\end{equation*}
+</div>
+<p class="continuation">Recall that for fractions, <span class="process-math">\(\frac{A}{B}=0\)</span> if and only if <span class="process-math">\(A=0\text{,}\)</span> and <span class="process-math">\(\frac{A}{B}\ DNE\)</span> if and only if <span class="process-math">\(B=0\)</span></p>
+<p id="p-1564">To find when <span class="process-math">\(f''=0\text{,}\)</span> solve the equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-149">
+\begin{align*}
+(x+2)(x-7) \amp = 0 
+\end{align*}
+</div>
+<p class="continuation">which happens when <span class="process-math">\(x=-2\)</span> or <span class="process-math">\(x=7\text{.}\)</span></p>
+<p id="p-1565">To find when <span class="process-math">\(f''\ DNE\text{,}\)</span> solve the equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-150">
+\begin{align*}
+x^2 \amp =0
+\end{align*}
+</div>
+<p class="continuation">which happens when <span class="process-math">\(x=0\)</span></p>
+<p id="p-1566">Using these values, we can make the sign chart as before <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/image_concavityexample3_signchartv1.svg" role="img" class="contained"></div></p>
+<p id="p-1567">Using the sign chart, we see that the <em class="emphasis">original/mystery</em> function <span class="process-math">\(f\)</span> is concave up on the interval <span class="process-math">\((-\infty,-2)\cup(7,\infty)\text{.}\)</span>  <span class="process-math">\(f\)</span> is concave down on the interval <span class="process-math">\((-2,0)\cup(0,7)\text{.}\)</span></p>
+<p id="p-1568">There are inflection points (the curve bends) at <span class="process-math">\(x=-2\)</span> and <span class="process-math">\(x=7\text{.}\)</span></p>
+</div></div>
+</div></article></article><p id="p-1569">We can combine all of the techinques we have used in the past section into a single problem.</p>
+<article class="exploration project-like" id="exploration-70"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-66"><p id="p-1570">Let <span class="process-math">\(f(x) = \frac{1}{5}x^5 - x^4\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-174"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1571">Find all maxima and minima for <span class="process-math">\(f\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-212" id="solution-212"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-212"><div class="solution solution-like">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-151">
+\begin{align*}
+f' \amp = \ddx{ \frac{1}{5}x^5 - x^4}\\
+\amp = \frac{1}{5}5x^4 - 4x^3\\
+\amp = x^4 - 4x^3
+\end{align*}
+</div>
+<p class="continuation"><span class="process-math">\(f'=0\)</span> if and only if</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-152">
+\begin{align*}
+x^4-4x^3 \amp =0\\
+x^3(x-4) \amp =0
+\end{align*}
+</div>
+<p class="continuation"><span class="process-math">\(f'=0\)</span> if <span class="process-math">\(x=0\)</span> or <span class="process-math">\(x=4\text{.}\)</span></p>
+<p id="p-1573"><span class="process-math">\(f'\)</span> is a polynomial so there are no values where <span class="process-math">\(f'\ DNE\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_concavityexample4_maxminsignchart.svg" role="img" class="contained"></div> <span class="process-math">\(f\)</span> has a local maximum at <span class="process-math">\(x=0\text{,}\)</span> and a local mininmum at <span class="process-math">\(x=4\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-175"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1574">Find all intervals of concavity for <span class="process-math">\(f\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-213" id="solution-213"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-213"><div class="solution solution-like">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-153">
+\begin{align*}
+f'' \amp = \ddx{f'} = \ddx{x^4 - 4x^3} \\
+\amp = 4x^3-12x^2
+\end{align*}
+</div>
+<p class="continuation"><span class="process-math">\(f''=0\)</span> when</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-154">
+\begin{align*}
+4x^3 -12x^2 \amp = 0\\
+4x^2( x - 3)\amp = 0 
+\end{align*}
+</div>
+<p class="continuation"><span class="process-math">\(f''=0\)</span> when <span class="process-math">\(x=0\)</span> or <span class="process-math">\(x=3\)</span></p>
+<p id="p-1576"><span class="process-math">\(f''\)</span> is a polynomial, so it is always defined.  Making the sign chart for <span class="process-math">\(f''\)</span> gives. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/image_concavityexample4_signchartv1.svg" role="img" class="contained"></div> The original function <span class="process-math">\(f\)</span> is concave up on the interal <span class="process-math">\((3,\infty)\text{.}\)</span> The function <span class="process-math">\(f\)</span> is concave down on the interval <span class="process-math">\((-\infty,0)\cup(0,3)\text{.}\)</span></p>
+</div></div>
+</div></article></article></section><section class="section" id="sec_seconderivativeconcavityandchange"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.3</span> <span class="title">The Second Derivative and Change Graphs</span>
+</h3>
+<p id="p-1577">So far, we've seen that if <span class="process-math">\(f(x)\)</span> is a function that represents a total amount of something, then the derivative function <span class="process-math">\(f'(x)\)</span> tells us how fast that total is changing.</p>
+<p id="p-1578">We have also seen that simply computing the change function <span class="process-math">\(\Delta y\)</span> gives a nice discrete analog of the derivative.</p>
+<p id="p-1579">We have recently begun studying the second derivative. Recall that <span class="process-math">\(f''(x)\)</span> tells us how fast the slope of our function is changing.</p>
+<p id="p-1580">As it turns out, we can get a discrete analog of the second derivative by computing the change in <span class="process-math">\(\Delta y\text{.}\)</span> We might call the “change in the change” function <span class="process-math">\(\Delta^2 y\)</span> , since it involves finding two different changes.</p>
+<article class="exploration project-like" id="exploration-71"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">13.7</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-67"><p id="p-1581"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_seconderivative.svg" role="img" class="contained"></div></p></div></article><figure class="table table-like" id="table-4"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">13.5<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">6</td>
+<td class="c m b0 r0 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\Delta P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\Delta^2 P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><ol id="p-1582" class="decimal">
+<li id="li-295"><p id="p-1583">What is the change in value <span class="process-math">\(\Delta P\)</span> due to the 2nd, 4th, and 6th items?</p></li>
+<li id="li-296"><p id="p-1584">When is the function changing the fastest and slowest?</p></li>
+<li id="li-297"><p id="p-1585">Which items contribute the maximum value? Which items contribute the minimum value?</p></li>
+<li id="li-298"><p id="p-1586">How fast is the value changing between items 1 and 2? What about between items 2 and 3?</p></li>
+<li id="li-299"><p id="p-1587">Fill in the remainder of the table above.</p></li>
+</ol>
+<p id="p-1588"><dfn class="terminology">Exercise:</dfn> Let <span class="process-math">\(P(x) = 0.1x^3 -1.4x^2 + 4.5x - 1\)</span> be a function that describes the total profit as a function of the number of units <span class="process-math">\(x\)</span> to be sold.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_seconderivative2.svg" role="img" class="contained"></div>
+<figure class="table table-like" id="table-5"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">13.6<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">6</td>
+<td class="c m b0 r0 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\Delta P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\Delta^2 P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><ol id="p-1589" class="decimal">
+<li id="li-300"><p id="p-1590">Fill in the table above describing the total profit <span class="process-math">\(P\text{,}\)</span> the change in profit <span class="process-math">\(\Delta P\text{,}\)</span> and the change in the change of profit <span class="process-math">\(\Delta^2 P\text{.}\)</span> Then sketch graphs of all three functions.</p></li>
+<li id="li-301"><p id="p-1591">For what intervals of <span class="process-math">\(x\)</span> is the <dfn class="terminology">change</dfn> in profit <span class="process-math">\(\Delta P\)</span> <dfn class="terminology">increasing</dfn>? For what intervals of <span class="process-math">\(x\)</span> is <span class="process-math">\(\Delta P\)</span> decreasing?</p></li>
+<li id="li-302"><p id="p-1592">When is <span class="process-math">\(\Delta P\)</span> changing the fastest? How is this related to <span class="process-math">\(\Delta^2 P\text{?}\)</span></p></li>
+</ol>
+<p id="p-1593"><dfn class="terminology">Exercise:</dfn> Let <span class="process-math">\(P(x) = -0.6x^2 + 3x - 1.4\)</span> be a function that describes the total profit as a function of the number of units <span class="process-math">\(x\)</span> to be sold.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image_totalchange_seconderivative3.svg" role="img" class="contained"></div>
+<figure class="table table-like" id="table-6"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">13.7<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines">day (<span class="process-math">\(x\)</span>)</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\Delta P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\Delta^2 P\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines">N/A</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><ol id="p-1594" class="decimal">
+<li id="li-303"><p id="p-1595">Fill in the table above describing the total profit <span class="process-math">\(P\text{,}\)</span> the change in profit <span class="process-math">\(\Delta P\text{,}\)</span> and the change in the change of profit <span class="process-math">\(\Delta^2 P\text{.}\)</span> Then sketch graphs of all three functions.</p></li>
+<li id="li-304"><p id="p-1596">For what intervals of <span class="process-math">\(x\)</span> is the <dfn class="terminology">change</dfn> in profit <span class="process-math">\(\Delta P\)</span> <dfn class="terminology">increasing</dfn>? For what intervals of <span class="process-math">\(x\)</span> is <span class="process-math">\(\Delta P\)</span> decreasing?</p></li>
+<li id="li-305"><p id="p-1597">What does the fact that <span class="process-math">\(\Delta^2 P\)</span> is constant tell us about the graph of <span class="process-math">\(P\text{?}\)</span> What does this say about the relationship between the total profit function <span class="process-math">\(P\)</span> and the various possible numbers of items <span class="process-math">\(x\)</span> that you might intend to sell?</p></li>
+</ol></section></section></div></main>
+</div>
+</body>
+</html>

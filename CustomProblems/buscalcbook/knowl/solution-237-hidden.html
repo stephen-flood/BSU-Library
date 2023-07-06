@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>This question requires concepts and computations from  <a href="ch_basicderivativerules.html#sec-marginalcost" class="internal" title="Section 9.3: Marginal Cost">Section 9.3</a>. Take a moment to refresh your memory of this section.</p>
+<p>In that section, to find the exact cost of the 100th item only, we need a total cost function <span class="process-math">\(F(x)\text{.}\)</span></p>
+<p>Then <span class="process-math">\(F(100)\)</span> is the cumulative cost of items 0-100, and <span class="process-math">\(F(99)\)</span> is the cumulative cost of items 0-99.</p>
+<p>That means that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{Cost of item }100 = F(100) - F(99) = \intdx{_{99}^{100}  36x + \frac{42}{x} }
+\end{equation*}
+</div>
+<p>We have already found that the cumulative cost function is <span class="process-math">\(F(x)  = 18x^2 + 42\cdot \ln(|x|)\)</span> Using this function we can compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\intdx{_{99}^{100}  36x + \frac{42}{x} } \amp = F(100) - F(99)\\
+\amp =180,193.41 - 176,610.99\\
+\amp = 3,582.42 
+\end{align*}
+</div>
+</div></body>
+</html>

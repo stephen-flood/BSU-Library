@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h'(x) = \ddx{ \blue{ e^{\big( \red{5-x^2} \big)} } }
+\end{equation*}
+</div>
+<p class="continuation">This is a composition with argument <span class="process-math">\(\red{g(x)} = \red{5-x^2}\)</span> and outside function <span class="process-math">\(\blue{f(u)} = \blue{ e^u }\text{.}\)</span></p>
+<p>Using our regular derivative rules, we know that <span class="process-math">\(\red{g'(x)} 
+= \red{ \ddx{5-x^2} } = \red{-2x} \)</span> and that <span class="process-math">\(\blue{f'(u)} 
+= \blue{\ddu{ e^u }} = \blue{e^u} \)</span></p>
+<p>Now that we have done our scrap work, we can return to our original question</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+h'(x) = \amp 
+\ddx{\blue{ e^{\big(\red{5-x^2}\big)} } }  \\
+= \amp \ddx{ \blue{f\Big( \red{g(x)} \Big) } }\\
+= \amp \blue{f'\Big( \red{g(x)}\Big)}\cdot \red{g'(x)}
+\end{align*}
+</div>
+<p class="continuation">Substituting the values first for <span class="process-math">\(\blue{f'}\text{,}\)</span> and then for  <span class="process-math">\(\red{g}\)</span> and <span class="process-math">\(\red{g'}\text{,}\)</span> into the above equation gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+h'(x) = \amp 
+\blue{ e^{(\red{g(x)})} }\cdot \red{g'(x)}\\
+= \amp 
+\blue{ e^{(\red{5-x^2})} }\cdot \Big(\red{-2x}\Big)
+\end{align*}
+</div>
+</div></body>
+</html>

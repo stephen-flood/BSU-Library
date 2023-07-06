@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.6.a.1</span><span class="period">.</span>
+</h5>
+<p>First, write down the compound interest formula from  <a href="" class="xref" data-knowl="./knowl/def-compoundinterest.html" title="Definition 4.12">Definition 4.12</a>.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-compoundinterest.html">
+\begin{equation*}
+F = P\cdot \left(1 + \frac{r}{m}\right)^{mt}
+\end{equation*}
+</div>
+<p class="continuation">with <span class="process-math">\(P=1000\text{,}\)</span> <span class="process-math">\(r=0.15\text{,}\)</span> and <span class="process-math">\(m=12\text{.}\)</span> Furthermore, we want the <em class="emphasis">future value</em>to be twice 1000.  In other words, we want <span class="process-math">\(F=2000\)</span> This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-compoundinterest.html">
+\begin{equation*}
+2000 = 1000 \cdot \left(1 + \dfrac{0.15}{12}\right)^{12t}
+\end{equation*}
+</div>
+<p class="continuation">Dividing both sides by 1000 gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-compoundinterest.html">
+\begin{equation*}
+2 = \left(1 + \dfrac{0.15}{12}\right)^{12t}
+\end{equation*}
+</div>
+<p>Next, we can simplify this equation using a calculator and the <a href="" class="xref" data-knowl="./knowl/exponential-arithmetic.html" title="Axiom A.2: Laws of Exponents">properties of exponents A.2</a></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+2 = \amp \left(1 + \dfrac{0.15}{12}\right)^{12t} \amp \\
+2 = \amp \left(\ 1.0125\ \right)^{12t} \amp \\
+2 = \amp \left(\ 1.0125^{12}\ \right)^{t} \amp \qquad\text{Because } a^{rs}=(a^r)^s\\
+2 = \amp \left(\ 1.16075\dots\ \right)^{t} \amp 
+\end{align*}
+</div>
+<p>Finally, finish solving the exponential equation as above using the  <a href="" class="xref" data-knowl="./knowl/assemblage-lawsoflogs.html" title="Summary: Laws of Logarithms">Laws of Logs</a>.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/assemblage-lawsoflogs.html">
+\begin{align*}
+\ln\Big(2\Big) = \amp \ln\Big( \left(\ 1.16075\dots\ \right)^{t} \Big) \amp \\
+\ln\Big(2\Big) = \amp t\cdot \ln\Big(  1.16075\dots \Big) \amp \qquad\text{Using }\ln(a^r) = r\ln(a)\\
+t = \amp \dfrac{ \ln\Big(2\Big)}{\ln\Big(  1.16075\dots \Big) }\amp \qquad\text{Dividing both sides by }\ln\Big(  1.16075\dots \Big)\\
+t = \amp 4.64\dots
+\end{align*}
+</div>
+<p class="continuation">With 15% interest, it will take about 4.64 years for the balance to double.</p>
+</div>
+<span class="incontext"><a href="ch_logarithms.html#solution-113" class="internal">in-context</a></span>
+</body>
+</html>

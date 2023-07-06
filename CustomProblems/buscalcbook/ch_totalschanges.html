@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Average Rates of Change</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="http://mathlogic.org/oerbook/buscalcchange/external/Delta_logo.gif">
+<meta property="book:title" content="Business Calculus">
+<meta property="book:author" content="Stephen Flood">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="buscalcchange" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\newcommand{\red}[1]{   {\color{red}   #1}   }
+\newcommand{\blue}[1]{  {\color{blue}  #1}  }
+\newcommand{\green}[1]{ {\color{green} #1} }
+
+\newcommand{\ddx}[1]{ \dfrac{d}{dx} \Big[ #1 \Big]  } 
+\newcommand{\ddt}[1]{ \dfrac{d}{dt} \Big[ #1 \Big]  } 
+\newcommand{\ddu}[1]{ \dfrac{d}{du} \Big[ #1 \Big]  } 
+\newcommand{\ddxfrac}[1]{ \dfrac{d}{dx} \left[ #1 \right]  } 
+\newcommand{\D}[1]{ \Big[ #1 \Big]'  } 
+
+\newcommand{\intdx}[1]{{\,\int#1\,\,dx}}
+\newcommand{\dint}[1]{\displaystyle\intdx{#1}}
+
+\def \tikzhistogram (#1,#2){\draw[fill=blue,opacity=0.3] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \draw[draw,thick] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \node[draw,fill=blue, circle,inner sep=2.5pt] at (#1,#2) {};}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="external/Delta_logo.gif" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="home.html"><span class="title">Business Calculus:</span> <span class="subtitle">A Study of Marginal Change</span></a></h1>
+<p class="byline">Stephen Flood</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_limits.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-rates.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_tangentsecant.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_limits.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="part-rates.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_tangentsecant.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-algebra.html" data-scroll="part-algebra" class="internal"><span class="codenumber">I</span> <span class="title">Algebra For Business</span></a></li>
+<li class="link">
+<a href="ch-functions.html" data-scroll="ch-functions" class="internal"><span class="codenumber">1</span> <span class="title">Functions of Economics</span></a><ul>
+<li><a href="ch-functions.html#sec-function-concepts" data-scroll="sec-function-concepts" class="internal">Function Concepts</a></li>
+<li><a href="ch-functions.html#sec-functions-readinggraphs" data-scroll="sec-functions-readinggraphs" class="internal">Graphs of Functions</a></li>
+<li><a href="ch-functions.html#sec-combining_functions" data-scroll="sec-combining_functions" class="internal">Combining Functions</a></li>
+<li><a href="ch-functions.html#sec_graphsoftotalsandchanges" data-scroll="sec_graphsoftotalsandchanges" class="internal">Graphs of Totals and Changes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-algebra_linearfunctions.html" data-scroll="ch-algebra_linearfunctions" class="internal"><span class="codenumber">2</span> <span class="title">Lines and Linear Functions</span></a><ul>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-equations" data-scroll="sec-algebra-linear-equations" class="internal">Finding the Equation of a Line</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-demandprice" data-scroll="sec-algebra-linear-demandprice" class="internal">Demand Price and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algeba-linear-cost" data-scroll="sec-algeba-linear-cost" class="internal">Item Cost, Total Cost, and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-applied_domain" data-scroll="sec-applied_domain" class="internal">Models and Applied Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_polynomials_and_rationals.html" data-scroll="ch_polynomials_and_rationals" class="internal"><span class="codenumber">3</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="ch_polynomials_and_rationals.html#sec_quadratic_functions" data-scroll="sec_quadratic_functions" class="internal">Quadratic and Polynomial Functions</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_revenue" data-scroll="sec_revenue" class="internal">Revenue with Fair Pricing</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec-understandingprofit" data-scroll="sec-understandingprofit" class="internal">Understanding Profit</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_rationalfns" data-scroll="sec_rationalfns" class="internal">Rational Functions</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-explog.html" data-scroll="part-explog" class="internal"><span class="codenumber">II</span> <span class="title">Mathematics of Compound Interest</span></a></li>
+<li class="link">
+<a href="ch_exponentials.html" data-scroll="ch_exponentials" class="internal"><span class="codenumber">4</span> <span class="title">Compound Interest and Depreciation</span></a><ul>
+<li><a href="ch_exponentials.html#sec_introducing_exponentials" data-scroll="sec_introducing_exponentials" class="internal">Exponential Functions</a></li>
+<li><a href="ch_exponentials.html#sec_percent_change" data-scroll="sec_percent_change" class="internal">Percents and Percent Change</a></li>
+<li><a href="ch_exponentials.html#sec_compound_interest" data-scroll="sec_compound_interest" class="internal">Compound Interest and Depreciation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logarithms.html" data-scroll="ch_logarithms" class="internal"><span class="codenumber">5</span> <span class="title">Logarithms and Solving for Time</span></a><ul>
+<li><a href="ch_logarithms.html#sec-inverses" data-scroll="sec-inverses" class="internal">Inverse Functions</a></li>
+<li><a href="ch_logarithms.html#sec_logartims" data-scroll="sec_logartims" class="internal">Logarithms Undo Exponentials</a></li>
+<li><a href="ch_logarithms.html#sec-lawsoflogs" data-scroll="sec-lawsoflogs" class="internal">Laws of Logarithms</a></li>
+<li><a href="ch_logarithms.html#sec_solvingfortime" data-scroll="sec_solvingfortime" class="internal">Solving Compound Interest for Time</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rates.html" data-scroll="part-rates" class="internal"><span class="codenumber">III</span> <span class="title">Introducing Change and Rates</span></a></li>
+<li class="link">
+<a href="ch_limits.html" data-scroll="ch_limits" class="internal"><span class="codenumber">6</span> <span class="title">Limits</span></a><ul>
+<li><a href="ch_limits.html#sec_readingdynamically" data-scroll="sec_readingdynamically" class="internal">Reading Graphs Dynamically</a></li>
+<li><a href="ch_limits.html#sec-econlimits" data-scroll="sec-econlimits" class="internal">Macroeconomics and Mostly Continous Functions</a></li>
+<li><a href="ch_limits.html#sec-ComputingLimitsNumerically" data-scroll="sec-ComputingLimitsNumerically" class="internal">Computing Limits Numerically</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="ch_totalschanges.html" data-scroll="ch_totalschanges" class="internal"><span class="codenumber">7</span> <span class="title">Average Rates of Change</span></a><ul>
+<li><a href="ch_totalschanges.html#sec-AROC" data-scroll="sec-AROC" class="internal">Average Rates of Change</a></li>
+<li><a href="ch_totalschanges.html#sec_graphsofrateschangesandtotals" data-scroll="sec_graphsofrateschangesandtotals" class="internal">Graphs of Rates, Changes, and Totals</a></li>
+<li><a href="ch_totalschanges.html#sec_velocityAndIROC" data-scroll="sec_velocityAndIROC" class="internal">Velocity and Instantaneous Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_tangentsecant.html" data-scroll="ch_tangentsecant" class="internal"><span class="codenumber">8</span> <span class="title">Understanding Slope</span></a><ul>
+<li><a href="ch_tangentsecant.html#sec_slope" data-scroll="sec_slope" class="internal">Slopes and Rates of Change</a></li>
+<li><a href="ch_tangentsecant.html#sec_secantangent" data-scroll="sec_secantangent" class="internal">Approximating Slope with Secant Lines</a></li>
+<li><a href="ch_tangentsecant.html#sec_slopealgebraically" data-scroll="sec_slopealgebraically" class="internal">Defining Slope Algebraically</a></li>
+<li><a href="ch_tangentsecant.html#sec-slopefunction" data-scroll="sec-slopefunction" class="internal">Defining a Slope Function</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-slopeshortcuts.html" data-scroll="part-slopeshortcuts" class="internal"><span class="codenumber">IV</span> <span class="title">Shortcuts for Computing Slope Functions</span></a></li>
+<li class="link">
+<a href="ch_basicderivativerules.html" data-scroll="ch_basicderivativerules" class="internal"><span class="codenumber">9</span> <span class="title">Slope Shortcuts for Basic Functions</span></a><ul>
+<li><a href="ch_basicderivativerules.html#sec_basicrules1" data-scroll="sec_basicrules1" class="internal">Basic Derivative Rules</a></li>
+<li><a href="ch_basicderivativerules.html#sec-derivativesexplog" data-scroll="sec-derivativesexplog" class="internal">Derivatives of Exponentials and Logarithms</a></li>
+<li><a href="ch_basicderivativerules.html#sec-marginalcost" data-scroll="sec-marginalcost" class="internal">Marginal Cost</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_productquotientrule.html" data-scroll="ch_productquotientrule" class="internal"><span class="codenumber">10</span> <span class="title">Product and Quotient Rule</span></a><ul>
+<li><a href="ch_productquotientrule.html#sec_productrule" data-scroll="sec_productrule" class="internal">Derivatives of Products</a></li>
+<li><a href="ch_productquotientrule.html#sec_quotientrule" data-scroll="sec_quotientrule" class="internal">Derivatives of Fractions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_chainrule.html" data-scroll="ch_chainrule" class="internal"><span class="codenumber">11</span> <span class="title">The Chain Rule</span></a><ul>
+<li><a href="ch_chainrule.html#sec_generalizedpowerrule" data-scroll="sec_generalizedpowerrule" class="internal">The Generalized Power Rule</a></li>
+<li><a href="ch_chainrule.html#sec-chainrule" data-scroll="sec-chainrule" class="internal">The Chain Rule</a></li>
+<li><a href="ch_chainrule.html#sec-derivativesummary" data-scroll="sec-derivativesummary" class="internal">List of All Derivative Rules</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-applyingslopes.html" data-scroll="part-applyingslopes" class="internal"><span class="codenumber">V</span> <span class="title">Applying Marginals and Slopes</span></a></li>
+<li class="link">
+<a href="ch-maxmin.html" data-scroll="ch-maxmin" class="internal"><span class="codenumber">12</span> <span class="title">Finding Maxima and Minima</span></a><ul>
+<li><a href="ch-maxmin.html#sec_understandingextrema" data-scroll="sec_understandingextrema" class="internal">Finding Local Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_absolutemaxmin" data-scroll="sec_absolutemaxmin" class="internal">Finding Absolute Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_maximaminimaandchangegraphs" data-scroll="sec_maximaminimaandchangegraphs" class="internal">Maxima, Minima, and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-secondderivatives.html" data-scroll="ch-secondderivatives" class="internal"><span class="codenumber">13</span> <span class="title">Dimishing Returns and Changing Rates</span></a><ul>
+<li><a href="ch-secondderivatives.html#sec-secondderivative" data-scroll="sec-secondderivative" class="internal">The Second Derivative</a></li>
+<li><a href="ch-secondderivatives.html#sec-concavity" data-scroll="sec-concavity" class="internal">Concavity and Graphs</a></li>
+<li><a href="ch-secondderivatives.html#sec_seconderivativeconcavityandchange" data-scroll="sec_seconderivativeconcavityandchange" class="internal">The Second Derivative and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-integrals.html" data-scroll="part-integrals" class="internal"><span class="codenumber">VI</span> <span class="title">Integral Calculus</span></a></li>
+<li class="link">
+<a href="ch_antiderivatives.html" data-scroll="ch_antiderivatives" class="internal"><span class="codenumber">14</span> <span class="title">Antiderivatives</span></a><ul>
+<li><a href="ch_antiderivatives.html#sec_undoingderivatives" data-scroll="sec_undoingderivatives" class="internal">Undoing Derivatives</a></li>
+<li><a href="ch_antiderivatives.html#sec-indefiniteintegrals" data-scroll="sec-indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_antiderivatives.html#sec-applyingantiderivatives" data-scroll="sec-applyingantiderivatives" class="internal">Applying Antiderivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_introducingarea.html" data-scroll="ch_introducingarea" class="internal"><span class="codenumber">15</span> <span class="title">Understanding Areas</span></a><ul>
+<li><a href="ch_introducingarea.html#sec_indefiniteintegrals" data-scroll="sec_indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_introducingarea.html#sec_geometricarea" data-scroll="sec_geometricarea" class="internal">Understanding Geometrically of Area</a></li>
+<li><a href="ch_introducingarea.html#sec_fundamentaltheorem" data-scroll="sec_fundamentaltheorem" class="internal">Area, Antiderivatives, and Graphs of Change</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="algebrareview.html" data-scroll="algebrareview" class="internal"><span class="codenumber">A</span> <span class="title">Algebra Review</span></a><ul>
+<li><a href="algebrareview.html#section-50" data-scroll="section-50" class="internal">Laws of Algebra</a></li>
+<li><a href="algebrareview.html#sec-IntervalsandGraphs" data-scroll="sec-IntervalsandGraphs" class="internal">Intervals and Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="chapter" id="ch_totalschanges"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">7</span> <span class="title">Average Rates of Change</span>
+</h2>
+<section class="introduction" id="introduction-38"><p id="p-912">The concepts contained in <a href="ch_limits.html" class="internal" title="Chapter 6: Limits">Chapter 6–8</a> are all connected in important, but sometimes tricky to follow ways.  As you go through this section, you may find it helpful to refer to the diagram below to see how the concepts we have seen so far are related. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/img_limit-rate-conceptmap.svg" role="img" class="contained" alt="A concept map of the relationship between concepts of limits, rates of change, and slope."></div></p></section><section class="section" id="sec-AROC"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Average Rates of Change</span>
+</h3>
+<p id="p-913">Let <span class="process-math">\(y\)</span> be any function of <span class="process-math">\(x\text{.}\)</span> That means that any change of input <span class="process-math">\(\Delta x\)</span> produces a change in the output <span class="process-math">\(\Delta y\text{.}\)</span> If we <em class="emphasis">average</em> the change in outputs <span class="process-math">\(\Delta y\)</span> over the inputs <span class="process-math">\(\Delta x\text{,}\)</span> we get the <dfn class="terminology">average change</dfn> <span class="process-math">\(\dfrac{\Delta y}{\Delta x}\text{.}\)</span></p>
+<p id="p-914">For reasons we will see in a future section, we will use the terms <dfn class="terminology">average change</dfn> and <dfn class="terminology">average rate of change</dfn> interchangeably.</p>
+<article class="definition definition-like" id="def-averagerate"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span>
+</h4>
+<p id="p-915">Given a curve <span class="process-math">\(y=f(x)\)</span> and two input values <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\)</span></p>
+<ul class="disc">
+<li id="li-119"><p id="p-916">The <dfn class="terminology">change in input</dfn> that results from moving from <span class="process-math">\(x_1\)</span> to <span class="process-math">\(x_2\)</span> is <span class="process-math">\(\Delta x = x_2-x_1\)</span></p></li>
+<li id="li-120">
+<p id="p-917">The resulting <dfn class="terminology">change in output</dfn> that results from moving from <span class="process-math">\(x_1\)</span> to <span class="process-math">\(x_2\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Delta y = y_2-y_1 = f(x_2) - f(x_1)
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(y_1 = f(x_1)\)</span> and <span class="process-math">\(y_2=f(x_2)\text{.}\)</span></p>
+</li>
+<li id="li-121">
+<p id="p-918">The <dfn class="terminology">average rate of change of <span class="process-math">\(y\)</span></dfn> as a result of changing the inputs from <span class="process-math">\(x_1\)</span> to <span class="process-math">\(x_2\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{\Delta y}{\Delta x} = \dfrac{y_2-y_1}{x_2-x_1} = \dfrac{f(x_2) - f(x_1)}{x_2-x_1}
+\end{equation*}
+</div>
+</li>
+</ul></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span>
+</h4>
+<p id="p-919">Recall that the total cost function <span class="process-math">\(C(x)\)</span> is a function of the total number of items <span class="process-math">\(x\)</span> to be produced. Suppose that increasing your production by 100 items will increase the total cost by $2000. Find the <em class="emphasis">average</em> (aka <em class="emphasis">average rate of</em>) change in the cost.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-125" id="solution-125"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-125"><div class="solution solution-like">
+<p id="p-920">We are told that a change of input <span class="process-math">\(\Delta x = 100\)</span> will result in an increase in total cost of <span class="process-math">\(\Delta C = 2000\text{.}\)</span> To find the <em class="emphasis">average</em> change, divide that $2000 evenly across the 100 additional items</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{\Delta C}{\Delta x} = \dfrac{2000}{100} = 20
+\end{equation*}
+</div>
+<p class="continuation">On average, each of the 100 additional items will increase the total cost by $20.</p>
+</div></div>
+</div></article><p id="p-921">Average rates are common throughout economics and daily life. When the number of items is large (in the context of macroeconomics), limits show up and calculus begins. But before we get there, we will first explore a number of examples that emphasize the connection between <em class="emphasis">totals</em>, <em class="emphasis">changes</em> and <em class="emphasis">averages/rates</em>.</p>
+<article class="exploration project-like" id="exploration-48"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-39"><p id="p-922">A total (cumulative) cost function is defined by <span class="process-math">\(C(x) = 0.1 x^2 + 50 x + 1000 \)</span> in dollars as a function of the total number of items <span class="process-math">\(x\)</span> to be produced.</p></div>
+<article class="task exercise-like" id="task-122"><h5 class="heading"><span class="codenumber">(a)</span></h5>Last year, you made 100 items. This year, you are considering increasing your production to 150 items. Find the <em class="emphasis">change</em> in cost and the <em class="emphasis">average rate of change</em> in the cost that would result from this change.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like">
+<p id="p-923">From the information given in the problem, we can compute the total cost of producing 100 items is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C_1 = C(100) = \$ 7, 000
+\end{equation*}
+</div>
+<p class="continuation">and that the total cost of producing 150 items would be</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C_2 = C(150) = \$ 10, 750
+\end{equation*}
+</div>
+<p class="continuation">The change in cost between these quantities is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Delta C = C(150) - C(100) = 10,750 - 7,000 = \$ 3,750
+\end{equation*}
+</div>
+<p class="continuation">This change is a result of changing the quantity by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Delta x = 150 - 100 = 50 \text{ items}
+\end{equation*}
+</div>
+<p class="continuation">. Dividing the total cost <span class="process-math">\(\Delta C\)</span> evenly among the <span class="process-math">\(\Delta x\)</span> items results in an <em class="emphasis">average</em> cost per item of</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{\Delta C}{\Delta x} = \dfrac{3,750}{50} = 75 \frac{\$}{\text{item}}
+\end{equation*}
+</div>
+<p id="p-924">There were a lot of parts of this calculation.  You can either use a the definition <span class="process-math">\(\dfrac{\Delta C}{\Delta x} = \dfrac{C(x_2) - C(x_1)}{x_2 - x_1} \)</span> which is a single formula that combines all of these steps, or you can organize the different parts separately using the table below. This is called an Average Rate of Change table, often abbreviated AROC. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta x\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta y\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta y/\Delta x\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(150\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(50\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(7000\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(10750\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(3750\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(75\)</span></td>
+</tr>
+</table></div></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task_costfunctionwithdecreasingquantity"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-925">Use the cost function above to find the average change in cost between 100 and 125 items, between 100 and 110 items, and between 100 and 101 items.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like"><p id="p-926"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta x\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta y\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta y/\Delta x\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(125\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 	125 - 100 = 25\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(100) = 7000\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(125) = 8812.5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(125) - C(100) \color{green} = 8812.5 - 7000 = 1812.5 \)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} 1812.5}{\color{red} 25} = 72.50  \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(110\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 	110 - 100 = 10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(100) = 7000\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(110) = 7710 \)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(110) - C(100) \color{green} = 7710 - 7000 = 710 \)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} 710}{\color{red} 10} = 71.00  \)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(101\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{red} 	101 - 100 = 1\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(100) = 7000\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(101) = 7070.1\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(101) - C(100) \color{green} =  7070.1 - 7000 = 70.1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} 70.1}{\color{red} 1} =  70.10 \)</span></td>
+</tr>
+</table></div></p></div></div>
+</div></article><article class="task exercise-like" id="task-124"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-927">Suppose that last year you produced 100 items, and that you are planning to increasing production by 5 items this year. Find the average rate of change in cost that results from this change.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like">
+<p id="p-928">We are given the starting quantity <span class="process-math">\(x_1 = 5\)</span> and the change in quantity <span class="process-math">\(\Delta x = 5\text{.}\)</span>  Using this, we can reason backward to get the ending quantity <span class="process-math">\(x_2 = 105\text{.}\)</span> We can use the AROC equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{\Delta C}{\Delta x} = \dfrac{C(105) - C(100)}{105-100} = \dfrac{7352.5 - 7000}{5} = 70.5
+\end{equation*}
+</div>
+<p class="continuation">or create an AROC table <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta x\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta y\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta y/\Delta x\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(105\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{red} 	105 - 100 = 5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(100) = 7000\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(105) = 7352.5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(105) - C(100) \color{green} =  7352.5 - 7000 = 352.5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} 362.5}{\color{red} 5} =  70.50 \)</span></td>
+</tr>
+</table></div> The 5 additional items will increase the <em class="emphasis">total cost</em> by an average of 70.50 <em class="emphasis">dollars per item</em>.</p>
+</div></div>
+</div></article></article></section><section class="section" id="sec_graphsofrateschangesandtotals"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Graphs of Rates, Changes, and Totals</span>
+</h3>
+<article class="insight remark-like" id="insight-applyingAROC"><a href="" data-knowl="" class="id-ref insight-knowl original has-image has-tabular" data-refid="hk-insight-applyingAROC"><h4 class="heading">
+<span class="type">Application</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span><span class="space"> </span><span class="title">Understanding and Applying "Average Rates of Change".</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-insight-applyingAROC"><article class="insight remark-like"><p id="p-929">We've spent a lot of time thinking about “total” and “change” graphs. In each of those examples, we knew the value of the total for each natural number <span class="process-math">\(1,2,3,\dots\)</span></p>
+<p id="p-930">But what happens if we only have information about <em class="emphasis">a few</em> values of <span class="process-math">\(x\text{.}\)</span> For example, in the graph on the right, we only know the total value on day 0, 5, 10, etc.</p>
+<p id="p-931">What should we do if we want to know the change between day 0 and 1? We can't know that number for certain, but we <em class="emphasis">can</em> try to compute the <em class="emphasis">average</em> change.</p>
+<p id="p-932">Since the value went up 2 units over 5 days, if we divide that change evenly over the 5 days we get the <dfn class="terminology">Average Rate Of Change</dfn></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{(AROC)} = \dfrac{\Delta y}{\Delta x} = \dfrac{y_2 - y_1}{x_2 - x_1} = \dfrac{4-2}{5-0} = \dfrac{2}{5} = 0.4
+\end{equation*}
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/image_totalchange_averagerate.svg" role="img" class="contained"></div>
+<p id="p-933">Summarizing this in a table, we get the row in an Average Rate Of Change (AROC) table:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta x\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta y\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta y/\Delta x\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{red} 	5 - 0 = 5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(0) = 2\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(5) = 4\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} C(0) - C(5) \color{green} = 2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} 2}{\color{red} 5} = 0.4\)</span></td>
+</tr>
+</table></div></article></div>
+<article class="exploration project-like" id="exploration-49"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-40"><p id="p-934">Suppose, as in <a href="" class="xref" data-knowl="./knowl/insight-applyingAROC.html" title='Application 7.3: Understanding and Applying "Average Rates of Change"'>Application 7.3</a>, that a total cost function is given by the histogram below <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/image_totalchange_averagerate_2.svg" role="img" class="contained"></div></p></div>
+<article class="task exercise-like" id="task-125"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-935">Fill in the following AROC table <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta x\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta y\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta y/\Delta x\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+</table></div></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-129"><div class="solution solution-like"><p id="p-936"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta x\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta y\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta y/\Delta x\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 5-0 = 5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 4\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 4-2 \color{green} = 2\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} 2}{\color{red} 5} = 0.4\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 10-5 = 5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 4\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 3\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 3-4 \color{green} = -1\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} -1}{\color{red} 5}=-0.2\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 15-10=5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 3\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 2.5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 2.5-3 \color{green} = -0.5\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} -0.5}{\color{red} 5}=-0.1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{red} 20-15 = 5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 2.5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 3.5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{blue} 3.5-2.5 \color{green} = 1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{\color{green} 1}{\color{red} 5}=0.2\)</span></td>
+</tr>
+</table></div></p></div></div>
+</div></article><article class="task exercise-like" id="task-126"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-937">Use your AROC table to fill in the graphs of the change <span class="process-math">\(\Delta y\)</span> and of the rate <span class="process-math">\(\dfrac{\Delta y}{\Delta x}\)</span> in the graph below. <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="generated/latex-image/image_totalchange_averagerate2.svg" role="img" class="contained"></div></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-130" id="solution-130"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-130"><div class="solution solution-like"><p id="p-938"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/image_totalchange_averagerate2_sln.svg" role="img" class="contained"></div></p></div></div>
+</div></article></article><article class="exploration project-like" id="exploration-50"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-41"><p id="p-939">Suppose that <span class="process-math">\(y = -0.05x^2 + 0.8x - 1\text{.}\)</span> Find the average rate of change between <span class="process-math">\(x=0\)</span> and <span class="process-math">\(5\text{,}\)</span> between <span class="process-math">\(x=5\)</span> and <span class="process-math">\(10\text{,}\)</span> and between <span class="process-math">\(x=10\)</span> and 15.</p></div>
+<article class="task exercise-like" id="task-127"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-940">Use an AROC table to find the average rate of change between <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=5\text{,}\)</span> between <span class="process-math">\(x=5\)</span> and <span class="process-math">\(x=10\text{,}\)</span> and between <span class="process-math">\(x=10\)</span> and <span class="process-math">\(x=10\)</span> and <span class="process-math">\(x=15\)</span></p></article><article class="task exercise-like" id="task-128"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-941">Graph histograms representing the total function <span class="process-math">\(y\text{,}\)</span> the change function <span class="process-math">\(\Delta y\text{,}\)</span> and of the rate of change function <span class="process-math">\(\dfrac{\Delta y}{\Delta x}\text{.}\)</span></p>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/image_totalchange_averagerate3.svg" role="img" class="contained"></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-131" id="solution-131"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-131"><div class="solution solution-like">
+<p id="p-942">Here's a graph of the solution:</p>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/image_totalchange_averagerate3_sln.svg" role="img" class="contained"></div>
+</div></div>
+</div></article></article></section><section class="section" id="sec_velocityAndIROC"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">Velocity and Instantaneous Rates of Change</span>
+</h3>
+<p id="p-943">So far, we have seen many examples of finding and applying <em class="emphasis">average change</em>. But we have not yet seen why we would call <span class="process-math">\(\frac{\Delta y}{\Delta x}\)</span> the <em class="emphasis">average <dfn class="terminology">rate</dfn> of change</em>. To understand that side of the story, we need to make a small detour into the physical world.</p>
+<section class="subsection" id="subsec-speedradar"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.3.1</span> <span class="title">Measuring Speed with Radar</span>
+</h4>
+<p id="p-944">Imagine driving down the highway, coming around a corner at 75 miles per hour. Suddenly, you see a speed trap ahead, measuring your speed with radar. How does this work? The detector actually measures your <em class="emphasis">distance</em> at two points in time <span class="process-math">\(t_1\)</span> and <span class="process-math">\(t_2\text{.}\)</span></p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/img_speedradar.svg" role="img" class="contained"></div>
+<p id="p-945">Subtracting the distances <span class="process-math">\(s_1,s_2\)</span> gives your <em class="emphasis">change in distance</em> <span class="process-math">\(\Delta s\)</span> in miles, and subtracting the times <span class="process-math">\(t_1,t_@\)</span> gives your <em class="emphasis">change in time</em> <span class="process-math">\(\Delta t\)</span> in hours (or minutes, or seconds).</p>
+<p id="p-946">Your <em class="emphasis">estimated</em> velocity will be the <dfn class="terminology">average rate of change</dfn> of your position</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{average velocity } = \dfrac{\text{change in position}}{\text{change in time}} = \dfrac{s_2-s_1}{t_2-t_1} = \dfrac{\Delta s}{\Delta t}
+\end{equation*}
+</div>
+<p id="p-947">Better radar detectors use <em class="emphasis">smaller <span class="process-math">\(\Delta t\)</span></em>.</p>
+<ul class="disc">
+<li id="li-122"><p id="p-948"><span class="process-math">\(\Delta t = 1\)</span> hour gives a bad approximation.</p></li>
+<li id="li-123"><p id="p-949"><span class="process-math">\(\Delta t = 0.016\)</span> hours (1 minute) gives a better approximation.</p></li>
+<li id="li-124"><p id="p-950"><span class="process-math">\(\Delta t = 0.000000000001\)</span> hours gives a <em class="alert">very good</em> approximation.</p></li>
+<li id="li-125">
+<p id="p-951">By making <span class="process-math">\(\Delta t\)</span> smaller and smaller, we get closer and closer to your <dfn class="terminology">true speed</dfn>.  Mathematically, that means</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{true speed } = \lim_{\Delta t\rightarrow 0} \dfrac{\Delta s}{\Delta t} 
+\end{equation*}
+</div>
+</li>
+</ul>
+<p id="p-952">To find velocity <em class="emphasis">numerically</em>, compute the <em class="emphasis">average rate</em> (AROC) over smaller and smaller intervals (<span class="process-math">\(\Delta t\rightarrow 0\)</span>) to see where <span class="process-math">\(\frac{\Delta s}{\Delta t}\)</span> ends up going.</p>
+<article class="exploration project-like" id="exploration-51"><h5 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="introduction-42"><p id="p-953">Suppose that a position function <span class="process-math">\(s(t)\)</span> corresponds to the AROC table below <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta t\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(s_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(s_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta s\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta s/\Delta t\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5.1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(16.98065\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5.01\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10.74421\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5.001\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10.07485\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(5.0001\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(10.00749\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+</table></div></p></div>
+<article class="task exercise-like" id="task-129"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-954">Complete the AROC table.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-132" id="solution-132"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-132"><div class="solution solution-like">
+<p id="p-955"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta t\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(s_1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(s_2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\Delta s\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\Delta s/\Delta t\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5.1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 0.1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(16.98065\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 6.98065\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\color{red} 69.8965\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5.01\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 0.01\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10.74421\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 0.74421\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\color{red}  74.421\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(5.001\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 0.001\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10.07485\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\color{red} 0.007485\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\color{red} 74.85\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(5.0001\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{red} 0.0001\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(10.00749\)</span></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\color{red} 0.00749\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\color{red} 74.9\)</span></td>
+</tr>
+</table></div> <em class="alert">Important:</em> Note that as <span class="process-math">\(\Delta t\)</span> gets smaller, the decimal accuracy of your average gets <em class="emphasis">smaller and smaller</em>.  To ensure that you had 4 decimal places of accuracy for <span class="process-math">\(\Delta t=0.0001\text{,}\)</span> you would need to start with <em class="emphasis">eight</em> decimal places of accuracy.</p>
+<p id="p-956">On the homework, you will need to make sure you leave as many decimal places as possible.  Otherwise, your <span class="process-math">\(\Delta y\)</span> and <span class="process-math">\(\Delta t\)</span> may be marked correct, but your <span class="process-math">\(\frac{\Delta y}{\Delta t}\)</span> may be marked incorrect.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-130"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-957">Use your table to find the exact (instantaneous) velocity at <span class="process-math">\(t=5\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-133" id="solution-133"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-133"><div class="solution solution-like">
+<p id="p-958">To find the exact velocity (IROC) at <span class="process-math">\(t=5\text{,}\)</span> read the table from top to bottom, since the smaller values of <span class="process-math">\(\Delta t\)</span> are further down in the table.</p>
+<p id="p-959">As you read the <span class="process-math">\(\frac{\Delta s}{\Delta t}\)</span> column, note that it is getting closer and closer to <span class="process-math">\(75\text{.}\)</span>  In other words, at <span class="process-math">\(t=5\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{ds}{dt} = \lim_{\Delta t\rightarrow 0} \dfrac{\Delta s}{\Delta t} = 75 \frac{\text{miles}}{\text{hour}}
+\end{equation*}
+</div>
+</div></div>
+</div></article></article></section><p id="p-960">How do <em class="emphasis">instantaneous</em> rates of change connect to econonmics? Take a look at <a href="" class="xref" data-knowl="./knowl/task_costfunctionwithdecreasingquantity.html" title="Task 7.1.b">Exploration 7.1.b</a>, and note that the AROC in the solution to that exercise is arranged in a very similar way to the table we used to compute the car's velocity at time <span class="process-math">\(t=5\)</span> in the example above.</p>
+<p id="p-961">Using a similar argument, we can use the AROC table in <a href="" class="xref" data-knowl="./knowl/task_costfunctionwithdecreasingquantity.html" title="Task 7.1.b">Exploration 7.1.b</a> to see that the <em class="emphasis">instantaneous rate of change</em> of the total cost function <span class="process-math">\(C(x)=0.1x^2+50x+1000\)</span> at <span class="process-math">\(100\)</span> items is equal to 70 dollars per item.</p>
+<p id="p-962">What does this mean?  We will return to this in much greater detail in section <a href="ch_basicderivativerules.html#sec-marginalcost" class="internal" title="Section 9.3: Marginal Cost">Section 9.3</a>.</p></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="insight remark-like"><p>Value can be measured in many ways. For example, suppose that you purchase a car and that you somehow know that it will last 200,000 miles, and that you will drive 20,000 miles each year. By how much has the value value of the car decreased after 3 years?</p>
+<p>The "correct" answer to this question depends on a surprising number of factors.</p>
+<ul class="disc">
+<li>
+<p>If you are measuring value as "percent of lifetime miles remaining", there would be <span class="process-math">\(160,000\)</span> of the total <span class="process-math">\(200,000\)</span> miles remaining, so the value of the car would be <span class="process-math">\(\frac{160,000}{200,000} = 0.8\text{,}\)</span> or 80%, of its original value.</p>
+<p>After four years, the value of the car would be  <span class="process-math">\(\frac{140,000}{200,000} = 0.7\text{,}\)</span> or 70%, of its original value. And after five years, the value of the car would be  <span class="process-math">\(\frac{120,000}{200,000} = 0.6\text{,}\)</span> or 60%, of its original value.</p>
+<p>In this case, the value is decreasing at a constant amount per year.  This is often called <dfn class="terminology">straight line depreciation</dfn>, since connecting the dots yields a linear equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{(value at year t)} = \text{(starting value)} - \text{(amount of value used per year)} t
+\end{equation*}
+</div>
+</li>
+<li>
+<p>On the other hand, cars are known to break more and more frequently as they get older.  If you knew which repairs would be required each year, you could make a table of values telling you the value of the vechicle at each point in time (or at each number of miles).  For each year, you would take its value from the previous year, decrease the value based on the reduced mileage of the car, and subtract the expected maintenence from that point of time.</p>
+<p>This way of tracking the decrease, or depreciation, is in some ways more accurate than straightline depreciation but is much more complicated to compute.</p>
+</li>
+<li>
+<p>From a different perspective, it is clear that new cars have many features that older cars do not.  To oversimplify things, suppose  that a new car always has 10% more features than an older car.  If you are going to buy a car that is one year older, you will want the price to decrease enough to make up for that loss in additional features.</p>
+<p>Said another way, many investments will lose a fixed percent of their value every year.  This is called <dfn class="terminology">declining balance</dfn> depreciation.</p>
+<p>Suppose that the value of a different car decreases by 25% each year.  After one year, 75% of the value is retained.  After 2 years, 75% of the original 75% is retained, resulting in <span class="process-math">\(0.75\cdot 0.75= 0.5625\text{,}\)</span> or 56.25% of the value remains.  After 3 years, the value that remains is  <span class="process-math">\(0.75\cdot 0.75\cdot 0.75= 0.421875\text{,}\)</span> or 42.19% of the original value.</p>
+<p>More generally, the value after <span class="process-math">\(t\)</span> years is defined by the exponential equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{(value in year t)} = \text{(starting value)}\cdot \text{(percent of value retained after a year)}^t
+\end{equation*}
+</div>
+</li>
+</ul>
+<p>Deciding when to use each depreciation scheme is an important question in Accounting, and is well beyond the scope of this course. As a result, in this course, we will restrict our attention to declining balance depreciation, and we will usually state explicitly that a fixed percentage of value is lost each year.</p></article></body>
+</html>

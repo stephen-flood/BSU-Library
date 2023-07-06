@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Suppose that  <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are differentiable functions.  We wish to compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-quotientrule.html">
+\begin{equation*}
+\ddx{ \dfrac{f(x)}{g(x)} } 
+\end{equation*}
+</div>
+<p class="continuation">To use the product and generalized power rule, we can get rid of the fraction by using an exponent of <span class="process-math">\(-1\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-quotientrule.html">
+\begin{equation*}
+\ddx{ \dfrac{f(x)}{g(x)} }  = \ddx{ \red{f(x)}\cdot \blue{ \Big(g(x)\Big)^{-1}} } 
+\end{equation*}
+</div>
+<p class="continuation">Using the product rule, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-quotientrule.html">
+\begin{equation*}
+\ddx{ \dfrac{f(x)}{g(x)} }  = \red{f(x)}\cdot \ddx{ \blue{ \Big(g(x)\Big)^{-1}} } +  \blue{ \Big(g(x)\Big)^{-1}}\cdot \ddx{ \red{f(x)}  } 
+\end{equation*}
+</div>
+<p class="continuation">There are two <span class="process-math">\(\ddx{\dots}\)</span> that remain.  The second one is simply notation: <span class="process-math">\(\ddx{f(x)} = f'(x)\text{.}\)</span> The first requires the chain rule</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-quotientrule.html">
+\begin{align*}
+\ddx{ \blue{ \Big( \red{g(x)} \Big)^{-1} }  } = \amp \blue{-1 \Big(\red{g(x)} \Big)^{-1-1}} \cdot \ddx{\red{g(x)}} \\
+= \amp -1 \Big(g(x)\Big)^{-2}\cdot g'(x)
+\end{align*}
+</div>
+<p class="continuation">Putting this back into the broader derivative</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-quotientrule.html">
+\begin{align*}
+\ddx{ \dfrac{f(x)}{g(x)} }  = \amp f(x) \cdot -1 \Big(g(x))^{-2}\cdot g'(x) +   \Big(g(x)\Big)^{-1}\cdot  f'(x)   \\
+=  \amp \frac{-f(x)\cdot g'(x)}{\Big(g(x)\Big)^2} + \frac{f'(x)}{g(x)} 
+\end{align*}
+</div>
+<p class="continuation">To combine these fractions, we need a common denominator</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-quotientrule.html">
+\begin{align*}
+=  \amp \frac{-f(x)\cdot g'(x)}{\Big(g(x)\Big)^2} + \frac{f'(x)\cdot g(x)}{\Big(g(x)\Big)^2} \\
+=  \amp \frac{-f(x)\cdot g'(x) + f'(x)\cdot g(x)}{\Big(g(x)\Big)^2} 
+\end{align*}
+</div>
+<p class="continuation">Rearranging the top gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-quotientrule.html">
+\begin{align*}
+=  \amp \frac{ g(x)\cdot f'(x) - f(x)\cdot g'(x) }{\Big(g(x)\Big)^2} 
+\end{align*}
+</div>
+<p class="continuation">This is exactly the quotient rule from <a href="" class="xref" data-knowl="./knowl/thm-quotientrule.html" title="Theorem 10.5">Theorem 10.5</a>.</p>
+</div></body>
+</html>

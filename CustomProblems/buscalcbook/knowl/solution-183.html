@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">11.13.1</span><span class="period">.</span>
+</h4>
+<p>In this derivative, the variable <span class="process-math">\(x\)</span> is in the exponent. The only related rule we have is the formula <span class="process-math">\(\ddx{e^x}=e^x\text{,}\)</span> but this only applies when the base is <span class="process-math">\(e=2.714\dots\text{.}\)</span></p>
+<p>The trick is to use properties of exponentials and logarithms to rewrite the number <span class="process-math">\(b\)</span> as <span class="process-math">\(e^{\ln(b)}\text{.}\)</span> With that, we can find the derivative as follows</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\ddx{ b^{x} } = \amp \ddx{ \Big(e^{\ln(b)}\Big)^x } \\
+= \amp \ddx{ \blue {e^{\big(\red{\ln(b)\cdot x}\big)} } } 
+\end{align*}
+</div>
+<p class="continuation">This is a chain rule problem, with outside function <span class="process-math">\(\blue{f(u)}=\blue{e^u}\)</span> and inside function <span class="process-math">\(\red{g(x)} = \red{\ln(b)\cdot x}\text{.}\)</span> Clearly, <span class="process-math">\(\blue{f'} = \blue{e^u}\text{.}\)</span> And because  <span class="process-math">\(b\)</span> and <span class="process-math">\(\ln(b)\)</span> are constants, <span class="process-math">\(\red{g'} = \red{\ddx{\ln(b)\cdot x}} = \red{\ln(b)}\)</span></p>
+<p>Now that we have done our scrap work, we can return to our original question</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+h'(x) = \amp 
+\ddx{\blue{ e^{\big(\red{\ln(b)\cdot x}\big)} } }  \\
+= \amp \ddx{ \blue{f\Big( \red{g(x)} \Big) } }\\
+= \amp \blue{f'\Big( \red{g(x)}\Big)}\cdot \red{g'(x)}
+\end{align*}
+</div>
+<p class="continuation">Substituting the values first for <span class="process-math">\(\blue{f'}\text{,}\)</span> and then for  <span class="process-math">\(\red{g}\)</span> and <span class="process-math">\(\red{g'}\text{,}\)</span> into the above equation gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+h'(x) = \amp 
+\blue{ e^{(\red{g(x)})} }\cdot \red{g'(x)}\\
+= \amp 
+\blue{ e^{(\red{\ln(b)\cdot x})} }\cdot \Big(\red{\ln(b)}\Big)\\
+= \amp b^x \cdot \ln(b)
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="ch_chainrule.html#solution-183" class="internal">in-context</a></span>
+</body>
+</html>

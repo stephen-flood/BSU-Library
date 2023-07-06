@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>To compute the integral</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\intdx{_{10}^{100} 36x + \frac{42}{x}} 
+\end{equation*}
+</div>
+<p class="continuation">we must first find an antidervivative of.  It is not difficult to see that <em class="emphasis">one</em> antiderivative of <span class="process-math">\(f(x) = 36x + 42\frac{1}{x}\)</span> is <span class="process-math">\(F(x) = 36\frac{1}{2}x^2 + 42\ln(|x|)\text{.}\)</span></p>
+<p>By <a href="" class="xref" data-knowl="./knowl/def-indefiniteintegral.html" title="Definition 15.1">Definition 15.1</a>, we can now compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-indefiniteintegral.html">
+\begin{align*}
+\intdx{_{10}^{100} 36x + \frac{42}{x}}  = \amp F(100) - F(10) \\
+= \amp [18x^2 + 42\cdot \ln(|x|)]_{10}^{100}
+\end{align*}
+</div>
+<p class="continuation">Using a calculator, you can compute separately</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-indefiniteintegral.html">
+\begin{align*}
+F(100) = \amp 18 (100)^2 + 42\ln(100) = 180,193.41\\
+F(10) = \amp 18 (10)^2 + 42\ln(10) = 1,896.70
+\end{align*}
+</div>
+<p class="continuation">We can now find the definite integral</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-indefiniteintegral.html">
+\begin{align*}
+\intdx{_{10}^{100} 36x + \frac{42}{x}}  = \amp F(100) - F(10) \\
+= \amp [18x^2 + 42\cdot \ln(|x|)]_{10}^{100}\\
+= \amp 178,296.71 
+\end{align*}
+</div>
+</div></body>
+</html>

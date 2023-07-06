@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h6 class="heading"><span class="title">Brute Force</span></h6>
+<p>We have seen how to solve this equation with a bit of planning ahead.  But what happens if you <em class="emphasis">start</em> by taking the natural log of both sides of the quation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+4\cdot(1.95)^{2x} = 16
+\end{equation*}
+</div>
+<p class="continuation">You get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ln\Big( {\color{red} 4}\cdot{\color{blue} (1.95)^{2x}} \Big) = \ln\Big(16\Big)
+\end{equation*}
+</div>
+<p class="continuation">On the left side, we have <span class="process-math">\(\ln\Big( {\color{red} 4}\cdot{\color{blue} (1.95)^{2x}} \Big)\text{.}\)</span>  We <em class="emphasis">cannot</em> use Log Law 1, since this is a product.  Instead, we need to use Log Law 2 <span class="process-math">\(\ln({\color{red} a}\cdot {\color{blue} b}) = \ln({\color{red} a}) + \ln({\color{blue} b})\)</span> with <span class="process-math">\(\color{red} a=4\)</span> and <span class="process-math">\(\color{blue} b=(1.95)^{2x}\text{.}\)</span>  This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ln\Big( {\color{red} 4}\Big) + \ln\Big({\color{blue} (1.95)^{2x}} \Big) = \ln\Big(16\Big)
+\end{equation*}
+</div>
+<p class="continuation">Now we can use Law Log 1 <span class="process-math">\(\ln(a^r) = r\cdot \ln(a)\)</span> with <span class="process-math">\(a=1.95\)</span> and <span class="process-math">\(r=2x\)</span> to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ln\Big( { 4}\Big) + 2x\cdot \ln\Big({ (1.95)} \Big) = \ln\Big(16\Big)
+\end{equation*}
+</div>
+<p class="continuation">You can simplify this using a calculator to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{1.386\dots} + 2\cdot x\cdot 0.667\dots = 2.772\dots
+\end{equation*}
+</div>
+<p class="continuation">You can solve this as usual to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x = \dfrac{{2.772\dots} - 1.386\dots}{2\cdot 0.667\dots} = 1.038\dots
+\end{equation*}
+</div>
+<p class="continuation">Alternatively, you can solve the exact equation to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x = \dfrac{\ln(16) - \ln(4)}{2\cdot \ln(1.95)}
+\end{equation*}
+</div></article><span class="incontext"><a href="ch_logarithms.html#li-86" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Limits</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="http://mathlogic.org/oerbook/buscalcchange/external/Delta_logo.gif">
+<meta property="book:title" content="Business Calculus">
+<meta property="book:author" content="Stephen Flood">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="buscalcchange" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\newcommand{\red}[1]{   {\color{red}   #1}   }
+\newcommand{\blue}[1]{  {\color{blue}  #1}  }
+\newcommand{\green}[1]{ {\color{green} #1} }
+
+\newcommand{\ddx}[1]{ \dfrac{d}{dx} \Big[ #1 \Big]  } 
+\newcommand{\ddt}[1]{ \dfrac{d}{dt} \Big[ #1 \Big]  } 
+\newcommand{\ddu}[1]{ \dfrac{d}{du} \Big[ #1 \Big]  } 
+\newcommand{\ddxfrac}[1]{ \dfrac{d}{dx} \left[ #1 \right]  } 
+\newcommand{\D}[1]{ \Big[ #1 \Big]'  } 
+
+\newcommand{\intdx}[1]{{\,\int#1\,\,dx}}
+\newcommand{\dint}[1]{\displaystyle\intdx{#1}}
+
+\def \tikzhistogram (#1,#2){\draw[fill=blue,opacity=0.3] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \draw[draw,thick] ({#1+((\xtwo-\xmin)/5)},#2) rectangle ({#1-((\xtwo-\xmin)/5)},0); \node[draw,fill=blue, circle,inner sep=2.5pt] at (#1,#2) {};}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="external/Delta_logo.gif" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="home.html"><span class="title">Business Calculus:</span> <span class="subtitle">A Study of Marginal Change</span></a></h1>
+<p class="byline">Stephen Flood</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="part-rates.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-rates.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_totalschanges.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="part-rates.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="part-rates.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_totalschanges.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-algebra.html" data-scroll="part-algebra" class="internal"><span class="codenumber">I</span> <span class="title">Algebra For Business</span></a></li>
+<li class="link">
+<a href="ch-functions.html" data-scroll="ch-functions" class="internal"><span class="codenumber">1</span> <span class="title">Functions of Economics</span></a><ul>
+<li><a href="ch-functions.html#sec-function-concepts" data-scroll="sec-function-concepts" class="internal">Function Concepts</a></li>
+<li><a href="ch-functions.html#sec-functions-readinggraphs" data-scroll="sec-functions-readinggraphs" class="internal">Graphs of Functions</a></li>
+<li><a href="ch-functions.html#sec-combining_functions" data-scroll="sec-combining_functions" class="internal">Combining Functions</a></li>
+<li><a href="ch-functions.html#sec_graphsoftotalsandchanges" data-scroll="sec_graphsoftotalsandchanges" class="internal">Graphs of Totals and Changes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-algebra_linearfunctions.html" data-scroll="ch-algebra_linearfunctions" class="internal"><span class="codenumber">2</span> <span class="title">Lines and Linear Functions</span></a><ul>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-equations" data-scroll="sec-algebra-linear-equations" class="internal">Finding the Equation of a Line</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algebra-linear-demandprice" data-scroll="sec-algebra-linear-demandprice" class="internal">Demand Price and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-algeba-linear-cost" data-scroll="sec-algeba-linear-cost" class="internal">Item Cost, Total Cost, and Linear Functions</a></li>
+<li><a href="ch-algebra_linearfunctions.html#sec-applied_domain" data-scroll="sec-applied_domain" class="internal">Models and Applied Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_polynomials_and_rationals.html" data-scroll="ch_polynomials_and_rationals" class="internal"><span class="codenumber">3</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="ch_polynomials_and_rationals.html#sec_quadratic_functions" data-scroll="sec_quadratic_functions" class="internal">Quadratic and Polynomial Functions</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_revenue" data-scroll="sec_revenue" class="internal">Revenue with Fair Pricing</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec-understandingprofit" data-scroll="sec-understandingprofit" class="internal">Understanding Profit</a></li>
+<li><a href="ch_polynomials_and_rationals.html#sec_rationalfns" data-scroll="sec_rationalfns" class="internal">Rational Functions</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-explog.html" data-scroll="part-explog" class="internal"><span class="codenumber">II</span> <span class="title">Mathematics of Compound Interest</span></a></li>
+<li class="link">
+<a href="ch_exponentials.html" data-scroll="ch_exponentials" class="internal"><span class="codenumber">4</span> <span class="title">Compound Interest and Depreciation</span></a><ul>
+<li><a href="ch_exponentials.html#sec_introducing_exponentials" data-scroll="sec_introducing_exponentials" class="internal">Exponential Functions</a></li>
+<li><a href="ch_exponentials.html#sec_percent_change" data-scroll="sec_percent_change" class="internal">Percents and Percent Change</a></li>
+<li><a href="ch_exponentials.html#sec_compound_interest" data-scroll="sec_compound_interest" class="internal">Compound Interest and Depreciation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logarithms.html" data-scroll="ch_logarithms" class="internal"><span class="codenumber">5</span> <span class="title">Logarithms and Solving for Time</span></a><ul>
+<li><a href="ch_logarithms.html#sec-inverses" data-scroll="sec-inverses" class="internal">Inverse Functions</a></li>
+<li><a href="ch_logarithms.html#sec_logartims" data-scroll="sec_logartims" class="internal">Logarithms Undo Exponentials</a></li>
+<li><a href="ch_logarithms.html#sec-lawsoflogs" data-scroll="sec-lawsoflogs" class="internal">Laws of Logarithms</a></li>
+<li><a href="ch_logarithms.html#sec_solvingfortime" data-scroll="sec_solvingfortime" class="internal">Solving Compound Interest for Time</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rates.html" data-scroll="part-rates" class="internal"><span class="codenumber">III</span> <span class="title">Introducing Change and Rates</span></a></li>
+<li class="link active">
+<a href="ch_limits.html" data-scroll="ch_limits" class="internal"><span class="codenumber">6</span> <span class="title">Limits</span></a><ul>
+<li><a href="ch_limits.html#sec_readingdynamically" data-scroll="sec_readingdynamically" class="internal">Reading Graphs Dynamically</a></li>
+<li><a href="ch_limits.html#sec-econlimits" data-scroll="sec-econlimits" class="internal">Macroeconomics and Mostly Continous Functions</a></li>
+<li><a href="ch_limits.html#sec-ComputingLimitsNumerically" data-scroll="sec-ComputingLimitsNumerically" class="internal">Computing Limits Numerically</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_totalschanges.html" data-scroll="ch_totalschanges" class="internal"><span class="codenumber">7</span> <span class="title">Average Rates of Change</span></a><ul>
+<li><a href="ch_totalschanges.html#sec-AROC" data-scroll="sec-AROC" class="internal">Average Rates of Change</a></li>
+<li><a href="ch_totalschanges.html#sec_graphsofrateschangesandtotals" data-scroll="sec_graphsofrateschangesandtotals" class="internal">Graphs of Rates, Changes, and Totals</a></li>
+<li><a href="ch_totalschanges.html#sec_velocityAndIROC" data-scroll="sec_velocityAndIROC" class="internal">Velocity and Instantaneous Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_tangentsecant.html" data-scroll="ch_tangentsecant" class="internal"><span class="codenumber">8</span> <span class="title">Understanding Slope</span></a><ul>
+<li><a href="ch_tangentsecant.html#sec_slope" data-scroll="sec_slope" class="internal">Slopes and Rates of Change</a></li>
+<li><a href="ch_tangentsecant.html#sec_secantangent" data-scroll="sec_secantangent" class="internal">Approximating Slope with Secant Lines</a></li>
+<li><a href="ch_tangentsecant.html#sec_slopealgebraically" data-scroll="sec_slopealgebraically" class="internal">Defining Slope Algebraically</a></li>
+<li><a href="ch_tangentsecant.html#sec-slopefunction" data-scroll="sec-slopefunction" class="internal">Defining a Slope Function</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-slopeshortcuts.html" data-scroll="part-slopeshortcuts" class="internal"><span class="codenumber">IV</span> <span class="title">Shortcuts for Computing Slope Functions</span></a></li>
+<li class="link">
+<a href="ch_basicderivativerules.html" data-scroll="ch_basicderivativerules" class="internal"><span class="codenumber">9</span> <span class="title">Slope Shortcuts for Basic Functions</span></a><ul>
+<li><a href="ch_basicderivativerules.html#sec_basicrules1" data-scroll="sec_basicrules1" class="internal">Basic Derivative Rules</a></li>
+<li><a href="ch_basicderivativerules.html#sec-derivativesexplog" data-scroll="sec-derivativesexplog" class="internal">Derivatives of Exponentials and Logarithms</a></li>
+<li><a href="ch_basicderivativerules.html#sec-marginalcost" data-scroll="sec-marginalcost" class="internal">Marginal Cost</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_productquotientrule.html" data-scroll="ch_productquotientrule" class="internal"><span class="codenumber">10</span> <span class="title">Product and Quotient Rule</span></a><ul>
+<li><a href="ch_productquotientrule.html#sec_productrule" data-scroll="sec_productrule" class="internal">Derivatives of Products</a></li>
+<li><a href="ch_productquotientrule.html#sec_quotientrule" data-scroll="sec_quotientrule" class="internal">Derivatives of Fractions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_chainrule.html" data-scroll="ch_chainrule" class="internal"><span class="codenumber">11</span> <span class="title">The Chain Rule</span></a><ul>
+<li><a href="ch_chainrule.html#sec_generalizedpowerrule" data-scroll="sec_generalizedpowerrule" class="internal">The Generalized Power Rule</a></li>
+<li><a href="ch_chainrule.html#sec-chainrule" data-scroll="sec-chainrule" class="internal">The Chain Rule</a></li>
+<li><a href="ch_chainrule.html#sec-derivativesummary" data-scroll="sec-derivativesummary" class="internal">List of All Derivative Rules</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-applyingslopes.html" data-scroll="part-applyingslopes" class="internal"><span class="codenumber">V</span> <span class="title">Applying Marginals and Slopes</span></a></li>
+<li class="link">
+<a href="ch-maxmin.html" data-scroll="ch-maxmin" class="internal"><span class="codenumber">12</span> <span class="title">Finding Maxima and Minima</span></a><ul>
+<li><a href="ch-maxmin.html#sec_understandingextrema" data-scroll="sec_understandingextrema" class="internal">Finding Local Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_absolutemaxmin" data-scroll="sec_absolutemaxmin" class="internal">Finding Absolute Extrema</a></li>
+<li><a href="ch-maxmin.html#sec_maximaminimaandchangegraphs" data-scroll="sec_maximaminimaandchangegraphs" class="internal">Maxima, Minima, and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-secondderivatives.html" data-scroll="ch-secondderivatives" class="internal"><span class="codenumber">13</span> <span class="title">Dimishing Returns and Changing Rates</span></a><ul>
+<li><a href="ch-secondderivatives.html#sec-secondderivative" data-scroll="sec-secondderivative" class="internal">The Second Derivative</a></li>
+<li><a href="ch-secondderivatives.html#sec-concavity" data-scroll="sec-concavity" class="internal">Concavity and Graphs</a></li>
+<li><a href="ch-secondderivatives.html#sec_seconderivativeconcavityandchange" data-scroll="sec_seconderivativeconcavityandchange" class="internal">The Second Derivative and Change Graphs</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-integrals.html" data-scroll="part-integrals" class="internal"><span class="codenumber">VI</span> <span class="title">Integral Calculus</span></a></li>
+<li class="link">
+<a href="ch_antiderivatives.html" data-scroll="ch_antiderivatives" class="internal"><span class="codenumber">14</span> <span class="title">Antiderivatives</span></a><ul>
+<li><a href="ch_antiderivatives.html#sec_undoingderivatives" data-scroll="sec_undoingderivatives" class="internal">Undoing Derivatives</a></li>
+<li><a href="ch_antiderivatives.html#sec-indefiniteintegrals" data-scroll="sec-indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_antiderivatives.html#sec-applyingantiderivatives" data-scroll="sec-applyingantiderivatives" class="internal">Applying Antiderivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_introducingarea.html" data-scroll="ch_introducingarea" class="internal"><span class="codenumber">15</span> <span class="title">Understanding Areas</span></a><ul>
+<li><a href="ch_introducingarea.html#sec_indefiniteintegrals" data-scroll="sec_indefiniteintegrals" class="internal">Indefinite Integrals</a></li>
+<li><a href="ch_introducingarea.html#sec_geometricarea" data-scroll="sec_geometricarea" class="internal">Understanding Geometrically of Area</a></li>
+<li><a href="ch_introducingarea.html#sec_fundamentaltheorem" data-scroll="sec_fundamentaltheorem" class="internal">Area, Antiderivatives, and Graphs of Change</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="algebrareview.html" data-scroll="algebrareview" class="internal"><span class="codenumber">A</span> <span class="title">Algebra Review</span></a><ul>
+<li><a href="algebrareview.html#section-50" data-scroll="section-50" class="internal">Laws of Algebra</a></li>
+<li><a href="algebrareview.html#sec-IntervalsandGraphs" data-scroll="sec-IntervalsandGraphs" class="internal">Intervals and Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="chapter" id="ch_limits"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">6</span> <span class="title">Limits</span>
+</h2>
+<section class="introduction" id="introduction-34"><p id="p-813"></p></section><section class="section" id="sec_readingdynamically"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Reading Graphs Dynamically</span>
+</h3>
+<p id="p-814">Reading graphs <em class="emphasis">dynamically</em> will be an essential part of understanding the key concepts of calculus, and applying those concepts to your daily life.</p>
+<p id="p-815">To read any graph dynamically, start at a specific <span class="process-math">\(x\)</span> value, and imagine "standing" on the function above that point on the x-axis. The <span class="process-math">\(y\)</span> value corresponds with your height above the x-axis.</p>
+<p id="p-816">Next, imagine walking right (increasing <span class="process-math">\(x\)</span>) and left (decreasing <span class="process-math">\(x\)</span>) along the curve. As you walk, the curve <em class="emphasis">forces</em> your height to move up or down.</p>
+<figure class="figure figure-like" id="figure_interactivelimit"><div style="width:450px;">
+<p id="p-817">Use the slider to move yourself left and right along the curve. The dot represents your position on the surface, with</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{cases}
+x = \text{ your position }\\
+y = \text{ your height } = f(x) 
+\end{cases}
+\end{equation*}
+</div> <ul class="disc">
+<li id="li-89">
+<p id="p-818">Imagine <em class="emphasis">approaching</em> towards <span class="process-math">\(x=1\)</span> from the left. What is happening to your height?</p>
+<p id="p-819"><em class="alert">Note:</em> only look at what is happening to the height during the <em class="emphasis">approach</em>, not at the value <span class="process-math">\(x=1\)</span> itself.</p>
+</li>
+<li id="li-90"><p id="p-820">Imagine <em class="emphasis">approaching</em> towards <span class="process-math">\(x=1\)</span> from the right. What is happening to your height?</p></li>
+<li id="li-91"><p id="p-821">What is happening to your height as you approach <span class="process-math">\(x=3\)</span> from the left?</p></li>
+<li id="li-92"><p id="p-822">What about when you approach <span class="process-math">\(x=3\)</span> from the right?</p></li>
+</ul>
+</div>
+<iframe id="interactive-6" width="450" height="450" src="interactive-6-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="example example-like" id="example_interactivelimit_intuitive"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example_interactivelimit_intuitive"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring Figure 6.1.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_interactivelimit_intuitive"><article class="example example-like"><p id="p-823">Let's explore what happens in  <a href="" class="xref" data-knowl="./knowl/figure_interactivelimit.html" title="Figure 6.1: Exploring Limits">Figure 6.1</a>.</p>
+<ul class="disc">
+<li id="li-93">
+<p id="p-824">To see what happens as you <em class="emphasis">approach <span class="process-math">\(x=1\)</span> from the left</em>,</p>
+<ol class="decimal">
+<li id="li-94"><p id="p-825">Move the <span class="process-math">\(x\)</span> value to some number less than <span class="process-math">\(1\text{.}\)</span> For simplicity, start by moving to <span class="process-math">\(x=0\text{.}\)</span> At that point on the curve, your height will be <span class="process-math">\(y=0\text{.}\)</span></p></li>
+<li id="li-95">
+<p id="p-826">Drag the slider to increase <span class="process-math">\(x\)</span> towards 1, making sure never to allow <span class="process-math">\(x\)</span> to equal 1.</p>
+<p id="p-827">As you increased <span class="process-math">\(x\)</span> (as you move it right), you will have seen the height increase as well.  Even more, you will have seen the height getting closer and closer to <span class="process-math">\(y=2\text{.}\)</span></p>
+</li>
+<li id="li-96"><p id="p-828">Because of this, we say that your height <span class="process-math">\(y=f(x)\)</span> gets closer and closer to <span class="process-math">\(y=2\)</span> as <span class="process-math">\(x\)</span> approaches 1 from the left.</p></li>
+</ol>
+<p id="p-829"><em class="alert">Important:</em> The fact that <span class="process-math">\(f(1)=3\)</span> is unrelated to our question, because that tells us what happens <em class="emphasis">at that point</em>, not what happens <em class="emphasis">during the process of approaching that point</em>.</p>
+</li>
+<li id="li-97">
+<p id="p-830">To see what happens as you <em class="emphasis">approach <span class="process-math">\(x=1\)</span> from the right</em>,</p>
+<ol class="decimal">
+<li id="li-98"><p id="p-831">Move the slider so that <span class="process-math">\(x\)</span> is significantly bigger than <span class="process-math">\(2\text{.}\)</span> For simplicity, start by moving to <span class="process-math">\(x=2\text{.}\)</span> At that point on the curve, your height will be <span class="process-math">\(y=2.5\text{.}\)</span></p></li>
+<li id="li-99"><p id="p-832">Drag the slider to <em class="emphasis">decrease</em> <span class="process-math">\(x\)</span> toward 1, making sure never to allow <span class="process-math">\(x\)</span> to equal 1. As you do this, the height decreases, getting closer and closer to <span class="process-math">\(2\text{.}\)</span></p></li>
+<li id="li-100"><p id="p-833">Because of this, we say that the height <span class="process-math">\(y=f(x)\)</span> gets closer and closer to <span class="process-math">\(y=2\)</span> as <span class="process-math">\(x\)</span> approaches 1 from the right.</p></li>
+</ol>
+</li>
+<li id="li-101">
+<p id="p-834">As you approach <span class="process-math">\(x=3\)</span> from the left, your height increases to <span class="process-math">\(y=3\text{.}\)</span></p>
+<p id="p-835">As you approach <span class="process-math">\(x=3\)</span> from the right, your height decreases to <span class="process-math">\(y=1\text{.}\)</span></p>
+</li>
+</ul></article></div>
+<p id="p-836">To answer these questions clearly and concisely, we need new mathematical language. To understand our notation, it will be helpful to remember the number line. If you (<span class="process-math">\(x\)</span>) approach a number <span class="process-math">\(a\)</span> <dfn class="terminology">from the left</dfn>, you are approaching <span class="process-math">\(a\)</span> from the side of the number line with all the negative numbers. Because of that, we write <span class="process-math">\(x\rightarrow a^-\)</span> as a shorthand for <em class="emphasis">approaches <span class="process-math">\(a\)</span> from the left</em>. <div class="image-box" style="width: 33%; margin-left: 33.5%; margin-right: 33.5%;"><img src="generated/latex-image/img_limitdirection_left.svg" role="img" class="contained"></div> If you (<span class="process-math">\(x\)</span>) approach a number <span class="process-math">\(a\)</span> <dfn class="terminology">from the right</dfn>, you are approaching <span class="process-math">\(a\)</span> from the side of the number line with all the positive numbers. Because of that, we write <span class="process-math">\(x\rightarrow a^+\)</span> as a shorthand for <em class="emphasis">approaches <span class="process-math">\(a\)</span> from the right</em>. <div class="image-box" style="width: 33%; margin-left: 33.5%; margin-right: 33.5%;"><img src="generated/latex-image/img_limitdirection_right.svg" role="img" class="contained"></div></p>
+<article class="definition definition-like" id="def-limit"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
+</h4>
+<p id="p-837">Suppose that <span class="process-math">\(f(x)\)</span> is some function, and that <span class="process-math">\(a\)</span> and <span class="process-math">\(L\)</span> are two numbers.</p>
+<dl class="description-list">
+<dt id="li-102">Left</dt>
+<dd>
+<p id="p-838">Suppose that is <span class="process-math">\(x\)</span> approaching <span class="process-math">\(a\)</span> from the left (that <span class="process-math">\(x\rightarrow a^-\)</span>). If the heights <span class="process-math">\(f(x)\)</span> get closer and closer to a number <span class="process-math">\(L\text{,}\)</span> then we say that the the <dfn class="terminology">left hand limit</dfn> exists, and write</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow a^-} f(x) = L
+\end{equation*}
+</div>
+<p class="continuation">We can read this expression by saying "(1) the limit (2) as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> from the left is (3) equal to "L".</p>
+</dd>
+<dt id="li-103">Right</dt>
+<dd>
+<p id="p-839">Suppose that is <span class="process-math">\(x\)</span> approaching <span class="process-math">\(a\)</span> from the right (that <span class="process-math">\(x\rightarrow a^+\)</span>). If the heights <span class="process-math">\(f(x)\)</span> get closer and closer to a number <span class="process-math">\(L\text{,}\)</span> then we say that the the <dfn class="terminology">right hand limit</dfn> exists, and write</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow a^+} f(x) = L
+\end{equation*}
+</div>
+<p class="continuation">We can read this expression by saying "(1) the limit (2) as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> from the right is (3) equal to "L".</p>
+</dd>
+<dt id="li-104">Undirected</dt>
+<dd>
+<p id="p-840">Sometimes, we talk about limits without any direction.</p>
+<p id="p-841">We say that the (undirected) <dfn class="terminology">limit</dfn> of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> is equal to <span class="process-math">\(L\text{,}\)</span> written</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow a} f(x) = L
+\end{equation*}
+</div>
+<p class="continuation">if  as the <em class="emphasis">input <span class="process-math">\(x\)</span></em> gets <em class="emphasis">closer to <span class="process-math">\(a\)</span></em>, the <em class="emphasis">output <span class="process-math">\(f(x)\)</span></em> gets <em class="emphasis">closer to <span class="process-math">\(L\)</span></em>.</p>
+</dd>
+</dl></article><article class="exploration project-like" id="exploration-45"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-35"><p id="p-842">Let <span class="process-math">\(f(x)\)</span> be the function defined by the graph in <a href="" class="xref" data-knowl="./knowl/figure_interactivelimit.html" title="Figure 6.1: Exploring Limits">Figure 6.1</a>. Compute the following limits.</p></div>
+<article class="task exercise-like" id="task-110"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-843"><span class="process-math">\(\displaystyle \lim_{x\rightarrow 1^-} f(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-844">Following the reasoning from <a href="" class="xref" data-knowl="./knowl/example_interactivelimit_intuitive.html" title="Example 6.2: Exploring Figure 6.1">Example 6.2</a>, we see that <span class="process-math">\(\displaystyle \lim_{x\rightarrow 1^-} f(x)=2\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-111"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-845"><span class="process-math">\(\displaystyle \lim_{x\rightarrow 1^+} f(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-846">Following the reasoning from <a href="" class="xref" data-knowl="./knowl/example_interactivelimit_intuitive.html" title="Example 6.2: Exploring Figure 6.1">Example 6.2</a>, we see that <span class="process-math">\(\lim_{x\rightarrow 1^+} f(x)=2\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-112"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-847"><span class="process-math">\(\displaystyle \lim_{x\rightarrow 1} f(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-848">We have seen that as <span class="process-math">\(x\)</span> approaches 1, the height goes to 2 <em class="emphasis">regardless</em> of the direction.  That tells us that the undirected limit exists and equals 2.  In other words, <span class="process-math">\(\lim_{x\rightarrow 1} f(x)=2\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-113"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-849"><span class="process-math">\(\displaystyle \lim_{x\rightarrow 3^-} f(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-850">Following the reasoning from <a href="" class="xref" data-knowl="./knowl/example_interactivelimit_intuitive.html" title="Example 6.2: Exploring Figure 6.1">Example 6.2</a>, we see that <span class="process-math">\(\lim_{x\rightarrow 3^-} f(x)=3\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-114"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-851"><span class="process-math">\(\displaystyle \lim_{x\rightarrow 3^+} f(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-852">Following the reasoning from <a href="" class="xref" data-knowl="./knowl/example_interactivelimit_intuitive.html" title="Example 6.2: Exploring Figure 6.1">Example 6.2</a>, we see that <span class="process-math">\(\lim_{x\rightarrow 3^+} f(x)=1\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-115"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-853"><span class="process-math">\(\displaystyle \lim_{x\rightarrow 3} f(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-854">We have seen that as <span class="process-math">\(x\)</span> approaches 3, the height goes to <em class="emphasis">different values</em> depending on your direction of approach.  That tells us that the undirected limit <em class="emphasis">does not exist</em>.  In other words, <span class="process-math">\(\lim_{x\rightarrow 3} f(x)= DNE\)</span></p></div></div>
+</div></article></article><p id="p-855">In the graph above, we have already seen that as we move the input (slider) <span class="process-math">\(x\)</span> closer to <span class="process-math">\(1\text{,}\)</span> that the height (output) gets closer to <span class="process-math">\(2\text{.}\)</span>  In our new lanugage, that says</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 1} f(x) = 2
+\end{equation*}
+</div>
+<article class="note remark-like" id="note-1"><a href="" data-knowl="" class="id-ref note-knowl original" data-refid="hk-note-1"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span><span class="space"> </span><span class="title">A little extra precision.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-note-1"><article class="note remark-like"><p id="p-856">In this class, we only need an informal understanding of limits, and the definitions above should be more than enough.</p>
+<p id="p-857">But there is still a little bit of ambiguity in expressions like "getting closer and closer to."  It is natural to ask, how close is close enough? The answer to that question gives us the full, mathematical definition of a limit.</p>
+<p id="p-858">That definition says that <span class="process-math">\(\lim_{x\rightarrow a}f(x) = L\)</span> if and only if for <em class="emphasis">any</em> acceptable error <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> there is an acceptable distance <span class="process-math">\(d&gt;0\)</span> such that the difference between the actual height <span class="process-math">\(f(x)\)</span> and the limit height of <span class="process-math">\(L\)</span> is less than <span class="process-math">\(\varepsilon\)</span> whenever the input <span class="process-math">\(x\)</span> is no more than distance <span class="process-math">\(d\)</span> from the point <span class="process-math">\(a\)</span> that you are approaching.</p>
+<p id="p-859">Again, unless you find it helpful we don't need that more formal definition for this class.  The main point is that it is possible to eliminate any ambiguity about what "close enough" really means.</p></article></div>
+<p id="p-860">The function in Figure <a href="" class="xref" data-knowl="./knowl/figure_interactivelimit.html" title="Figure 6.1: Exploring Limits">Figure 6.1</a> is very unusual. Most mathematical functions can be drawn smoothly, with one or two strokes of a pen. But this function includes lots of jumping around, and we need to lift the pen every time there is a "jump". We can make this precise using the following definition.</p>
+<article class="definition definition-like" id="def-continuous"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span>
+</h4>
+<p id="p-861">We say that a function <span class="process-math">\(f(x)\)</span> is <dfn class="terminology">continuous</dfn> on its domain if you can draw the graph of the function without lifting your pen.</p>
+<p id="p-862">A function is <dfn class="terminology">continuous at the number <span class="process-math">\(a\)</span></dfn> if</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow a} f(x) = f(a)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which means that both the left and right limits exist, and equal the value that <span class="process-math">\(f\)</span> achieves at <span class="process-math">\(a\text{.}\)</span></p></article><p id="p-863">The two definitions are really two ways of saying the same thing. If your function can be drawn without lifting your pen, then each point flows smoothly into the next point, and the limit <span class="process-math">\(\lim_{x\rightarrow a} f(x) \)</span> exists and equals <span class="process-math">\(f(a)\)</span></p>
+<p id="p-864">On the other hand, if the function can't be drawn without lifting your pen, then there must be some point in drawing the curve where the function does <em class="emphasis">not</em> smoothly flow into the next point.  In that case, the limit <span class="process-math">\(\lim_{x\rightarrow a}f(x)\)</span> either does not exist, or it does not equal <span class="process-math">\(f(a)\text{.}\)</span></p>
+<article class="example example-like" id="example-13"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-example-13"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Three reasons  a function might <em class="emphasis">not</em> be continuous..</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-13"><article class="example example-like"><dl class="description-list">
+<dt id="li-105">Removable Discontinuity</dt>
+<dd>
+<p id="p-865"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_continuity_1.svg" role="img" class="contained"></div> Imagine running along this graph. The discontinuity is a hole in the ground, like an open manhole cover. If you were to walk over that hole, you would fall down the hole, and hit the ground at the bottom. But it seems like someone should be able to <dfn class="terminology">remove</dfn> this discontinuity by covering up the manhole cover (by redefining the function at that specific point).</p>
+<p id="p-866">We say that <em class="emphasis">any</em> function has a <dfn class="terminology">removable discontinuity</dfn> if the left and right limits both exist, and both equal the same number, but if that number is not equal to <span class="process-math">\(f(a)\text{.}\)</span></p>
+</dd>
+<dt id="li-106">Jump Discontinuity</dt>
+<dd>
+<p id="p-867"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_continuity_2.svg" role="img" class="contained"></div> In this graph, the limit does not exist.  If you imagine running along this curve, you would need to <dfn class="terminology">jump</dfn> to get from one side of the discontinuity to the other.</p>
+<p id="p-868">We say that <em class="emphasis">any</em> function has a <dfn class="terminology">jump discontinuity</dfn> if the left and right limits equal two different finite numbers.</p>
+</dd>
+<dt id="li-107">Infinite Discontinuity</dt>
+<dd>
+<p id="p-869"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img_continuity_3.svg" role="img" class="contained"></div> In this graph, the left and right limits both go off to infinity, and the graph of the function has a vertical asymptote. If you imagine running along this curve, you would need to be able to go to infinity in the process of getting from one side to the other.</p>
+<p id="p-870">We say that <em class="emphasis">any</em> function has an <dfn class="terminology">infinite discontinuity</dfn> if either the left or right limit goes to infinity.</p>
+</dd>
+</dl></article></div></section><section class="section" id="sec-econlimits"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Macroeconomics and Mostly Continous Functions</span>
+</h3>
+<p id="p-871">There is an important difference between histograms and scatter plots on the one hand, and continuous functions on the other. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/img_histogramvscontinous.svg" role="img" class="contained"></div> In a discrete graph, you would need to "jump" to move between the discrete points. But as you add more and more points, the distance you would need to "jump" gets smaller and smaller. If you add enough discrete points, the graph becomes indistinguishable from a <em class="emphasis">continuous</em> curve, where you can walk smoothly along the curve.</p>
+<p id="p-872">In the words of <a class="external" href="https://www.investopedia.com/terms/m/macroeconomics.asp" target="_blank">Investopedia</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>, “Macroeconomics is the branch of economics that deals with the structure, performance, behavior, and decision-making of the whole, or aggregate, economy”.</p>
+<p id="p-873">There are a <em class="emphasis">lot</em> of data points in the overall economy, so many macroeconomic functions are essentially continuous. However, certain unique events can introduce jumps.</p>
+<p id="p-874">As a very simplified example, any given oil rig will be able to produce different amounts of oil, based on how many people are working on it, how much electricity is used for the pump, and other factors. These factors can generally be scaled smoothly, so the cost of producing oil should be roughly continous as a function of the number of barrels to be produced.</p>
+<p id="p-875">But there are also limits to the amount of oil that a certain rig will be able to extract.  To produce more than that amount of oil, an entirely new oil rig will need to be set up, causing a massive jump in the cost. Furthermore, additional refinement will probably be needed after the new rig is produced, possibly resulting in another jump in cost.</p>
+<article class="exploration project-like" id="explore_oillimit_graphical"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-36">
+<p id="p-876">Suppose that the following graph shows the cost <span class="process-math">\(C\)</span> in millions of dollars of producing <span class="process-math">\(x\)</span> million barells of oil at a specific oil field. Use this graph to answer the following questions.</p>
+<iframe id="interactive-7" width="300" height="300" src="interactive-7-if.html"></iframe>
+</div>
+<article class="task exercise-like" id="task-116"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-877">Compute <span class="process-math">\(\lim_{x\rightarrow 10^-}C(x).\)</span> What does this tell us about oil production?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like"><p id="p-878">As the number of (millions of) gallons of oil increases to 10 from the <em class="emphasis">left</em>, the cost increases to $100 (million) dollars. Therefore,   <span class="process-math">\(\lim_{x\rightarrow 10^-}C(x)= 100.\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-117"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-879">Compute <span class="process-math">\(\lim_{x\rightarrow 10^+}C(x).\)</span> What does this tell us about oil production?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like"><p id="p-880">As the number of (millions of) gallons of oil decreases to 10 from the <em class="emphasis">right</em>, the cost decreases to $150 (million) dollars. Therefore,   <span class="process-math">\(\lim_{x\rightarrow 10^+}C(x)= 150.\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-118"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-881">Compute <span class="process-math">\(C(10).\)</span> What does this tell us about oil production?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-120" id="solution-120"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-120"><div class="solution solution-like"><p id="p-882">To produce exactly 10 (millon) barrels, the cost will be exactly $125 (million) dollars. Therefore,   <span class="process-math">\(C(10)= 125.\)</span></p></div></div>
+</div></article></article><p id="p-883">To define functions with jumps, we often use <em class="emphasis">piecewise functions</em>. The graph in <a href="" class="xref" data-knowl="./knowl/explore_oillimit_graphical.html" title="Exploration 6.2">Exploration 6.2</a> is made up of the following three functions:</p>
+<ul class="disc">
+<li id="li-108"><p id="p-884">When <span class="process-math">\(x\lt 10\text{,}\)</span> graph the line <span class="process-math">\(50 + 5x\)</span></p></li>
+<li id="li-109"><p id="p-885">When <span class="process-math">\(x = 10\text{,}\)</span> graph the point <span class="process-math">\(50 + 5x\)</span></p></li>
+<li id="li-110"><p id="p-886">When <span class="process-math">\(x\gt 10\text{,}\)</span> graph the line <span class="process-math">\(90 + 6x\)</span></p></li>
+</ul>
+<p class="continuation">Mathematically, this is often abbreviated as</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/explore_oillimit_graphical.html">
+\begin{equation*}
+\begin{cases}
+50 + 5x &amp; \text{ if } x\lt 10 \\ 
+125     &amp; \text{ if } x = 10 \\ 
+90 + 6x &amp; \text{ if } x\gt 10 \\ 
+\end{cases}
+\end{equation*}
+</div></section><section class="section" id="sec-ComputingLimitsNumerically"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Computing Limits Numerically</span>
+</h3>
+<p id="p-887">You can also compute limits numerically. The process is straighforward, once you understand what the question is asking. For example, suppose that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = 
+\begin{cases}
+1 + x   &amp; \text{ if } x \lt 2 \\   
+1       &amp; \text{ if } x = 2 \\   
+-1+0.5x &amp; \text{ if } x \gt 2 \\   
+\end{cases}
+\end{equation*}
+</div>
+<ul class="disc">
+<li id="li-111"><p id="p-888">You are asked to compute <span class="process-math">\(\displaystyle \lim_{x\rightarrow 2^+} f(x)\)</span></p></li>
+<li id="li-112"><p id="p-889">Remember this means you want to see <em class="emphasis">what happens to your height</em> when your <span class="process-math">\(x\)</span> value approaches <span class="process-math">\(a=2\)</span> from the right.</p></li>
+<li id="li-113"><p id="p-890">Think about some <span class="process-math">\(x\)</span> values you would pass through when approaching <span class="process-math">\(2\)</span> from the right.  For example, you would pass through <span class="process-math">\(x=3,\ x=2.5,\ x=2.1,\ x=2.01\)</span> and so on.</p></li>
+<li id="li-114"><p id="p-891">Compute the height at each of the <span class="process-math">\(x\)</span> values we listed above. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(3) = -1 + 0.5(3) = 0.5 \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(2.5\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(2.5) = -1 + 0.5(2.5) = 0.25 \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(2.1\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(2.1) = -1 + 0.5(2.1) = 0.05 \)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(2.01\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(2.01) = -1 + 0.5(2.01) = 0.005 \)</span></td>
+</tr>
+</table></div></p></li>
+<li id="li-115">
+<p id="p-892">Think about what is happening to your height as your <span class="process-math">\(x\)</span> value is approaching 2 from the right.</p>
+<p id="p-893">Notice that the <span class="process-math">\(y\)</span>-value is getting <em class="alert">closer and closer to 0</em>.  In other words,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 2^+} f(x) = 0
+\end{equation*}
+</div>
+</li>
+</ul>
+<p id="p-894">To get more comfortable with what this means, the graph of the piecewise function <span class="process-math">\(f(x) = 
+\begin{cases}
+1 + x   &amp; \text{ if } x \lt 2 \\   
+1       &amp; \text{ if } x = 2 \\   
+-1+0.5x &amp; \text{ if } x \gt 2 \\   
+\end{cases}\)</span> is given below. As you change the value of <span class="process-math">\(x\text{,}\)</span> the left side of the screen displays</p>
+<ol class="decimal">
+<li id="li-116"><p id="p-895">The current value of <span class="process-math">\(x\text{.}\)</span></p></li>
+<li id="li-117"><p id="p-896">Whether <span class="process-math">\(x\)</span> is greater, equal, or less than <span class="process-math">\(2\text{.}\)</span> This is used to decide which of the three equations to use when computing <span class="process-math">\(f(x)\text{.}\)</span></p></li>
+<li id="li-118"><p id="p-897">The result of plugging the current value of <span class="process-math">\(x\)</span> into the equation for <span class="process-math">\(f(x)\text{,}\)</span> which gives the current <span class="process-math">\(y\)</span> value.</p></li>
+</ol>
+<iframe id="interactive-8" width="600" height="600" src="interactive-8-if.html"></iframe><p id="p-898">We can use the equation</p>
+<article class="exploration project-like" id="exploration-47"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-37">
+<p id="p-899">Suppose that the cost of producing <span class="process-math">\(x\)</span> barrels of oil is given by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C(x) = 
+\begin{cases}
+50 + 5x &amp; \text{ if } x\lt 10 \\ 
+125     &amp; \text{ if } x = 10 \\ 
+90 + 6x &amp; \text{ if } x\gt 10 \\ 
+\end{cases}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-119"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-900">Compute <span class="process-math">\(\displaystyle \lim_{x\rightarrow 10^+} C(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-121" id="solution-121"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-121"><div class="solution solution-like">
+<p id="p-901">Think about some <span class="process-math">\(x\)</span> values you would pass through when approaching <span class="process-math">\(10\)</span> from the right. For example, you would pass through <span class="process-math">\(x=11,\ x=10.5,\ x=10.1,\ x=10.01\)</span> and so on. Compute the height at each of the <span class="process-math">\(x\)</span> values we listed above. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(11\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(11) =  90 + 6(11) = 156  \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10.5\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(10.5) = 90 + 6(10.5) = 153  \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10.1\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(10.1) =  90 + 6(10.1) =150.6  \)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(10.01\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(C(10.01) = 90 + 6(10.01) =150.06   \)</span></td>
+</tr>
+</table></div> As you move from the top row of the table to the bottom row of the table, the <span class="process-math">\(x\)</span> values get closer and closer to <span class="process-math">\(a=10\text{,}\)</span> always from the right.</p>
+<p id="p-902">And as these <span class="process-math">\(x\)</span> values approach 10, we see that the heights <span class="process-math">\(C(x)\)</span> get closer and closer to 150.  That means</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 10^+} C(x) = 150
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-120"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-903">Compute <span class="process-math">\(\displaystyle \lim_{x\rightarrow 10^-} C(x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like">
+<p id="p-904">Think about some <span class="process-math">\(x\)</span> values you would pass through when approaching <span class="process-math">\(10\)</span> from the left. For example, you would pass through <span class="process-math">\(x=9,\ x=9.5,\ x=9.9,\ x=9.99\)</span> and so on. Compute the height at each of the <span class="process-math">\(x\)</span> values we listed above. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(9) =  90 + 6(11) = 95  \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(9.5\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(9.5) = 90 + 6(10.5) = 97.5  \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(9.9\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(C(9.9) =  90 + 6(10.1) =99.5  \)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(9.99\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(C(9.99) = 90 + 6(10.01) = 99.95\)</span></td>
+</tr>
+</table></div> As you move from the top row of the table to the bottom row of the table, the <span class="process-math">\(x\)</span> values get closer and closer to <span class="process-math">\(a=10\text{,}\)</span> always from the left.</p>
+<p id="p-905">And as these <span class="process-math">\(x\)</span> values approach 10, we see that the heights <span class="process-math">\(C(x)\)</span> get closer and closer to 100.  That means</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 10^-} C(x) = 100
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-121"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-906">Is <span class="process-math">\(C(x)\)</span> continuous at <span class="process-math">\(x=10\text{?}\)</span>  If not, classify the type of discontinuity.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-123" id="solution-123"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-123"><div class="solution solution-like">
+<p id="p-907">We have seen above that the left and right hand limits exist, but do not equal eachother.  In other words, we have seen that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 10} C(x) DNE\text{.}
+\end{equation*}
+</div>
+<p class="continuation">It follows that the function is not continuous at <span class="process-math">\(a=10\text{.}\)</span></p>
+<p id="p-908">Because the directed limits exist and equal finite numbers, this is a <em class="emphasis">jump discontinuity</em>.</p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span>
+</h4>
+<p id="p-909">Let <span class="process-math">\(A(x) = \dfrac{10+4x}{x}\text{.}\)</span> Find <span class="process-math">\(\displaystyle\lim_{x\rightarrow 0^+} A(x)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-interactive has-tabular" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like">
+<p id="p-910">Think about some <span class="process-math">\(x\)</span> values you would pass through when approaching <span class="process-math">\(0\)</span> from the right. For example, you would pass through <span class="process-math">\(x=1,\ x=0.5,\ x=0.1,\ x=0.01\)</span> and so on. Compute the height at each of the <span class="process-math">\(x\)</span> values we listed above. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(1) = \dfrac{10+4(1)}{1} = 14  \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(0.5\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(0.5) = \dfrac{10+4(0.5)}{0.5} = 24  \)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(0.1\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(0.1) = \dfrac{10+4(0.1)}{0.1} = 104 \)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(0.01\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(0.01) = \dfrac{10+4(0.01)}{0.01} = 1,004  \)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(0.001\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(f(0.001) = \dfrac{10+4(0.001)}{0.001} = 10,004  \)</span></td>
+</tr>
+</table></div> As you move from the top row of the table to the bottom row of the table, the <span class="process-math">\(x\)</span> values get closer and closer to <span class="process-math">\(a=0\text{,}\)</span> always from the right.</p>
+<p id="p-911">And as these <span class="process-math">\(x\)</span> values approach 0, we see that the heights <span class="process-math">\(f(x)\)</span> are getting bigger and bigger, without bound.  That means</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 10^+} f(x) = \infty
+\end{equation*}
+</div>
+<iframe id="interactive-9" width="600" height="600" src="interactive-9-if.html"></iframe>
+</div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">www.investopedia.com/terms/m/macroeconomics.asp</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

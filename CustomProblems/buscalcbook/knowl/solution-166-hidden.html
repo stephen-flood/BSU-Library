@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>As always, start by setting up the derivative</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddx{ \sqrt{x} \cdot (9 + 7x) } 
+\end{equation*}
+</div>
+<p class="continuation">We don't have any derivative rule for square roots, but we can always rewrite <span class="process-math">\(\sqrt[m]{x^n} = x^{n/m}\text{.}\)</span>  In particular, using <span class="process-math">\(\sqrt{x} = x^{1/2}\)</span> gives us</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x) = \ddx{ x^{1/2} \cdot (9 + 7x) } 
+\end{equation*}
+</div>
+<p class="continuation">To apply our derivative rules, you need to use order of operations (PEMDAS) to identify the "outermost" operation. In this case, our function is the <em class="alert">product</em> of <span class="process-math">\(x^{1/2}\)</span> with <span class="process-math">\((9+7x)\text{.}\)</span>  That means we will use the <em class="emphasis">product rule</em> <span class="process-math">\(\D{\red{f}\cdot \blue{g}} = \red{f}\cdot \D{\blue{g}} + \blue{g}\cdot \D{\red{f}}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f'(x)  = \amp \ddx{ \red{x^{1/2}} \cdot \blue{(9 + 7x)} } \\
+f'(x)  = \amp \red{x^{1/2}} \cdot \ddx{ \blue{(9 + 7x)} } + \blue{(9 + 7x)} \cdot \ddx{ \red{x^{1/2}} } \\
+f'(x)  = \amp x^{1/2} \cdot \ddx{ (9 + 7x) } + (9 + 7x) \cdot \ddx{ x^{1/2} } \\
+f'(x)  = \amp x^{1/2} \cdot \ddx{ (\red{9} + \blue{7x}) } + (9 + 7x) \cdot \ddx{ \blue{x}^{\red{1/2}} } \\
+f'(x)  = \amp x^{1/2} \cdot (\ddx{\red{9}} + \ddx{\blue{7x}})  + (9 + 7x) \cdot \red{\frac{1}{2}}\cdot \blue{x}^{\red{1/2}-1}  \\
+f'(x)  = \amp x^{1/2} \cdot (0 + 7)  + (9 + 7x) \cdot \frac{1}{2} \cdot x^{-1/2}  \\
+f'(x)  = \amp 7\sqrt{x}  + (9 + 7x) \cdot \frac{1}{2} \cdot x^{-1/2}  \\
+f'(x)  = \amp 7\sqrt{x}  + (9 + 7x) \cdot \frac{1}{2} \cdot \frac{1}{\sqrt{x}} 
+\end{align*}
+</div>
+<p class="continuation">You could keep "simpifying" this derivative, but we might as well stop here.</p>
+</div></body>
+</html>

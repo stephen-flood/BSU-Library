@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.6/jsxgraph.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.6/jsxgraphcore.js"></script>
+</head>
+<body class="pretext-content ignore-math" id="buscalcchange"><div style="width:450px; height:450px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
+<div id="jsxgraph-limitpicewise" class="jxgbox" style="width:450px; height:450px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"></div>
+<script type="text/jessiecode" container="jsxgraph-limitpicewise" axis="true" grid="true">$board.setBoundingBox( [ -2, 4, 4, -2 ] , keepaspectratio=true) ;
+
+xslider = slider(
+      // Specify slider location
+        [0.5,-1], [3,-1], 
+      // Specify smallest/starting/largest value for slider
+        [-2,0.5,4])
+    <<
+        name:"x",
+        snapWidth:0.1
+    >>  ;      
+
+// Define piecewise function      
+f1 = function(x) { 
+  if (x<1 ){
+  return 2*x ;  
+  }else if (x==1){
+    return 3;
+  }else if (1<x && x<3 ){
+    return 0.5*(x-1) + 2;
+  }else if (x==3){
+    return 3;
+  }else if (3<x ){
+    return (x-3)^2+1;
+  }
+;} ;
+
+// Graph the lines from the point to the x and y axis
+//    (put these first so they go behind the function and points)
+line( [function() {return xslider.Value();} ,
+            function() {return f1(xslider.Value());}],[0,function() {return f1(xslider.Value());}] )
+          << 
+            color:"blue",
+            straightFirst:false, 
+            straightLast:false,
+            dash:2
+          >> ;
+line( [function() {return xslider.Value();} ,
+            function() {return f1(xslider.Value());}],[function() {return xslider.Value();}, 0 ] )
+          << 
+            color:"blue",
+            straightFirst:false, 
+            straightLast:false,
+            dash:2
+          >> ;
+
+// Graph the function and 
+fGraph1 = functiongraph( f1 )  
+  << 
+      strokeColor:"red"  
+  >>;
+point(1,2)  << 
+            name:"",
+            fixed:true,
+            size:3,
+            fillColor:'white' 
+          >> ;      
+point(1,3)  << 
+            name:"",
+            fixed:true,
+            size:3
+          >> ;      
+point(3,3)  << 
+            name:"",
+            fixed:true,
+            size:3
+          >> ;      
+point(3,1)  << 
+            name:"",
+            fixed:true,
+            size:3,
+            fillColor:'white' 
+          >> ;      
+
+// Graph point that follows the function
+point( function() {return xslider.Value();} ,
+            function() {return f1(xslider.Value());}) 
+          << 
+            name:"(x,f(x))",
+            color:"blue" 
+          >> ;
+text( -0.75, function() {return f1(xslider.Value());}, "f(x)") 
+          << 
+            color:"blue" 
+          >> ;
+text( function() {return xslider.Value();} , -0.25 , "x") 
+          << 
+            color:"blue" 
+          >> ;
+</script>
+</div></body>
+</html>
