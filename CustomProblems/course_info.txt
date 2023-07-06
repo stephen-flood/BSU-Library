@@ -10,7 +10,7 @@ for
 <ul>
 	<li> How to input Mathematics 
 	<li> Frequently Asked Questions.
-	<li> If you have an unanswered question, please contact <a href="mailto:Stephen.Flood@bridgew.edu">Stephen.Flood@bridgew.edu</a>
+	<li> If you have an unanswered question, please contact <a href="mailto:sflood@bridgew.edu">sflood@bridgew.edu</a>
 </ul>
 
 <b>How to <i>Succeed</i> with WebWork</b>

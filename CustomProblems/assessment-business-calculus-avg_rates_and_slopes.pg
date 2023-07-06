@@ -133,7 +133,7 @@ You are given the first two rows of the table below.
 You must fill in the  missing blanks in the third row of the table giving decimal accuracy of [`0.00001`].  
 [@DataTable(
   [
-    [['`x_1`', headerrow => 1], '`y_1`' , '`x_2`', '`y_2`', '`\Deltax`', '`\Deltay`', '`\frac{\Delta y}{\Delta x}`'],
+    [['\(x_1\)', headerrow => 1], '\(y_1\)' , '\(x_2\)', '\(y_2\)', '\(\Delta x\)', '\(\Delta y\)', '\(\frac{\Delta y}{\Delta x}\)'],
     [  $x13 , $f_x13, $a, $f_a, $deltax*3, $delta_f_x13, ($f_a-$f_x13)/($a-$x13)],
     [  $x12 , $f_x12, $a, $f_a, $deltax*2, $delta_f_x12,  ($f_a-$f_x12)/($a-$x12)],
     [  $x11 , ans_rule(7), $a, ans_rule(7), ans_rule(7), ans_rule(7), ans_rule(7) ],

@@ -18,6 +18,7 @@ DOCUMENT();        # This should be the first executable line in the problem.
 loadMacros(
   "PGstandard.pl",
   "PGchoicemacros.pl",
+  "MathObjects.pl",
   "PGcourse.pl"
 );
 
@@ -33,6 +34,8 @@ $n = random(2,10,1);
 $b = random(2,10,1);
 $co1 = 2*$n*$b;
 
+$R=Compute("$co1*x - $b*x^2");
+
 TEXT(EV2(<<EOT));
 
 The demand function for a product is \( p=$co1-$b x \) where \( p \) is the
@@ -41,16 +44,20 @@ Find the level of production
 that maximizes the total revenue and determine the revenue.
 
 $PAR
-\( x= \) \{ans_rule(10)\} units
+Revenue function \( R(x) = \) \{ans_rule(10)\}
 
 $PAR
-\( R= \) $DOLLAR \{ans_rule(10)\}
+Maximum revenue occurs at quantity \( = \) \{ans_rule(10)\} units
+
+$PAR
+Maximum revenue possible is \( = \) $DOLLAR \{ans_rule(10)\}
         
 EOT
 
 $ans1 = $n;
 $ans2 = $b*$n**2;
 
+ANS($R->cmp());
 ANS(num_cmp($ans1));
 ANS(num_cmp($ans2));
 

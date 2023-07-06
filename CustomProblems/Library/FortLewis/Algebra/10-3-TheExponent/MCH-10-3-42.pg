@@ -47,8 +47,8 @@ BEGIN_TEXT
 The value of an investment increases by $BBOLD\($rdaily\)%  every day$EBOLD (as a decimal, \(r=$rdecimal\)). By what percent does it increase in a year?
 $BR
 $BR
-Annual growth rate as a $BITALIC percent $EITALIC \(= \)\{ ans_rule(10) \}%
-\{ AnswerFormatHelp("numbers") \}
+Effective Annual APR  \(= \)\{ ans_rule(10) \}%
+\{ AnswerFormatHelp("numbers") \} (enter your answer as a percent)
 $PAR
 If you do not get the problem after $showHint attempts, you will get a detailed hint.
 

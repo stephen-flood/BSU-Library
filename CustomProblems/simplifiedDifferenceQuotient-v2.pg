@@ -63,16 +63,16 @@ while( $fofxzero==0)
 ## End selection of xzero
 
 ## Evaluate f at (x + xzero) [RESTRICTIVE VERSION]
-#Context("LimitedPolynomial");
-#$coeff1 = $a;
-#$coeff2 = 2*$a*$xzero+$b;
-#$coeff3 = $f->eval(x=>"$xzero");
-#$fxplusxzero = Compute("$coeff1*x^2 + $coeff2*x+ $coeff3")->reduce();
-#$diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
-
-$fxplusxzero = $f->substitute(x=>"x+$xzero");
-$fh = $f->substitute(x=>"h");
+Context("LimitedPolynomial");
+$coeff1 = $a;
+$coeff2 = 2*$a*$xzero+$b;
+$coeff3 = $f->eval(x=>"$xzero");
+$fxplusxzero = Compute("$coeff1*x^2 + $coeff2*x+ $coeff3")->reduce();
 $diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
+
+#$fxplusxzero = $f->substitute(x=>"x+$xzero");
+#$fh = $f->substitute(x=>"h");
+#$diffq = DifferenceQuotient("$a*x + 2*$xzero*$a + $b","x");
 
 
 ##############################################################

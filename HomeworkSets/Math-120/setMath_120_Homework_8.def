@@ -1,0 +1,154 @@
+assignmentType      = default
+openDate          = 03/19/2022 at 03:43pm EDT
+reducedScoringDate = 03/29/2022 at 02:00pm EDT
+dueDate           = 03/29/2022 at 02:00pm EDT
+answerDate        = 03/29/2022 at 02:00pm EDT
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 
+emailInstructor   = 
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-02.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/Hope/Multi1/01-01-Vectors-in-Rn/Vectors-18a.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/Hope/Multi1/01-02-Vector-operations/Graphical_vector_ops_08.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/272/setStewart12_2/problem_3a.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/12_Vector_Geometry/12.1_Vectors_in_the_Plane/12.1.29.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 6
+source_file = Library/UMN/calculusStewartET/s_12_2_prob02/s_12_2_prob02.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 7
+source_file = Library/Union/setMVvectors/vectors-3b.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 8
+source_file = Library/BentleyUniversity/MathematicsOfComputerGraphics/setMoCG-Ch2/2-11-VectorAnimationIn2D.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 9
+source_file = Library/Rochester/setVectors4PlanesLines/ur_vc_2_11.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 10
+source_file = Library/UMN/calculusStewartET/s_12_5_2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 11
+source_file = Library/UMN/calculusStewartET/s_12_5_8.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 12
+source_file = Library/UMN/calculusStewartET/s_12_5_prob01.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 13
+source_file = Library/Utah/Calculus_II/set12_Conics_and_Polar_Coordinates/set12_pr3.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 14
+source_file = Library/Utah/Calculus_II/set12_Conics_and_Polar_Coordinates/set12_pr4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+

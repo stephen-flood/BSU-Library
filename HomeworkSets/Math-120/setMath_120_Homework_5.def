@@ -1,0 +1,74 @@
+assignmentType      = default
+openDate          = 02/13/2022 at 11:24am EST
+reducedScoringDate = 02/22/2022 at 02:00pm EST
+dueDate           = 02/23/2022 at 02:00pm EST
+answerDate        = 02/23/2022 at 02:00pm EST
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 
+emailInstructor   = 
+
+problemListV2 
+problem_start
+problem_id = 1
+source_file = Library/Rochester/setLinearAlgebra5LUfactorization/ur_la_5_9.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 2
+source_file = Library/Rochester/setLinearAlgebra5LUfactorization/ur_la_5_1.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 3
+source_file = Library/Rochester/setLinearAlgebra5LUfactorization/ur_la_5_4.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 4
+source_file = Library/Rochester/setLinearAlgebra5LUfactorization/ur_la_5_7.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 5
+source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.4.6.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 6
+source_file = Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.4.9.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+
