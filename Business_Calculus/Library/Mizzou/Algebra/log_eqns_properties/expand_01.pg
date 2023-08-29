@@ -1,0 +1,105 @@
+##DESCRIPTION
+##  Logarithms: Properties of Logarithms
+##ENDDESCRIPTION
+
+
+## BookTitle('Exponential and Logarithmic Functions')
+## Author1('David Covert')
+## Author2('Teri Christiansen')
+## Author3('Rick Lynch')
+## DBsubject(Algebra)
+## DBchapter(Exponential and logarithmic expressions and functions)
+## DBsection(Properties of logarithms)
+## Date(Spring 2012)
+## Institution(University of Missouri)
+## MLT(LogProp_fillblanks)
+## MLTleader(1)
+## Level(2)
+## MO(1)
+## TitleText1('College Algebra')
+## AuthorText1('Beecher, Penna, Bittinger')
+## EditionText1('4')
+## Section1('5.4')
+## Problem1('')
+## KEYWORDS('logarithm', 'laws of logarithms')
+
+##################################
+#  Initialization
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGunion.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "parserMultiAnswer.pl",
+  "PGcourse.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+);
+
+TEXT(beginproblem());
+
+
+###################################
+# Setup
+
+Context()->variables->add(
+   y=>"Real",
+   z=>"Real",
+   w=>"Real",
+   u=>"Real",
+   v=>"Real",
+   p=>"Real",
+   q=>"Real",
+   r=>"Real",
+   k=>"Real",
+   m=>"Real",
+   n=>"Real",
+   A=>"Real",
+   B=>"Real",
+   C=>"Real",
+   D=>"Real",
+   S=>"Real",
+   T=>"Real",);
+
+$var1 = list_random('A','B','C','D','S','T');
+$var2 = list_random('p','q','r','k','m','n');
+$var3 = list_random('x','y','z','w','u','v');
+
+$m = random(2,10,1);
+$n = random(2,10,1);
+do {$l = random(2,10,1)} until (gcd( $m, $l) ==1);
+
+###################################
+# Main text
+$texanswer = "\($m \log(x) + $n \log(y) + $l \log(z)\)";
+Context()->texStrings;
+BEGIN_TEXT
+Write the following as a sum of logarithms:
+$PAR
+\( \log(x^{$m} y^{$n} z^{$l} ) = \) \{ans_rule(3)\} \(\log(x) +\) \{ans_rule(3)\} \(\log(y) +\) \{ans_rule(3)\} \(\log(z)\)
+
+END_TEXT
+
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch_logarithms", "assemblage-lawsoflogs", "Laws of Logarithms")   @]*
+* [@  buscalcbooklink("ch_logarithms", "ex_usingloglaws", "EXAMPLE")   @]*
+END_PGML_HINT
+
+
+###################################
+# Answers
+
+$showPartialCorrectAnswers = 1;
+
+ANS( Compute($m)-> cmp() );
+ANS( Compute($n)-> cmp() );
+ANS( Compute($l)-> cmp() );
+
+ENDDOCUMENT();

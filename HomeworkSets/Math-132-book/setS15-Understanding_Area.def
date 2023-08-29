@@ -1,0 +1,94 @@
+assignmentType      = default
+openDate          = 12/12/2023 at 11:59pm EST
+reducedScoringDate = 12/12/2023 at 11:59pm EST
+dueDate           = 12/12/2023 at 11:59pm EST
+answerDate        = 12/12/2023 at 11:59pm EST
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2
+problem_start
+problem_id = 1
+source_file = local/Business_Calculus/Library/ASU-topics/setCalculusFundamentalTheorem/6-5-19.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = local/Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C05S04-IndefInts/5-4-21.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = local/Business_Calculus/Library/ASU-topics/setCalculusFundamentalTheorem/6-5-13.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = local/Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C05S03-FundThmCalc/5-3-21.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = local/Business_Calculus/Library/Valdosta/APEX_Calculus/5.2/APEX_5.2_10.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = local/Business_Calculus/Library/FortLewis/Calc1/05-02-Definite-integral/HGM5-05-02-Definite-integral-27.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = local/Business_Calculus/Library/Valdosta/APEX_Calculus/5.2/APEX_5.2_6.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = local/Business_Calculus/Library/UCSB/Stewart5_5_2/Stewart5_5_2_35.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+

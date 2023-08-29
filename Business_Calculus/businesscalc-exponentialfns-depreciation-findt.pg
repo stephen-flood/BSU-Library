@@ -1,0 +1,120 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+
+## DBsubject(Algebra)
+## DBchapter(Exponential and logarithmic expressions and functions)
+## DBsection(Applications and models - general)
+## Date(9/27/2021)
+## Level(3)
+## KEYWORDS('sample')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(P => 'Real', t => 'Real');
+Context()->variables->set(t => {limits => [3,5]});
+Context()->variables->set(P => {limits => [3,5]});
+
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+do{
+    # The amount to reduce each year
+    $RR = random(2,15,0.1);
+    $DRR = Compute("$RR/100");
+    
+    # percent remaining of value
+    $PR = random(5,30,0.1);
+    $DPR = Compute("$PR/100");
+} while ( abs($RR - $PR) < 1 ) ;
+
+$FV = Compute("P * ( 1 - ($RR)/100 )^t"); 
+
+$T = Compute("ln($PR/100)/ln(1-$RR/100)")->with(
+  tolType => 'absolute',
+  tolerance => .001,
+);;
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+
+Alien Publications owns a printing press. The press will need to be replaced when it is worth only [$PR]% of its current worth. It depreciates (decreases in value) by [$RR]% per year. 
+
+1.  Suppose you the original value of the press is [`P`] dollars.  Write a formula for the value remaining after [`t`] years.  
+Future value = [____________________]{$FV}  
+(Enter your answer as a function using the variables [`P`] and [`t`])
+
+2.  Find the time [`t`] when they will need to replace the press.  
+[____________________]{$T} years  
+(Enter your answer in exact form, or keep at least three decimal places of accuracy)  
+END_PGML
+
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch_logarithms", "ex_depreciation2", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch_logarithms", "interactive_depreciation", "Interactive Graphical Exploration")   @]*
+END_PGML_HINT
+
+
+#$showHint = 0;
+BEGIN_PGML_HINT
+In accounting and finance, "depreciation" just means "decreasing the value" of some asset.
+In this example, we are depreciating the value of an asset with an unspecified value of [`P`] by an amount of [`[$RR]`]% each year. 
+
+Mathematically, "Decreasing [`P`] by [`[$RR]`]%" is the same as subtracting [`[$DRR]\, P`] from the starting value of [`P`].
+In other words, reducing [`P`] by [`[$RR]`]% one time is the same as computing  
+[`P -[$DRR]\, P = P(1 - [$DRR])`] 
+
+Each time we depreciate (reduce the value) of [`P`], we multiply [`P`] by another increment of [`(1 - [$DRR])`]
+
+Therefore, after [`t`] years, the value remaining in the future will be [`F = P (1 - [$DRR])^t`]. 
+
+For part (b), you want to solve for the time such that [`F = [$DPR]\, P`].  You can now use your answer to part (a) to set up and solve an appropriate exponential equation. 
+
+END_PGML_HINT
+
+ENDDOCUMENT();

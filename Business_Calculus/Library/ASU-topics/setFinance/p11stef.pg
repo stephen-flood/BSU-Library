@@ -1,0 +1,53 @@
+## DESCRIPTION
+## Applied Mathematics
+## ENDDESCRIPTION
+
+## Tagged by XW
+
+## DBsubject(Financial mathematics)
+## DBchapter(Interest)
+## DBsection(Compound interest)
+## Institution(ASU)
+## Level(3)
+## KEYWORDS('percent', 'mathematics for business', 'algebraic expression')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGasu.pl",
+  "PGcourse.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+);
+
+TEXT(beginproblem());
+
+$A = random(25,55,1)*100;
+$b = random(2,7,1);
+
+$c = random(3,15,1);
+$r = $c/100;
+
+TEXT(EV2(<<EOT));
+A mutual fund pays $c$PERCENT compounded monthly. How much should I invest now
+so that $b years from now I will have $DOLLAR$A in the account?
+$BR
+$BR
+Amount  = $DOLLAR \{ans_rule(20)\}
+
+EOT
+$ans = $A/(1+$r/12)**($b*12);
+ANS(num_cmp($ans));
+
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch_exponentials", "ex_compoundinterest1", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch_exponentials", "ex_compoundinterest2", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch_exponentials", "ex_compoundinterest3", "EXAMPLE")   @]*
+END_PGML_HINT
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

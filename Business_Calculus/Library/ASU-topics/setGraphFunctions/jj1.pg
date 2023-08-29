@@ -1,0 +1,73 @@
+## DESCRIPTION
+## Algebra
+## ENDDESCRIPTION
+
+## Tagged by XW
+
+## DBsubject(Algebra)
+## DBchapter(Quadratic equations and functions)
+## DBsection(Applications and models)
+## Institution(ASU)
+## MLT(cost_quadfunction)
+## Level(2)
+## KEYWORDS('algebra', 'graphs', 'functions')
+
+#
+# First comes some stuff that appears at the beginning of every problem
+#
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGasu.pl",
+  "PGcourse.pl",
+  "MathObjects.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+);
+
+TEXT(beginproblem());
+
+$d = random(30,90,10);
+$a = $d + random(10,30);
+$b = random(1,20)*0.001;
+$bstr = sprintf("%6.3f", $b);
+$c = random(21, 69,1)*10;
+
+$P = Compute("($a*x - $bstr*x^2) - ($c + $d*x) ");
+
+BEGIN_TEXT
+The marketing department of a company estimates that the demand for a product
+is given by \(p=$a - $bstr x\) dollars, where \(p\) is the price per unit and \(x\)
+is the number of units.
+$PAR
+The cost of producing \(x\) units is given by \(C = $c + $d x\) dollars.
+
+$PAR
+Find the function that tells you the profit for producing \(x\) units
+$BR
+\( P(x) = \) \{ans_rule(60)\}
+
+$PAR
+Skech the graph of the profit function and estimate the number
+of units that would produce a maximum profit.
+	$PAR
+	quantity \(x\) that results in a maximum profit \(P\) = \{ans_rule(60)\}
+END_TEXT
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch_polynomials_and_rationals", "ex_profit_from_pricecost", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch_polynomials_and_rationals", "ex_profit_fromRC", "EXAMPLE")   @]*
+END_PGML_HINT
+
+
+
+ANS($P->cmp());
+ANS(num_cmp(($a-$d)/(2*$b),tolType=> 'absolute', tol=>5));
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
+

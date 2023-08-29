@@ -1,0 +1,77 @@
+##DESCRIPTION
+##Calculus: Differentiation
+##ENDDESCRIPTION
+
+##Tagged by YJ
+## Updated December 2014 at OPL Workshop by JDA
+
+
+
+## DBsubject(Calculus - single variable)
+## DBchapter(Differentiation)
+## DBsection(Product rule (without trigonometric functions))
+## Date(5/26/2005)
+## Institution(UCSB)
+## Author(Jeff Holt)
+## Level(4)
+## MO(1)
+## TitleText1('Calculus: Early Transcendentals')
+## AuthorText1('Stewart')
+## EditionText1('5')
+## Section1('3.2')
+## Problem1('')
+## TitleText2('Calculus: Early Transcendentals')
+## AuthorText2('Stewart')
+## EditionText2('6')
+## Section2('3.2')
+## Problem2('')
+## KEYWORDS('calculus', 'differentiation','Product','Quotient','Differentiation')
+
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+
+);
+
+Context('Numeric');
+
+$a = random(2,8,1)*random(-1,1,2);
+
+
+$x0 = random(1,3,1);
+$y0 = $a*$x0*exp($x0);
+$m = $a*$x0*exp($x0)+$a*exp($x0);
+
+TEXT(beginproblem());
+
+$showPartialCorrectAnswers = 1;
+
+BEGIN_TEXT
+Find an equation for the line tangent to the graph of
+\[
+f(x) = $a x e^x
+\]
+at the point \(($x0,f($x0))\).
+$BR $BR
+\(y\) = \{ans_rule(30)\}
+END_TEXT
+
+$ans = Compute("$y0 + $m*(x-$x0)");
+
+ANS($ans->cmp);
+
+$showHint=-1;
+BEGIN_PGML_HINT
+This problem requires combining ideas from two different kinds of problems
+* [@  buscalcbooklink("ch_basicderivativerules", "ex_basicderivativestangent", "EXAMPLE - Finding Tangent Lines")   @]*
+* [@  buscalcbooklink("ch_productquotientrule", "ex_productrule1", "EXAMPLE - Product Rule")   @]*
+* [@  buscalcbooklink("ch_productquotientrule", "ex_productrule2", "EXAMPLE - Product Rule")   @]*
+* [@  buscalcbooklink("ch_productquotientrule", "ex_productrule3", "EXAMPLE - Product Rule")   @]*
+END_PGML_HINT
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

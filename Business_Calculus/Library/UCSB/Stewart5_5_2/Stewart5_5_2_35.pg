@@ -1,0 +1,52 @@
+## DBsubject(Calculus - single variable)
+## DBchapter(Integrals)
+## DBsection(Conceptual understanding of integration)
+## Institution(UCSB)
+## Level(2)
+## Static(1)
+## TitleText1('Calculus: Early Transcendentals')
+## AuthorText1('Stewart')
+## EditionText1('5')
+## Section1('5.2')
+## Problem1('35')
+## KEYWORDS('integration')
+
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+);
+
+TEXT(&beginproblem);
+$showPartialCorrectAnswers = 1;
+$a=random(1,10,1)*random(-1,1,2);
+$b=random(1,10,1)*random(-1,1,2);
+$c=random(1,10,1)*random(-1,1,2);
+
+BEGIN_TEXT
+
+$PAR
+Evaluate the following integral by interpreting it in terms of areas:
+\[\int_{0}^{\,3} {\left(\frac{1}{2}x-1\right)}\, dx\]
+
+$PAR
+Value of integral = \{ans_rule(50)\}
+
+END_TEXT
+
+ANS(num_cmp("-.75"));
+
+
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch_introducingarea", "ex_graphicalarea1", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch_introducingarea", "ex_graphicalarea2", "EXAMPLE")   @]*
+END_PGML_HINT
+
+ENDDOCUMENT();

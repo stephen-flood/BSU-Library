@@ -1,0 +1,108 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+
+## DBsubject(Algebra)
+## DBchapter(Exponential and logarithmic expressions and functions)
+## DBsection(Applications and models - general)
+## Date(6/25/2018)
+## Level(3)
+## KEYWORDS('sample')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+#Context()->flags->set(tolType=>relative);
+
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+$PP = random(20000, 100000,10000);
+
+$RR = random(2,20,0.1);
+$DRR = Compute("$RR/100");
+
+$TT = random(5,40,1);
+
+$FV = Compute("$PP*(1 - $RR/100)^x");
+
+$FVatT = $FV->eval(x=>$TT);
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+
+Alien Publications purchased some industrial equipment for [$PP] dollars. The equipment decreases in value (depreciates) by [$RR]% per year. How much is the equipment worth after [$TT] years?  
+
+[____________________]{"$FVatT"} dollars
+
+
+*Note:* You must enter an exact answer, or keep at least 2 places of decimal accuracy.
+
+END_PGML
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch_exponentials", "ex_depreciation1", "EXAMPLE")   @]*
+END_PGML_HINT
+
+$showHint=1;
+BEGIN_PGML_HINT
+You can find the amount remaining after depreciation in two different ways.  
+
+One of the best ways to do this is to reason from "first principles".  Recall that decreasing a value of [`P`] by [$RR]% once is the same as computing  
+[`` P - [$DRR] P = P\cdot ( 1 - [$DRR])``]  
+Each time you reduce by [$RR]%, you multiply by an additional term of [`( 1 - [$DRR])`].  In other words, the value after [`t`] years is given by  
+[`` P \cdot ( 1 - [$DRR] )^t ``]. 
+
+If the reasoning above is hard to remember, you can also approach this problem by thinking carefully, and by using the compound interest formula.  
+Because you are *decreasing* the value by [$RR]%, the rate is [` r = -[$DRR] `].  (Note that the rate is *negative* here, because the balance is *decreasing*, as opposed to compound interest where the rate is positive because the balance is increasing.)  
+Because you are reducing the value once per year, you have [` m = 1`].  You can then plug these values into the compound interest formula  
+[`` F = P \cdot \left( 1 + \frac{r}{m}\right)^{mt} =  P \cdot ( 1 - [$DRR])^t ``]  
+which is the same formula as from first principles. 
+END_PGML_HINT
+
+
+ENDDOCUMENT();

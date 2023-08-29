@@ -1,0 +1,69 @@
+##DESCRIPTION
+## DBsubject(Algebra)
+## DBchapter(Linear equations and functions)
+## DBsection(Applications and models)
+## Institution(NAU)
+## Author(Monika Keindl)
+## MLT(SupplyDemand)
+## Level(3)
+## MO(1)
+## KEYWORDS('supply', 'demand','business', 'supply','application')
+##ENDDESCRIPTION
+
+# File Created: 07/19/2010
+# Location: Northern Arizona University
+# Course: Finite Mathematics
+
+DOCUMENT();     
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+
+);
+
+TEXT(&beginproblem);
+
+Context('Numeric');
+$x = Formula('x');  # used to construct formulas below.
+
+
+$a=random(180,220,10);
+$p=random(300,350,10);
+$aa=random(1000,1200,10);
+$pp=random(230,260,10);
+
+$slope=($p-$pp)/($a-$aa);
+$yint=$p-$slope*$a;
+
+$ans1=($slope*$x+$yint) -> reduce;
+# $ans1 -> {test_points}=[[0],[200],[-1100],[50]];
+$ans1 -> {tolType}='absolute';
+
+
+
+BEGIN_TEXT
+
+The quantity demanded for an iPad is $a units when the unit price is set at $DOLLAR$p. The quantity 
+demanded is $aa units when the price is $DOLLAR$pp. Find the demand price 
+equation. (Here \(x\) is the quantity, \(p\) is the unit price, and the demand function is linear.)  
+
+$BR 
+\( p(x) = \)\{ans_rule(20)\}  
+END_TEXT
+
+ANS($ans1->cmp);
+
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch-algebra_linearfunctions", "eg_demandprice_1", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch-algebra_linearfunctions", "explore_pricefn1", "EXAMPLE")   @]*
+END_PGML_HINT
+
+
+ENDDOCUMENT();      
+

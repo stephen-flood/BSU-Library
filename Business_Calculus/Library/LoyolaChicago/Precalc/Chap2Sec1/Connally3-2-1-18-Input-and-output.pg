@@ -1,0 +1,175 @@
+## DESCRIPTION
+## Functions: Input and Output
+
+
+## DBsubject(Algebra)
+## DBchapter(Functions)
+## DBsection(Graphs)
+## Date(01/01/10)
+## Institution(Fort Lewis College)
+## Author(Paul Pearson)
+## MLT(graphicEval)
+## Level(2)
+## MO(1)
+## TitleText1('Functions Modeling Change')
+## TitleText2('Functions Modeling Change')
+## TitleText3('Functions Modeling Change')
+## AuthorText1('Connally')
+## AuthorText2('Connally')
+## AuthorText3('Connally')
+## EditionText1('3')
+## EditionText2('4')
+## EditionText3('5')
+## Section1(2.1)
+## Section2(2.Review)
+## Section3('2.Review')
+## Problem1(18)
+## Problem2(12)
+## Problem3('12')
+## KEYWORDS('functions','evaluating','solving','input','output')
+
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "PGgraphmacros.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  "contextInequalities.pl",
+  "unionTables.pl",
+  "PGcourse.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+);
+
+TEXT(beginproblem());
+
+##############################################
+#  Setup
+
+Context("Numeric");
+#Context()->flags->set(tolerance=>0, tolType=>"absolute");
+
+$a = random(2,3,2); # left x-intercept
+$b = random(2,4,2); # right x-intercept
+$c = random(5,6,1); # y-intercept
+
+$k = Compute("-($c)/($a * $b)");
+
+$A = Compute("$k");
+$B = Compute("$k*($a - $b)");
+$C = Compute("-($k * $a * $b)");
+
+$gr = init_graph(-5,-1,5,9,axes=>[0,0],grid=>[10,10]);
+
+$gr->lb('erase');
+foreach my $i (-4, -3, -2, -1, 1, 2, 3, 4) {
+  $gr->lb( new Label($i,-0.75,$i,'black','center','middle'));
+}
+
+foreach my $i (1..8) {
+  $gr->lb( new Label(-4.75,$i,$i,'black','center','middle'));
+}
+
+
+add_functions($gr, "$A*x**2+$B*x+$C for x in <-5,5> using color:blue and weight:2");
+$gr -> lb(new Label ( 4.5,0,'x','black','left','bottom'));
+$gr -> lb(new Label ( 0.25,8.5,'y','black','left','bottom'));
+$gr -> lb(new Label ( 0.25,$c,'y = f(x)','black','left','bottom'));
+
+
+#############################################
+#  Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+\{
+ColumnTable(
+"The graph of \( y = f(x) \) is given in the figure.".
+$BR.
+$BR.
+"(a) \( f(0) \) = ".
+ans_rule(20).
+$BR.
+$BR.
+"(b) For what x-value(s) is \( f(x) = 0 \)? ".
+ans_rule(20).
+$PAR.
+"If there are multiple solutions \(a\) and \(b\), enter your answer in the following format: \( x = a \text{ or } x=b\)".
+$BR.
+$BR.
+"(c) For what x-value(s) is \( f(x) > 0 \)? ".
+ans_rule(20).$SPACE.AnswerFormatHelp("intervals").
+$BR.
+"Enter your answer using interval notation"
+,
+$BCENTER.
+image(insertGraph($gr), width=>400, height=>400, tex_size=>600).
+$BR.
+"(Click on graph to enlarge)".
+$ECENTER
+,
+indent=>"0", separation=>"30", valign=>"TOP"
+);
+\}
+END_TEXT
+Context()->normalStrings;
+
+
+###############################################
+#  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS(Real("$c")->cmp(tolerance=>0, tolType=>"absolute"));
+
+Context("Inequalities");
+#ANS(List(Real("-$a"),Real("$b"))->cmp(tolerance=>0, tolType=>"absolute"));
+ANS(Compute("x=-$a or x=$b")->cmp());
+
+Context("Interval");
+#Context("Inequalities");
+
+ANS(Compute("(-$a,$b)")->cmp());
+
+Context()->texStrings;
+SOLUTION(EV3(<<'END_SOLUTION'));
+$PAR
+$BBOLD SOLUTION $EBOLD
+$PAR
+(a) From the graph, we see that the \(y\)-intercept is \(y = $c\),
+so \(f(0) = $c\).
+
+$PAR
+(b) The \(x\)-intercepts are \(x = -$a\) and \(x = $b\).
+
+$PAR
+(c) The graph of \(f(x)\) is above the \(x\)-axis for
+\(-$a < x < $b\).
+
+END_SOLUTION
+Context()->normalStrings;
+
+## A macro link for the ebook.  
+##   INPUT: ( chapter-xml:id , exercise-xml:id , Link Text)
+##   RETURNS: a html link to the relevant part of the ebook
+#sub buscalcbooklink
+#{
+#    my ($chapterid , $exerciseid, $linktext ) = @_ ;
+#    my $linkurl = "https://webwork.bridgew.edu/oer/Business_Calculus/" . $chapterid . ".html#" . #$exerciseid ; 
+#    return htmlLink("$linkurl","$linktext", "Target='_blank'");
+#}
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch-functions", "ex-reading_graphs", "EXAMPLE")   @]*
+
+For more information, see the following videos from Khan Academy
+* [@ htmlLink( "https://www.khanacademy.org/math/college-algebra/xa5dd2923c88e7aa8:functions/xa5dd2923c88e7aa8:inputs-and-outputs-of-a-function/v/matching-function-input-to-output-with-graph", "Matching inputs and outputs on graphs" , "TARGET='_blank'" )  @]*
+* [@ htmlLink( "https://www.khanacademy.org/math/college-algebra/xa5dd2923c88e7aa8:functions/xa5dd2923c88e7aa8:intervals-where-a-function-is-positive-negative-increasing-or-decreasing/v/increasing-decreasing-positive-and-negative-intervals", "Finding positive and negative intervals" , "TARGET='_blank'" )  @]*
+
+END_PGML_HINT
+
+;
+ENDDOCUMENT();

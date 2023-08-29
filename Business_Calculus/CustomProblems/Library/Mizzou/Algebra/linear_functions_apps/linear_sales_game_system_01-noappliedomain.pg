@@ -1,0 +1,124 @@
+# DESCRIPTION
+# A certain company is selling game systems. The student must
+# determine the linear sales function given two points. They must
+# also figure out the domain of this function and find the value
+# of a random point.
+# ENDDESCRIPTION
+
+## DBsubject(Algebra)
+## DBchapter(Linear equations and functions)
+## DBsection(Applications and models)
+## Institution(University of Missouri-Columbia)
+## Author(Patrick Spencer)
+## Level(2)
+## KEYWORDS('problem solving', 'linear', 'equations')
+
+
+#################################################################
+# initialization 
+#################################################################
+
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl",
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+
+);
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+
+#################################################################
+# setup contexts and variables 
+#################################################################
+
+$yint_base = random(1,4);
+$yint = $yint_base*50;
+do {
+  $domep_base = random(2,7);
+} until ( 
+  gcd($yint_base,$domep_base)==1
+);
+# domep = domain right endpoint
+# we want x1 < x2 < x3 < domep
+$domep = $domep_base*5*10;
+$x3 = $domep_base*5*random(7,9);
+$x2 = $domep_base*5*random(4,6);
+$x1 = $domep_base*5*random(2,3);
+
+$slope = -$yint/$domep;
+$disp_slope = "-\frac{$yint_base}{$domep_base}";
+$disp_eq = "$disp_slope x+$yint";
+
+# x3 is the x value we ask students to plug into the problem
+$rand = $domep_base*5*random(2,7);
+$p1 = $slope*$x1+$yint;
+$p2 = $slope*$x2+$yint;
+
+Context("Numeric");
+$eq = Compute("$slope*x+$yint");
+
+Context("Interval");
+$domain = Interval([0,$domep]);
+
+$quanititywhenfree = Compute("$domep");
+$pricetosellnothing = $eq->eval(x=>0);
+
+Context("Numeric");
+$p3 = Compute("$slope*$x3+$yint");
+
+#################################################################
+# state the problem 
+#################################################################
+
+Context()->texStrings;
+BEGIN_TEXT
+A local retailer has determined that the number \(x\) of PortaBoy
+game systems sold in a week is related to the price \(p\) in
+dollars of each system. \($x1\) game
+systems were sold when the price was $\($p1\). When the systems went on sale the following
+week, \($x2\) systems were sold at $\($p2\) a piece.
+$PAR
+(a) Find a linear function which fits this data. Use the weekly
+sales \(x\) as the independent variable and the price \(p\) as
+the dependent variable. $PAR
+Answer: \(p(x) = \)\{ans_rule(25)\}
+$PAR
+(b) If the retailer wants to sell \($x3\) PortaBoys next week,
+what should the price be?$PAR
+Answer: \(p=\) \{ans_rule(25)\} dollars
+$PAR
+(c) Find the quantity that you would "sell" if you set the price to \(0\).  In other words, how many units can you give away for free?  $PAR
+Answer: \(x=\)\{ans_rule(25)\} 
+$PAR
+(d) Find the lowest price at which you would sell \(0\) items.$PAR
+Answer: \(p=\)\{ans_rule(25)\} 
+END_TEXT
+
+
+#################################################################
+# check the answer  
+#################################################################
+
+ANS($eq->cmp());
+ANS($p3->cmp());
+ANS($quanititywhenfree->cmp());
+ANS($pricetosellnothing->cmp());
+
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch-algebra_linearfunctions", "eg_demandprice_1", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch-algebra_linearfunctions", "explore_pricefn1", "EXAMPLE")   @]*
+END_PGML_HINT
+
+
+
+COMMENT('Slope will always be a nice fraction. The y-intercept is always
+  a multiple of 50 as is the right domain endpoint. Random x
+  values will always be multiples the denominator of slope and 5.');
+ENDDOCUMENT();
