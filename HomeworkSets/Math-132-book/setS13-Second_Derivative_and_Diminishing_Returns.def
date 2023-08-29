@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2
 problem_start
 problem_id = 1
-source_file = Business_Calculus/Library/UCSB/Stewart5_3_7/Stewart5_3_7_6.pg
+source_file = CustomProblems/Business_Calculus/Library/UCSB/Stewart5_3_7/Stewart5_3_7_6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Business_Calculus/Library/Valdosta/APEX_Calculus/2.3/APEX_2.3_29.pg
+source_file = CustomProblems/Business_Calculus/Library/Valdosta/APEX_Calculus/2.3/APEX_2.3_29.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Business_Calculus/Library/ASU-topics/setSecondDerivative/4-3-31.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setSecondDerivative/4-3-31.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S07-HigherDerivs/3-7-43.pg
+source_file = CustomProblems/Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S07-HigherDerivs/3-7-43.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S07-HigherDerivs/3-7-46.pg
+source_file = CustomProblems/Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S07-HigherDerivs/3-7-46.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Business_Calculus/Library/ASU-topics/setSecondDerivative/4-3-53.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setSecondDerivative/4-3-53.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_20.pg
+source_file = CustomProblems/Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_20.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_19.pg
+source_file = CustomProblems/Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_19.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Business_Calculus/Library/ASU-topics/setSecondDerivative/4-4-50.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setSecondDerivative/4-4-50.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_6-7.pg
+source_file = CustomProblems/Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_6-7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_8-9.pg
+source_file = CustomProblems/Business_Calculus/Library/Valdosta/APEX_Calculus/3.4/APEX_3.4_8-9.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Business_Calculus/assessment-derivatives-concavity-from-splines.pg
+source_file = CustomProblems/Business_Calculus/assessment-derivatives-concavity-from-splines.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

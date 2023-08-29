@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2
 problem_start
 problem_id = 1
-source_file = Business_Calculus/Library/ma122DB/set5/s3_5_7.pg
+source_file = CustomProblems/Business_Calculus/Library/ma122DB/set5/s3_5_7.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-25.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-25.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = Business_Calculus/Library/Rochester/setDerivatives5ChainRule/s2_5_3.pg
+source_file = CustomProblems/Business_Calculus/Library/Rochester/setDerivatives5ChainRule/s2_5_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-27.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-27.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = Business_Calculus/Library/Rochester/setDerivatives5ChainRule/s2_5_6.pg
+source_file = CustomProblems/Business_Calculus/Library/Rochester/setDerivatives5ChainRule/s2_5_6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-75.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-75.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = Business_Calculus/Library/Michigan/Chap3Sec4/Q05.pg
+source_file = CustomProblems/Business_Calculus/Library/Michigan/Chap3Sec4/Q05.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = Business_Calculus/Library/Rochester/setDerivatives5ChainRule/s2_5_8_mo.pg
+source_file = CustomProblems/Business_Calculus/Library/Rochester/setDerivatives5ChainRule/s2_5_8_mo.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-77.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-77.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/5-2-28.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/5-2-28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-37.pg
+source_file = CustomProblems/Business_Calculus/Library/ASU-topics/setChainRulePowerFunctions/3-6-37.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = Business_Calculus/Library/Michigan/Chap3Sec4/Q41.pg
+source_file = CustomProblems/Business_Calculus/Library/Michigan/Chap3Sec4/Q41.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = Business_Calculus/Library/Michigan/Chap3Sec6/Q01.pg
+source_file = CustomProblems/Business_Calculus/Library/Michigan/Chap3Sec6/Q01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = Business_Calculus/Library/UBC/setLogExpos/log3.pg
+source_file = CustomProblems/Business_Calculus/Library/UBC/setLogExpos/log3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S08-DerivLogs/3-8-16.pg
+source_file = CustomProblems/Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S08-DerivLogs/3-8-16.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = Business_Calculus/Library/Union/setDervChainRule/an4_4_28.pg
+source_file = CustomProblems/Business_Calculus/Library/Union/setDervChainRule/an4_4_28.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -173,7 +173,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 17
-source_file = Business_Calculus/Library/OSU/high_school_apcalc/dchmwk4/prob12.pg
+source_file = CustomProblems/Business_Calculus/Library/OSU/high_school_apcalc/dchmwk4/prob12.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -183,7 +183,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 18
-source_file = Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S08-DerivLogs/3-8-27.pg
+source_file = CustomProblems/Business_Calculus/Library/UVA-Stew5e/setUVA-Stew5e-C03S08-DerivLogs/3-8-27.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -193,7 +193,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 19
-source_file = Business_Calculus/Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-21.pg
+source_file = CustomProblems/Business_Calculus/Library/Hope/Calc1/03-01-Tangents/Thomas12-03-01-21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
