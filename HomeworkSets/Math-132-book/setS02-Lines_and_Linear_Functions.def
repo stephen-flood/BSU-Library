@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2
 problem_start
 problem_id = 1
-source_file = local/Business_Calculus/Library/ASU-topics/setLinesInPlane/lines2.pg
+source_file = Business_Calculus/Library/ASU-topics/setLinesInPlane/lines2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Business_Calculus/Library/NewHampshire/NECAP/grade8/gr8-2005/n8-2005-7s.pg
+source_file = Business_Calculus/Library/NewHampshire/NECAP/grade8/gr8-2005/n8-2005-7s.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = local/Business_Calculus/Library/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasics10.pg
+source_file = Business_Calculus/Library/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasics10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = local/Business_Calculus/Library/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA10.pg
+source_file = Business_Calculus/Library/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = local/Business_Calculus/Library/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquation10.pg
+source_file = Business_Calculus/Library/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquation10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = local/Business_Calculus/Library/NAU/setLines/linearfunc1.pg
+source_file = Business_Calculus/Library/NAU/setLines/linearfunc1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = local/Business_Calculus/Library/Utah/Business_Algebra/set6_Linear_Equations_and_Functions/p21.pg
+source_file = Business_Calculus/Library/Utah/Business_Algebra/set6_Linear_Equations_and_Functions/p21.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = local/Business_Calculus/CustomProblems/Library/NAU/setLines/supplydemand1.pg
+source_file = Business_Calculus/CustomProblems/Library/NAU/setLines/supplydemand1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = local/Business_Calculus/CustomProblems/Library/Mizzou/Algebra/linear_functions_apps/linear_sales_game_system_01-noappliedomain.pg
+source_file = Business_Calculus/CustomProblems/Library/Mizzou/Algebra/linear_functions_apps/linear_sales_game_system_01-noappliedomain.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = local/Business_Calculus/businesscalc-supply-demand-v1.pg
+source_file = Business_Calculus/businesscalc-supply-demand-v1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = local/Business_Calculus/businesscalc-supply-demand-v2.pg
+source_file = Business_Calculus/businesscalc-supply-demand-v2.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1

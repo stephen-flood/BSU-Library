@@ -13,7 +13,7 @@ emailInstructor   =
 problemListV2
 problem_start
 problem_id = 1
-source_file = local/Business_Calculus/UMN/calculusStewartCCC/s_2_2_5.pg
+source_file = Business_Calculus/UMN/calculusStewartCCC/s_2_2_5.pg
 value = 1
 max_attempts = -1
 showMeAnother = -2
@@ -23,7 +23,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Business_Calculus/Library/ASU-topics/setLimitConcepts/3-2-36.pg
+source_file = Business_Calculus/Library/ASU-topics/setLimitConcepts/3-2-36.pg
 value = 1
 max_attempts = -1
 showMeAnother = -2
@@ -33,7 +33,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 3
-source_file = local/Business_Calculus/Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_10.pg
+source_file = Business_Calculus/Library/Valdosta/APEX_Calculus/1.6/APEX_1.6_10.pg
 value = 1
 max_attempts = -1
 showMeAnother = -2
@@ -43,7 +43,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 4
-source_file = local/Business_Calculus/Library/UMN/calculusStewartCCC/s_2_4_prob01.pg
+source_file = Business_Calculus/Library/UMN/calculusStewartCCC/s_2_4_prob01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -2
@@ -53,7 +53,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 5
-source_file = local/Business_Calculus/Library/ASU-topics/setContinuity/4-1-53.pg
+source_file = Business_Calculus/Library/ASU-topics/setContinuity/4-1-53.pg
 value = 1
 max_attempts = -1
 showMeAnother = -2
@@ -63,7 +63,7 @@ att_to_open_children = 1
 problem_end
 problem_start
 problem_id = 6
-source_file = local/Business_Calculus/Library/Michigan/Chap1Sec8/Q15.pg
+source_file = Business_Calculus/Library/Michigan/Chap1Sec8/Q15.pg
 value = 1
 max_attempts = -1
 showMeAnother = -2

@@ -13,7 +13,7 @@ emailInstructor   = 0
 problemListV2
 problem_start
 problem_id = 1
-source_file = local/Business_Calculus/Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg
+source_file = Business_Calculus/Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -23,7 +23,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 2
-source_file = local/Business_Calculus/Library/Rochester/setAlgebra28ExpFunctions/srw4_1_3.pg
+source_file = Business_Calculus/Library/Rochester/setAlgebra28ExpFunctions/srw4_1_3.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -33,7 +33,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 3
-source_file = local/Business_Calculus/Library/Utah/Business_Algebra/set8_Exponential_and_Logarithmic_Functions/p01/p01.pg
+source_file = Business_Calculus/Library/Utah/Business_Algebra/set8_Exponential_and_Logarithmic_Functions/p01/p01.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -43,7 +43,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 4
-source_file = local/Business_Calculus/CustomProblems/Exponent-rules.pg
+source_file = Business_Calculus/CustomProblems/Exponent-rules.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -53,7 +53,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 5
-source_file = local/Business_Calculus/CustomProblems/Exponent-rules-neg-exponent.pg
+source_file = Business_Calculus/CustomProblems/Exponent-rules-neg-exponent.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -63,7 +63,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 6
-source_file = local/Business_Calculus/Library/FortLewis/Algebra/10-1-Exponential-Functions/MCH1-10-1-8.pg
+source_file = Business_Calculus/Library/FortLewis/Algebra/10-1-Exponential-Functions/MCH1-10-1-8.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -73,7 +73,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 7
-source_file = local/Business_Calculus/Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-6.pg
+source_file = Business_Calculus/Library/FortLewis/Algebra/10-3-TheExponent/MCH-10-3-6.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -83,7 +83,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 8
-source_file = local/Business_Calculus/Library/FortLewis/Algebra/10-1-Exponential-Functions/MCH1-10-1-38.pg
+source_file = Business_Calculus/Library/FortLewis/Algebra/10-1-Exponential-Functions/MCH1-10-1-38.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -93,7 +93,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 9
-source_file = local/Business_Calculus/Library/PCC/BasicAlgebra/NumberBasics/PercentOfNumber90.pg
+source_file = Business_Calculus/Library/PCC/BasicAlgebra/NumberBasics/PercentOfNumber90.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -103,7 +103,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 10
-source_file = local/Business_Calculus/Library/LoyolaChicago/Precalc/Chap3Sec1/Q09.pg
+source_file = Business_Calculus/Library/LoyolaChicago/Precalc/Chap3Sec1/Q09.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -113,7 +113,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 11
-source_file = local/Business_Calculus/Library/LoyolaChicago/Precalc/Chap3Sec1/Q20.pg
+source_file = Business_Calculus/Library/LoyolaChicago/Precalc/Chap3Sec1/Q20.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -123,7 +123,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 12
-source_file = local/Business_Calculus/businesscalc-exponentialfns-depreciation.pg
+source_file = Business_Calculus/businesscalc-exponentialfns-depreciation.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -133,7 +133,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 13
-source_file = local/Business_Calculus/Library/ASU-topics/setFinance/p5stef.pg
+source_file = Business_Calculus/Library/ASU-topics/setFinance/p5stef.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -143,7 +143,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 14
-source_file = local/Business_Calculus/Library/ASU-topics/setFinance/p3st.pg
+source_file = Business_Calculus/Library/ASU-topics/setFinance/p3st.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -153,7 +153,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 15
-source_file = local/Business_Calculus/Library/ASU-topics/setFinance/p11stef.pg
+source_file = Business_Calculus/Library/ASU-topics/setFinance/p11stef.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
@@ -163,7 +163,7 @@ att_to_open_children = 0
 problem_end
 problem_start
 problem_id = 16
-source_file = local/Business_Calculus/CustomProblems/Library/NAU/setFinance/yr_interest1.pg
+source_file = Business_Calculus/CustomProblems/Library/NAU/setFinance/yr_interest1.pg
 value = 1
 max_attempts = -1
 showMeAnother = -1
