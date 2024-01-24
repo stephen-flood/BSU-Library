@@ -95,11 +95,11 @@ b. Simplify the following expression completely [`f(x + [$xzero])`]
 
     [`f(x + [$xzero])`] = [________]{"$fxplusxzero"}
 
-c. Simplify the following expression completely [`f(x+[$xzero]) - f([$xzero])`].
+c. Simplify the following expression completely [`f(x+[$xzero]) - f([$xzero])`]
 
     [`f(x+[$xzero]) - f([$xzero])`] =  [____________]{"$fxplusxzero - $fofxzero"}
 
-d. Simplify the following expression completely [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`].
+d. Simplify the following expression completely [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`]
 
     [`\dfrac{ f(x+[$xzero]) - f([$xzero])}{x}`] =  [____________]{"$diffq"}
 

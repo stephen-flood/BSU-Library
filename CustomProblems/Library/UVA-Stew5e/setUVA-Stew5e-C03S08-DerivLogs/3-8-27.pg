@@ -43,7 +43,7 @@ $b = random(8,15,1);
 
 BEGIN_TEXT
 Suppose that
-\[ f(x) = x^2 \ln($b - $a x^2).\]
+\[ f(x)\quad =\quad x^2\ \cdot \ \ln($b - $a x^2).\]
 Find  \(f'(x)\), and use interval notation to give the domain of \(f\).
 $BR
 $BBOLD Note: $EBOLD When entering interval notation in WeBWorK, use
@@ -52,21 +52,10 @@ and $BBOLD U $EBOLD for the union symbol.  If the set is empty,
 enter "{}" without the quotation marks.
 $PAR
 \(f'(x)\) = \{ ans_rule(35) \}
-$PAR$PAR
-Domain of \(f\)= \{ ans_rule(35) \}
 $PAR
 
 END_TEXT
 
-$showHint = 3;
-BEGIN_HINT
-For part (b), it is helful to recall that \(\ln(u)\) is defined if and only if \(u>0\).  
-$PAR
-To find the domain of the given (more complicated) function, first determine what \(u\) should be, and then solve the equation \(u>0\).
-END_HINT
-
-
-ANS((fun_cmp("2*x*ln($b-$a*x**2)-(2*$a*x**3)/($b-$a*x**2)", vars=>"x"),
-    interval_cmp("(-sqrt($b/$a),sqrt($b/$a))") ) );
+ANS(fun_cmp("2*x*ln($b-$a*x**2)-(2*$a*x**3)/($b-$a*x**2)", vars=>"x")) ;
 
 ENDDOCUMENT();        # This should be the last executable line in the problem.

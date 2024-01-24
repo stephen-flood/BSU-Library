@@ -1,0 +1,151 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+
+## DBsubject(Probability)
+## DBchapter(Sample Space)
+## DBsection(Outcomes & events)
+## Date(6/25/2018)
+## Level(3)
+## KEYWORDS('sample')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+    "PGtikz.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(a => 'Real',b => 'Real',c => 'Real',d => 'Real',e => 'Real',f => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+
+@letter= ("a","b","c","d","e","f"); 
+
+$blank_spinner = createTikZImage();
+$blank_spinner->BEGIN_TIKZ
+    \draw (0,0) circle (2cm);
+        \foreach \theta in {0,60,120,180,240,300,360}
+            \draw (0,0) -- (\theta:2cm);
+        \node at ({30+(0)*60}:1cm) {\($letter[0]\)};
+        \node at ({30+(1)*60}:1cm) {\($letter[1]\)};
+        \node at ({30+(2)*60}:1cm) {\($letter[2]\)};
+        \node at ({30+(3)*60}:1cm) {\($letter[3]\)};
+        \node at ({30+(4)*60}:1cm) {\($letter[4]\)};
+        \node at ({30+(5)*60}:1cm) {\($letter[5]\)};
+END_TIKZ
+
+do{
+    $r[0] = random(0,2,1);
+    $r[1] = random(0,2,1);
+    $r[2] = random(0,2,1);
+    $r[3] = random(0,2,1);
+    $r[4] = random(0,2,1);
+    $r[5] = random(0,2,1);
+
+    $labeled_spinner = createTikZImage();
+    $labeled_spinner->BEGIN_TIKZ
+        \draw (0,0) circle (2cm);
+            \foreach \theta in {0,60,120,180,240,300,360}
+                \draw (0,0) -- (\theta:2cm);
+            \node at ({30+(0)*60}:1cm) {$r[0]};
+            \node at ({30+(1)*60}:1cm) {$r[1]};
+            \node at ({30+(2)*60}:1cm) {$r[2]};
+            \node at ({30+(3)*60}:1cm) {$r[3]};
+            \node at ({30+(4)*60}:1cm) {$r[4]};
+            \node at ({30+(5)*60}:1cm) {$r[5]};
+    END_TIKZ
+    
+    @P = (0,0,0);
+    @E = ("","","");
+    for(my $i=0; $i<6; $i++){
+        $P[$r[$i]]+=1/6;
+        if( $E[$r[$i]] eq "")
+        {  
+            $E[$r[$i]]="$letter[$i]";
+        }else {
+            $E[$r[$i]]=$E[$r[$i]] . ",$letter[$i]";
+        }
+    }
+}
+while( $P[0]==0 || $P[1]==0 || $P[2]==0 || ($P[0]==$P[1] && $P[1]==$P[2]) );
+
+$P0 = Compute("$P[0]");
+$P1 = Compute("$P[1]");
+$P2 = Compute("$P[2]");
+
+$E0 = List("$E[0]");
+$E1 = List("$E[1]");
+$E2 = List("$E[2]");
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+A certain spinner is divided into six even regions, labeled below.  Because each of the regions have equal arclength, they all have equal probability of occuring. 
+
+[@ image($blank_spinner, width => 200, tex_size => 1000) @]*
+
+
+
+Next, we will modify this spinner to define a non-uniform probability model, by assigning a number between [`0`] and [`2`] to each original region of the spinner as shown in the image below.  
+
+[@ image($labeled_spinner, width => 200, tex_size => 1000) @]*
+
+Describe the following events as a comma separated list of the original outcomes [`a,b,c,d,e,f`]. 
+
+The event that the spinner returns [`0 = A_0 = \Big\{`] [_______________]{$E0} [`\Big\}`]
+
+The event that the spinner returns [`1 = A_1 = \Big\{`] [_______________]{$E1} [`\Big\}`]
+
+The event that the spinner returns [`2 = A_2 = \Big\{`] [_______________]{$E2} [`\Big\}`]
+
+Compute the probability of each event. 
+
+Probability of event [`A_0 = `] [_______________]{"$P0"}
+
+Probability of event [`A_1 = `] [_______________]{"$P1"}
+
+Probability of event [`A_2 = `] [_______________]{"$P2"}
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();

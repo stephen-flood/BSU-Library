@@ -1,0 +1,96 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+
+## DBsubject(Probability)
+## DBchapter(Sample Space)
+## DBsection(Outcomes & events)
+## Date(01/21/2022)
+## Author(Stephen Flood)
+## Level(3)
+## KEYWORDS('sample')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+# Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$n = 6;
+$n1 = $n;
+$n2 = $n;
+
+$m = random(4,2*$n-2); 
+
+
+$outcomestring = "";
+for (my $x1=1 ; $x1<=$n ; $x1++){
+    for (my $x2=1 ; $x2<=$n ; $x2++){
+        if($x1+$x2 == $m){
+            if($outcomestring == ""){
+                $outcomestring = "$x1" . "$x2";
+            }
+            else {
+                $outcomestring = $outcomestring . ",$x1" . "$x2";
+            }
+        }
+    }
+}
+
+$event = List($outcomestring);
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+You roll *two* [`[$n]`] sided dice. Write the elements of the event that the two rolls sum to [`[$m]`] as a *comma separated list* of outcomes. 
+
+*Note:* You would enter the string [`x_1 x_2`] to denote the outcome where the first roll was [`x_1`] and the second roll was [`x_2`].  For example, to describe the event with [`x_1=5`] and [`x_2=6`], you would enter [`\tt 56`]. 
+
+
+Dice rolls sum to [`[$m]`]  [` = \Big\{ `] [__________________________]{$event}  [`\Big\}`]
+
+
+END_PGML
+
+
+ENDDOCUMENT();

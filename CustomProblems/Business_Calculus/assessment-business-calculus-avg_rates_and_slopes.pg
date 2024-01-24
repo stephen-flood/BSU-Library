@@ -35,7 +35,10 @@ loadMacros(
         # "PGgraphmacros.pl",	   # For dynamic graphs
     	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
     	"parserPopUp.pl",	   # Create popup lists for selecting entries
-    	# "contextInequalities.pl",
+    	# "contextInequalities.pl",,
+  "PGML.pl",              ## Used For Business Calculus Hints
+  "Business_Calculus.pl", ## Used For Business Calculus Hints
+
 );
 
 
@@ -160,9 +163,13 @@ Give your answer with decimal accuracy of [`0.00001`]
 [` y = `] [_____________________]{Compute("$slope_at_a*(x-$a) + $f_a")}
 
 
-
-
 END_PGML
 
+$showHint=-1;
+BEGIN_PGML_HINT
+A good place to start is to study the following from the *course textbook*, along with the surrounding text.
+* [@  buscalcbooklink("ch_tangentsecant", "ex_approx_slope_from_secant", "EXAMPLE")   @]*
+* [@  buscalcbooklink("ch_tangentsecant", "eassemblage-secantlines", "Summary of Concepts")   @]*
+END_PGML_HINT
 
 ENDDOCUMENT();

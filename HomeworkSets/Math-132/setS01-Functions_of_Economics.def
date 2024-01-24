@@ -1,0 +1,254 @@
+assignmentType      = jitar
+openDate          = 09/06/2023 at 11:59pm EDT
+reducedScoringDate = 09/06/2023 at 11:59pm EDT
+dueDate           = 09/06/2023 at 11:59pm EDT
+answerDate        = 09/06/2023 at 11:59pm EDT
+enableReducedScoring = Y
+paperHeaderFile   = defaultHeader
+screenHeaderFile  = defaultHeader
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
+
+problemListV2
+problem_start
+problem_id = 1
+source_file = CustomProblems/assessment_IntroducingWebWork.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 2
+source_file = CustomProblems/Business_Calculus/Library/Mizzou/Algebra/functions_domain_range/fun_dom_23.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 3
+source_file = CustomProblems/Business_Calculus/Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph30.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 4
+source_file = CustomProblems/Business_Calculus/Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-18-Input-and-output.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 5
+source_file = CustomProblems/Business_Calculus/Library/LoyolaChicago/Precalc/Chap5Review/Q30.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 6
+source_file = CustomProblems/Business_Calculus/Library/LoyolaChicago/Precalc/Chap1Sec1/Q19.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 7
+source_file = CustomProblems/Business_Calculus/Library/FortLewis/Algebra/2-3-Expanding-and-factoring/MCH1-2-3-08-Expanding-and-factoring.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 8
+source_file = CustomProblems/Business_Calculus/Library/Mizzou/Algebra/polynomials_add_sub_mult/poly_mult_06.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 9
+source_file = CustomProblems/Business_Calculus/Library/FortLewis/Algebra/2-3-Expanding-and-factoring/MCH1-2-3-08-Expanding-and-factoring-2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 10
+source_file = CustomProblems/Business_Calculus/Library/UMN/algebraKaufmannSchwitters/ks_4_5_2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 11
+source_file = CustomProblems/Business_Calculus/Library/Rochester/setAlgebra17FunComposition/beth1_mo.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 12
+source_file = CustomProblems/Business_Calculus/Library/FortLewis/Algebra/8-2-Function-composition/MCH1-8-2-28-Function-composition.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 13
+source_file = CustomProblems/Business_Calculus/simplifiedDifferenceQuotient-v2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 14
+source_file = CustomProblems/Business_Calculus/simplifiedDifferenceQuotient.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 15
+source_file = CustomProblems/Business_Calculus/Library/Utah/Trigonometry/set2_Algebra/s2p2.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 16
+source_file = CustomProblems/Business_Calculus/Library/Mizzou/College_Algebra/Real_Numbers/Interval_Notation/Graph_Two_Intervals_Union.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 17
+source_file = CustomProblems/Business_Calculus/Library/Mizzou/College_Algebra/Real_Numbers/Interval_Notation/Graph_One_Interval_Left_Inf.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 18
+source_file = CustomProblems/Business_Calculus/Library/Mizzou/College_Algebra/Real_Numbers/Interval_Notation/Graph_One_Interval_Finite_Endpts.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 19
+source_file = CustomProblems/Business_Calculus/businesscalc-graphs_of_totals_and_changes.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 20
+source_file = CustomProblems/Business_Calculus/businesscalc-graphs_of_totals_and_changes_basic-interpretation.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 21
+source_file = CustomProblems/Business_Calculus/businesscalc-graphs_of_totals_and_changes-givenrule.pg
+value = 1
+max_attempts = -1
+showMeAnother = -1
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 0 
+problem_end
+problem_start
+problem_id = 22
+source_file = CustomProblems/Business_Calculus/buscalc_changeiny_numeric.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 23
+source_file = CustomProblems/Business_Calculus/buscalc_changeiny_deltax.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+problem_start
+problem_id = 24
+source_file = CustomProblems/Business_Calculus/buscalc_changeiny_xanddx.pg
+value = 1
+max_attempts = -1
+showMeAnother = -2
+prPeriod = -1
+counts_parent_grade = 0
+att_to_open_children = 1 
+problem_end
+

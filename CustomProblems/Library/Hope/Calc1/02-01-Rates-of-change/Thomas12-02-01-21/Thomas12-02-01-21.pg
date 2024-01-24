@@ -57,11 +57,11 @@ $BR
 (a) Find the bicyclist's average velocity over the 
 following time intervals.
 $BR
-Over \( \lbrack 0,1 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
+Between \( t=0\) and \( t= 1 \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
 $BR
-Over \( \lbrack 1,2.5 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
+Between \( t= 1\) and \(t=2.5  \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
 $BR
-Over \( \lbrack 2.5,3.5 \rbrack \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
+Between \( t= 2.5\) and \(t=3.5  \), the average velocity is approximately \{ ans_rule(10) \} mi/hr.
 $BR
 $BR
 (b) Find the bicyclist's instantaneous velocity at the following times.

@@ -43,7 +43,7 @@ TEXT(beginproblem());
 
 
 # Show which answers are correct and which ones are incorrect
-$showPartialCorrectAnswers = 1;
+$showPartialCorrectAnswers = 1; # ALSO GIVES PARTIAL CREDIT FOR LISTS/INTERVALS
 $refreshCachedImages = 1;
 
 ##############################################################
@@ -93,11 +93,17 @@ foreach my $j (-6,-4,-2,0,2,4,6) {
 
 $increasing_string = "";
 $decreasing_string = "";
+$horizontal_string = "";
+
+$num_intervals = 4;
 
 my $lasty = random(-2,2,1);
 my $changex = random(2,4);
 $x = -6;
-for(my $i = 1; $i < 5; $i++){
+
+$horizontal_string = $horizontal_string . "$x";
+
+for(my $i = 1; $i < $num_intervals; $i++){
     if( ($increasing_string eq "" && $decreasing_string ne "" ) || $lasty<-4 ){   
         $change = random(2,3,1);    
     }
@@ -120,10 +126,12 @@ for(my $i = 1; $i < 5; $i++){
     }    
     $lasty = $lasty+$change;
     $x = $x + $changex ;
+    $horizontal_string = $horizontal_string . ",$x";
 }
 
 $increasing = Interval("$increasing_string");
 $decreasing = Interval("$decreasing_string");
+$horizontal = List("$horizontal_string");
 
 $a   = random(3,5,1);
 $b   = non_zero_random(-2,2,1);
@@ -148,6 +156,9 @@ Let [`f(x)`] be defined using the graph below.
 
 [@ image( insertGraph($gr), width=>400, 
     height=>400, tex_size=>800 ) @]***
+
+(a)  For what values of [`x`] is [`f'(x) = 0`].  Enter your answer as a comma separated list of numbers.  
+[________________________________]{$horizontal}
 
 (a)  For what values of [`x`] is the function increasing?  Enter your answer in interval notation.  
 [________________________________]{$increasing}

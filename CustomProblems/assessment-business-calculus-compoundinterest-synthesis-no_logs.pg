@@ -1,0 +1,103 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood & Karen Duseau')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->flags->set(tolerance => 0.01);
+Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$P = random(1000,10000,500);
+$rate = random(5,30,1);
+$r = $rate/100;
+$n = list_random(4,8,12,52,365);
+
+$FutureValue = Compute("$P*(1 + ($r)/($n))^($n*t)");
+
+$effectiveAPR = Compute("(1 + ($r)/($n))^($n) - 1");
+
+$givent = random(2,10,1);
+
+$DoublingTime = Compute("ln(2)/($n*ln(1 + $r/$n))");
+$TriplingTime = Compute("ln(3)/($n*ln(1 + $r/$n))");
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+A certain investment is growing according to the model 
+[` F = [$P]\left(1 + \dfrac{[$r]}{[$n]}\right)^{[$n]t} `].  
+
+1.  How much was the initial investment?  
+[______________]{$P}
+
+2.  How many times is this investment compounded each year?  
+[______________]{$n}
+
+2.  What is the APR [`r`] (annual percentage rate) of this investment, as a decimal?  
+[______________]{$r}
+
+3.  What is the *effective* annual interest [`r_{eff}`] of this investment, as a decimal?  
+[______________]{$effectiveAPR}
+
+
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();

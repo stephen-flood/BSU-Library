@@ -1,0 +1,21 @@
+
+BATCH VERSION:
+((perform substitution in each file in the current directory))
+
+find ./ -type f -exec sed -i -e 's/source_file = local/source_file = CustomProblems/g' {} \;
+
+
+
+
+
+Use the following regular expression search & replace:
+
+1. Open vim
+2. Type 
+    :
+3. Copy/paste
+    %s/source_file = local/source_file = CustomProblems/
+
+(This assumes that there is a sim-link titled "CustomProblems" in the "Templates" directory of the course.
+ This should link to a folder that contains (1) the new custom problems and (2) a subdirectory "Library" 
+ that contains modified versions of existing problems.)

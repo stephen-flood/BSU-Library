@@ -65,8 +65,8 @@ $ans = Compute("1/$n");
 
 Context("Inequalities");
 #Context("Interval);
-$increasing = Compute("x<$ans");
-$decreasing = Compute("$ans<x<1 or 1<x");
+$increasing = Compute("x>=0 and x<$ans");
+$decreasing = Compute("$ans<x and x<=1");
 #$increasing = Interval("(-Infinity,$ans)");
 #$decreasing = Interval("($ans,1) U (1,Inf)");
 

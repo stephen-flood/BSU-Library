@@ -26,16 +26,16 @@
 DOCUMENT();
 
 # Load whatever macros you need for the problem
-loadMacros(
-  "PGstandard.pl",
-  "PGchoicemacros.pl",
-  "PGgraphmacros.pl",
-  "MathObjects.pl",
-  "PGcourse.pl",
+loadMacros("PG.pl",
+           "PGbasicmacros.pl",
+           "PGchoicemacros.pl",
+           "PGanswermacros.pl",
+           "PGauxiliaryFunctions.pl",
+           "PGgraphmacros.pl",
+           "MathObjects.pl",
   "PGML.pl",              ## Used For Business Calculus Hints
   "Business_Calculus.pl", ## Used For Business Calculus Hints
-
-);
+  );
  
 ## Show partial correct answers
 $showPartialCorrectAnswers = 1;
@@ -52,7 +52,7 @@ $f = Formula("$a2*(x-$a0) + $a1")->reduce;
 
 Context()->texStrings;
 BEGIN_TEXT
-Given that \(\>f($a0)= $a1\>\) and \(\>f'($a0)= $a2\>\), find an equation for the tangent line to the graph of \(\>y = f(x)\>\) at \(\>x = $a0\).
+Given that \(\>f($a0)= $a1\>\) and that the slope of \(f\) at \($a0\) is \( \>f'($a0)= $a2\>\), find an equation for the tangent line to the graph of \(\>y = f(x)\>\) at \(\>x = $a0\).
 $BR
 $BR
 \(\>y = \): \{ans_rule(20)\}
@@ -61,11 +61,12 @@ END_TEXT
 Context()->normalStrings;
 ANS($f->cmp);
 
-
 $showHint=-1;
 BEGIN_PGML_HINT
 A good place to start is to study the following from the *course textbook*, along with the surrounding text.
-* [@  buscalcbooklink("ch_basicderivativerules", "ex_basicderivativestangent", "EXAMPLE - Finding a tangent line")   @]*
+* [@  buscalcbooklink("ch_tangentsecant", "prop-tangenteqn", "Formula")   @]*
+* [@  buscalcbooklink("ch_tangentsecant", "assemblage-connectingslopeandtangent", "Summary")   @]*
+* [@  buscalcbooklink("ch_tangentsecant", "ex_tangentlinefromgiveninfo", "EXAMPLE")   @]*
 END_PGML_HINT
 
 ENDDOCUMENT();

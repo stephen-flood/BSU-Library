@@ -175,8 +175,8 @@ $ECENTER
 $PAR
 (a) Determine \(f($a)\): \{ans_rule(20)\} $BR
 (b) Determine \(f($x0)\) : \{ans_rule(20)\} $BR
-(c) Domain: \{ans_rule(20)\} $BR
-(d) Range: \{ans_rule(20)\}
+(c) Domain: \{ans_rule(20)\}.  Enter your answer in interval notation. $BR
+(d) Range: \{ans_rule(20)\}.  Enter your answer in interval notation. 
 END_TEXT
 Context()->normalStrings;
 

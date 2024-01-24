@@ -1,0 +1,100 @@
+##DESCRIPTION
+##  Problem Description
+##ENDDESCRIPTION
+
+##KEYWORDS('sample')
+
+## DBsubject('Course')
+## DBchapter('Section')
+## DBsection('Subsection')
+## Date('6/25/2018')
+## Author('Stephen Flood')
+## Institution('')
+## TitleText1('')
+## EditionText1('')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+
+
+
+########################################################################
+
+
+
+DOCUMENT();
+
+# Load whatever macros you need for the problem
+loadMacros(
+        "PGstandard.pl",     # Standard macros for PG language
+        "PGcourse.pl",       
+	"PGML.pl",
+	"MathObjects.pl",
+	# "PGchoicemacros.pl",	# For multiple select, multiple matching, and true/false questions
+        # "PGgraphmacros.pl",	   # For dynamic graphs
+    	# "parserMultiAnswer.pl",  # For answer checkers that reference MULTIPLE answer blanks
+    	# "parserPopUp.pl",	   # Create popup lists for selecting entries
+    	# "contextInequalities.pl",
+);
+
+
+# Print problem number and point value (weight) for the problem
+TEXT(beginproblem());
+
+# Show which answers are correct and which ones are incorrect
+$showPartialCorrectAnswers = 1;
+
+
+##############################################################
+#  Setup
+
+Context("Numeric");
+# Context()->webflags->set(tolerance => 0.01);
+Context()->variables->add(t => 'Real');
+# See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
+
+$P = random(1000,10000,500);
+$rate = random(5,17,1);
+$r = $rate/100;
+$n = list_random(1,12,52,365);
+
+$FutureValue = Compute("$P*(1 + ($r)/($n))^($n*t)");
+
+$givent = random(2,4,1);
+
+$ValueAtGivent=$FutureValue->eval(t=>$givent);
+
+$percentchange=Compute("100*(($ValueAtGivent/$P)-1)");
+
+$DoublingTime = Compute("ln(2)/($n*ln(1 + $r/$n))");
+
+
+#################################################
+# Write Problem 
+#
+# PGML syntax at 
+# 	http://webwork.maa.org/wiki/Introduction_to_PGML#.V8CReFQko2w
+# 	http://webwork.maa.org/wiki/Category:PGML_Syntax#.V8DHHVQko2w
+
+
+BEGIN_PGML
+
+An $[`[$P]`] investment earns [`[$rate]`]% interest, compounded [$n] times per year.  
+
+1.  Write a formula for the value of the investment as a function of the number of years [`t`].  
+[______________]{$FutureValue}
+
+2.  Calculate the value of the investment after [$givent] years.  
+[______________]{$ValueAtGivent}
+
+3.  By what percent does the principle increase over those [$givent] years?  
+[______________]{$percentchange->cmp(tolType=>absolute,tolerance=>0.5)}%  
+*Enter your answer as a percentage*, not a decimal rate.
+
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();

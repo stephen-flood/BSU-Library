@@ -54,10 +54,10 @@ Context("Numeric");
 # See http://webwork.maa.org/wiki/Introduction_to_contexts for more options
 
 
-$deltax = random(20,50,10);
+$deltax = list_random(20,40,50);
 $deltay = random(10,50,10);
 
-$x1  = random(5,20,5);
+$x1  = random(5,30,5);
 $y1  = random(25+$deltay,50+$deltay,5);
 
 $x2 = Compute("$x1+$deltax");
@@ -68,6 +68,11 @@ $demand = Compute("$slope*(x - $x1) + $y1");
 
 $middle = random($x1 + 5, $x2 - 5, 5);
 $priceofmiddle = $demand->eval(x=>$middle);
+
+$a = non_zero_random(-3,3,1);
+$middle2 = $middle + $a;
+$priceofmiddle2 = $demand->eval(x=>$middle2);
+
 
 # the arguments of PopUp are [list of answers], 
 #    correct answer
@@ -93,16 +98,15 @@ Assume that the demand price is linear.
 [___________________________________________]{$slope}  
 [`\ `]
 
-1. For each additional unit sold, the demand price  
-[_]{$popup} by 
-[___________________________________________]{$slopemagnitude}  
-[`\ `]
-
-2. Find the *demand price* which would result from selling exactly  [`[$middle]`] units.  
+2. Find the demand price which would result from selling exactly  [`[$middle]`] units.  
 [___________________________________________]{$priceofmiddle} dollars per unit.  
 [`\ `]
 
-3.  Find a formula for the demand price as function of [`x`], the number of units sold.  
+3. Find the quantity that corresponds to setting an item price of [`[$priceofmiddle2]`] dollars per item.  
+[___________________________________________]{$middle2} items
+[`\ `]
+
+4.  Find a formula for the demand price as function of [`x`], the number of units sold.  
 [`p(x) = `][____________________________________________]{$demand}
 END_PGML
 

@@ -48,7 +48,7 @@ TEXT(beginproblem());
 Context("Numeric");
 
 
-$showPartialCorrectAnswers = 1;
+$showPartialCorrectAnswers = 0;
 
 $pick = random(0,3,1);
 @all = (5,10,15,20);
